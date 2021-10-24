@@ -1,0 +1,354 @@
+<!doctype html public "-//ietf//dtd html//en">
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>fuzzyTECH: 4.) Benchmarks</title>
+</head>
+
+<body bgcolor="#c0c0c0">
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+  <tr>
+    <td bgcolor="#000080"><b><font color="#00ffff" size="5" face="arial"><i>fuzzy</i>TECH: 4.)
+    Benchmarks</font></b></td>
+    <td align="center" bgcolor="#ffff00"><font size="2" face="arial"><a href="d_index.htm"><img
+    src="home.gif" alt="zur fuzzytech home page" width="21" height="21"></a><a
+    href="e_ftedsp.htm"><img src="wld16x16.gif" alt="english" width="21" height="21"></a></font><a
+    href="d_fteded.htm"><font face="arial"><img src="previous.gif"
+    alt="zur vorherigen Seite (Editionen)" width="21" height="21"></font></a><a
+    href="d_ftedsp.htm"><font size="2" face="arial"><img src="next.gif"
+    alt="zur folgenden Seite (Leistungsmerkmale)" width="21" height="21"></font></a></td>
+  </tr>
+</table>
+
+<p><font size="2" face="arial">Um die Rechenleistung unterschiedlicher Fuzzy-Systeme auf
+verschiedener Zielhardware vergleichen zu können, hat INFORM in Zusammenarbeit mit
+führenden Halbleiterherstellern einen hardwareunabhängigen Satz von Benchmarks
+entwickelt. Sie enthalten 5 typische Fuzzy-Systeme, die von realen Entwicklungsprojekten
+abgeleitet wurden und den Bereich von sehr einfachen bis zu sehr komplexen Aufgaben
+abdecken. Die Quellcodes der 5 Benchmarksysteme sind jeder <i>fuzzy</i>TECH Edition
+beigelegt und können auch direkt von diesem Server aus heruntergeladen werden (<a
+href="d_dwnld.htm">Benchmarks herunterladen</a>). Tabelle 5 zeigt Rechengeschwindigkeit
+und Speicherbedarf für die 5 Benchmarksysteme. Die Systeme repräsentieren typische
+Aufgabenstellungen:</font> 
+
+<ul>
+  <li><font size="2" face="arial">Bench 0: Einfacher Fuzzy-Positionsregler<br>
+    (7 Regeln, 2 Eingänge mit je 3 Termen, 1 Ausgang mit 5 Termen, alle Regelgewichte = 1)</font><font
+    size="2"> </font></li>
+  <li><font size="2" face="arial">Bench 1: Fuzzy PI-Regler <br>
+    (20 Regeln, 2 Eingänge mit je 5 Termen, 1 Ausgang mit 5 Termen, alle Regelgewichte = 1)</font><font
+    size="2"> </font></li>
+  <li><font size="2" face="arial">Bench 2: Fuzzy PD-Regler<br>
+    (20 Regeln, 2 Eingänge mit je 5 Termen, 1 Ausgang mit 5 Termen, alle Regelgewichte
+    unterschiedlich)</font><font size="2"> </font></li>
+  <li><font size="2" face="arial">Bench 3: Parameterschätzung in einem ABS-System <br>
+    (80 Regeln, 3 Eingänge mit 3, 4, und 6 Termen, 1 Ausgang mit 5 Termen, alle Regelgewichte
+    unterschiedlich )</font><font size="2"> </font></li>
+  <li><font size="2" face="arial">Bench 4: Aktiver Fahrstabilisator in einem PKW<br>
+    (500 Regeln, 8 Eingänge mit je 7 Termen, 4 Ausgänge mit je 7 Termen, alle Regelgewichte
+    unterschiedlich) </font></li>
+</ul>
+
+<p><font size="2" face="arial">Bench 4 stammt aus einer Forschungsanwendung und ist das
+derzeit größte veröffentlichte Fuzzy-System im Bereich des Embedded Control. </font></p>
+
+<table border="1" height="640">
+  <tr>
+    <td width="270" bgcolor="#ffff00" height="19"><font face="Arial" size="2"><strong>Benchmarks</strong></font></td>
+    <td align="center" width="100" bgcolor="#808080" height="19">&nbsp;<font size="2"
+    face="arial"><b>Bench 0</b></font></td>
+    <td align="center" width="100" bgcolor="#808080" height="19"><font size="2" face="arial"><b>Bench
+    1</b></font></td>
+    <td align="center" width="100" bgcolor="#808080" height="19"><font size="2" face="arial"><b>Bench
+    2</b></font></td>
+    <td align="center" width="100" bgcolor="#808080" height="19"><font size="2" face="arial"><b>Bench
+    3</b></font></td>
+    <td align="center" width="110" bgcolor="#808080" height="19"><font size="2" face="arial"><b>Bench
+    4</b></font>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#808080" height="32"><font size="2" face="arial"><b>Prozessor/Mikrokontroller</b></font><font
+    face="arial"> </font></td>
+    <td align="center" width="100" height="32"><font size="2" face="arial">7 Regeln <br>
+    2 Ein / 1 Aus</font></td>
+    <td align="center" width="100" height="32"><font size="2" face="arial">20 Regeln <br>
+    2 Ein / 1 Aus</font></td>
+    <td align="center" width="100" height="32"><font size="2" face="arial">20 FAM Regeln 2 Ein
+    / 1 Aus</font></td>
+    <td align="center" width="100" height="32"><font size="2" face="arial">80 FAM Regeln 3 Ein
+    / 1 Aus</font></td>
+    <td align="center" width="110" height="32"><font size="2" face="arial">500 FAM Regeln 8
+    Ein / 4 Aus</font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="50"><font color="#000080" size="2" face="arial"><b>PC:</b>
+    <i>fuzzy</i>TECH Professional Edition, C Code Erzeugung, 16 bit Auflösung, Test Prozessor
+    i486SX, 33 MHz, MS-C 8.00</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#000080"
+    size="2" face="arial">0,05/0,07 ms <br>
+    0,73 KB OBJ<br>
+    39 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#000080"
+    size="2" face="arial">0,05/0,08 ms <br>
+    0,82 KB OBJ<br>
+    47 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#000080"
+    size="2" face="arial">0,05/0,09 ms <br>
+    0,89 KB OBJ<br>
+    47 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#000080"
+    size="2" face="arial">0,09/0,12 ms <br>
+    1,27 KB OBJ<br>
+    53 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="50"><font color="#000080"
+    size="2" face="arial">0,35/0,45 ms <br>
+    3,5 KB OBJ<br>
+    185 Byte RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="50"><font color="#800000" size="2" face="arial"><b>80C196:</b>
+    <i>fuzzy</i>TECH MCU-96 Edition, Assemblercodeerzeugung, 16 bit Auflösung, Test MCU
+    80C196KD, interner ROM, 20 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,19/0,23 ms <br>
+    0,63 KB ROM<br>
+    50 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,24/0,33 ms <br>
+    0,69 KB ROM<br>
+    58 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,26/0,38 ms <br>
+    0,78 KB ROM<br>
+    58 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,44/0,64 ms <br>
+    1,17 KB ROM<br>
+    66 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">1,87/2,45 ms <br>
+    3,47 KB ROM<br>
+    214 Byte RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="50"><font color="#800000" size="2" face="arial"><b>80C166:</b>
+    <i>fuzzy</i>TECH MCU-166 Edition, Assemblercodeerzeugung, 16 bit Auflösung, Test MCU
+    80C166, interner ROM, 20 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,05/0,06 ms <br>
+    0,44 KB ROM<br>
+    30 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,06/0,08 ms <br>
+    0,56 KB ROM<br>
+    30 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,06/0,09 ms <br>
+    0,61 KB ROM<br>
+    30 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,10/0,14 ms <br>
+    0,99 KB ROM<br>
+    36 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,43/0,56 ms <br>
+    3,2 KB ROM<br>
+    194 B RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="241" bgcolor="#C0C0C0" height="50"><font color="#800000" size="2" face="arial"><b>68HC11:</b>
+    <i>fuzzy</i>TECH MCU-11/12 Edition, Assemblercodeerzeugung, 8 bit Auflösung, Test 68HC11,
+    ext. ROM, 8 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="95" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">1.1 ms/1.3 ms <br>
+    0.64 KB ROM<br>
+    31 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="94" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">1.4ms /1.9 ms <br>
+    0.71 KB ROM<br>
+    35 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="91" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">1.4 ms/1.9 ms <br>
+    0.75 KB ROM<br>
+    35 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="91" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">2.6 ms/3.5 ms <br>
+    1.1 KB ROM<br>
+    39 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="101" bgcolor="#FFFFFF" height="50"><font color="#800000"
+    size="2" face="arial">11 ms/14 ms <br>
+    3.1 KB ROM<br>
+    113 Byte RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="241" bgcolor="#C0C0C0" height="50"><font color="#800000" size="2" face="arial"><b>68HC12:</b>
+    <i>fuzzy</i>TECH MCU-11/12 Edition, Assemblercodeerzeugung, 8 bit Auflösung, Test 68HC12,
+    ext. ROM, 16 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="95" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">0.09ms/0.09ms <br>
+    0.34 KB ROM<br>
+    26 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="94" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">0.14ms/0.15ms <br>
+    0.42 KB ROM<br>
+    30 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="91" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">0.16ms/0.17ms <br>
+    0.54 KB ROM<br>
+    30 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="91" bgcolor="#FFFFFF" height="50"><font color="#800000" size="2"
+    face="arial">0.40ms/0.41ms <br>
+    1.4 KB ROM<br>
+    34 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="101" bgcolor="#FFFFFF" height="50"><font color="#800000"
+    size="2" face="arial">2.1 ms/2.2 ms <br>
+    8.8 KB ROM<br>
+    108 Byte RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="51"><font color="#800000" size="2" face="arial"><b>TMS-320:
+    </b><i>fuzzy</i>TECH MCU-320 Edition, Assemblercodeerzeugung, 16 bit Auflösung, Test MCU
+    TMS-320C52, ext. ROM, 20 ns</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="51"><font color="#800000"
+    size="2" face="arial">0,02/0,022 ms <br>
+    0,85 KB ROM<br>
+    54 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="51"><font color="#800000"
+    size="2" face="arial">0,023/0,03 ms <br>
+    0,99 KB ROM<br>
+    60 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="51"><font color="#800000"
+    size="2" face="arial">0,024/0,03 ms<br>
+    1,06 KB ROM 62 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="51"><font color="#800000"
+    size="2" face="arial">0,039/0,049 ms <br>
+    1,8 KB ROM<br>
+    70 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="51"><font color="#800000"
+    size="2" face="arial">0,146/0,188 ms <br>
+    5,7 KB ROM<br>
+    218 B RAM*)</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="50"><font color="#800000" size="2" face="arial"><b>8051:
+    </b><i>fuzzy</i>TECH MCU-51 Edition, Assemblercodeerzeugung, 8 bit Auflösung, Test MCU
+    80C51, interner ROM, 12 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">1,0/1,2 ms <br>
+    0,45 KB ROM<br>
+    21 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">1,4/1,9 ms <br>
+    0,54 KB ROM<br>
+    25 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">1,5/2,0 ms <br>
+    0,58 KB ROM<br>
+    25 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">4,4/4,9 ms <br>
+    1,0 KB ROM<br>
+    29 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">16,7/18,0 ms <br>
+    3,0 KB ROM<br>
+    103 B RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="50"><font color="#800000" size="2" face="arial"><b>PIC16C5X:
+    </b><i>fuzzy</i>TECH MP Edition, Assemblercodeerzeugung, 8 bit Auflösung, Test MCU
+    PIC16C74, interner ROM, 20 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,4/0,4 ms <br>
+    0,32 KB ROM<br>
+    27 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,7/0,8 ms <br>
+    0,41 KB ROM<br>
+    31 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">0,9/1,0 ms <br>
+    0,44 KB ROM<br>
+    31 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">2,5/2,7 ms <br>
+    0,7 KB ROM<br>
+    35 Byte RAM</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">10,3/11,4 ms <br>
+    2,2 KB ROM<br>
+    107 Byte RAM</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="50"><font color="#800000" size="2" face="arial"><b>Fuzzy-Koprozessor:</b>
+    <i>fuzzy</i>TECH MCU-99 Edition, Binärcode, 8 bit Auflösung, Testchip 81C99A, ext. ROM,
+    20 MHz</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">-/0,029 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">-/0,031 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">-/0,031 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">-/0,037 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="50"><font color="#800000"
+    size="2" face="arial">-/0,066 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+  </tr>
+  <tr>
+    <td width="270" bgcolor="#c0c0c0" height="66"><font color="#008080" size="2" face="arial"><b>Programmable
+    Logic Controller:</b> <i>fuzzy</i>TECH IA Edition, Fuzzy-Funktionsblock, 16 bit
+    Auflösung, Test-SPS Klöckner-Moeller PS4/401</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="66"><font color="#008080"
+    size="2" face="arial">-/1,6 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="66"><font color="#008080"
+    size="2" face="arial">-/1,6 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="66"><font color="#008080"
+    size="2" face="arial">-/1,6 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="100" bgcolor="#ffffff" height="66"><font color="#008080"
+    size="2" face="arial">-/1,6 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+    <td align="center" width="110" bgcolor="#ffffff" height="66"><font color="#008080"
+    size="2" face="arial">-/3,0 ms <br>
+    -<br>
+    -</font><font face="arial"> </font></td>
+  </tr>
+</table>
+
+<p><font size="2" face="arial">Alle Rechenzeiten (Durchschnitt/Maximum)<br>
+ms := Millisekunde</font></p>
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+  <tr>
+    <td bgcolor="#000080"><b><font color="#00ffff" size="5" face="arial"><i>fuzzy</i>TECH: 4.)
+    Benchmarks</font></b></td>
+    <td align="center" bgcolor="#ffff00"><font size="2" face="arial"><a href="d_index.htm"><img
+    src="home.gif" alt="zur fuzzytech home page" width="21" height="21"></a><a
+    href="e_ftedsp.htm"><img src="wld16x16.gif" alt="english" width="21" height="21"></a></font><a
+    href="d_fteded.htm"><font face="arial"><img src="previous.gif"
+    alt="zur vorherigen Seite (Editionen)" width="21" height="21"></font></a><a
+    href="d_ftedsp.htm"><font size="2" face="arial"><img src="next.gif"
+    alt="zur folgenden Seite (Leistungsmerkmale)" width="21" height="21"></font></a></td>
+  </tr>
+</table>
+</body>
+</html>

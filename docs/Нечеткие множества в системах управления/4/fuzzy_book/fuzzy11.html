@@ -1,0 +1,253 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy10.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy12.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+<CENTER><H3>Логико-лингвистическое описание систем, нечеткие модели.</H3></CENTER>
+
+Логико-лингвистические методы описания систем основаны на том, что поведение исследуемой системы описывается на естественном (или близком к естественному) языке в терминах лингвистических переменных. <BR>
+Входные и выходные параметры системы рассматриваются как лингвистические переменные, а качественное описание процесса задается совокупностью высказываний следующего вида: <BR>
+L<SUB>1</SUB> : если &lt;<I>A</I><SUB>1</SUB> &gt; то &lt;<I>B</I><SUB>1</SUB> &gt;, <BR>
+L<SUB>2</SUB> : если &lt;<I>A</I><SUB>2</SUB> &gt; то &lt;<I>B</I><SUB>2</SUB> &gt;, 
+<P> .................... <BR>
+L<I><SUB>k</I></SUB> : если &lt;<I>A<SUB>k</I></SUB> &gt; то &lt;<I>B<SUB>k</I></SUB> &gt;, <BR>
+где &lt;<I>A<SUB>i</I></SUB>&gt;, <I>i</I>=1,2,..,<I>k</I> - составные нечеткие высказывания, определенные на значениях входных лингвистических переменных, а &lt;<I>B<SUB>i</I></SUB>&gt;, <I>i</I> = 1,2,..,<I>k</I> - высказывания, определенные на значениях выходных лингвистических переменных. <BR>
+С помощью правил преобразования дизъюнктивной и конъюнктивной формы описание системы можно привести к виду:<BR>
+L<SUB>1</SUB> : если &lt;A<SUB>1</SUB> &gt; то &lt;B<SUB>1</SUB> &gt;, <BR>
+L<SUB>2</SUB> : если &lt;A<SUB>2</SUB> &gt; то &lt;B<SUB>2</SUB> &gt;, <BR>
+<P> .................... <BR>
+L<I><SUB>k</I></SUB> : если &lt;A<I><SUB>k</I></SUB> &gt; то &lt;B<I><SUB>k</I></SUB> &gt;, <BR>
+где A<SUB>1</SUB>,A<SUB>2</SUB>,..,A<I><SUB>k</I></SUB> - нечеткие множества, заданные на декартовом произведении X универсальных множеств входных лингвистических переменных, а B<SUB>1</SUB>, B<SUB>2</SUB>, .., B<I><SUB>k</I></SUB> - нечеткие множества, заданные на декартовом произведении Y универсальных множеств выходных лингвистических переменных. <BR>
+Совокупность импликаций {L<SUB>1</SUB>, L<SUB>2</SUB>, ..., L<I><SUB>k</SUB></I>} отражает функциональную взаимосвязь входных и выходных переменных и является основой построения нечеткого отношения XRY, заданного на произведении X<FONT FACE="Symbol">&#180;</FONT>Y универсальных множеств входных и выходных переменных. Если на множестве X задано нечеткое множество A, то композиционное правило вывода B = A<FONT FACE="Symbol">&#183;</FONT>R определяет на Y нечеткое множество B с функцией принадлежности <BR>
+<CENTER>
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>) =<IMG SRC="image275.gif" WIDTH=20 HEIGHT=35 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) <FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB>(<I>x,y</I>))
+</CENTER><BR>
+Таким образом, композиционное правило вывода в этом случае задает закон функционирования нечеткой модели системы. 
+
+<P>Рассмотрим широко цитируемый пример решения задачи нечеткого логического управления: построение модели управления паровым котлом. 
+
+<CENTER><H4>Модель управления паровым котлом</H4></CENTER>
+
+Прототипом модели послужил паровой двигатель (лабораторный) с двумя входами (подача тепла, открытие дросселя) и двумя выходами (давление в котле, скорость двигателя). <BR>
+<I>Цель управления:</I> поддержание заданного давления в котле (зависит от подачи тепла) и заданной скорости двигателя (зависит от открытия дросселя). В соответствии с этим, схема системы управления двигателем выглядит следующим образом: <BR>
+
+<P>Рассмотрим одну часть задачи - управление давлением. <BR>
+<B>Входные лингвистические переменные</B>:
+<DIR>
+РЕ - отклонение давления (разность между текущим и заданным значениями); <BR>
+СРЕ - скорость изменения отклонения давления. 
+</DIR>
+<P>
+<B>Выходная лингвистическая переменная:</B>
+<DIR>
+НС - изменение количества тепла.
+</DIR>
+<B>Значения лингвистических переменных:</B>
+<DIR>
+NB - отрицательное большое; <BR>
+NM- отрицательное среднее; <BR>
+NS- отрицательное малое; <BR>
+NO- отрицательное близкое к нулю; <BR>
+ZO- близкое к нулю; <BR>
+PO - положительное близкое к нулю; <BR>
+PS - положительное малое; <BR>
+PM - положительное среднее; <BR>
+PB - положительное большое.
+</DIR>
+<P>
+Управляющие правила (15 правил), связывающие лингвистические значения входных и выходных переменных, имеют вид: &quot;<I>Если отклонение давления = А<SUB>i</SUB> и, если скорость отклонения давления = В<SUB>i</SUB> , то изменение количества подаваемого тепла равно С<SUB>i</I></SUB>&quot;, где <I>А<SUB>i</I></SUB>, <I>В<SUB>i</I></SUB> ,<I>С<SUB>i</I></SUB> - перечисленные выше лингвистические значения.
+
+<P>Полный набор правил задавался таблицей: <BR>
+
+
+<TABLE BORDER CELLPADDING=7>
+<TR>
+<TH>╬</TH>
+<TH>Отклонение <BR>давления РЕ</TH>
+<TH>Скорость изменения <BR>отклонения давления СРЕ</TH>
+<TH>Изменение количества<BR> подаваемого тепла НС</TH>
+</TR>
+<TR ALIGN=CENTER><TD>1</TD><TD>NB</TD><TD>NB или NM</TD><TD>PB</TD></TR>
+<TR ALIGN=CENTER><TD>2</TD><TD>NB или NM</TD><TD>NS</TD><TD>PM</TD></TR>
+<TR ALIGN=CENTER><TD>3</TD><TD>NS</TD><TD>PS или NO</TD><TD>PM</TD></TR>
+<TR ALIGN=CENTER><TD>4</TD><TD>NO</TD><TD>PB или PM</TD><TD>PM</TD></TR>
+<TR ALIGN=CENTER><TD>5</TD><TD>NO</TD><TD>NB или NM</TD><TD>NM</TD></TR>
+<TR ALIGN=CENTER><TD>6</TD><TD>PO или ZO</TD><TD>NO</TD><TD>NO</TD></TR>
+<TR ALIGN=CENTER><TD>7</TD><TD>PO</TD><TD>NB или NM</TD><TD>PM</TD></TR>
+<TR ALIGN=CENTER><TD>8</TD><TD>PO</TD><TD>PB или PM</TD><TD>NM</TD></TR>
+<TR ALIGN=CENTER><TD>9</TD><TD>PS</TD><TD>PS или NO</TD><TD>NM</TD></TR>
+<TR ALIGN=CENTER><TD>10</TD><TD>PB или PM</TD><TD>NS</TD><TD>NM</TD></TR>
+<TR ALIGN=CENTER><TD>11</TD><TD>PB</TD><TD>NB или NM</TD><TD>NB</TD></TR>
+<TR ALIGN=CENTER><TD>12</TD><TD>NO</TD><TD>PS</TD><TD>PS</TD></TR>
+<TR ALIGN=CENTER><TD>13</TD><TD>NO</TD><TD>NS</TD><TD>NS</TD></TR>
+<TR ALIGN=CENTER><TD>14</TD><TD>PO</TD><TD>PS</TD><TD>PS</TD></TR>
+<TR ALIGN=CENTER><TD>15</TD><TD>PO</TD><TD>PS</TD><TD>NS</TD></TR>
+</TABLE>
+
+<P>Лингвистические значения отклонений задавались нечеткими подмножествами на шкалах X, Y, Z следующей таблицей: <BR>
+<P>
+
+<TABLE BORDER CELLPADDING=7>
+<TR ALIGN=CENTER><TH>&nbsp;</TH><TH>-6</TH><TH>-5</TH><TH>-4</TH><TH>-3</TH><TH>-2</TH><TH>-1</TH><TH>0</TH>
+<TH>+1</TH><TH>+2</TH><TH>+3</TH><TH>+4</TH><TH>+5</TH><TH>+6</TH></TR>
+
+<TR ALIGN=CENTER><TD>PB</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+<TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>0,3</TD><TD>0,7</TD><TD>1</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>PM</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+<TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>0,3</TD><TD>0,7</TD><TD>1</TD><TD>0,7</TD><TD>0,3</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>PS</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+<TD>&nbsp;</TD><TD>0,3</TD><TD>0,7</TD><TD>1</TD><TD>0,7</TD><TD>0,3</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>PO</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+<TD>0,3</TD><TD>1</TD><TD>0,7</TD><TD>0,3</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>NO</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>0,3</TD>
+<TD>0,7</TD><TD>1</TD><TD>0,3</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>NS</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>0,3</TD><TD>0,7</TD><TD>1</TD><TD>0,7</TD>
+<TD>0,3</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>NM</TD><TD>0,3</TD><TD>0,7</TD><TD>1</TD><TD>0,7</TD><TD>0,3</TD><TD>&nbsp;</TD>
+<TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+</TR>
+
+<TR ALIGN=CENTER><TD>NB</TD><TD>1</TD><TD>0,7</TD><TD>0,3</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+<TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+<P>То есть области значений входных переменных PE, CPE и выходной переменной НС представлялись 13 точками [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6], равномерно расположенными между максимальными отрицательными и положительными значениями этих переменных. <BR>
+Приведем управляющие правила к виду: &quot;<I>если</I> (А<SUB>i</SUB><FONT FACE="Symbol">&#180;</FONT>
+В<SUB>i</SUB> ), то С<SUB>i</SUB>&quot;, где (А<SUB>i</SUB><FONT FACE="Symbol">&#180;</FONT>В<SUB>i</SUB>) декартово произведение нечетких множеств А и В , заданных на шкалах X и Y с функцией принадлежности<BR> 
+<CENTER>
+<IMG SRC="image276.gif" WIDTH=60 HEIGHT=16 ALIGN="ABSMIDDLE">(<I>x,y</I>)= <FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB><I>i</I></SUB></SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B<SUB><I>i</I></SUB></SUB>(<I>y</I>),
+</CENTER> <BR>
+
+определенной на X<FONT FACE="Symbol">&#180;</FONT>Y. <BR>
+Для каждого из правил вида &quot;<I>если</I> (А<SUB>i</SUB><FONT FACE="Symbol">&#180;</FONT>В<SUB>i</SUB> ), то С<SUB>i</SUB>&quot;, где (А<SUB>i</SUB><FONT FACE="Symbol">&#180;</FONT>В<SUB>i</SUB>)- входное нечеткое множество, а С<SUB>i</SUB> - соответствующее нечеткое значение выхода, определялось нечеткое отношение 
+<CENTER>
+R<SUB>i</SUB>=(А<SUB>i</SUB><FONT FACE="Symbol">&#180;</FONT>В<SUB>i</SUB>)<FONT FACE="Symbol">&#180;</FONT>С<SUB>i</SUB>, i = 1, 2, ..., 15 
+</CENTER><BR>
+с функцией принадлежности 
+<CENTER>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB><I>i</I></SUB></SUB>((<I>x,y</I>)<I>,z</I>)= (<FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB><I>i</I></SUB></SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B<SUB><I>i</I></SUB></SUB>(<I>y</I>))<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>C<SUB><I>i</I></SUB></SUB>(<I>z</I>).
+</CENTER><BR>
+Совокупности всех правил соответствовало нечеткое отношение 
+<CENTER>
+R = <IMG SRC="image281.gif" WIDTH=23 HEIGHT=58 ALIGN="ABSMIDDLE">R<SUB>i</SUB> </CENTER><BR>
+с функцией принадлежности 
+<CENTER>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB>(<I>x,y,z</I>) = <IMG SRC="image283.gif" WIDTH=23 HEIGHT=45 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB><I>i</I></SUB></SUB>((<I>x,y</I>),<I>z</I>).</CENTER> <BR>
+При заданных значениях А<FONT FACE="Symbol">&#162;</FONT>, В<FONT FACE="Symbol">&#162;</FONT>
+входных переменных регулирующее значение С<FONT FACE="Symbol">&#162;</FONT> входной переменной определялось на основе композиционного правила вывода: <BR>
+<CENTER>
+С<FONT FACE="Symbol">&#162;</FONT> = (А<FONT FACE="Symbol">&#162;</FONT><FONT FACE="Symbol">&#180;</FONT>В<FONT FACE="Symbol">&#162;</FONT>)<IMG SRC="image284.gif" WIDTH=11 HEIGHT=11 ALIGN="ABSMIDDLE">R,
+</CENTER><BR> 
+где <IMG SRC="image284.gif" WIDTH=11 HEIGHT=11 ALIGN="ABSMIDDLE"> - (max-min)-композиция. 
+
+<P>Функция принадлежности С<FONT FACE="Symbol">&#162;</FONT> имеет вид: <BR>
+<CENTER>
+<FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB><FONT FACE="Symbol">&#162;</FONT>(<I>z</I>) = <IMG SRC="image285.gif" WIDTH=37 HEIGHT=34 ALIGN="ABSMIDDLE"> <IMG SRC="image286.gif" WIDTH=40 HEIGHT=43 ALIGN="ABSMIDDLE"> (<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB><FONT FACE="Symbol">&#162;</FONT>(<I>x</I>) <FONT FACE="Symbol">&#76;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB><FONT FACE="Symbol">&#162;</FONT>
+(<I>y</I>)) <FONT FACE="Symbol">&#76;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB>(<I>x,y,z</I>).
+</CENTER> 
+
+
+<P>Числовое значение <I>z</I><SUB>0</SUB> (изменение подаваемого тепла) определяется при этом либо из условия 
+<FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB><FONT FACE="Symbol">&#162;</FONT>(<I>z</I><SUB>0</SUB>) = <IMG SRC="image287.gif" WIDTH=34 HEIGHT=20 ALIGN="ABSMIDDLE"> <FONT FACE="Symbol">&#109;</FONT><SUB>C<FONT FACE="Symbol">&#162;</FONT>
+</SUB>(<I>z</I>),<BR>
+либо по формуле <BR>
+<CENTER>
+<FONT SIZE=+1><I>z</I><SUB>0</SUB></FONT> = <IMG SRC="image288.gif" WIDTH=91 HEIGHT=90 ALIGN="ABSMIDDLE">,<BR></CENTER>
+где N - количество точек в Z (в данном случае N=13). <BR>
+
+<P>
+Задача управления скоростью двигателя решалась аналогично. Результаты практического использования показали, что разработанная нечеткая модель управления сравнима с классическими моделями оптимального управления. <BR>
+Появление первых работ по построению моделей нечеткого логического управления для конкретных систем определило ряд общих вопросов, касающихся логических основ моделей, в их числе: 
+
+<UL>
+<LI>о полноте и непротиворечивости совокупности правил управления;
+<LI>об адекватности представления правил управления вида &quot;<I>если </I> <I>А, то В</I>&quot;
+ нечеткими отношениями, определяемыми разными способами;
+<LI>о правильности способа вывода, основанного на (max-min)-композиции и возможности использования других видов операции композиции.
+</UL>
+
+<P>&nbsp;
+<CENTER><H4>Полнота и непротиворечивость правил управления</H4></CENTER>
+
+Наиболее часто требование <B>полноты</B> для системы <I>&quot;если А<SUB>i</SUB>, то В<SUB>i</I></SUB>&quot;, <I>i</I>=1,2,..,<I>n</I>, сводится к <BR>
+<CENTER>X = <IMG SRC="image289.gif" WIDTH=23 HEIGHT=48 ALIGN="ABSMIDDLE">Supp A<I><SUB>i</I></SUB>,</CENTER> <BR>
+где Supp A<I><SUB>i</I></SUB> - носитель нечеткого множества A<I><SUB>i</I></SUB>. Содержательно это означает, что для каждого текущего состояния <I>х</I> процесса существует хотя бы одно управляющее правило, посылка которого имеет ненулевую степень принадлежности для <I>х</I>. <BR>
+<B>Непротиворечивость</B> системы управляющих правил чаще всего трактуется как отсутствие правил, имеющих сходные посылки и различные или взаимоисключающие следствия. <BR>
+Степень непротиворечивости <I>i</I>-го и <I>k</I>-го правил можно задавать величиной 
+<CENTER>
+C<I><SUB>ik</I></SUB> = |<IMG SRC="image290.gif" WIDTH=39 HEIGHT=31 ALIGN="ABSMIDDLE"> (<FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB><I>i</I></SUB></SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT> 
+<FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB><I>k</I></SUB></SUB>(<I>x</I>)) - <IMG SRC="image293.gif" WIDTH=34 HEIGHT=20 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>B<SUB><I>i</I></SUB></SUB>(<I>y</I>)<FONT FACE="Symbol">&#76;</FONT> 
+<FONT FACE="Symbol">&#109;</FONT><SUB>B<SUB><I>k</I></SUB></SUB>
+(<I>y</I>))|.
+</CENTER> <BR>
+
+Суммируя по <I>k</I>, получаем оценку непротиворечивости <I>i</I>-го правила в системе: <BR>
+<CENTER>
+C<I><SUB>i</I></SUB> = <IMG SRC="image296.gif" WIDTH=26 HEIGHT=58 ALIGN="ABSMIDDLE">C<I><SUB>ik</I></SUB>, 1&lt;<I>i</I>&lt;<I>N</I>, <I>k<FONT FACE="Symbol">&#185;</FONT>i</I>. </CENTER><BR>
+Если эта оценка превосходит некоторое пороговое значение, то правило из системы удаляется.
+В частности, для рассматриваемой выше модели управляющей системы парового котла, оценки степеней непротиворечивости равны:
+<P>
+<TABLE BORDER CELLPADDING=7>
+<TR><TH>╬ правила</TH>
+<TD>1</TD><TD>2</TD><TD>3</TD><TD>4</TD><TD>5</TD><TD>6</TD><TD>7</TD><TD>8</TD>
+<TD>9</TD><TD>10</TD><TD>11</TD><TD>12</TD><TD>13</TD><TD>14</TD><TD>15</TD>
+</TR>
+<TR><TH>C<I><SUB>i</I></SUB></TH>
+<TD>2,4</TD><TD>3,4</TD><TD>4,2</TD><TD>3,8</TD><TD>4,2</TD><TD>1,8</TD><TD>4,5</TD><TD>3,5</TD>
+<TD>4,0</TD><TD>3,9</TD><TD>1,7</TD><TD>3,3</TD><TD>4,1</TD><TD>3,7</TD><TD>3,3</TD>
+</TR>
+</TABLE>
+
+<P>Таким образом, при пороговом значении g=3 в модели остается всего три правила 1, 6 и 11.
+
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<TABLE BORDER=0><TR>
+<TD>
+<A HREF="fuzzy10.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<TD>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<TD>
+<A HREF="fuzzy12.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD></TR></TABLE>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+
+</BODY>
+</HTML>

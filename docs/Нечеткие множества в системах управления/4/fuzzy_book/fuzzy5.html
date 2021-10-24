@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy4.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy6.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+<CENTER><H3>2. НЕЧЕТКИЕ ОТНОШЕНИЯ </H3></CENTER>
+
+Пусть <B>Е = Е<SUB>1</SUB><FONT FACE="Symbol">&#180;</FONT>Е<SUB>2</SUB><FONT FACE="Symbol">&#180;</FONT> ...<FONT FACE="Symbol">&#180;</FONT>Е<SUB>n</SUB></B> - прямое произведение универсальных множеств и <B>М</B> - некоторое множество принадлежностей (например <B>М</B> = [0,1]). Нечеткое n-арное отношение определяется как нечеткое подмножество <B>R</B> на <B>E</B>, принимающее свои значения в <B>М</B>. 
+В случае <B>n</B>=2 и <B>М</B> = [0,1], нечетким отношением <B>R</B> между множествами <B>X = Е<SUB>1</SUB></B> и <B>Y = Е<SUB>2</SUB></B> будет называться функция <B>R:(X,Y)<FONT FACE="Symbol">&#174;</FONT></B>
+[0,1], которая ставит в соответствие каждой паре элементов (х,y)<FONT FACE="Symbol">&#206;</FONT><B>X<FONT FACE="Symbol">&#180;</FONT>Y</B> величину <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x,y) <FONT FACE="Symbol">&#206;</FONT>[0,1].
+Обозначение: нечеткое отношение на <B>X<FONT FACE="Symbol">&#180;</FONT>Y</B> запишется в виде: 
+x<FONT FACE="Symbol">&#206;</FONT><B>X</B>, y<FONT FACE="Symbol">&#206;</FONT><B>Y</B>: <B>xRy</B>. 
+ В случае, когда <B>X = Y</B>, т.е. <B>X</B> и <B>Y</B> совпадают, нечеткое отношение <NOBR><B>R:</B> X<FONT FACE="Symbol">&#180;</FONT>X<FONT FACE="Symbol">&#174;</FONT>[0,1]</NOBR> называется нечетким отношением на множестве <B>X</B>. <BR>
+<BR>
+
+Примеры: 
+<OL>
+<LI>Пусть <B>X</B> = {x</FONT><SUB>1</SUB>,x<SUB>2</SUB>,x<SUB>3</SUB>}, <B>Y</B> = {y<SUB>1</SUB>,y<SUB>2</SUB>,y<SUB>3</SUB>,y<SUB>4</SUB></FONT>}, <B>М</B> = [0,1]. 
+Нечеткое отношение <B>R=XRY</B> может быть задано, к примеру, таблицей: <BR>
+
+<CENTER>
+<TABLE BORDER CELLPADDING=4>
+<TR>
+<TH>&nbsp;</TH><TH>y<SUB>1</SUB></TH><TH>y<SUB>2</SUB></TH><TH>y<SUB>3</SUB></TH><TH>y<SUB>4</SUB></TH>
+</TR>
+<TR>
+<TH>x<SUB>1</SUB></TH><TD>0</TD><TD>0</TD><TD>0,1</TD><TD>0,3</TD>
+</TR>
+<TR>
+<TH>x<SUB>2</SUB></TH><TD>0</TD><TD>0,8</TD><TD>1</TD><TD>0,7</TD>
+</TR>
+<TR>
+<TH>x<SUB>3</SUB></TH><TD>1</TD><TD>0,5</TD><TD>0,6</TD><TD>1</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<BR>
+<LI> Пусть <B>X</B> = <B>Y</B> = (-<IMG SRC="image69.gif" WIDTH=7 HEIGHT=7>, <IMG SRC="image70.gif" WIDTH=15 HEIGHT=10>), т.е. множество всех действительных чисел. Отношение x&gt;&gt;y (x много больше y) можно задаеть функцией принадлежности: 
+<IMG SRC="image71.gif" WIDTH=265 HEIGHT=93 ALIGN="ABSMIDDLE"><BR>
+
+<LI>Отношение <B>R</B>, для которого <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x,y) = 
+<I><B>e</B><SUP>-k(x-y)<SUP>2</SUP></SUP></I>, при достаточно больших k можно интерпретировать так: "x и y близкие друг к другу числа". <BR>
+В случае конечных или счетных универсальных множеств очевидна интерпретация нечеткого отношения в виде нечеткого графа, в котором пара вершин (x<SUB>i</SUB>,x<SUB>j</SUB>) в случае XRX соединяется ребром с весом <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x<SUB>i</SUB>,x<SUB>j</SUB>), в случае <B>XRY</B> пара вершин (x<SUB>i</SUB>,y<SUB>j</SUB>) соединяется ребром c весом <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x<SUB>i</SUB>,y<SUB>j</SUB>).<BR> 
+
+</OL>
+
+Примеры:
+<OL>
+<LI> Пусть Х={x<SUB>1</SUB>,x<SUB>2</SUB>,x<SUB>3</SUB>}, и задано нечеткое отношение R: X<FONT FACE="Symbol">&#180;</FONT>X<FONT FACE="Symbol">&#174;</FONT>
+[0,1], представимое графом: <BR>
+<CENTER><IMG SRC="image73.gif" WIDTH=365 HEIGHT=160></CENTER>
+<BR>
+<LI> Пусть X={x<SUB>1</SUB>,x<SUB>2</SUB>} и Y={y<SUB>1</SUB>,y<SUB>2</SUB>,y<SUB>3</SUB>}, тогда нечеткий граф вида: <BR>
+<CENTER><IMG SRC="image74.gif" WIDTH=343 HEIGHT=160></CENTER><BR>
+задает нечеткое отношение <B>XRY</B>. <BR>
+
+</OL>
+<I>Замечание.</I> В общем случае нечеткий граф может быть определен на некотором <B>G</B><FONT FACE="Symbol">&#204;</FONT><B>X</B><FONT FACE="Symbol">&#180;</FONT><B>Y</B>, где <B>G</B> - множество упорядоченных пар (x,y) (необязательно всех возможных) такое, что <B>G</B><FONT FACE="Symbol">&#199;</FONT>
+<IMG SRC="image75.gif" WIDTH=10 HEIGHT=12> = <FONT FACE="Symbol">&#198;</FONT> и <B>G</B><FONT FACE="Symbol">&#200;</FONT><IMG SRC="image76.gif" WIDTH=10 HEIGHT=13> = <B>X</B><FONT FACE="Symbol">&#180;</FONT><B>Y</B>. 
+
+<P>
+Будем использовать обозначения <IMG SRC="image77.gif" WIDTH=14 HEIGHT=18> вместо <IMG SRC="image78.gif" WIDTH=40 HEIGHT=21 ALIGN="ABSMIDDLE"> и <IMG SRC="image79.gif" WIDTH=15 HEIGHT=18> вместо <IMG SRC="image80.gif" WIDTH=37 HEIGHT=26 ALIGN="ABSMIDDLE">. 
+<P>
+Пусть <B>R</B>: <B>X</B><FONT FACE="Symbol">&#180;</FONT><B>Y</B><FONT FACE="Symbol">&#174;</FONT>[0,1]. <BR>
+<P>
+<U><B>Носитель нечеткого отношения.</B></U> 
+<P>
+Носителем нечеткого отношения <B>R</B> называется обычное множество упорядоченных пар (x,y), для которых функция принадлежности положительна: <BR>
+<CENTER><B>S(R)</B>={(x,y): <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x,y)&gt;0}.</CENTER> <BR>
+
+<U>Нечеткое отношение содержащее данное нечеткое отношение, или содержащееся в нем.</U><BR> 
+Пусть <B>R<SUB>1</SUB></B> и <B>R<SUB>2</SUB></B> - два нечетких отношения такие, что:<BR> 
+<CENTER>
+<FONT FACE="Symbol">&#34;</FONT>(x,y)<FONT FACE="Symbol">&#206;</FONT><B>X</B><FONT FACE="Symbol">&#180;</FONT>
+<B>Y</B>: <B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB></SUB></B>(x,y)<FONT FACE="Symbol">&#163;</FONT><B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>2</SUB></SUB></B>(x,y),
+</CENTER> 
+тогда говорят, что <B>R<SUB>2</SUB></B> содержит <B>R<SUB>1</SUB></B> или <B>R<SUB>1</SUB></B> содержится в <B>R<SUB>2</SUB></B> .<BR><BR> 
+<I>Обозначение:</I> <B>R<SUB>1</SUB><FONT FACE="Symbol">&#205;</FONT>R<SUB>2</SUB></B> .<BR> 
+<BR>
+Пример: <BR>
+
+<CENTER>
+<IMG SRC="image83.gif" WIDTH=203 HEIGHT=53><BR>
+
+<IMG SRC="image84.gif" WIDTH=205 HEIGHT=53><BR>
+</CENTER>
+
+Отношения <B>R<SUB>1</SUB></B> , <B>R<SUB>2</SUB></B> - отношения типа y&gt;&gt;x (y много больше x). При k<SUB>2</SUB> &gt; k<SUB>1</SUB> отношение <B>R<SUB>2</SUB></B> содержит <B>R<SUB>1</SUB></B> . 
+
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy0.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy2.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-r">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (X11; I; Linux 2.0.32 i586) [Netscape]">
+   <TITLE>FLLL - Fuzzy Control</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF">
+[&nbsp;<A HREF="fuzzy_ctrl_r.html"><IMG SRC="prev.gif" ALT="Prev" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_r.html"><IMG SRC="toc.gif" ALT="Contents" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_ctrl_r_20.html"><IMG SRC="next.gif" ALT="Next" HEIGHT=16 WIDTH=16></A>
+]
+<BR>
+<HR WIDTH="100%">
+<H1>
+Нечеткое управление</H1>
+
+<H3>
+(продолжение)</H3>
+
+<HR NOSHADE WIDTH="100%">
+
+<P>Сейчас определим несколько <I>правил</I>, которые определяют что делать
+в данной ситуации.
+
+<P>Положим, например, что мачта находится справа (угол равен нулю) и не
+двигается (угловая скорость - ноль). Очевидно, что это желаемое положение,
+и ничего предпринимать не надо (скорость равна нулю).
+<BR>Рассмотрим другой случай: мачта находится справа, как и прежде, но
+движется с <I>низкой</I> скоростью в <I>положительном&nbsp; </I>направлении.
+Естественно необходимо компенсировать движение мачты, передвигая тележку
+в том же направлении с <I>низкой&nbsp;</I> скоростью.
+
+<P>Итак, получаем два правила, которые более формально представляются в
+следующей форме:
+<UL>
+<LI>
+<TT><B>Если</B> угол равен нулю <B>И</B> угловая скорость равна нулю, <B>тогда</B>
+скорость должна быть равна нулю.</TT></LI>
+
+<LI>
+<TT><B>Если</B> угол равен нулю <B>И</B> угловая скорость положительная
+низкая, <B>тогда</B> скорость должна быть положительной низкой.</TT></LI>
+</UL>
+Сведем все полученные правила в таблицу:
+<PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; угол
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+&nbsp;&nbsp;&nbsp; скорость |&nbsp; ОВ&nbsp;&nbsp;&nbsp; ОН&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; ПН&nbsp;&nbsp;&nbsp; ПВ&nbsp;&nbsp;
+&nbsp; -----------+------------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ОВ&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ОВ
+&nbsp; угл.&nbsp; ОН&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ОН&nbsp;&nbsp;&nbsp; 0
+&nbsp; скор. 0&nbsp;&nbsp;&nbsp; |&nbsp; ОВ&nbsp;&nbsp;&nbsp; ОН&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; ПН&nbsp;&nbsp;&nbsp; ПВ
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ПН&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; ПН
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ПВ&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; НВ</TT></PRE>
+где&nbsp; ОВ - Отрицательное Высокое (большое) значение, ОН - Отрицательное
+Низкое (малое) значение, 0 - нуль и т.д.
+
+<P>На следующей странице покажем как эти правила могут применяться с конкретными
+значениями для <I>угла</I> и <I>угловой скорости.</I>
+
+<P>
+<HR>[&nbsp;<A HREF="fuzzy_ctrl_r.html"><IMG SRC="prev.gif" ALT="Prev" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_r.html"><IMG SRC="toc.gif" ALT="Contents" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_ctrl_r_20.html"><IMG SRC="next.gif" ALT="Next" HEIGHT=16 WIDTH=16></A>
+]
+</BODY>
+</HTML>

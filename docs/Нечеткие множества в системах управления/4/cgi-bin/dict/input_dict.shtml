@@ -1,0 +1,37 @@
+<HTML>
+<BODY>
+
+<P>
+<CENTER>
+<HR WIDTH="100%">
+<H2>To add some word to the dictionary:</H2>
+</CENTER>
+</P>
+
+<CENTER>
+<FORM METHOD="GET" action="input_dict.cgi">
+<P>
+<H3>Input word</H3>
+</P>
+<P>
+<INPUT TYPE="text" SIZE=40 NAME="input_word"></H3>
+</P>
+<P>
+<H3>Input translation</H3>
+<P>
+<TEXTAREA NAME="input_translation" ROWS=6 COLS=60></TEXTAREA>
+</P>
+<H2>And press this button -> <INPUT TYPE=submit VALUE=Submit> </H2>
+</FORM>
+
+</CENTER>
+</P>
+
+<P>
+<CENTER>
+<HR WIDTH="100%">
+</CENTER>
+</P>
+
+</BODY>
+</HTML>

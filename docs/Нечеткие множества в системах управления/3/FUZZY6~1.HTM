@@ -1,0 +1,489 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy5.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy7.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+<CENTER><H4>Операции над нечеткими отношениями</H4></CENTER>
+
+<U>Объединение двух отношений</U> <B><I>R<SUB>1</SUB></I></B> и <B>R<SUB>2</SUB></B>. <BR>
+
+ Объединение двух отношений обозначается <B>R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>2</SUB></B> и определяется выражением: 
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>2</SUB></SUB></B>(x,y) = 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB></SUB></B>(x,y)<B><FONT FACE="Symbol">&#218;</FONT></B>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>2</SUB></SUB></B>(x,y)
+</CENTER><BR>
+Примеры: <BR>
+<P>
+<B>1.</B> Ниже изображены отношения действительных чисел, содержательно означающие: x<B>R<SUB>1</SUB></B>y - "числа x и y очень близкие", <B>xR<SUB>2</SUB>y</B> - "числа x и y очень различны" и их объединение 
+x<B>R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>2</SUB></B>y - "числа x и y очень близкие или очень различные". <BR>
+ Функции принадлежности отношений заданы на |y-x|. 
+<IMG SRC="image86.gif" WIDTH=639 HEIGHT=221 ALIGN="ABSMIDDLE"><P>
+
+<TABLE BORDER=0>
+<TR>
+<TD VALIGN=middle> <FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>2</SUB></SUB>(x,y) =  </TD>
+<TD VALIGN=middle> <FONT FACE="Symbol">&#236;</FONT><BR><FONT FACE="Symbol">&#237;</FONT><BR><FONT FACE="Symbol">&#238;</FONT></TD>
+<TD><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB></SUB>(x,y), | y - x | <FONT FACE="Symbol">&#163;&#97;</FONT>
+<BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>2</SUB></SUB>(x,y), | y - x | &gt;<FONT FACE="Symbol">&#97;</FONT>
+</TD>
+</TR>
+</TABLE>
+
+где <B><FONT FACE="Symbol">&#97;</FONT></B> - такое |y-x|, что 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB></SUB></B>(x,y) = 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>2</SUB></SUB></B>(x,y)
+<P>
+<B>2.</B>
+<TABLE WIDTH="80%">
+<TR>
+<TD>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=4>
+	<CAPTION ALIGN=left><B>R<SUB>1</SUB></B></CAPTION>
+	<TR>
+	<TD WIDTH="25%">&nbsp;</TD>
+	<TD>y<SUB>1</SUB></TD>
+	<TD>y<SUB>2</SUB></TD>
+	<TD>y<SUB>3</SUB></TD>
+	</TR>
+	<TR>
+	<TD>x<SUB>1</SUB></TD>
+	<TD>0,1</TD>
+	<TD>0</TD>
+	<TD>0,8</TD>
+	</TR>
+	<TR>
+	<TD>x<SUB>2</SUB></TD>
+	<TD>1</TD>
+	<TD>0,7</TD>
+	<TD>0</TD>
+	</TR>
+	</TABLE>
+</TD>
+<TD>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=4>
+	<CAPTION ALIGN=left><B>R<SUB>2</SUB></B></CAPTION>
+	<TR>
+	<TD WIDTH="25%">&nbsp;</TD>
+	<TD>y<SUB>1</SUB></TD>
+	<TD>y<SUB>2</SUB></TD>
+	<TD>y<SUB>3</SUB></TD>
+	</TR>
+	<TR>
+	<TD>x<SUB>1</SUB></TD>
+	<TD>0,7</TD>
+	<TD>0,9</TD>
+	<TD>1</TD>
+	</TR>
+	<TR>
+	<TD>x<SUB>2</SUB></TD>
+	<TD>0,3</TD>
+	<TD>0,4</TD>
+	<TD>0,5</TD>
+	</TR>
+	</TABLE> 
+</TD>
+<TD>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=4>
+	<CAPTION ALIGN=left><B>R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>2</SUB></B></CAPTION>
+	<TR>
+	<TD WIDTH="25%">&nbsp;</TD>
+	<TD>y<SUB>1</SUB></TD>
+	<TD>y<SUB>2</SUB></TD>
+	<TD>y<SUB>3</SUB></TD>
+	</TR>
+	<TR>
+	<TD>x<SUB>1</SUB></TD>
+	<TD>0,7</TD>
+	<TD>0,9</TD>
+	<TD>1</TD>
+	</TR>
+	<TR>
+	<TD>x<SUB>2</SUB></TD>
+	<TD>1</TD>
+	<TD>0,7</TD>
+	<TD>0,5</TD>
+	</TR>
+	</TABLE> 
+</TD>
+</TR>
+</TABLE>
+
+<P>
+<U>Пересечение двух отношений. </U>
+<P>
+Пересечение двух отношений <B>R<SUB>1</SUB></B> и <B>R<SUB>2</SUB></B> обозначается 
+<B>R<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>2</SUB></B> и определяется выражением:
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>2</SUB></SUB></B>(x,y) = 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB></SUB></B>(x,y)<B><FONT FACE="Symbol">&#217;</FONT></B>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>2</SUB></SUB></B>(x,y)
+</CENTER>.
+<P>
+Примеры:
+<P>
+<B>1.</B> Ниже изображены отношения: x<B>R<SUB>1</SUB></B>y, означающее "модуль разности |y-x| близок к <FONT FACE="Symbol">&#97;</FONT>", x<B>R<SUB>2</SUB></B>y, означающее "модуль разности |y-x| близок к 
+<FONT FACE="Symbol">&#98;</FONT>", и их пересечение. <BR>
+<IMG SRC="image90.gif" WIDTH=591 HEIGHT=237 BORDER=0>
+
+<P>
+<U>Алгебраическое произведение двух отношений.</U>
+<P>
+Алгебраическое произведение двух отношений <B>R<SUB>1</SUB></B> и <B>R<SUB>2</SUB></B> обозначается <B>R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>R<SUB>2</SUB></B> и определяется выражением:<BR> 
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>R<SUB>2</SUB></SUB></B>(x,y) = 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>1</SUB></SUB></B>(x,y)<FONT FACE="Symbol">&#215;</FONT>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>2</SUB></SUB></B>(x,y)
+</CENTER>
+<P>
+<U>Алгебраическая сумма двух отношений.</U>
+<P>
+Алгебраическая сумма двух отношений R<SUB>1</SUB> и R<SUB>2</SUB> обозначается R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">R<SUB>2</SUB> и определяется выражением: 
+<IMG SRC="image93.gif" WIDTH=370 HEIGHT=25 ALIGN="ABSMIDDLE">.<BR>
+Для введенных операций справедливы следующие свойства дистрибутивности:<BR> 
+<DIR><DIR>
+R<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT>(R<SUB>2</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>3</SUB>) = (R<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>2</SUB> )<FONT FACE="Symbol">&#200;</FONT>(R<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>3</SUB>),<BR>
+ 
+R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>(R<SUB>2</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>3</SUB>) = (R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>2</SUB>)<FONT FACE="Symbol">&#199;</FONT>(R<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>3</SUB>), <BR>
+
+R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>(R<SUB>2</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>3</SUB>) = (R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>R<SUB>2</SUB>)<FONT FACE="Symbol">&#200;</FONT>(R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>R<SUB>3</SUB>), <BR>
+
+R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>(R<SUB>2</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>3</SUB>) = (R<SUB>1</SUB><FONT FACE="Symbol">&#215;</FONT>R<SUB>2</SUB>)<FONT FACE="Symbol">&#199;</FONT>(R<SUB>1<FONT FACE="Symbol">&#215;</FONT></SUB>R<SUB>3</SUB>), <BR>
+
+R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">(R<SUB>2</SUB><FONT FACE="Symbol">&#200;</FONT>R<SUB>3</SUB>) = (R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">R<SUB>2</SUB>)<FONT FACE="Symbol">&#200;</FONT>(R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">R<SUB>3</SUB>), <BR>
+
+R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">(R<SUB>2</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>3</SUB>) = 
+(R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">R<SUB>2</SUB>)<FONT FACE="Symbol">&#199;</FONT>
+(R<SUB>1</SUB><IMG SRC="image85.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">R<SUB>3</SUB>). <BR>
+</DIR></DIR>
+
+<P>
+<U>Дополнение отношения. </U>
+<P>
+Дополнение отношения <B>R</B> обозначается <IMG SRC="image95.gif" WIDTH=11 HEIGHT=12 ALIGN="ABSMIDDLE"> и определяется функцией принадлежности: <BR>
+<CENTER><IMG SRC="image96.gif" WIDTH=18 HEIGHT=13 ALIGN="ABSMIDDLE">(x,y) = 1 - <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x,y)</CENTER>. 
+
+<P>
+<U>Дизъюнктивная сумма двух отношений. </U>
+<P>
+Дизъюнктивная сумма двух отношений <B>R<SUB>1</SUB></B> и <B>R<SUB>2</SUB></B> обозначается 
+<B>R<FONT FACE="Symbol">&#197;</FONT>R</B> и определяется выражением:<BR> 
+
+<B>R<SUB>1</SUB><FONT FACE="Symbol">&#197;</FONT>R<SUB>2</SUB> = 
+(R<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT><IMG SRC="image97.gif" WIDTH=11 HEIGHT=13 ALIGN="ABSMIDDLE"><SUB>2</SUB>)<FONT FACE="Symbol">&#200;</FONT>(<IMG SRC="image97.gif" WIDTH=11 HEIGHT=13 ALIGN="ABSMIDDLE"><SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT>R<SUB>2</SUB>)</B> .
+
+<P>
+<U>Обычное отношение, ближайшее к нечеткому. </U>
+<P>
+Пусть <B>R</B> - нечеткое отношение с функцией принадлежности 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x,y). Обычное отношение, ближайшее к нечеткому, обозначается <U>R</U> и определяется выражением:<BR> 
+
+<IMG SRC="image98.gif" WIDTH=334 HEIGHT=74><BR>
+По договоренности принимают <B><FONT FACE="Symbol">&#109;</FONT><U><SUB>R</U></SUB></B>(x,y)=0 при <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(x,y) = 0,5.<BR> 
+
+<P>
+<U>Проекции нечеткого отношения. </U>
+<P>
+Пусть <B>R</B> - нечеткое отношение <B>R</B>: (x,y)<FONT FACE="Symbol">&#174;</FONT>[0,1]. Первой проекцией <IMG SRC="image99.gif" WIDTH=14 HEIGHT=16 ALIGN="ABSMIDDLE"> отношения <B>R</B> (проекция на <B>X</B>) называется нечеткое множество <IMG SRC="image99.gif" WIDTH=14 HEIGHT=16 ALIGN="ABSMIDDLE">, заданное на множестве <B>X</B>, с функцией принадлежности:<BR> 
+<CENTER><IMG SRC="image101.gif" WIDTH=130 HEIGHT=26 ALIGN="ABSMIDDLE">.</CENTER>
+
+Аналогично, второй проекцией <IMG SRC="image102.gif" WIDTH=13 HEIGHT=15 ALIGN="ABSMIDDLE"> (проекцией на <B>Y</B>) называется нечеткое множество <IMG SRC="image102.gif" WIDTH=13 HEIGHT=15 ALIGN="ABSMIDDLE">, заданное на множестве <B>Y</B>, с функцией принадлежности: <BR>
+
+<CENTER><IMG SRC="image103.gif" WIDTH=130 HEIGHT=23 ALIGN="ABSMIDDLE">.</CENTER>
+
+Величина h(R) = <IMG SRC="image104.gif" WIDTH=135 HEIGHT=29 ALIGN="ABSMIDDLE"> называется глобальной проекцией отношения <B>R</B>. Если h(R)=1, то отношение <B>R</B> нормально, в противном случае - субнормально. 
+<P>
+<U>Пример:</U> 
+<P>
+
+<TABLE>
+<TR>
+<TD><B>R</B> = </TD>
+<TD>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH="100%">
+	<TR>
+	<TH>&nbsp;</TH>
+	<TH><I>y</I><SUB>1</SUB></TH><TH><I>y</I><SUB>2</SUB></TH><TH><I>y</I><SUB>3</SUB></TH><TH><I>y</I><SUB>4</SUB></TH><TH><I>y</I><SUB>5</SUB></TH>
+	</TR>
+	<TR>
+	<TD><I>x</I><SUB>1</SUB></TD><TD>0,1</TD>	<TD>0,2</TD><TD>1</TD><TD>0,3</TD><TD>0,9</TD>
+	</TR>
+	<TR>
+	<TD><I>x</I><SUB>2</SUB></TD><TD>0,9</TD>	<TD>0,1</TD><TD>0,5</TD><TD>0,8</TD><TD>0,5</TD>
+	</TR>
+	<TR>
+	<TD><I>x</I><SUB>3</SUB></TD><TD>0,4</TD>	<TD>0</TD><TD>0,6</TD><TD>1</TD><TD>0,3</TD>
+	</TR>
+	</TABLE>
+
+</TD>
+<TD> </TD>
+<TD ALIGN=center VALIGN=bottom>1-я проекция<BR><BR>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7>
+
+	<TR><TD>1</TD></TR>
+	<TR><TD> 0,9</TD></TR>
+	<TR><TD> 1</TD></TR>
+	</TABLE>
+</TD>
+<TD> = <B>R</B><SUB>1'</SUB> </TD>
+</TR>
+<TR>
+<TD>&nbsp; </TD><TD>&nbsp; </TD><TD>&nbsp; </TD><TD> &nbsp;</TD><TD> &nbsp;</TD>
+</TR>
+
+<TR>
+<TD><B>R</B><SUB>2</SUB>' =  </TD>
+<TD>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH="100%">
+	<TR>
+	<TD>&nbsp; </TD><TD>0,9</TD><TD>0,2</TD><TD>1</TD><TD>1</TD><TD>0,9</TD>
+	</TR>
+	</TABLE>
+
+</TD>
+<TD>&nbsp; </TD>
+<TD ALIGN=center>
+	<TABLE  BORDER CELLSPACING=1 CELLPADDING=7>
+	<TR>
+	<TD>1</TD>
+	</TR>
+	</TABLE>
+</TD>
+<TD> = h(R) </TD>
+</TR>
+<TR><TD COLSPAN=4  ALIGN=center>2-я проекция</TD>
+<TD>&nbsp;</TD></TR>
+</TABLE>
+
+<P>
+<U>Цилиндрические продолжения проекций нечеткого отношения</U>
+<P>
+Проекции <B>R<SUB>1<FONT FACE="Symbol">&#162;</FONT></SUB></B> и R<B><SUB>2<FONT FACE="Symbol">&#162;</FONT></SUB></B> нечеткого отношения <B>XRY</B> в свою очередь определяют в <B>X<FONT FACE="Symbol">&#180;</FONT>Y</B> нечеткие отношения <IMG SRC="image105.gif" WIDTH=20 HEIGHT=20 ALIGN="ABSMIDDLE"> и <IMG SRC="image106.gif" WIDTH=23 HEIGHT=23 ALIGN="ABSMIDDLE"> с функциями принадлежности: 
+<P> 
+<CENTER>
+<IMG SRC="image107.gif" WIDTH=26 HEIGHT=20 ALIGN="ABSMIDDLE">(<I>x,y</I>)=<IMG SRC="image108.gif" WIDTH=24 HEIGHT=19 ALIGN="ABSMIDDLE">(<I>x</I>) при любом  <I>y</I>,  
+<IMG SRC="image109.gif" WIDTH=26 HEIGHT=23 ALIGN="ABSMIDDLE">(<I>x,y</I>)=<IMG SRC="image110.gif" WIDTH=25 HEIGHT=19 ALIGN="ABSMIDDLE">(<I>y</I>) при любом <I>x</I>,
+ </CENTER>
+
+<P>
+называемые, соответственно, <B><I>цилиндрическим продолжением</I> R<SUB>1</SUB>'</B> и <B><I>цилиндрическим продолжением</I> R<SUB>2</SUB>'</B>. 
+<P>
+<I><U>Замечание.</I></U> Очевидно, что для любых нечетких подмножеств <B>А</B> и <B>В</B>, определенных, соответственно, на <B>X</B> и <B>Y</B>, можно построить их цилиндрические продолжения <B>А</B> и <B>В</B>. <BR>
+
+<U>Пример (продолжение):</U> 
+<P>Имеем: <BR>
+
+<TABLE>
+<TR>
+<TD VALIGN=middle><B>R<SUB>1</SUB>'</B> = </TD>
+<TD VALIGN=top>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7>
+	<TR>
+	<TH>&nbsp;</TH>
+	<TH>&nbsp;</TH>
+	</TR>
+	<TR>
+	<TD><B><I>x</I><SUB>1</SUB></B></TD>
+	<TD>1</TD>
+	</TR>
+	<TR>
+	<TD><B><I>x</I><SUB>2</SUB></B></TD>
+	<TD>0,9</TD>
+	</TR>
+	<TR>
+	<TD><B><I>x</I><SUB>3</SUB></B></TD>
+	<TD>1</TD>
+	</TR>
+	</TABLE>
+</TD>
+<TD>&nbsp; </TD>
+<TD VALIGN=middle><IMG SRC="image105.gif" WIDTH=20 HEIGHT=20> = </TD>
+<TD VALIGN=top> 
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7>
+	<TR>
+	<TH>&nbsp;</TH>
+	<TH><I>y</I><SUB>1</SUB></TH>
+	<TH><I>y</I><SUB>2</SUB></TH>
+	<TH><I>y</I><SUB>3</SUB></TH>
+	<TH><I>y</I><SUB>4</SUB></TH>
+	<TH><I>y</I><SUB>5</SUB></TH>
+	</TR>
+	<TR>
+	<TD><B><I>x</I><SUB>1</SUB></B></TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	</TR>
+	<TR>
+	<TD><B><I>x</I><SUB>2</SUB></B></TD>
+	<TD>0,9</TD>
+	<TD>0,9</TD>
+	<TD>0,9</TD>
+	<TD>0,9</TD>
+	<TD>0,9</TD>
+	</TR>
+	<TR>
+	<TD><B><I>x</I><SUB>3</SUB></B></TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	</TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<P>и
+<P>
+
+<TABLE>
+<TR>
+<TD><B>R<SUB>2</SUB>'</B> = </TD>
+<TD VALIGN=top>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH="100%">
+	<TR>
+	<TH>&nbsp;&nbsp;&nbsp; </TH>
+	<TH><I>y</I><SUB>1</SUB></TH>
+	<TH><I>y</I><SUB>2</SUB></TH>
+	<TH><I>y</I><SUB>3</SUB></TH>
+	<TH><I>y</I><SUB>4</SUB></TH>
+	<TH><I>y</I><SUB>5</SUB></TH>
+	</TR>
+	<TR>
+	<TD>&nbsp; </TD>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>0,9</TD>
+	</TR>
+	</TABLE>
+</TD>
+
+<TD>&nbsp;&nbsp;&nbsp;<IMG SRC="image106.gif" WIDTH=20 HEIGHT=23> = </TD>
+<TD VALIGN=top>
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH="100%">
+	<TR>
+	<TH><I>x</I><SUB>1</SUB></TH>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>0,9</TD>
+	</TR>
+	<TR>
+	<TH><I>x</I><SUB>2</SUB></TH>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>0,9</TD>
+	</TR>
+	<TR>
+	<TH><I>x</I><SUB>3</SUB></TH>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>0,9</TD>
+	</TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+<U>Сепарабельность отношений </U>
+<P>Нечеткое отношение <B>XRY</B> называется сепарабeльным, если оно равно пересечению цилиндрических продолжений своих проекций, т.е. если <B>R</B> = <IMG SRC="image105.gif" WIDTH=20 HEIGHT=20 ALIGN="ABSMIDDLE"><B><FONT FACE="Symbol">&#199;</FONT></B>
+<IMG SRC="image106.gif" WIDTH=20 HEIGHT=23 ALIGN="ABSMIDDLE"> , т.е. <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B> (<I>x,y</I>) = <IMG SRC="image108.gif" WIDTH=24 HEIGHT=19 ALIGN="ABSMIDDLE">(<I>x</I>)<B><FONT FACE="Symbol">&#199;</FONT></B>
+<IMG SRC="image110.gif" WIDTH=25 HEIGHT=19 ALIGN="ABSMIDDLE">(<I>y</I>). <BR>
+<I><U>Замечание.</U></I> Если определено декартово произведение нечетких множеств (выше оно введено), то, очевидно, нечеткое отношение <B>XRY</B> сепарабельно, если оно является декартовым произведением своих проекций, т.е. <B>R = R<SUB>1</SUB>'<FONT FACE="Symbol">&#180;</FONT>R<SUB>2</SUB>'</B>. <BR>
+<P> 
+<U>Пример (продолжение):</U> <BR>
+<P> 
+
+
+<TABLE>
+<TR>
+<TD><IMG SRC="image105.gif" WIDTH=20 HEIGHT=20 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#199;</FONT>
+<IMG SRC="image106.gif" WIDTH=20 HEIGHT=23 ALIGN="ABSMIDDLE"> = </TD>
+<TD> 
+	<TABLE BORDER CELLSPACING=1 CELLPADDING=7>
+	<TR>
+	<TD>&nbsp;</TD>
+	<TH><I>y</I><SUB>1</SUB></TH>
+	<TH><I>y</I><SUB>2</SUB></TH>
+	<TH><I>y</I><SUB>3</SUB></TH>
+	<TH><I>y</I><SUB>4</SUB></TH>
+	<TH><I>y</I><SUB>5</SUB></TH>
+	</TR>
+	<TR>
+	<TH><I>x</I><SUB>1</SUB></TH>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>0,9</TD>
+	</TR>
+	<TR>
+	<TH><I>x</I><SUB>2</SUB></TH>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>0,9</TD>
+	<TD>0,9</TD>
+	<TD>0,9</TD>
+	</TR>
+	<TR>
+	<TH><I>x</I><SUB>3</SUB></TH>
+	<TD>0,9</TD>
+	<TD>0,2</TD>
+	<TD>1</TD>
+	<TD>1</TD>
+	<TD>0,9</TD>
+	</TR>
+	</TABLE>
+</TD>
+<TD><FONT FACE="Symbol">&#185;</FONT> <B>R</B>,</TD>
+</TR>
+</TABLE>
+
+т.е. исходное отношение <B>R</B> несепарабельно.
+
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy5.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy7.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+
+</BODY>
+</HTML>

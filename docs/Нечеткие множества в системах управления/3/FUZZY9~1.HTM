@@ -1,0 +1,215 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy8.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy10.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+<CENTER><H3>3. НЕЧЕТКАЯ И ЛИНГВИСТИЧЕСКАЯ ПЕРЕМЕННЫЕ</H3></CENTER>
+ 
+<P>Понятие нечеткой и лингвистической переменных используется при описании объектов и явлений с помощью нечетких множеств. <BR>
+<B><I>Нечеткая переменная</B></I> характеризуется тройкой &lt;<FONT FACE="Symbol">&#97;</FONT>, X, A&gt;, где <DIR>
+<FONT FACE="Symbol">&#97;</FONT> - наименование переменной, <BR>
+X - универсальное множество (область определения <FONT FACE="Symbol">&#97;</FONT>), <BR>
+A - нечеткое множество на X, описывающее ограничения (т.е. <FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB>(<I>x</I>)) на значения нечеткой переменной <FONT FACE="Symbol">&#97;</FONT>. 
+</DIR>
+
+<B><I>Лингвистической переменной</B></I> называется набор &lt;<FONT FACE="Symbol">&#98;</FONT>
+,T,X,G,M&gt;, где 
+<DIR>
+
+<FONT FACE="Symbol">&#98;</FONT> - наименование лингвистической переменной; <BR>
+Т - множество ее значений (терм-множество), представляющих собой наименования нечетких переменных, областью определения каждой из которых является множество X. Множество T называется базовым терм-множеством лингвистической переменной; <BR>
+G - синтаксическая процедура, позволяющая оперировать элементами терм-множества T, в частности, генерировать новые термы (значения). Множество T<FONT FACE="Symbol">&#200;</FONT>
+G(T), где G(T) - множество сгенерированных термов, называется расширенным терм-множеством лингвистической переменной; <BR>
+М - семантическая процедура, позволяющая превратить каждое новое значение лингвистической переменной, образуемое процедурой G, в нечеткую переменную, т.е. сформировать соответствующее нечеткое множество. 
+</DIR>
+
+<I><U>Замечание.</I></U> Чтобы избежать большого количества символов 
+
+<UL>
+<LI>символ <FONT FACE="Symbol">&#98;</FONT> используют как для названия самой переменной, так и для всех ее значений;
+<LI>пользуются одним и тем же символом для обозначения нечеткого множества и его названия, например терм "<I>молодой</I>", являющийся значением лингвистической переменной <FONT FACE="Symbol">&#98;</FONT>
+= "<I>возраст</I>", одновременно есть и нечеткое множество М ("<I>молодой</I>").
+</UL>
+
+Присвоение нескольких значений символам предполагает, что контекст позволяет разрешить возможные неопределенности. <BR>
+<U>Пример: </U>Пусть эксперт определяет толщину выпускаемого изделия с помощью понятий "<I>малая толщина</I>", "<I>средняя толщина</I>" и "<I>большая толщина</I>", при этом минимальная толщина равна 10 мм, а максимальная - 80 мм. <BR>
+Формализация такого описания может быть проведена с помощью следующей лингвистической переменной &lt;<FONT FACE="Symbol">&#98;</FONT>, T, X, G, M&gt;, где 
+<DIR>
+<DIR>
+
+<FONT FACE="Symbol">&#98;</FONT> - толщина изделия; <BR>
+T - {"<I>малая толщина</I>", "<I>средняя толщина</I>", "<I>большая толщина</I>"}; <BR>
+X - [10, 80];<BR> 
+G - процедура образования новых термов с помощью связок "<I>и</I>", "<I>или</I>" и модификаторов типа "<I>очень</I>", "<I>не</I>", "<I>слегка</I>" и др. Например: "<I>малая или средняя толщина</I>", <I>"очень малая толщина</I>" и др.; <BR>
+М - процедура задания на X = [10, 80] нечетких подмножеств А<SUB>1</SUB>="<I>малая толщина</I>", А<SUB>2</SUB><I> = "средняя толщина</I>", А<SUB>3</SUB>="<I>большая толщина</I>", а также нечетких множеств для термов из G(T) в соответствии с правилами трансляции нечетких связок и модификаторов "<I>и</I>", "<I>или</I>", "<I>не</I>", "<I>очень</I>", "<I>слегка</I>" и др. операции над нечеткими множествами вида: А <FONT FACE="Symbol">&#199;</FONT> В, А<FONT FACE="Symbol">&#200;</FONT> В, <IMG SRC="image206.gif" WIDTH=19 HEIGHT=22  ALIGN="ABSMIDDLE">, CON А = А<SUP>2</SUP> , DIL А = А<SUP>0,5</SUP> и др. 
+</DIR>
+</DIR>
+
+<I><U>Замечание.</I></U> Наряду с рассмотренными выше базовыми значениями лингвистической переменной "<I>толщина</I>" (Т={"<I>малая толщина</I>", "<I>средняя толщина</I>", "<I>большая толщина</I>"}) возможны значения, зависящие от области определения Х. В данном случае значения лингвистической переменной "толщина изделия" могут быть определены как "<I>около 20 мм</I>", "<I>около 50 мм</I>", "<I>около 70 мм</I>", т.е. в виде <I>нечетких чисел</I>. 
+<BR>
+<U>Продолжение примера:</U> <BR>
+<IMG SRC="image207.gif" WIDTH=492 HEIGHT=122 ALIGN="ABSMIDDLE"><BR>
+Функции принадлежности нечетких множеств:<BR>
+<I>"малая толщина"</I> = А<SUB>1</SUB> , "<I>средняя толщина</I>"= А<SUB>2</SUB>, "<I> большая толщина</I>"= А<SUB>3</SUB> . <BR>
+<IMG SRC="image208.gif" WIDTH=485 HEIGHT=125 ALIGN="ABSMIDDLE"><BR>
+Функция принадлежности:<BR>
+нечеткое множество "<I>малая или средняя толщина</I>" = А<SUB>1</SUB><FONT FACE="Symbol">&#200;</FONT>А<SUB>1</SUB>. 
+
+<CENTER>
+<H4><U>Нечеткие числа</U></H4>
+</CENTER> 
+<P>
+<B><I>Нечеткие числа</B></I> - нечеткие переменные, определенные на числовой оси, т.е. нечеткое число определяется как нечеткое множество А на множестве действительных чисел R с функцией принадлежности <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#206;</FONT>[0,1], где <I>x</I> - действительное число, т.е. <I>x<FONT FACE="Symbol">&#206;</FONT></I>R. <BR>
+Нечеткое число А <B><I>нормально</B></I>, если <IMG SRC="image209.gif" WIDTH=34 HEIGHT=20 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)=1, <B><I>выпуклое</B></I>, если для любых x<FONT FACE="Symbol">&#163;</FONT>y<FONT FACE="Symbol">&#163;</FONT>z выполняется <BR>
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>y</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>z</I>).</B>
+</CENTER> <BR>
+<B><I>Множество <FONT FACE="Symbol">&#97;</FONT> - уровня</B></I> нечеткого числа А определяется как <BR>
+<CENTER>
+<B>А<FONT FACE="Symbol">&#97;</FONT> = {<I>x</I>/<FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#97;</FONT>}.</B>
+</CENTER> <BR>
+Подмножество S<SUB>A</SUB><FONT FACE="Symbol">&#204;</FONT>R называется <B><I>носителем</B></I> нечеткого числа А, если <BR>
+<CENTER>
+<B>S = {<I>x</I>/<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)&gt;0}.</B>
+</CENTER> <BR>
+Нечеткое число А <I><B>унимодально</B></I>, если условие <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) = 1 справедливо только для одной точки действительной оси. <BR>
+Выпуклое нечеткое число А называется <B><I>нечетким нулем</B></I>, если 
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(0) = <IMG SRC="image210.gif" WIDTH=28 HEIGHT=20 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)).</B>
+</CENTER> <BR>
+Нечеткое число А <B><I>положительно</B></I>, если <FONT FACE="Symbol">&#34;</FONT><I>x<FONT FACE="Symbol">&#206;</FONT></I>S<SUB>A</SUB>, <I>x</I>&gt;0 <BR>
+и <B><I>отрицательно</B></I>, если <FONT FACE="Symbol">&#34;</FONT><I>x<FONT FACE="Symbol">&#206;</FONT></I>S<SUB>A</SUB>, <I>x</I>&lt;0. 
+
+<CENTER>
+<H4><U>Операции над нечеткими числами</U></H4>
+</CENTER>
+
+Расширенные бинарные арифметические операции (сложение, умножение и пр.) для нечетких чисел определяются через соответствующие операции для четких чисел с использованием принципа обобщения следующим образом. <BR>
+Пусть А и В - нечеткие числа, и <IMG SRC="image211.gif" WIDTH=14 HEIGHT=20 ALIGN="ABSMIDDLE"> - нечеткая операция, соответствующая операции <IMG SRC="image212.gif" WIDTH=13 HEIGHT=14 ALIGN="ABSMIDDLE"> над обычными числами. Тогда <BR>
+<CENTER><B>
+С = А<IMG SRC="image211.gif" WIDTH=14 HEIGHT=20 ALIGN="ABSMIDDLE">B <FONT FACE="Symbol">&#219;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image213.gif" WIDTH=53 HEIGHT=35 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))).</B>
+</CENTER> <BR>
+Отсюда: <BR>
+<CENTER><B>
+ С =<IMG SRC="image214.gif" WIDTH=37 HEIGHT=16 ALIGN="ABSMIDDLE"> <FONT FACE="Symbol">&#219;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image215.gif" WIDTH=55 HEIGHT=35 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))),<BR><BR>
+С = <IMG SRC="image216.gif" WIDTH=39 HEIGHT=12 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#219;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image217.gif" WIDTH=50 HEIGHT=34 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))),<BR><BR>
+С = <IMG SRC="image218.gif" WIDTH=35 HEIGHT=13 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#219;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image219.gif" WIDTH=46 HEIGHT=34 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT>
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))), <BR><BR>
+С = <IMG SRC="image220.gif" WIDTH=37 HEIGHT=15 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#219;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image221.gif" WIDTH=61 HEIGHT=34 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))), <BR><BR>
+С = <IMG SRC="image222.gif" WIDTH=90 HEIGHT=25 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#219;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image223.gif" WIDTH=100 HEIGHT=39 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))),<BR><BR>
+С = <IMG SRC="image224.gif" WIDTH=90 HEIGHT=29 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#219;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>(<I>z</I>)=<IMG SRC="image225.gif" WIDTH=99 HEIGHT=47 ALIGN="ABSMIDDLE">(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>))).</B>
+<P>
+
+<H4><U>Нечеткие числа (L-R)-типа</U></H4></CENTER>
+
+Нечеткие числа (L-R)-типа - это разновидность нечетких чисел специального вида, т.е. задаваемых по определенным правилам с целью снижения объема вычислений при операциях над ними. <BR>
+Функции принадлежности нечетких чисел (L-R)-типа задаются с помощью невозрастающих на множестве неотрицательных действительных чисел функций действительного переменного L(<I>x</I>) и R(<I>x</I>), удовлетворяющих свойствам:<BR>
+а) L(-<I>x</I>)=L(<I>x</I>), R(-<I>x</I>)=R(<I>x</I>);<BR>
+б) L(0)=R(0).<BR>
+Очевидно, что к классу (L-R) функций относятся функции, графики которых имеют следующий вид:<BR>
+<IMG SRC="image226.gif" WIDTH=467 HEIGHT=212 ALIGN="ABSMIDDLE"> <BR>
+Примерами аналитического задания (L-R) функций могут быть <BR>
+<CENTER>
+L(<I>x</I>) = <IMG SRC="image227.gif" WIDTH=43HEIGHT=27 ALIGN="ABSMIDDLE">, <I>p<FONT FACE="Symbol">&#179;</FONT></I>0; <BR>
+R(<I>x</I>)= <IMG SRC="image228.gif" WIDTH=67 HEIGHT=55 ALIGN="ABSMIDDLE">, p<FONT FACE="Symbol">&#179;</FONT>
+0 и т.д.
+</CENTER> <BR>
+Пусть L(<I>y</I>) и R(<I>y</I>) - функции (L-R)-типа (конкретные). Унимодальное нечеткое число А с <B><I>модой</B></I> <I>а</I> (т.е. <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>a</I>)=1) c помощью L(<I>y</I>) и R(<I>y</I>) задается следующим образом: <BR>
+<CENTER>
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) = <IMG SRC="image229.gif" WIDTH=153 HEIGHT=93 ALIGN="ABSMIDDLE"></CENTER><BR>
+где <I>а</I> - мода; <FONT FACE="Symbol">&#97;</FONT>&gt;0, <FONT FACE="Symbol">&#98;</FONT>&gt;0 - левый и правый коэффициенты нечеткости. <BR>
+Таким образом, при заданных L(<I>y</I>) и R(<I>y</I>) нечеткое число (унимодальное) задается тройкой А = (<I>а</I>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>). <BR>
+Толерантное нечеткое число задается, соответственно, четверкой параметров А=(<I>а</I><SUB>1</SUB><I>, a</I><SUB>2</SUB>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>), где<I> а</I><SUB>1</SUB> и <I>a</I><SUB>2</SUB> - границы толерантности, т.е. в промежутке [<I>а</I><SUB>1</SUB><I>,a</I><SUB>2</SUB>] значение функции принадлежности равно 1. <BR>
+Примеры графиков функций принадлежности нечетких чисел (L-R)-типа приведены ниже. <BR>
+<IMG SRC="image230.gif" WIDTH=534 HEIGHT=208> <BR>
+Мы не будем здесь рассматривать операции над (L-R) числами; отметим, что в конкретных ситуациях функции L(<I>y</I>), R(<I>y</I>), а также параметры <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>
+ нечетких чисел (<I>а</I>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>) и (<I>а</I><SUB>1</SUB><I>, a</I><SUB>2</SUB>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>
+) должны подбираться таким образом, чтобы результат операции (сложения, вычитания, деления и т.д.) был точно или приблизительно равен нечеткому числу с теми же L(<I>y</I>) и R(<I>y</I>), а параметры <FONT FACE="Symbol">&#97;</FONT><FONT FACE="Symbol">&#162;</FONT> и <FONT FACE="Symbol">&#98;</FONT><FONT FACE="Symbol">&#162;</FONT> результата не выходили за рамки ограничений на эти параметры для исходных нечетких чисел, особенно если результат в дальнейшем будет участвовать в операциях. 
+<P>
+<I><U>Замечание.</I></U> Решение задач математического моделирования сложных систем с применением аппарата нечетких множеств требует выполнения большого объема операций над разного рода лингвистическими и другими нечеткими переменными. Для удобства исполнения операций, а также для ввода-вывода и хранения данных, желательно работать с функциями принадлежности стандартного вида. 
+
+<P>
+Нечеткие множества, которыми приходится оперировать в большинстве задач, являются, как правило, унимодальными и нормальными. Одним из возможных методов аппроксимации унимодальных нечетких множеств является аппроксимация с помощью функций (L-R)-типа. <BR>
+
+<U>Примеры</U> (L-R)-представлений некоторых лингвистических переменных: <BR>
+<BR>
+<CENTER><TABLE BORDER CELLPADDING=7>
+<TR>
+<TH>Терм ЛП</TH>
+<TH>(L-R)-представление</TH>
+<TH>Графическое представление</TH>
+</TR>
+<TR>
+<TD><I>Средний</I></TD>
+<TD>А = (<I>а</I>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>)<SUB>LR</SUB> <BR>
+<FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#98;</FONT>&gt;0</TD>
+<TD><FONT FACE="Symbol">&#97;</FONT> <FONT FACE="Symbol">&#98;</FONT></TD>
+</TR>
+<TR>
+<TD><I>Малый</I></TD>
+<TD>А = (<I>а</I>, <FONT FACE="Symbol">&#165;</FONT>, <FONT FACE="Symbol">&#98;</FONT>)<SUB>LR</SUB> <BR>
+<FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#165;</FONT>
+</TD>
+<TD><FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#165;</FONT> <FONT FACE="Symbol">&#98;</FONT></TD>
+</TR>
+<TR>
+<TD><I>Большой</I></TD>
+<TD>А = (<I>а</I>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#165;</FONT>)<SUB>LR</SUB> <BR>
+<FONT FACE="Symbol">&#98;</FONT>=<FONT FACE="Symbol">&#165;</FONT></TD>
+<TD><FONT FACE="Symbol">&#97;</FONT> <FONT FACE="Symbol">&#98;</FONT> = <FONT FACE="Symbol">&#165;</FONT></TD>
+</TR>
+<TR>
+<TD><I>Приблизительно в диапазоне</I></TD>
+<TD>А = (<I>а</I><SUB>1</SUB>, <I>а</I><SUB>2</SUB>, <FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#165;</FONT>)<SUB>LR</SUB> <BR>
+<FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#98;</FONT>&gt;0</TD>
+<TD ><FONT FACE="Symbol">&#97;</FONT> <FONT FACE="Symbol">&#98;</FONT><BR>
+a<SUB>1</SUB> a<SUB>2</SUB></TD>
+</TR>
+<TR>
+<TD><I>Определенный</I></TD>
+<TD>А = (<I>а</I>, 0, 0)<SUB>LR</SUB> <BR>
+<FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#98;</FONT> = 0</TD>
+<TD ><FONT FACE="Symbol">&#97;</FONT> = 0 <FONT FACE="Symbol">&#98;</FONT> = 0</TD>
+</TR>
+<TR>
+<TD><I>Разнообразный <BR>
+зона полной неопределенности</I></TD>
+<TD> А = (<I>а</I>, <FONT FACE="Symbol">&#165;</FONT>, <FONT FACE="Symbol">&#165;</FONT>)<SUB>LR</SUB><BR>
+<FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#98;</FONT> = <FONT FACE="Symbol">&#165;</FONT></TD>
+<TD ><FONT FACE="Symbol">&#97;</FONT> = <FONT FACE="Symbol">&#98;</FONT> = <FONT FACE="Symbol">&#165;</FONT> </TD>
+</TR>
+</TABLE>
+</CENTER>
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy8.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy10.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+</BODY>
+</HTML>

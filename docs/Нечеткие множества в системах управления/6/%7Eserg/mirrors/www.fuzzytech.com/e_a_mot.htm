@@ -1,0 +1,338 @@
+<!doctype html public "-//ietf//dtd html//en">
+<html>
+
+<head>
+<meta http-equiv="content-type"
+content="text/html; charset=iso-8859-1">
+<meta name="generator" content="microsoft frontpage 2.0">
+<title>fuzzyTECH Apps Paper: fuzzyTECH on Motorola 68HC12 MCU </title>
+</head>
+
+<body bgcolor="#c0c0c0">
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+    <tr>
+        <td bgcolor="#000080"><font color="#00ffff" size="5"
+        face="arial"><b><i>fuzzy</i></b><b>TECH Application Paper</b></font>
+        </td>
+        <td align="center" bgcolor="#ffff00"><a href="index.htm"><img
+        src="home.gif" alt="go back to home page" width="21"
+        height="21"></a><a href="e_ap_lst.htm#212"><img
+        src="previous.gif" alt="go to application papers page"
+        width="21" height="21"></a> </td>
+    </tr>
+</table>
+
+<p><font size="5" face="arial"><b>Demonstration Model of </b><b><i>fuzzy</i></b><b>TECH
+Implementation on Motorola 68HC12 MCU</b></font><font size="2"
+face="arial"> </font></p>
+
+<hr>
+
+<p><font size="2" face="arial"><i>by Philip Drake and Jim
+Sibigtroth of Motorola AMCU Division, Austin, plus Constantin von
+Altrock and Ralph Konigbauer of Inform Software Corp., Chicago
+(8/96)</i> </font></p>
+
+<p><font size="2" face="arial">Citation Reference: The Fuzzy
+Logic Application Note series is published by Inform Software
+Corporation on its Internet server to promote the use of fuzzy
+logic technologies in applications.</font></p>
+
+<hr>
+
+<p><font size="2" face="arial"><em>This paper presents a
+demonstration model that demonstrates the usage of fuzzy logic on
+a Motorola microcontroller (MCU). The 68HC12 MCU was introduced
+in Q3/1996 by Motorola as a successor to the 68HC11 MCU, one of
+the most widely used microcontrollers in the world. The HC12 has
+been enhanced in a number of ways over the HC11 and is the
+world's first standard MCU that includes a complete fuzzy logic
+instruction set. The &quot;background debug mode&quot; of the
+HC12 supports the real-time remote cross debugging (RTRCD)
+without interfering with the MCU's operation. To support systems
+design, Inform Software Corp. and Motorola created the fuzzyTECH
+MCU-HC12 Edition, which supports both the HC12's fuzzy logic
+instruction set and the HC12 background debug mode. To
+demonstrate both the usage of the fuzzy logic instruction set and
+the use of the background debug mode with the fuzzyTECH
+development system, Inform and Motorola have designed an
+autonomously guided tank as a demonstration model. This paper
+discusses the tank's fuzzy logic controller design, as well as
+the fuzzyTECH implementation on the HC12 MCU.</em></font></p>
+
+<h2><font size="4" face="arial">1. Motorola 68HC12 MCU </font></h2>
+
+<p><font size="2" face="arial">This new 16-bit microcontroller
+family includes four fuzzy logic instructions in addition to the
+memory and on-chip peripheral functions you would expect in a
+general purpose microcontroller. The fuzzy logic instructions use
+existing CPU logic to perform computations including addition,
+subtraction, multiplication, multiply-and-accumulate, and
+comparisons, so the speed and efficiency of fuzzy logic programs
+is greatly improved without increasing the cost of the MCU. A
+fuzzy inference kernel on the HC12 takes 1/5 as much code space
+and executes more than 10 times faster compared to an HC11
+general purpose MCU.</font></p>
+
+<p><font size="2" face="arial">The MEM instruction computes one
+fuzzy input based on a trapezoidal membership function in 625 ns.
+This instruction automatically stores the computed result and
+updates two pointers so several membership functions can be
+evaluated without executing any other instructions between labels
+of a system input. REV performs unweighted min-max rule
+evaluation on a complete rule list for a fuzzy logic system. REVW
+optionally allows the user to specify a per-rule weighting factor
+between zero and one. Since rule lists may include any number of
+rules, these instructions allow interrupts. </font></p>
+
+<p><font size="2" face="arial">WAV computes a sum-of-products and
+a sum-of-weights needed for weighted average defuzzification.
+These sums are left in the correct CPU registers so that an EDIV
+instruction immediately after WAV completes the final divide to
+get the weighted average result. Since WAV processes all labels
+of a system output, it is designed to allow interrupts. The new
+background debug interface uses a single dedicated MCU pin for
+bi-directional communication. Memory can be read or written while
+the MCU is executing an application program. The CPU can also be
+stopped to allow access to CPU registers and for TRACE and GO
+commands. </font></p>
+
+<h2><font size="4" face="arial">2. <i>fuzzy</i>TECH MCU-HC12
+Edition </font></h2>
+
+<p><font size="2" face="arial"><i>fuzzy</i>TECH is a family of
+complete software development systems based on fuzzy logic and
+NeuroFuzzy technologies [1]. For MCU implementations, <i>fuzzy</i>TECH
+offers assembly code generation to ensure maximum computational
+performance using as little memory resources as possible.</font></p>
+
+<p><font size="2" face="arial"><img src="fuzzytc.gif" width="820"
+height="319"> </font></p>
+
+<p><font size="2" face="arial"><i>Figure </i></font><a
+name="f_ft"><font size="2" face="arial"><i>1: The fuzzyTECH
+MCU-HC12 Edition is a Complete Graphical Development and
+Debugging Environment</i></font></a></p>
+
+<p><font size="2" face="arial">The <i>fuzzy</i>TECH MCU-HC12
+Edition is a version of <i>fuzzy</i>TECH dedicated to the
+Motorola 68HC12 family of microcontrollers. In close cooperation
+with Motorola, Inform's fuzzy logic experts have generated a HC12
+code generator that optimally utilizes the fuzzy logic functions
+of the HC12 ALU. </font></p>
+
+<p><font size="2" face="arial">In many fuzzy logic applications,
+an implemented control strategy can best be optimized on the
+running process. <i>fuzzy</i>TECH supports this
+&quot;on-the-fly&quot; optimization of a running fuzzy logic
+system with its RTRCD-HC12 Module, an add-on to the <i>fuzzy</i>TECH
+MCU-HC12 Edition. The RTRCD Module uses the background debug mode
+of the HC12 MCU to: </font></p>
+
+<ol>
+    <li><font size="2" face="arial">Visualize the complete fuzzy
+        logic inference in real time in <i>fuzzy</i>TECH's
+        analyzers and dynamic editors (Figure 1). </font></li>
+    <li><font size="2" face="arial">Carry out any modification
+        done in <i>fuzzy</i>TECH on the HC12 in real time without
+        interfering with the running process. </font></li>
+</ol>
+
+<h2><font size="4" face="arial">3. The Tank Demonstration Model </font></h2>
+
+<p><font size="2" face="arial">To demonstrate the implementation
+and RTRCD optimization of a fuzzy logic system using the HC12 and
+<i>fuzzy</i>TECH, Motorola and Inform designed a tank model. This
+tank model guides itself by following a light source using three
+optical sensors. The tank uses the following periphery: </font></p>
+
+<ul>
+    <li><font size="2" face="arial">light sensor left (input) </font></li>
+    <li><font size="2" face="arial">light sensor right (input) </font></li>
+    <li><font size="2" face="arial">light sensor back (input) </font></li>
+    <li><font size="2" face="arial">motor power left chain
+        (output) </font></li>
+    <li><font size="2" face="arial">motor power right chain
+        (output) </font></li>
+</ul>
+
+<p><font size="2" face="arial">Figure 2 shows the schematics of
+the tank demonstration model. The three optical sensors are used
+by the tank to detect the direction of the light source is shall
+follow. The sensors are simple light dependent resistors (LDR)
+coupled to a current source as a voltage divider. The resulting
+voltage is fed into the analog inputs of the HC12 MCU.</font></p>
+
+<p><font size="2" face="arial"><img src="mot_schm.gif"
+width="610" height="394"> </font></p>
+
+<p><font size="2" face="arial"><i>Figure </i></font><a
+name="f_car_model_scheme"><font size="2" face="arial"><i>2:
+Schematics of the Tank Demonstration Model </i></font></a></p>
+
+<p><font size="2" face="arial">To move and turn the tank, two
+chains are powered by independent motors. The motor's power and
+direction are controlled by the pulse width modulation (PWM)
+outputs of the HC12 MCU via a power stage. </font></p>
+
+<p><font size="2" face="arial"><img src="mot_tank.gif"
+width="471" height="301"> </font></p>
+
+<p><font size="2" face="arial"><i>Figure 3: Implementation of the
+Tank Demonstration Model</i></font></p>
+
+<p><font size="2" face="arial">After the mechanical design of the
+tank was completed and the electrical periphery (sensor signal
+conditioning and power stage) was completed, the tank's control
+software was developed. The software of the tank was written in C
+code using the COSMIC toolkit. The main routine consists of a
+loop which is called periodically every 10 milliseconds. Within
+this loop, first the sensor signals are fetched, then the fuzzy
+logic computation is called, and finally the output of the fuzzy
+logic computation is fed into the PWM registers.</font></p>
+
+<h2><font size="4" face="arial">4. The Fuzzy Logic Controller </font></h2>
+
+<p><font size="2" face="arial">The fuzzy logic computation
+routine is completely generated by the Edition. The C header of
+the generated function is:</font></p>
+
+<p><font size="2" face="arial"><tt>FLAGS TankCntrl( int
+SensorLeft, int SensorRight, int <br>
+</tt></font><font size="1" face="arial"><tt>SensorBack, * int
+PowerLeft, * int PowerRight);</tt></font></p>
+
+<p><font size="2" face="arial">Figure 4 shows the graphical
+design of the fuzzy logic tank controller in the <i>fuzzy</i>TECH
+development system. The upper left window shows the structure of
+the fuzzy logic controller. The three inputs of the fuzzy logic
+system, SensorBack, SensorLeft, and SensorRight, are the light
+intensities measured by the optical sensors. They feed into the
+rule block that contains the linguistic control strategy. The two
+output variables of the fuzzy logic system, PowerLeft and
+PowerRight, feed directly into the PWM registers of the HC12 MCU.</font></p>
+
+<p><font size="2" face="arial"><img src="mot_ctrl.gif"
+width="817" height="575"> </font></p>
+
+<p><font size="2" face="arial"><i>Figure </i></font><a
+name="f_fuzzytech"><font size="2" face="arial"><i>4: Fuzzy Logic
+Controller Development Using fuzzyTECH </i></font></a></p>
+
+<p><font size="2" face="arial">The upper right window shows the
+membership functions and the defuzzification process of the
+output variable &quot;PowerRight&quot;. The lower window shows
+the five fuzzy control rules of the system in a spreadsheet-type
+representation. <i>fuzzy</i>TECH produces the entire system as
+ready-to-use code for the HC12 by selecting the
+&quot;Compile&quot; menu item. For a complete development guide
+for fuzzy logic systems and sample software, refer to [4].</font></p>
+
+<h2><font size="4" face="arial">5. Real-Time Remote Cross
+Debugging </font></h2>
+
+<p><font size="2" face="arial">Fuzzy logic provides designers
+with a technique to use engineering experience and experimental
+results directly for a system's design. Thus in most
+applications, a fuzzy logic system can best be tuned, optimized,
+and verified while running with the real process.</font></p>
+
+<p><font size="2" face="arial"><i>fuzzy</i>TECH supports this
+development &quot;on-the-fly&quot; with its RTRCD add-on module.
+The development steps are: </font></p>
+
+<ul>
+    <li><font size="2" face="arial">Design of the fuzzy logic
+        controller &quot;off-line&quot;, that is, using the
+        graphical design tools and simulation environment of <i>fuzzy</i>TECH.
+        </font></li>
+    <li><font size="2" face="arial">Compile the fuzzy logic
+        system to HC12 code using <i>fuzzy</i>TECH. </font></li>
+    <li><font size="2" face="arial">Link the RTRCD driver
+        provided with <i>fuzzy</i>TECH and implement the code on
+        the HC12 board. </font></li>
+    <li><font size="2" face="arial">Run the tank. At any time,
+        the HC12 board may be connected to the PC running <i>fuzzy</i>TECH
+        using the background debug interface cable. </font></li>
+    <li><font size="2" face="arial">In <i>fuzzy</i>TECH's Monitor
+        Mode, you can open any editor and any analyzer of <i>fuzzy</i>TECH
+        to view and analyze the fuzzy logic controller while
+        running. </font></li>
+    <li><font size="2" face="arial">In <i>fuzzy</i>TECH's Online
+        Mode, you may also modify the fuzzy logic controller
+        while running. Any change takes effect instantly on the
+        running tank controller. </font></li>
+</ul>
+
+<p><font size="2" face="arial"><img src="mot_sdi.gif" width="639"
+height="234"> </font></p>
+
+<p><font size="2" face="arial"><i>Figure </i></font><a
+name="f_rtrcd"><font size="2" face="arial"><i>5: Real-Time Remote
+Cross Debugging</i></font></a></p>
+
+<h2><font size="4" face="arial">6. Conclusion </font></h2>
+
+<p><font size="2" face="arial">While the control objective
+implemented in the tank is not overly complex and could have been
+solved using different techniques, its fuzzy logic solution,
+involving only five fuzzy rules, is strikingly simple and
+transparent. Even more, adding more sensors and actuators in the
+fuzzy logic controller for more complex operations can be done in
+very short time.</font></p>
+
+<p><font size="2" face="arial">The new Motorola HC12 MCU is the
+world's first standard MCU with an embedded fuzzy logic
+instruction set. Using this instruction set, the <i>fuzzy</i>TECH
+MCU-HC12 Edition can implement even highly complex fuzzy logic
+systems using only a few hundred bytes of ROM that compute in
+less than a millisecond. Such high performance renders the use of
+dedicated fuzzy coprocessors unnecessary in most applications.
+Considering the fact that the fuzzy logic instruction set of the
+HC12 does not come with any price tag attached, the HC12 will
+enable the use of fuzzy logic in mass-market high-speed
+applications, such as car engine control, anti-skid brakes,
+traction control, inter-vehicle dynamics control, hard disk drive
+control, servo motor control, and cellular phones.</font></p>
+
+<p><font size="2" face="arial">The complete FTL source code of
+the tank controller and a demo version of <i>fuzzy</i>TECH can be
+downloaded from the Inform web server [1] to view, test and
+analyze the fuzzy logic system. On this web server, you also find
+additional app notes on fuzzy logic in automotive engineering and
+other application areas. For a complete introduction to fuzzy
+logic design, refer to [4]. </font></p>
+
+<h2><font size="4" face="arial">7. Literature </font></h2>
+
+<p><font size="2" face="arial">[</font><a name="ft_home_page"><font
+size="2" face="arial">1</font></a><font size="2" face="arial">] <i>fuzzy</i>TECH
+Home Page at: &quot;http://www.fuzzytech.com&quot; </font></p>
+
+<p><font size="2" face="arial">[2] Motorola, &quot;CPU12
+Reference Manual&quot;, CPU12RM/AD.</font></p>
+
+<p><font size="2" face="arial">[3] Motorola, &quot;MC68HC812A4
+Technical Summary&quot;, MC68HC812A4TS/D.</font></p>
+
+<p><font size="2" face="arial">[</font><a
+name="l_altrock_prentice_hall"><font size="2" face="arial">4</font></a><font
+size="2" face="arial">] von Altrock, C., &quot;Fuzzy Logic and
+NeuroFuzzy Applications Explained&quot;, Prentice Hall, ISBN
+0-13-368456-2 (1995).</font></p>
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+    <tr>
+        <td bgcolor="#000080"><font color="#00ffff" size="5"
+        face="arial"><b><i>fuzzy</i></b><b>TECH Application Paper</b></font>
+        </td>
+        <td align="center" bgcolor="#ffff00"><a href="index.htm"><img
+        src="home.gif" alt="go back to home page" width="21"
+        height="21"></a><a href="e_ap_lst.htm#212"><img
+        src="previous.gif" alt="go to application papers page"
+        width="21" height="21"></a> </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,2653 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.01 [en] (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Alexandr A. Savinov">
+   <META NAME="Description" CONTENT="In this paper a new original approach to the analysis of fuzzy multi-dimensional distributions is described. A uniform method for representing the fuzzy multi-dimensional distributions by means of sectioned vectors and matrices is proposed. The sectioned matrix is interpreted as fuzzy conjunctive normal form, while its line vectors are interpreted as fuzzy disjuncts. Several useful characteristics of fuzzy distributions and disjuncts are defined and studied. The main operation for manipulating by fuzzy multi-dimensional distributions is a new original fuzzy resolution which is applied to any two disjuncts on some variable and results in a third disjunct called resolvent. The property of adjacency of two disjuncts is defined and the criterion of adjacency is formulated. It is shown that the resolution operation proposed is a generalization of the conventional resolution and the whole approach can be viewed as a generalization of propositional logic. Methods for finding prime disjuncts, projection on a variable (and thus solving the satisfiability problem) and transforming into the dual form are proposed.">
+   <META NAME="KeyWords" CONTENT="Fuzzy multi-dimensional analysis; Fuzzy distributions; Fuzzy resolution; Fuzzy prime disjunct; Fuzzy logic; Finding projections">
+   <TITLE>Fuzzy Multi-dimensional Analysis</TITLE>
+</HEAD>
+<BODY BACKGROUND="bg.jpg">
+
+<CENTER>
+<H1>
+Fuzzy Multi-dimensional Analysis</H1></CENTER>
+
+<CENTER><FONT SIZE=+1>Alexandr A. Savinov</FONT></CENTER>
+
+<CENTER>&nbsp;<FONT SIZE=+1>Institute of Mathematics</FONT></CENTER>
+
+<CENTER><FONT SIZE=+1>Moldavian Academy of Sciences</FONT></CENTER>
+
+<CENTER><FONT SIZE=+1>str. Academiei 5</FONT></CENTER>
+
+<CENTER><FONT SIZE=+1>MD-2028 Kishinev</FONT></CENTER>
+
+<CENTER><FONT SIZE=+1>Moldavia</FONT></CENTER>
+
+<CENTER>Phone: (3732) 73-81-30, Fax: (3732) 73-80-27</CENTER>
+
+<CENTER>E-mail: savinov@math.md, savinov@usa.net</CENTER>
+
+<CENTER>URL: http://www.geocities.com/ResearchTriangle/7220/</CENTER>
+
+<CENTER></CENTER>
+
+<CENTER>October 20, 1997</CENTER>
+
+
+<P><B>Abstract</B>
+<BR>In this paper a new original approach to the analysis of fuzzy multi-dimensional
+distributions is described. A uniform method for representing the fuzzy
+multi-dimensional distributions by means of sectioned vectors and matrices
+is proposed. The sectioned matrix is interpreted as fuzzy conjunctive normal
+form, while its line vectors are interpreted as fuzzy disjuncts. Several
+useful characteristics of fuzzy distributions and disjuncts are defined
+and studied. The main operation for manipulating by fuzzy multi-dimensional
+distributions is a new original fuzzy resolution which is applied to any
+two disjuncts on some variable and results in a third disjunct called resolvent.
+The property of adjacency of two disjuncts is defined and the criterion
+of adjacency is formulated. It is shown that the resolution operation proposed
+is a generalization of the conventional resolution and the whole approach
+can be viewed as a generalization of propositional logic. Methods for finding
+prime disjuncts, projection on a variable (and thus solving the satisfiability
+problem) and transforming into the dual form are proposed.
+
+<P><B>Key words: </B>Fuzzy multi-dimensional analysis; Fuzzy distributions;
+Fuzzy resolution; Fuzzy prime disjunct; Fuzzy logic; Finding projections.
+
+<P><B>Contents</B>
+<UL><A HREF="#1">1. Introduction</A>
+<BR><A HREF="#2">2. Method of Sectioned Vectors and Matrices</A>
+<BR><A HREF="#3">3. Characteristics of Disjuncts</A>
+<BR><A HREF="#4">4. Reduced Forms of Disjuncts</A>
+<BR><A HREF="#5">5. Resolution Principle</A>
+<UL>5.1. General Definition
+<BR>5.2. Resolution on Reduced Disjuncts
+<BR>5.3. Adjacency of Disjuncts</UL>
+<A HREF="#6">6. Equivalent Transformations of Fuzzy Sectioned Matrices</A>
+<UL>6.1. Finding Prime Disjuncts
+<BR>6.2. Transforming Matrix into the Dual Form</UL>
+<A HREF="#7">7. Finding Projections on Variables</A>
+<BR><A HREF="#8">8. Conclusion and References</A></UL>
+
+<H2>
+<A NAME="1"></A>1. Introduction</H2>
+Let us consider the following problem. Given a n-dimensional space called
+the universe of discourse equal to the Cartesian product of n variables.
+There is some (global) distribution over this space which is supposed to
+be represented by means of a combination of elementary (local) distributions
+over individual variables. A global characteristic of the distribution
+is said to be some quantity which depends on the values in all (or almost
+all) points of the universe of discourse. The problem is how to calculate
+a global characteristic of the distribution without the necessity to access
+values in all points of the universe of discourse, i.e., taking into account
+only local distributions over individual variables by means of which the
+multi-dimensional distribution is represented..
+
+<P>Such a formulation is obviously too general therefore to obtain concrete
+results we have to reduce it to some more concrete case by specifying more
+exactly types of variables, their sets of values, operations used for combining
+distributions, global characteristics to find.
+
+<P>One such particular but probably the most important case has been paid
+a lot of attention in Logic, Algebra, Switching Theory, Cybernetics, Artificial
+Intelligence, and other fields where it usually has its own name and is
+described in special terms depending on the problem being solved. The main
+assumptions for this case are that
+<OL>
+<LI>
+all variables have only two values 0 and 1,</LI>
+
+<LI>
+distributions take values from the set {0,1},</LI>
+
+<LI>
+logical connectives AND and OR are used for combining elementary distributions,
+and</LI>
+
+<LI>
+the maximal or minimal value is usually searched as a global characteristic.</LI>
+</OL>
+There are only 4 different two-valued distributions over two-valued variables
+which in propositional logic are called elementary propositions (Fig. 1):
+<OL>
+<LI>
+truth constant 0,</LI>
+
+<LI>
+truth constant 1,</LI>
+
+<LI>
+proposition P, and</LI>
+
+<LI>
+proposition ~ P.</LI>
+</OL>
+&nbsp;
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_1.gif" ALT="Fig. 2. Four Bollean propositions. Both the variable and the distribution are two valued." HEIGHT=128 WIDTH=453>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 1. Four Boolean propositions. Both the variable
+and the distribution are two-valued.&nbsp;</CAPTION>
+</TABLE></CENTER>
+Combining different local distributions with logical connectives AND and
+OR which are interpreted with the help of conventional truth tables we
+can represent different global distributions over n-dimensional hyper-cube.
+One traditional problem that many other theoretical and applied problems
+are reduced to, is the problem of satisfiability which is obviously equivalent
+to finding the maximal value of the global distribution over the n-dimensional
+universe of discourse. There is a lot of different methods and their modifications
+for solving this problem, e.g., based on the operation of consensus (resolution
+in the Artificial Intelligence), transformation into the dual form, covering
+techniques etc.
+
+<P>In this paper it is supposed that
+<OL>
+<LI>
+all variables take their values from finite sets,</LI>
+
+<LI>
+all distributions are fuzzy membership functions from the domain of definition
+(values of individual variables or their Cartesian product) to the unit
+interval [0,1], and</LI>
+
+<LI>
+logical connectives AND and OR interpreted with the help of the minimum
+and maximum operations are used for combining distributions.</LI>
+</OL>
+In fact, only the supposition 3 is principal. Instead of the finite sets
+of values of variables we can consider the unit interval [0,1] (assumption
+1) or any other continuos interval. Maximal value of the global distribution
+over the universe of discourse is considered as a global characteristic
+to find. We also consider a more general problem of finding a projection
+of the global distribution on some variable which allows us to solve more
+efficiently the problem of logical inference. There can be formulated also
+other useful problems, e.g., finding a global entropy of a multi-dimensional
+fuzzy distribution.
+
+<P>Currently there are not exact methods for solving this problem. However,
+there have been proposed a lot of inexact methods in the field of approximate
+reasoning (mainly for application to knowledge based systems). Probably
+the most well-known of them is the Zadeh's combination and projection principle
+[<A HREF="#Zd75">Zd75</A>, <A HREF="#Zd79">Zd79</A>]. This method consists
+in that
+<OL>
+<LI>
+each statement is translated into a possibility distribution,</LI>
+
+<LI>
+all possibility distributions are conjunctively (with the help of minimum
+operation) <I>combined</I> into an overall possibility distribution PI,</LI>
+
+<LI>
+the distribution PI is <I>projected</I> on various variables of interest
+(for instance, using the generalized modus ponens).</LI>
+</OL>
+Unfortunately, it is only a principle and does not provide us a concrete
+procedure for finding projections. The main disadvantage of other approaches
+see, e.g., [<A HREF="#KS90">KS90</A>]) is that they do not guarantee that
+the conclusion (projection) obtained is correct like similar methods in
+the Boolean fields (Switching Theory, Boolean functions, Propositional
+Logic etc.). In other words, we do not know whether the projection resulted
+from the procedure is equal to the real projection of our distribution.
+
+<P>In this paper we propose a new original operation of fuzzy resolution
+which can used to solve this problem. We will suppose that the global distribution
+is represented by means of a number of fuzzy disjuncts combined with the
+connective AND (minimum). Each fuzzy disjunct consist of n local distributions
+(possibly trivial) combined with the connective OR. The operation of fuzzy
+resolution is applied to any two disjuncts on some variable and results
+in a third disjunct called resolvent (consensus). The resolvent possesses
+several useful properties (described in below in the paper) which allows
+us to say that this operation is a generalization of the conventional resolution.
+Thus having this fuzzy resolution we can more or less easily transfer onto
+fuzzy case almost all resolution (consensus) based methods developed for
+the boolean case.
+
+<P>This paper originates from an original approach of Zakrevsky [<A HREF="#Zk89">Zk89</A>,
+<A HREF="#Zk94">Zk94</A>] called the logic of finite predicates where a
+new technique of sectioned boolean vectors for representing disjuncts and
+the corresponding consensus operation was proposed. On the basis of the
+technique of Boolean sectioned vectors and matrices a diagnostic expert
+system shell EDIP was implemented [<A HREF="#L90">L90</A>, <A HREF="#LS91">LS91</A>,
+<A HREF="#LS92">LS92</A>]. An inference process in the system EDIP is based
+on the procedure of finding all prime vector disjuncts by means of the
+operation of generalized consensus.
+
+<P>Later [<A HREF="#S91">S91</A>, <A HREF="#S93a">S93a</A>, <A HREF="#LS93a">LS93a</A>,
+<A HREF="#S93b">S93b</A>] the formalism of Zakrevsky including the technique
+of sectioned vectors and the operation of consensus was generalized on
+fuzzy case where the components take their values from the unit interval
+[0,1]. In addition some new properties degenerated in the crisp case were
+studied, as well as new procedures of logical inference were developed
+which underlie an expert system shell EDIP for Windows 3.x [<A HREF="#S96b">S96b</A>].
+In this generalization of the formalism of Zakrevsky instead of the term
+'consensus' the term 'resolution' was used, which is conventional in the
+Artificial Intelligence.
+
+<P>This approach to fuzzy multi-dimensional analysis was reformulated in
+logical terms as a generalized fuzzy propositional logic [<A HREF="#S93b">S93b</A>,
+<A HREF="#S93c">S93c</A>] and a logic of possibility distributions [<A HREF="#S96a">S96a</A>].
+It was also applied to such fields as diagnosis [<A HREF="#LS94a">LS94a</A>],
+fuzzy control [<A HREF="#LS94b">LS94b</A>], aggregation of information
+[<A HREF="#LS94c">LS94c</A>, <A HREF="#LS96">LS96</A>].
+<BR>&nbsp;
+<H2>
+<A NAME="2"></A>2. Method of Sectioned Vectors and Matrices</H2>
+Let x<SUB>1</SUB>,x<SUB>2</SUB>,...,x<SUB>n</SUB> be elementary logical
+variables, each of them taking its values from the sets X<SUB>1</SUB>,X<SUB>2</SUB>,...,X<SUB>n</SUB>
+called (elementary) domains respectively. In general, domains are supposed
+to be any continuos interval but in examples for the sake of simplicity
+we will consider only the case of domains consisting of a finite number
+of values a<SUB>ij</SUB>, where i=1,2,...,n, and j=1,2,...,n<SUB>i</SUB>.
+The Cartesian product of all domains X<SUB>1</SUB>&times;X<SUB>2</SUB>&times;...&times;X<SUB>n</SUB>
+forms the universe of discourse O with the power in the finite case n<SUB>1</SUB>&times;n<SUB>2</SUB>&times;...&times;n<SUB>n</SUB>.
+Each element o=&lt;x<SUB>1</SUB>,x<SUB>2</SUB>,...,x<SUB>n</SUB>> in O
+is an ordered n-tuple of the values of all variables.
+
+<P>Below in this section we describe a technique which we use to write
+fuzzy disjuncts. This technique was originally proposed by Zakrevsky for
+the case of multi-valued variables and two-valued distributions. Later
+it was generalized by Savinov onto the case of fuzzy distributions. In
+the method of sectioned vectors we use the following terminology:
+<UL>
+<LI>
+<I>component</I> <B>v</B><SUB>ij</SUB> of the vector <B>v</B> is one number
+which is equal to the local distribution value in one point of the domain;
+in the case of crisp distributions it is equal either 0 or 1; in the fuzzy
+case it takes values from the interval [0,1]; in other words, the component
+<B>v</B><SUB>ij</SUB> is equal to the local distribution value in the point
+x<SUB>i</SUB>=a<SUB>ij</SUB>, where a<SUB>ij</SUB> is j-th value of i-th
+variable;</LI>
+
+<LI>
+<I>section</I> <B>v</B><SUB>i</SUB> is a sequence of n<SUB>i</SUB> components
+for all values of one local distribution, e.g., if <B>v</B><SUB>i</SUB>={0.7,
+1, 0.2, 0} then <B>v</B><SUB>i1</SUB>=0.7, <B>v</B><SUB>i2</SUB>=1, <B>v</B><SUB>i3</SUB>=0.2,
+<B>v</B><SUB>i4</SUB>=0;</LI>
+
+<LI>
+<I>vector</I> <B>v</B> consists of n sections <B>v</B><SUB>i</SUB> separated
+by points (when the operation is implicitely implied) or explicitely by
+the name of operation, e.g., {0.7, 1, 0.2, 0}.{1, 0.4, 0}.{1, 0}, where
+n<SUB>1</SUB>=4, n<SUB>2</SUB>=3, n<SUB>3</SUB>=2.</LI>
+
+<LI>
+<I>matrix</I> is made up of a number of vectors each of them representing
+one line.</LI>
+</UL>
+An interpretation of fuzzy vector is a rule by means of which we can compute
+the global distribution this vector defines over the universe of discourse
+proceeding from the local distributions the vector is made up. There are
+two interpretations of fuzzy vectors: as disjuncts and as conjuncts. If
+the vector <B>d</B> is interpreted as disjunct then the value of its global
+distribution in some point is equal to the maximum of n corresponding components
+(Fig. 2).
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_2.gif" ALT="Fig. 2. Interpretation of the vector as disjunct by means of the maximum of n corresponding components." HEIGHT=151 WIDTH=453>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 2. Interpretation of the vector as disjunct
+by means of the maximum of n corresponding components.&nbsp;</CAPTION>
+</TABLE></CENTER>
+For example, the disjunct
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{0.7, 1, 0.2, 0}</TD>
+
+<TD>{1, 0.4, 0}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+</TABLE></CENTER>
+defines the distribution which in the point &lt;a<SUB>13</SUB>,a<SUB>22</SUB>,a<SUB>32</SUB>>
+is equal to max(0.2, 0.4, 0)=0.4.
+
+<P>The interpretation of sectioned vectors as conjuncts is dual, i.e.,
+it uses the operation of minimum.
+
+<P>Sectioned matrices have two interpretations: as conjunctive normal form
+(CNF) and as disjunctive normal form (DNF). The interpretation as CNF means
+that the value in some point of the universe of discourse is equal to the
+minimum of the values which are assigned to this point by its lines. The
+lines of the CNF are interpreted as disjuncts.
+
+<P>It can be easily proved that any fuzzy distribution over the universe
+of discourse can be represented in the form of fuzzy CNF. Such a CNF is
+made up of |O|=n<SUB>1</SUB>&times;n<SUB>2</SUB>&times;...&times;n<SUB>n</SUB>
+line disjuncts each of them representing a value of the fuzzy distribution
+in the corresponding point of the universe of discourse. In other words
+one line of this matrix is responsible for representing the distribution
+value in some point and it does not influences all other points. Each section
+of the disjunct satisfying this condition has to consist of all 1 except
+for one component which is equal to the corresponding distribution value.
+We say that it pricks a hole down to the necessary level in the distribution
+surface. Of course, it is not a procedure for building and representing
+fuzzy multi-dimensional distributions -- it only demonstrates that for
+any arbitrary fuzzy distribution there exists a sectioned matrix interpreted
+as CNF which represents it (i.e., with the same semantics).
+<BR>&nbsp;
+<H2>
+<A NAME="3"></A>3. Characteristics of Disjuncts</H2>
+In this section we define three global characteristics of fuzzy distributions.
+Here 'global' characteristic means that to calculate it one needs to access
+all elements of the domain of definition and corresponding fuzzy distribution
+values. All these properties are formulated for fuzzy distributions but
+can be also used for describing their forms of representation, e.g., for
+characterizing fuzzy disjuncts.
+
+<P>The maximal value that the fuzzy distribution takes over the domain
+of definition is said to be the <I>consistency</I> (Fig. 3).
+
+<P>For example, the local distribution {0, 0.1, 0.3, 0.7} has the consistency
+0.7, and the consistency of the disjunct {0, 0.5}.{1, 0, 0} is equal to
+1.
+
+<P>The minimal value that fuzzy distribution takes over the domain of definition
+is said to be the <I>constant</I> (Fig. 3).
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_3.gif" ALT="Fig. 3. Consistency and constant of the distribution." HEIGHT=113 WIDTH=347>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 3. Consistency and constant of the distribution.&nbsp;</CAPTION>
+</TABLE></CENTER>
+For example, the local distribution {0.1, 0.5, 1} and the disjunct {0,
+0.5}.{1, 0, 0} have the constants 0.1 and 0 respectively.
+
+<P>We will need a quantity called a degree of <I>incomparability</I> of
+two distributions. Let us define at first a relative degree of incomparability.
+The degree of incomparability of the distribution P in relation to Q is
+equal to the maximal value of the distribution P which is exactly greater
+than the corresponding (i.e., in the same point of the universe) value
+of the proposition Q:
+<CENTER>incomp<SUB>Q</SUB>(P) = max(P(x)), where P(x) > Q(x)</CENTER>
+
+
+<P>Thus in order to compute this quantity one at first needs to select
+in P all the values which are exactly greater than the corresponding values
+in Q, and then to choose among them the maximal value (Fig. 4).
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_4.gif" ALT="Fig. 4. Relative degree of incomparability." HEIGHT=132 WIDTH=340>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 4. Relative degree of incomparability.&nbsp;</CAPTION>
+</TABLE></CENTER>
+In the case where the condition
+<CENTER>forall x P(x) &lt;= Q(x)</CENTER>
+
+
+<P>holds, i.e., there is nothing to choose the maximal value from (the
+distribution P is included into Q), it is supposed by definition that incomp<SUB>Q</SUB>(P)=0.
+
+<P>For example, degree of incomparability of the proposition P={0, 0.5,
+0.7, 1} in relation to the proposition Q={0.2, 0.4, 0.6, 1} is equal to
+incomp<SUB>Q</SUB>(P)=max(0.5,0.7)=0.7, whereas incomp<SUB>P</SUB>(Q)=max(0.2)
+= 0.2.
+
+<P>The (mutual) degree of incomparability is equal to the minimal of two
+relative degrees of incomparability:
+<CENTER>incomp(P,Q) = min( incompQ(P),incompP(Q))</CENTER>
+
+
+<P>Note that it is important that the degree of incomparability is defined
+not from informal interpretation of the word "incomparable" but from the
+formal requirements of the fuzzy resolution what will be shown below.
+
+<P>Consequence relation on fuzzy distributions is defined in a traditional
+way. Namely, the distribution Q is said to be a logical consequence of
+the distribution P iff the condition
+<CENTER>forall x P(x) &lt;= Q(x)</CENTER>
+
+
+<P>holds, i.e., P is included into Q.
+
+<P>Obviously, if Q is a logical consequence of P then Q can be removed
+from a set axioms or theorems. In particular, disjunct which is a consequence
+of another disjunct can be removed from the matrix. The process of removing
+such disjuncts is called absorption.
+<BR>&nbsp;
+<H2>
+<A NAME="4"></A>4. Reduced Forms of Disjuncts</H2>
+Let us consider the following example. Three disjuncts
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 0, 1, 1}</TD>
+
+<TD>{0.5, 1}</TD>
+</TR>
+
+<TR>
+<TD>{1, 0.5, 1, 1}</TD>
+
+<TD>{0, 1}</TD>
+</TR>
+
+<TR>
+<TD>{1, 0.5, 1, 1}</TD>
+
+<TD>{0.2, 1}</TD>
+</TR>
+</TABLE></CENTER>
+are semantically equivalent, i.e., they represent the same distribution
+over the universe of discourse. Thus in general case disjuncts represent
+semantics not uniquely, i.e., several different on the form disjuncts can
+represent the same on the meaning proposition about the universe. The uniqueness
+of representation takes place only for disjuncts with the constant equal
+to 0, when there is at least one element from the universe with the distribution
+value 0. If the disjunct constant (the minimal value of the corresponding
+distribution) is not equal to 0, then its representation is not unique
+because the components which are between 0 and the disjunct constant may
+be changed in this interval (provided that this does not change the constant
+itself). So it is clear that in the disjunct
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 0, 1, 1}</TD>
+
+<TD>{0.5, 1}</TD>
+</TR>
+</TABLE></CENTER>
+with the constant 0.5 the second component of the first section may be
+changed between 0 and 0.5, e.g.,
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 0.27, 1, 1}</TD>
+
+<TD>{0.5, 1}</TD>
+</TR>
+</TABLE></CENTER>
+To overcome this non-uniqueness of representation let us introduce a so
+called <I>reduced forms</I> of disjunct. The disjunct <B>d</B> is said
+to be in k-th reduced form iff the constants of all its sections <B>d</B><SUB>i</SUB>
+except for the k-th section <B>d</B><SUB>k</SUB> are equal to 0
+<CENTER>constant(<B>d</B><SUB>i</SUB>) = min(<B>d</B><SUB>ij</SUB>) = 0</CENTER>
+
+
+<P>and all the rest of components are exactly greater than constant(<B>d</B><SUB>k</SUB>):
+
+<P>In other words, disjunct in k-th reduced form may not contain components
+in the interval (0,constant(<B>d</B><SUB>k</SUB>)] (i.e., any component
+is either equal to 0 or is greater than constant(<B>d</B><SUB>k</SUB>),
+and in addition, each proposition must include at least one component equal
+to 0 except for the k-th section. For example, the disjunct
+<BLOCKQUOTE>
+<BLOCKQUOTE>
+<BLOCKQUOTE>&nbsp;
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 0.2, 0.9, 1}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;</BLOCKQUOTE>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+&nbsp;is in 1st reduced form, whereas the disjuncts
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 0.2, 0.9, 1}</TD>
+
+<TD>{1, 0.2}</TD>
+</TR>
+
+<TR>
+<TD>{1, 0.2, 0.9, 1}</TD>
+
+<TD>{1, 0.1}</TD>
+</TR>
+
+<TR>
+<TD>{1, 0.2, 0.9, 1}</TD>
+
+<TD>{0.2, 0.2}</TD>
+</TR>
+</TABLE></CENTER>
+are not reduced.
+
+<P>This definition does not say how to reduce disjuncts. Now we will propose
+a procedure for reducing disjuncts which is based on operations of subtraction/addition
+of the value p from/to the section <B>d</B><SUB>i</SUB>. This operations
+result in a new local distribution <B>d</B><SUB>i</SUB>-p/<B>d</B><SUB>i</SUB>+p
+such that
+<CENTER><B>d</B><SUB>i</SUB>-p = <B>d</B><SUB>i</SUB>, if <B>d</B><SUB>i</SUB>
+> p</CENTER>
+
+<CENTER><B>d</B><SUB>i</SUB>-p = 0, otherwise</CENTER>
+
+
+<P>and
+<CENTER><B>d</B><SUB>i</SUB>+p = <B>d</B><SUB>i</SUB>, if <B>d</B><SUB>i</SUB>
+> p</CENTER>
+
+<CENTER><B>d</B><SUB>i</SUB>+p = p, otherwise</CENTER>
+
+
+<P>Thus to compute <B>d</B><SUB>i</SUB>-p (<B>d</B><SUB>i</SUB>+p) we have
+to change onto 0 (p) all the components which are less than or equal to
+p (Fig. 5).
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_5.gif" ALT="Fig. 5. Operation of subtraction/addition of the value from/to the section." HEIGHT=132 WIDTH=377>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 5. Operation of subtraction/addition of the
+value from/to the section.&nbsp;</CAPTION>
+</TABLE></CENTER>
+The whole procedure for reducing disjuncts is the following:
+<OL>
+<LI>
+find the disjunct constant:</LI>
+
+<BR>constant(<B>d</B>) = max( min(<B>d</B><SUB>1j</SUB>),...,min(<B>d</B><SUB>nj</SUB>)
+)
+<BR>(The disjunct constant is equal to the maximum of all local constants.)
+<LI>
+subtract the disjunct constant from all non-k-th propositions</LI>
+
+<LI>
+add the disjunct constant to the k-th proposition</LI>
+</OL>
+For example, the constant of the disjunct
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{0, 0.2, 0.3, 1}</TD>
+
+<TD>{0.3, 1}</TD>
+</TR>
+</TABLE></CENTER>
+is equal to 0.3, therefore its 1st reduced form is the following:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{0.3, 0.3, 0.3, 1}</TD>
+
+<TD>{0, 1}</TD>
+</TR>
+</TABLE></CENTER>
+According to this approach if a disjunct is in a reduced form then it involves
+a section which is responsible for storing the disjunct constant value.
+We can transfer the constant from one section to another but such a section
+will always exist and thus we have n different reduced forms.
+
+<P>Another approach [<A HREF="#S93b">S93b</A>, <A HREF="#S93c">S93c</A>,
+<A HREF="#S96a">S96a</A>] consists in that we introduce one special component
+which is responsible for storing the disjunct constant value and is said
+to be also the disjunct constant (or constant proposition in logical terms).
+For the sake of simplicity such a representation is not used in this paper
+but it is really useful in many situations (e.g., when representing disjuncts
+in knowledge base) since the reduced form is defined uniquely and the disjunct
+constant is represented explicitly.
+<BR>&nbsp;
+<H2>
+<A NAME="5"></A>5. Resolution Principle</H2>
+
+<H3>
+5.1. General Definition</H3>
+Logical inference usually consists in that new disjuncts are built from
+the source disjuncts. Then they are added to the CNF and can serve as premises
+for continuing the inference process. Here we will not touch the question
+what logical inference is needed for and which requirements it have to
+meet. We will only consider how disjuncts can be generated.
+
+<P>The main operation for generating disjuncts can serve a fuzzy resolution.
+It is applied to two disjuncts on some section (variable) and results in
+a third disjunct called a resolvent. If <B>u</B> and <B>v</B> are two disjuncts
+and <B>w</B> is their resolvent on k-th variable, then we write:
+<CENTER><B>u</B>&lt;x<SUB>k</SUB>><B>v</B> = <B>w</B></CENTER>
+
+
+<P>where &lt;x<SUB>k</SUB>> denotes the resolution on k-th variable.
+
+<P>Now let us consider how given two premises the resolvent is built. Each
+section of the resolvent depends on (is constructed from) only two corresponding
+sections of the premises. k-th proposition of the resolvent (which the
+resolution is applied to) is equal to the conjunction of the two corresponding
+propositions from the source disjuncts; every non-k-th proposition of the
+resolvent is equal to the disjunction of the two corresponding propositions:
+<BLOCKQUOTE>
+<BLOCKQUOTE><B>w</B><SUB>i</SUB> = <B>u</B><SUB>i</SUB> AND <B>v</B><SUB>i</SUB>,
+<B>w</B><SUB>ij</SUB> = min(<B>u</B><SUB>ij</SUB>, <B>v</B><SUB>ij</SUB>),
+if i = k, j = 1,2,...,n <SUB>i</SUB>
+<BR><B>w</B><SUB>i</SUB> = <B>u</B><SUB>i</SUB> OR <B>v</B><SUB>i</SUB>,
+<B>w</B><SUB>ij</SUB> = max(<B>u</B><SUB>ij</SUB>, <B>v</B><SUB>ij</SUB>),
+otherwise</BLOCKQUOTE>
+</BLOCKQUOTE>
+Conjunction and disjunction of elementary propositions about the same variable
+are equal to the componentwise minimum and maximum, respectively.
+
+<P>The resolution operation can be represented in the form of the following
+pattern (Fig. 6):
+<CENTER><TABLE BORDER=2 CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR BGCOLOR="#C0C0C0">
+<TD>
+<CENTER>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>x<SUB>1</SUB></CENTER>
+
+<CENTER>max&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>x<SUB>k</SUB></CENTER>
+
+<CENTER>min&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>x<SUB>n</SUB></CENTER>
+
+<CENTER>max&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>u</B><SUB>1</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>-/-/-&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>u</B><SUB>k</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>-/-/-&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>u</B><SUB>n</SUB>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>v</B><SUB>1</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>-/-/-&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>v</B><SUB>k</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>-/-/-&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>v</B><SUB>n</SUB>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>k</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>u</B><SUB>1</SUB> OR <B>v</B><SUB>1</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>-/-/-&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>u</B><SUB>k</SUB> AND <B>v</B><SUB>k</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>-/-/-&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>u</B><SUB>n</SUB> OR <B>v</B><SUB>n</SUB>&nbsp;</CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_6.gif" ALT="Fig. 6. Operation of fuzzy resolution." HEIGHT=132 WIDTH=453>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 6. Operation of fuzzy resolution.&nbsp;</CAPTION>
+</TABLE></CENTER>
+Here are two examples of applying the resolution:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0.1, 0.2, 1}</TD>
+
+<TD>{0, 1}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0.3, 0.5, 0}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>1</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0.1, 0.2, 0}</TD>
+
+<TD>{0, 1}</TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}</TD>
+
+<TD>{0, 1, 0.7}</TD>
+
+<TD>{1, 0.2, 1}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0}</TD>
+
+<TD>{1, 1, 0.2}</TD>
+
+<TD>{0, 0.1, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 1}</TD>
+
+<TD>{0, 1, 0.2}</TD>
+
+<TD>{1, 0.2, 1}</TD>
+</TR>
+</TABLE></CENTER>
+The main property of the resolvent is that it is a consequence of two its
+premises:
+<CENTER>If <B>w</B> = <B>u</B> &lt;x<SUB>k</SUB>> <B>v</B>, then <B>u</B>
+AND <B>v</B> |= <B>w</B>.</CENTER>
+
+
+<P>It means that we can add any resolvent to the CNF containing its two
+premises and the the whole semantics will not change.
+
+<P>If there is only one variable, then we obtain extensional case and the
+resolution is reduced to ordinary conjunction. Thus the resolution operation
+in some sense can be viewed as a generalization of conjunction onto multidimensional
+case.
+
+<P>In the case of two-valued variables and two-valued distributions the
+behavior of this resolution coincides with that for the classical case
+of boolean propositions except for the fact that our resolution can be
+applied to any two disjuncts even if their k-th propositions are not contrary
+and/or there exist non-k-th contrary propositions. It is obvious that in
+the first case the resolvent will be a consequence of one of its premises,
+while in the second case it will be valid, i.e., involve the constant proposition
+1.
+
+<P>Let us consider the following example.
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}=x<SUB>1</SUB></TD>
+
+<TD>{0, 1}=x<SUB>2</SUB></TD>
+
+<TD>{0, 0}=0</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0}=0</TD>
+
+<TD>{1, 0}=~x<SUB>2</SUB></TD>
+
+<TD>{0, 1}=x<SUB>3</SUB></TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}=x<SUB>1</SUB></TD>
+
+<TD>{0, 0}=0</TD>
+
+<TD>{0, 1}=x<SUB>3</SUB></TD>
+</TR>
+</TABLE></CENTER>
+In this classical example of the boolean resolution we obtain "good" resolvent
+since sections <B>u</B><SUB>2</SUB> and <B>v</B><SUB>2</SUB> are contrary,
+while other sections are not. Each section is written in sectioned form
+and conventional form with the help of boolean propositions.
+
+<P>In the following example we obtain the resolvent which is a consequence
+of (weaker than) both premises since the sections <B>u</B><SUB>2</SUB>
+and <B>v</B><SUB>2</SUB> are not contrary. Note that classical resolution
+is not applied to such disjuncts.
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}=x<SUB>1</SUB></TD>
+
+<TD>{0, 1}=x<SUB>2</SUB></TD>
+
+<TD>{0, 0}=0</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0}=0</TD>
+
+<TD>{0, 1}=~x<SUB>2</SUB></TD>
+
+<TD>{0, 1}=x<SUB>3</SUB></TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}=x<SUB>1</SUB></TD>
+
+<TD>{0, 1}=0</TD>
+
+<TD>{0, 1}=x<SUB>3</SUB></TD>
+</TR>
+</TABLE></CENTER>
+In this example we also obtain "bad" resolvent since two premises involve
+contrary non-k-th propositions which result in the constant proposition
+1 in the resolvent.
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}=x<SUB>1</SUB></TD>
+
+<TD>{0, 1}=x<SUB>2</SUB></TD>
+
+<TD>{0, 0}=0</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0}=0</TD>
+
+<TD>{1, 0}=~x<SUB>2</SUB></TD>
+
+<TD>{0, 1}=x<SUB>3</SUB></TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 1}=1</TD>
+
+<TD>{0, 0}=0</TD>
+
+<TD>{0, 1}=x<SUB>3</SUB></TD>
+</TR>
+</TABLE></CENTER>
+
+<H3>
+5.2. Resolution on Reduced Disjuncts</H3>
+If to consider the resolution as being a generalization of conjunction
+(multidimensional conjunction), then it is natural to suppose that its
+goal is to infer the disjunct which is equivalent to the conjunction of
+two source disjuncts. In that case the resolvent would represent just both
+source premises in one clause, and consequently the source disjuncts could
+be removed as superfluous. However, such ideal variant is unrealizable
+because the conjunction of two disjuncts in general case cannot be represented
+in the form of only one disjunct. Nevertheless, it is possible to formulate
+the criterion of "quality" of one resolution operation or another: the
+closer the semantics of two disjuncts is approximated by their resolvent,
+the better the resolution rule.
+
+<P>It is a characteristic property of the general definition of the resolution
+formulated in the previous section that the resolvent content (semantics,
+i.e., the corresponding fuzzy distribution) depends on the premises form.
+In the following two examples the premises have different forms but the
+semantics is the same, while the resolvents have different semantics:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0.3}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>1</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0.3}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0}</TD>
+
+<TD>{0.3, 0.3}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 1}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>1</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.3}</TD>
+</TR>
+</TABLE></CENTER>
+Thus the question arises: which form of premises is the best from the point
+of view of the above formulated criterion, or which form of premises generates
+the strongest resolvent.
+
+<P>The resolvent components are decreased only in k-th section when conjuncting
+two source sections (in the rest of sections the components can be only
+increased), i.e., it is exactly k-th section that is responsible for non-trivial
+semantical properties of the resolvent. The higher component values in
+disjunctive (non-k-th) sections, the weaker the resolvent. In ideal case
+when all non-k-th sections consist of only zero components the resolvent
+is exactly equal to the conjunction of two premises, for example:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.5, 0.3}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0.5, 1}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0.5, 0.3}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+</TABLE></CENTER>
+Here the constant of the first disjunct is equal to 0.3, and the constant
+of the second disjunct is equal to 0. If in this example the constant of
+the first disjunct is transferred from the second sections (<B>u</B><SUB>2</SUB>=<B>u</B><SUB>2</SUB>-0.3)
+into any other disjunctive section (e.g., the third one, i.e., <B>u</B><SUB>3</SUB>=<B>u</B><SUB>3</SUB>+0.3),
+then the resolvent becomes worse, i.e., weaker than that in the ideal case:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0.3, 0.3}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0.5, 1}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B></CENTER>
+</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0.5, 0}</TD>
+
+<TD>{0.3, 0.3}</TD>
+</TR>
+</TABLE></CENTER>
+It becomes more clear if the resolvent obtained is transformed into the
+following equivalent form (2nd reduced form):
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0"><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B></TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0.3, 0.5, 0.3}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+</TABLE></CENTER>
+Thus our conclusion is that in order to infer the strongest resolvent on
+k-th section, the premises have to be transformed into the k-th reduced
+form. However all below described properties of the resolution will be
+formulated for the general definition independent of the premises form.
+<H3>
+5.3. Adjacency of Disjuncts</H3>
+Although the goal of the application of resolution is to obtain a new non-trivial
+disjunct differing from both the first premise and the second premise,
+this requirement can be satisfied not always (it is not satisfied for the
+majority of disjunct pairs and variables). More exactly two disjuncts <B>u</B>
+and <B>v</B> are said to be <I>adjacent</I> on the variable x<SUB>k</SUB>
+if their resolvent on k-th variable is not a logical consequence of the
+disjunct <B>u</B> and disjunct <B>v</B>, i.e., it cannot be absorbed by
+its premises.
+
+<P>Now it is clear that it makes sense to apply the resolution to only
+adjacent disjuncts, otherwise the resolvent is a consequence of one of
+two premises and it does not contain new information. For example, the
+following two disjuncts are adjacent on the first variable and they are
+not adjacent on the second variable:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0.5, 0.2}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0.2, 1}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>1</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0.2, 0.2}</TD>
+
+<TD>{1, 0}</TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>u</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.2}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{0, 0.2, 1}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="#C0C0C0">
+<CENTER><B>w</B> = <B>u</B>&lt;x<SUB>2</SUB>><B>v</B>&nbsp;</CENTER>
+</TD>
+
+<TD>{1, 0.5, 1}</TD>
+
+<TD>{0, 0}</TD>
+</TR>
+</TABLE></CENTER>
+In this context the problem can be formulated as follows:
+<BLOCKQUOTE><I>how to find out whether two disjuncts are adjacent or they
+are not, making use only their form, without constructing the resolvent</I></BLOCKQUOTE>
+This problem can be solved with the help of the following criterion.
+
+<P>Disjuncts <B>u</B> and <B>v</B> are adjacent on the variable x<SUB>k</SUB>
+iff forall i=1,...,n except for i=k
+<CENTER>constant(<B>u</B><SUB>i</SUB> OR <B>v</B><SUB>i</SUB>) &lt; incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>)</CENTER>
+
+
+<P>In other words the minimal value of the disjunction of two sections
+<B>u</B><SUB>i</SUB> and <B>v</B><SUB>i</SUB> has to be strictly less than
+the degree of incomparability of the sections <B>u</B><SUB>k</SUB> and
+<B>v</B><SUB>k</SUB>. Informally two disjuncts are adjacent if and only
+if the mutual degree of incomparability of two sections <B>u</B><SUB>k</SUB>
+and <B>v</B><SUB>k</SUB> (which the resolution is applied to) is high enough
+to compensate the validity resulted from the disjunction of non-k-th sections.
+
+<P>Thus the adjacency of two disjuncts is influenced by the following two
+factors:
+<OL>
+<LI>
+too low degree of incomparability of the propositions about k-th variable;</LI>
+
+<LI>
+too high constant (degree of validity) in non-k-th sections.</LI>
+</OL>
+The first factor is a generalization of the conventional condition (see,
+e.g., [<A HREF="#CL73">CL73</A>]) that the resolution is applied only to
+disjuncts involving contrary literals. It is natural that in fuzzy case
+the contrariety of two literals is also fuzzy (the degree of incomparability).
+Note that the contrariety and incomparability coincide only in two-valued
+non-fuzzy case (classical propositional calculus); in any other case the
+incomparability condition is weaker.
+
+<P>The second factor influencing the adjacency of two disjuncts is a generalization
+of the conventional condition which consists in the absence in disjuncts
+of the second pair of contrary literals.
+
+<P>When computing the value constant(<B>u</B><SUB>i</SUB> OR <B>v</B><SUB>i</SUB>)
+we have to construct i-th section of the resolvent <B>w</B><SUB>i</SUB>=<B>u</B><SUB>i</SUB>OR<B>v</B><SUB>i</SUB>,
+i.e., in fact, to find out if two disjuncts are adjacent or not with the
+help of this criterion it is necessary to construct n-1 sections of the
+resolvent. Thus it could be more easy to construct the resolvent and then
+to check if it is a consequence of one of its premises. However it is not
+so, since for the majority of disjunct pairs the condition incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>)=0
+holds, and therefore the criterion constant(<B>u</B><SUB>i</SUB> OR <B>v</B><SUB>i</SUB>)&lt;incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>)
+cannot be satisfied in any case. In addition, even if incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>)>0
+it makes sense to check the criterion for each new section of the resolvent
+rather than check the adjacency after building all the sections. Thus the
+whole procedure for generating resolvents is as follows:
+<OL>
+<LI>
+build the k-the section of the resolvent: <B>w</B><SUB>k</SUB>=<B>u</B><SUB>k</SUB>AND<B>v</B><SUB>k</SUB>;</LI>
+
+<LI>
+find the value incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>);</LI>
+
+<LI>
+if incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>)=0 then goto 9;</LI>
+
+<LI>
+for i=1,2,...,n (except for i=k);</LI>
+
+<LI>
+build the i-th section of the resolvent: <B>w</B><SUB>i</SUB>=<B>u</B><SUB>i</SUB>OR<B>v</B><SUB>i</SUB>;</LI>
+
+<LI>
+if constant(<B>w</B><SUB>i</SUB>)>=incomp(<B>u</B><SUB>k</SUB>,<B>v</B><SUB>k</SUB>)
+then goto 9;</LI>
+
+<LI>
+next i (goto 5);</LI>
+
+<LI>
+the disjuncts <B>u</B> and <B>v</B> are adjacent and the resolvent <B>w</B>
+is built;</LI>
+
+<LI>
+the disjuncts <B>u</B> and <B>v</B> are not adjacent;</LI>
+</OL>
+&nbsp;
+<H2>
+<A NAME="6"></A>6. Equivalent Transformations of Fuzzy Sectioned Matrices</H2>
+
+<H3>
+6.1. Finding Prime Disjuncts</H3>
+The problem of finding prime disjuncts has the same significance as that
+in the boolean case since once we have found prime disjuncts we can solve
+many other problems. In this section we consider a method for generating
+prime disjuncts which is based on the operation of fuzzy resolution.
+
+<P>Prime disjuncts are always defined in relation to some fuzzy distribution
+which is supposed to be represented by a fuzzy CNF. In other words, a disjunct
+may be prime in relation to one fuzzy distribution and it may be not prime
+in relation to another fuzzy distribution. Prime disjunct is a disjunct
+which is a consequence of the corresponding fuzzy distribution but is not
+a consequence of any other disjunct (among those which are a consequence
+of this distribution). Thus prime disjunct is in a certain sense the most
+strong disjunct among those which can represent the corresponding fuzzy
+distribution, i.e., those which can be added to the CNF without the distribution
+change. If a prime disjunct is in a reduced form then it can be shown that
+if any its component is decreased then new disjunct is already not a consequence
+of the corresponding distribution, i.e., no one component of a prime disjunct
+in a reduced form can be decreased..
+
+<P>The method of finding prime disjuncts based on the resolution operation
+consists in applying the resolution to different disjuncts from the CNF
+on different variables, adding the resolvents obtained to the CNF and absorbing
+disjuncts which are a consequence of other disjuncts in this CNF. The process
+is stopped when any new resolvent is absorbed, i.e., no new resolvent can
+be generated. The main problem in this method is in which order to apply
+the resolution. According to the breadth first approach the resolution
+is applied to all disjunct pairs in the current CNF and new resolvents
+are added to the end of this CNF but the resolution is not applied to them.
+After the generation phase the process of absorption is carried out when
+all disjuncts which are a consequence of any other are removed from the
+CNF. After that new generation-absorption pass is started until no new
+resolvents can be generated. Obviously, before generating each new resolvent
+we check if two disjuncts are adjacent and if yes then after the resolvent
+is built we check if it is not a consequence of some disjunct already in
+the CNF. The whole process is shown in Fig. 7.
+<CENTER><TABLE BORDER=5 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>
+<CENTER><IMG SRC="fmda_7.gif" HEIGHT=434 WIDTH=510>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<CAPTION ALIGN=BOTTOM>Fig. 7. Breadth first strategy of generating prime
+disjuncts.&nbsp;</CAPTION>
+</TABLE></CENTER>
+&nbsp;For example, if we have a fuzzy CNF represented by means of the sectioned
+matrix (<B>1</B>, <B>2</B> and <B>3</B> are disjuncts)
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="3" BGCOLOR="#C0C0C0"><B>D</B> =&nbsp;</TD>
+
+<TD>{0.3, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+</TABLE></CENTER>
+then the generation of resolvents at the first pass results in the matrix
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="6" BGCOLOR="#C0C0C0"><B>D</B><SUB>1</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 0}</TD>
+
+<TD>{0, 0.4, 0}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>4</B>=<B>1</B>&lt;x<SUB>2</SUB>><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>5</B>=<B>1</B>&lt;x<SUB>1</SUB>><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>6</B>=<B>2</B>&lt;x<SUB>3</SUB>><B>3</B></TD>
+</TR>
+</TABLE></CENTER>
+No one disjunct in this matrix can be absorbed therefore it is taken as
+an input of the pass 2. During the pass 2 we generate only one disjunct
+<B>7</B> -- other generated disjuncts are absorbed by the disjuncts which
+are already in the matrix. For example, the resolvent <B>2</B>&lt;x<SUB>2</SUB>><B>5</B>
+is absorbed by the disjunct <B>4</B> and is not added to the matrix. The
+disjunct <B>7</B> does not absorbs previous disjuncts <B>1</B>-<B>6</B>
+and the pass 2 is finished with the matrix
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="7" BGCOLOR="#C0C0C0"><B>D</B><SUB>2</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 0}</TD>
+
+<TD>{0, 0.4, 0}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>4</B>=<B>1</B>&lt;x<SUB>2</SUB>><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>5</B>=<B>1</B>&lt;x<SUB>1</SUB>><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>6</B>=<B>2</B>&lt;x<SUB>3</SUB>><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0.4, 0}</TD>
+
+<TD>{0, 0.2, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>7</B>=<B>3</B>&lt;x<SUB>3</SUB>><B>4</B></TD>
+</TR>
+</TABLE></CENTER>
+During the pass 3 we generate only one disjunct (the disjunct 7 has to
+be transformed to the 2-nd reduced form)
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0.4, 0.3}</TD>
+
+<TD>{0, 0.2, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>8</B>=<B>6</B>&lt;x<SUB>2</SUB>><B>7</B></TD>
+</TR>
+</TABLE></CENTER>
+which absorbs its premises--disjuncts <B>6</B> and <B>7</B>. Thus we obtain
+the matrix
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="6" BGCOLOR="#C0C0C0"><B>D</B><SUB>3</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 0}</TD>
+
+<TD>{0, 0.4, 0}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>4</B>=<B>1</B>&lt;x<SUB>2</SUB>><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>5</B>=<B>1</B>&lt;x<SUB>1</SUB>><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0.4, 0.3}</TD>
+
+<TD>{0, 0.2, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>8</B>=<B>6</B>&lt;x<SUB>2</SUB>><B>7</B></TD>
+</TR>
+</TABLE></CENTER>
+Each pair of disjuncts from this matrix generates a resolvent which is
+absorbed by some other disjunct. So we cannot generate more disjuncts and
+the process is stopped. Thus we obtained the final matrix <B>D</B><SUB>3</SUB>
+which consists of 6 prime disjuncts.
+<H3>
+6.2. Transforming Matrix into the Dual Form</H3>
+Let us consider only transformation of DNF into CNF. The back transformation
+is carried out in the dual way. This problem is formulated as follows.
+There is a sectioned matrix <B>C</B> consisting of fuzzy conjuncts and
+representing a fuzzy DNF. It is necessary to transform it into the matrix
+of disjuncts <B>D</B> interpreted as a CNF and characterized by the same
+fuzzy distribution.
+
+<P>This procedure is based on the operation of adding the conjunct <B>c</B>
+to the disjunct <B>d</B> which results in the CNF <B>D</B>:
+<CENTER>(<B>c</B><SUB>1</SUB> AND <B>c</B><SUB>2</SUB> AND ... AND <B>c</B><SUB>n</SUB>)
+OR (<B>d</B><SUB>1</SUB> OR <B>d</B><SUB>2</SUB> OR ... OR <B>d</B><SUB>n</SUB>)
+= <B>D</B></CENTER>
+
+
+<P>It can be proved that this operation results in n disjuncts:
+<BLOCKQUOTE>
+<BLOCKQUOTE>((<B>d</B><SUB>1</SUB> OR <B>c</B><SUB>1</SUB>) OR <B>d</B><SUB>2</SUB>
+OR ... OR <B>d</B><SUB>n</SUB>) AND
+<BR>(<B>d</B><SUB>1</SUB> OR (<B>d</B><SUB>2</SUB> OR <B>c</B><SUB>1</SUB>)
+OR ... OR <B>d</B><SUB>n</SUB>) AND
+<BR>--/--/--/--
+<BR>(<B>d</B><SUB>1</SUB> OR <B>d</B><SUB>2</SUB> OR ... OR (<B>d</B><SUB>n</SUB>
+OR <B>c</B><SUB>1</SUB>))</BLOCKQUOTE>
+</BLOCKQUOTE>
+or in the sectioned matrix form
+
+<P>&nbsp;
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="4" BGCOLOR="#C0C0C0"><B>D</B> =&nbsp;</TD>
+
+<TD>
+<CENTER>(<B>d</B><SUB>1</SUB> OR <B>c</B><SUB>1</SUB>)&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>d</B><SUB>2</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>d</B><SUB>n</SUB>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER><B>d</B><SUB>1</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>(<B>d</B><SUB>2</SUB> OR <B>c</B><SUB>1</SUB>)&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>d</B><SUB>n</SUB>&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER><B>d</B><SUB>1</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER><B>d</B><SUB>2</SUB>&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>...&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>(<B>d</B><SUB>n</SUB> OR <B>c</B><SUB>1</SUB>)&nbsp;</CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+Thus to add the conjunct <B>c</B> to the disjunct <B>d</B> we have to copy
+<B>d</B> n times and for each i-th copy <B>d</B><SUP>i</SUP> fulfill the
+transformation:
+<CENTER><B>d</B><SUP>i</SUP><SUB>i</SUB> = <B>d</B><SUP>i</SUP><SUB>i</SUB>
+OR <B>c</B><SUB>i</SUB></CENTER>
+
+
+<P>Note that if the disjunct <B>d</B> consists of only 0 (complete inconsistency)
+then we obtain the procedure for transforming the DNF consisting from a
+single conjunct into the CNF.
+
+<P>For example the conjunct
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 1}</TD>
+
+<TD>{0, 0.5, 1}</TD>
+
+<TD>{1, 0.7, 0.2, 0}</TD>
+</TR>
+</TABLE></CENTER>
+being added to the disjunct
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{1, 0}</TD>
+
+<TD>{0, 0.8, 0}</TD>
+
+<TD>{0, 0.4, 0.9, 1}</TD>
+</TR>
+</TABLE></CENTER>
+results in the matrix
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="3" BGCOLOR="#C0C0C0"><B>D</B> =&nbsp;</TD>
+
+<TD>
+<CENTER>{1, 1}&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>{0, 0.8, 0}&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>{0, 0.4, 0.9, 1}&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>{1, 0}&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>{0, 0.8, 1}&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>{0, 0.4, 0.9, 1}&nbsp;</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>{1, 0}&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>{0, 0.8, 0}&nbsp;</CENTER>
+</TD>
+
+<TD>
+<CENTER>{1, 0.7, 0.9, 1}&nbsp;</CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+Obviously the first disjunct can be removed from the matrix since it is
+absolutely valid (its constant is equal to 1).
+
+<P>In general, before generating i-th disjunct <B>d</B><SUP>i</SUP> at
+the i-th step it is natural to check if the section <B>c</B><SUB>i</SUB>
+is present (i.e., it is not equal to the constant 1) and if the disjunction
+<B>d</B><SUB>i</SUB> OR <B>c</B><SUB>i</SUB> is not valid.
+
+<P>The procedure of transforming DNF into CNF is based on the operation
+of adding a conjunct to a disjunct. At each step of this procedure we add
+new conjunct from the DNF to all disjuncts from the CNF. At the beginning
+we add the first conjunct from the DNF to the empty CNF which involves
+only one disjunct consisting of all 0. The number of disjuncts in the matrix
+<B>D</B> grows very quickly therefore it is necessary to carry out periodically
+the procedure of absorption.
+
+<P>For example, let us suppose that we have to transform the matrix of
+DNF
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="3" BGCOLOR="#C0C0C0"><B>C</B> =&nbsp;</TD>
+
+<TD>{0.3, 1}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>c</B><SUP>1</SUP></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>c</B><SUP>2</SUP></TD>
+</TR>
+
+<TR>
+<TD>{1, 0}</TD>
+
+<TD>{1, 1, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>c</B><SUP>3</SUP></TD>
+</TR>
+</TABLE></CENTER>
+consisting of three conjuncts <B>c</B><SUP>1</SUP>, <B>c</B><SUP>2</SUP>
+and <B>c</B><SUP>3</SUP> into the matrix of CNF. The whole procedure consists
+of 3 steps. At each step we add to the DNF one conjunct from <B>C</B>.
+Thus at the first step we transform the conjunct <B>c</B><SUP>1</SUP> into
+the matrix of DNF, i.e., we add this conjunct to the initial disjunct consisting
+of all 0. This results in the matrix
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="3" BGCOLOR="#C0C0C0"><B>D</B><SUB>1</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+</TABLE></CENTER>
+At the second step we have to add the conjunct <B>c</B><SUP>2</SUP> to
+the matrix <B>D</B><SUB>1</SUB>, i.e., this conjunct have to be added to
+each disjunct from <B>D</B><SUB>1</SUB>. First, we make 3 copies of each
+of our disjuncts
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="9" BGCOLOR="#C0C0C0"><B>D</B><SUB>2</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+</TABLE></CENTER>
+Then we impose on them with the operation OR the corresponding section
+of the conjunct <B>c</B><SUP>2</SUP>
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="9" BGCOLOR="#C0C0C0"><B>D</B><SUB>2</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 1} OR {0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0} OR {0, 0.4, 1}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0} OR {0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1.3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0} OR {0, 1}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0} OR {0, 0.4, 1}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0} OR {0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0} OR {0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0} OR {0, 0.4, 1}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0} OR {0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.3</B></TD>
+</TR>
+</TABLE></CENTER>
+and finally we obtain the matrix (disjuncts <B>1.2</B> , <B>1.3</B> are
+absorbed by the dijsunct&nbsp; <B>1.1</B>, i.e., the disjunct <B>1</B>
+has not changed)
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="9" BGCOLOR="#C0C0C0"><B>D</B><SUB>2</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 1}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.3</B></TD>
+</TR>
+</TABLE></CENTER>
+After adding to the matrix <B>D</B><SUB>2</SUB> the third conjunct <B>c</B><SUP>3</SUP>
+we obtain the final matrix <B>D</B><SUB>3</SUB> which is equivalent to
+the source matrix of conjuncts <B>C</B>:
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="15" BGCOLOR="#C0C0C0"><B>D</B><SUB>3</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 1}</TD>
+
+<TD>{1, 1, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1.1.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1.1.3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{1, 1, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.1.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.1.3</B></TD>
+</TR>
+
+<TR>
+<TD>{1, 0}</TD>
+
+<TD>{1, 0.5, 1}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.2.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 1}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.2.3</B></TD>
+</TR>
+
+<TR>
+<TD>{1, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.3.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 1, 0}</TD>
+
+<TD>{0, 0, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.3.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.3, 0, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2.3.3</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{1, 1, 0}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.1.2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.1.3</B></TD>
+</TR>
+
+<TR>
+<TD>{1, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.2.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{1, 1, 1, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.2.3</B></TD>
+</TR>
+
+<TR>
+<TD>{1, 0}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{0, 1, 1, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.3.1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 1, 0}</TD>
+
+<TD>{0, 1, 1, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3.3.2</B></TD>
+</TR>
+</TABLE></CENTER>
+This matrix can be further transformed, for example, disjunct <B>1.1.2</B>
+is absobed by <B>2.1.2</B> and should be removed.
+<BR>&nbsp;
+<H2>
+<A NAME="7"></A>7. Finding Projections on Variables</H2>
+The problem of finding projections on variables is one of the most important
+in multi-dimensional analysis. With the help of this operation we obtain
+a local distribution over the values of one variable from a multi-dimensional
+distribution. Let us suppose that it is required to find a projection of
+the distribution represented by the matrix of CNF <B>D</B> onto the variable
+x<SUB>k</SUB>. Generally, projection can be defined in different ways but
+we will suppose that it is defined by means of the operation of maximum.
+Namely, j-th value of the projection on the variable x<SUB>k</SUB>, i.e.,
+its value in the point a<SUB>kj</SUB> is equal to
+<CENTER>max( <B>D</B>(x<SUB>1</SUB>,..., x<SUB>k</SUB>=a<SUB>kj</SUB>,...,
+x<SUB>n</SUB>) )</CENTER>
+on all values of all variables except for x<SUB>k</SUB>=a<SUB>kj</SUB>.
+In other words, we take maximum in all points which have k-th component
+(k-th dimension) equal to a<SUB>kj</SUB>. Thus to calculate the whole projection
+in n<SUB>k</SUB> points of k-th domain&nbsp; we have to take maximum in
+all point of the universe of discourse. Obviously, the maximum of the projection
+on any variable is equal to the maximum of the whole multi-dimensional
+distribution and therefore we can solve the satisfiability problem (finding
+the consistency) by finding any projection.
+
+<P>We can also redefine the projection by means of the logical consequence
+relation. Let us suppose that n projections on all variables are represented
+by the conjunct <B>c</B>, i.e., each section <B>c</B><SUB>i</SUB> of this
+conjunct represents a projection on i-th variable. Then all its components
+<B>c</B><SUB>ij</SUB> must be minimal provided that it is still a consequence
+of <B>D</B>. In other words, to find the conjunct of projections <B>c</B>
+we have to take the trivial conjunct consisting of all 1 and gradually
+decrease its components untill we reach the border where it ceases to be
+a consequence of <B>D</B>.
+
+<P>One procedure for finding projections is based on a theorem [<A HREF="#S93a">S93a</A>]
+which affirms that disjunct <B>u</B> is a consequence of the matrix of
+CNF <B>D</B> iff there exists such a prime disjunct <B>p</B> of this matrix
+that the disjunct <B>d</B> is its consequence:
+<CENTER><B>D</B> |= <B>u</B> &lt;=> there exists prime <B>p</B>: <B>p</B>
+|= <B>u</B></CENTER>
+
+
+<P>With the help of this criterion we can check if some disjunct is a consequence
+of the matrix, but we can also find minimal disjuncts which satisfy this
+condition. It can shown that the projection on k-th variable of the distribution
+represented by the matrix of CNF <B>D</B> is equal to the minimum of projections
+of all prime disjuncts on this variable. Note that we have to have <I>all</I>
+prime disjuncts to carry out this procedure.
+
+<P>Projection on k-th variable of one disjunct is equal to the k-th section
+of this disjunct plus constant M which is equal to maximal value in all
+the rest of the sections (i.e., M is equal to the maximum of all non-k-th
+section constants). For example, projection of the disjunct
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD>{0.3, 0}</TD>
+
+<TD>{0, 0.4, 0}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+</TR>
+</TABLE></CENTER>
+on 3rd variable is equal to {0, 0.2, 0.7, 1}+0.4={0.4, 0.4, 0.7, 1} while
+its projections on the variables x<SUB>1</SUB> and x<SUB>2</SUB> is equal
+to the constant 1 (we say that the projection is absent).
+
+<P>Let us consider an example of the matrix consisting of all prime disjuncts
+from the previous section
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=2 BGCOLOR="#FFFFFF" >
+<TR>
+<TD ROWSPAN="6" BGCOLOR="#C0C0C0"><B>D</B><SUB>3</SUB> =&nbsp;</TD>
+
+<TD>{0.3, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{0, 0, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>1</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{0, 0.4, 1}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>2</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>3</B></TD>
+</TR>
+
+<TR>
+<TD>{0.3, 0}</TD>
+
+<TD>{0, 0.4, 0}</TD>
+
+<TD>{0, 0.2, 0.7, 1}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>4</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 0}</TD>
+
+<TD>{1, 0.5, 0}</TD>
+
+<TD>{1, 0.3, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>5</B></TD>
+</TR>
+
+<TR>
+<TD>{0, 1}</TD>
+
+<TD>{0, 0.4, 0.3}</TD>
+
+<TD>{0, 0.2, 0, 0}</TD>
+
+<TD BGCOLOR="#C0C0C0"><B>8</B></TD>
+</TR>
+</TABLE></CENTER>
+The projection of this matrix on the variable x<SUB>1</SUB> is equal to
+{0.4, 1} (disjunct <B>8</B>), on variable x<SUB>2</SUB> -- {1, 0.5, 0.3}
+(disjunct <B>1</B>), and on variable x<SUB>3</SUB> -- {0.4, 0.4, 0.7, 1}
+(disjunct <B>4</B>).
+<BR>&nbsp;
+<H2>
+<A NAME="8"></A>8. Conclusion</H2>
+<I>Distribution as logical proposition</I>
+<UL>The notion of fuzzy relation or fuzzy multi-dimensional distribution
+which has been studied in the paper is certainly not new and has been paid
+a lot of attention in fuzzy literature. On the other hand, one traditional
+direction of fuzzy research has consisted in fuzzifying classical logics.
+These two approaches have being developed in great extent independently.
+Fuzzy relations are usually described in algebraic terms (e.g., as fuzzy
+relational algebra) while fuzzy logics are usually obtained from some classical
+logic by introducing fuzzy parameters (in fact, there are two big approaches
+to fuzzifying classical logics: (i) fuzzifying interpretations (e.g., [<A HREF="#L71">L71</A>,
+<A HREF="#L72">L72</A>]) and fuzzifying formulas themselves, e.g., introducing
+weights to propositions (e.g., [<A HREF="#DLP91">DLP91</A>])). One general
+result of this paper is that we have established a connection between these
+two directions. Now we know that any local (fuzzy) distribution can be
+viewed as a proposition in logical sense and we can combine them just as
+ordinary propositions by means of connections AND and OR to build more
+complex propositions [<A HREF="#S93b">S93b</A>], particularly, fuzzy CNF
+and fuzzy DNF. Of course, it is not enough to declare that the distribution
+(relation) is a proposition and in the paper we have shown that the whole
+behavior of our formal system is analogous to and even more general then
+that of the propositional logic.</UL>
+<I>Inference as equivalent transformation</I>
+<UL>Traditionally logical inference has been thought of as applying inference
+rules to axioms and theorems which have been already proved and obtaining
+new theorems (deduction process). As a result we could infer logical statements
+which express in an explicit form different properties of the formal system
+hidden in the original representation by means of axioms. Although we have
+showed in the paper that our approach to logical inference is analogous
+to this one, we also give another interpretation for it. According to this
+view inference process is considered as an equivalent transformation of
+our representation of the semantics by means of axioms to some other representation
+which is more appropriate in the sense of explicit representation of necessary
+properties. In this case a consequence relation is only one of many possible
+equivalent transformations which allows us to remove unnecessary statements.
+This interpretation of logical inference seems more general especially
+when considering non-minimax operations for composing distributions.</UL>
+<I>Values of variables and values of distributions</I>
+<UL>One general result of the approach described in the paper is that we
+clearly distinguish two notions of values of variables and values of distributions
+which are often mixed in traditional formalisms. The values of individual
+logical variables can be associated with the syntax or objective part of
+the problem domain. They define the matter of propositions, i.e., what
+the proposition is about, e.g., it can be some states space. On the other
+hand, the values of distributions are associated with the semantics or
+subjective part of the problem domain. They define the proposition itself,
+e.g., what we think or know about the possible states. However in the case
+of superpositions the same set of values can represent both syntactic and
+semantic values. For example, when we negate some proposition we in essence
+apply the proposition (negation) to the set of values which are semantical
+for the negated proposition but syntactic for the negation.</UL>
+<I>Inference as finding projections</I>
+<UL>Suppose we know that inference process is an equivalent transformation
+of our representation to some form, i.e., to infer something we have to
+change the form of representation in such a way that the semantics remain
+the same. Then the question arises: What form of representation we have
+to seek for, and why it is better than other forms, i.e., what is the goal
+of inference process? An answer is the following. Our general goal is to
+reveal interesting in some sense (global) properties of a multi-dimensional
+distribution, i.e., to find the form of representation where these properties
+would be explicit. Usually explicit form of representation assumes that
+the property is expressed in one statement. The property which is looked
+for in most cases is the projection of the whole distribution on some variable(s)
+or the proposition about one variable. Although there may be also other
+properties (e.g., correlations between individual variables) this one is
+supposed the most important and is considered to be the goal of general
+inference process.</UL>
+<I>Fuzzy resolution operation and its properties</I>
+<UL>Perhaps the most important result described in the paper is new fuzzy
+resolution operation. It generalizes traditional consensus operation and
+resolution in logic in two directions: (i) values of variables are supposed
+to be many-valued [<A HREF="#Zk89">Zk89</A>] and even continuos, and (ii)
+distributions are supposed to take values from the interval [0,1] [<A HREF="#S91">S91</A>].
+The criterion of adjacency formulated in the paper enforces the analogy
+with crisp case since it allows us to determine when the resolvent is not
+trivial. To define correctly the resolution operation and the criterion
+of adjacency we had to introduce such new notions as reduced forms, degree
+of incomparability, constant of disjunct.</UL>
+<I>Negation as proposition</I>
+<UL>Although it is not described in this paper, it can be easily shown
+that we do not need an operation of negation. Instead of it we can use
+more general operation of superposition (proposition about proposition),
+a particular case of which represents negation. More about this can be
+read in [<A HREF="#S93b">S93b</A>].</UL>
+
+<H2>
+References</H2>
+<A NAME="Zd75"></A><B>[Zd75]</B> Zadeh L.A. (1975), The concept of a linguistic
+variable and its application to approximate reasoning -- Part I. -- Information
+Sciences, v.8, pp.301-357.
+
+<P><A NAME="Zd79"></A><B>[Zd79]</B> Zadeh L.A. (1979), A theory of approximate
+reasoning, In: Machine Intelligence, v.9 (Hayes J.E., Michie D. and Mikulich
+L.I., Eds.). -- New York: Elsevier, pp.149-194.
+
+<P><A NAME="KS90"></A><B>[KS90]</B> Kruse R. and Schwecke E. (1990), Fuzzy
+Reasoning in a Multidimensional Space of Hypotheses, Int. J. of Approximate
+Reasoning <B>4</B>, 47-68.
+
+<P><A NAME="Zk89"></A><B>[Zk89]</B> Zakrevsky A.D. (1989), Logical inference
+in finite predicates, Preprint No.6, Institute of Technical Cybernetics,
+AS Belorussia, Minsk (in Russian).
+
+<P><A NAME="Zk94"></A><B>[Zk94]</B> Zakrevsky A.D. (1994), Logical recognition
+in the space of multivalued attributes, Computer Sci. J. of Moldova <B>2</B>(2),
+169-184.
+
+<P><A NAME="L90"></A><B>[L90]</B> Levchenko V.I. (1990), Diagnostic system
+based on finite predicates, Preprint, Institute of Mathematics and CC AS
+Moldavia, Kishinev, Shtiintsa, (in Russian).
+
+<P><A NAME="LS91"></A><B>[LS91]</B> Levchenko V.I. and Savinov A.A. (1991),
+Dialog control and logical inference in finite predicates, In: Applied
+Systems of Artificial Intelligence, Kishinev, Shtiintsa, 40-46 (in Russian).
+
+<P><A NAME="LS92"></A><B>[LS92]</B> Levchenko V.I. and Savinov A.A. (1992),
+The representation of fuzzy knowledge in the diagnostic expert system shell
+EDIP, Proc. 2nd Int. Conf. on Fuzzy Logic and Neural Networks---IIZUKA'92,
+Iizuka, Japan, July 17-22.
+<BR>&nbsp;
+<BR><A NAME="S91"></A><B>[S91]</B> A.A. Savinov (1991), Matrix representation
+of fuzzy knowledge in attribute models, Preprint, Institute of Mathematics
+and CC, AS Moldavia, Kishinev, Shtiintsa, (in Russian).
+
+<P><A NAME="S93a"></A><B>[S93a]</B> A.A. Savinov (1993), Matrix representation
+of fuzzy knowledge in expert systems, C.Sc. thesis, Technical University
+of Moldova (in Russian).
+
+<P><A NAME="LS93a"></A><B>[LS93a]</B> V.I. Levchenko and A.A. Savinov (1993),
+The matrix representation of fuzzy knowledge and its application to the
+expert systems design, Computer Sci. J. of Moldova <B>1</B>(1), 62-84.
+
+<P><A NAME="LS93b"></A><B>[LS93b]</B> V.I. Levchenko and A.A. Savinov (1993),
+Matrix representation of fuzzy predicates and its application in expert
+systems, Izvestia RAN, Tehnicheskaia kibernetika No.5, 1993, 126-140 (in
+Russian).
+
+<P><A NAME="S96b"></A><B>[S96b]</B> Savinov A.A. (1996), Inference in the
+Fuzzy Knowledge Manager EDIP, International Workshop "Soft Computing---SC'96",
+Kazan, Russia, October 3-5.
+
+<P><A NAME="S93b"></A><B>[S93b]</B> Savinov A.A. (1993), Fuzzy propositional
+logic, Fuzzy Sets and Systems <B>60</B>(1), 9-17.
+
+<P><A NAME="S93c"></A><B>[S93c]</B> Savinov A.A. (1993), Fuzzy propositional
+logic for the knowledge representation, First European Congress on Fuzzy
+and Intelligent Technologies---EUFIT'93, Aachen, Germany, September 7-10,
+1993.
+
+<P><A NAME="S96a"></A><B>[S96a]</B> Savinov A.A. (1996), Some properties
+of new resolution rule in the logic of possibility distributions, 4th European
+Congress on Intelligent Techniques and Soft Computing---EUFIT'96, Aachen,
+Germany, September 2-5, 178-182, 1996.
+
+<P><A NAME="LS94a"></A><B>[LS94a]</B> Levchenko V.I. and Savinov A.A. (1994),
+Diagnosis by fuzzy constraints in attribute model, 2nd Eur. Congr. on Intelligent
+Techniques and Soft Computing---EUFIT'94, Aachen, Germany, September 20-23,
+382-385, 1994.
+
+<P><A NAME="LS94b"></A><B>[LS94b]</B> Levchenko V.I. and Savinov A.A. (1994),
+Using the fuzzy inference engine EDIP for real time control, Symp. on Artificial
+Intelligence in Real Time Control, Valencia, Spain, October 3-5, 1994.
+
+<P><A NAME="LS94c"></A><B>[LS94c]</B> Levchenko V.I. and Savinov A.A.,
+Qualitative aggregation of information in fuzzy attribute model, Computer
+Sci. J. of Moldova <B>2</B>(2), 215-225.
+
+<P><A NAME="LS96"></A><B>[LS96]</B> Levchenko V.I. and Savinov A.A. (1996),
+Aggregation in fuzzy attribute models, 5th National Conference on Artificial
+Intelligence, Kazan, Russia, October 7-11, 1996 (in Russian).
+
+<P><A NAME="CL73"></A><B>[CL73]</B> Chang C.L. and Lee R.C.T. (1973), Symbolic
+logic and mechanical theorem proving, Academic press, New York, 1973.
+
+<P><A NAME="L71"></A><B>[L71]</B> R.C.T. Lee and C.L. Chang (1971), Some
+properties of fuzzy logic, Inform and Control <B>19</B>, 417-431.
+
+<P><A NAME="L72"></A><B>[L72]</B> R.C.T. Lee (1972), Fuzzy logic and the
+resolution principle, J. Assoc. Comput. Mach. <B>19</B>, 109-119.
+
+<P><A NAME="DLP91"></A><B>[DLP91]</B> D. Dubois, J. Lang, H. Prade (1991),
+Possibilistic logic, Rapport IRIT/91-98/R, Institut de Recherche en Informatique
+de Toulouse, December 1991.
+<BR>&nbsp;
+</BODY>
+</HTML>

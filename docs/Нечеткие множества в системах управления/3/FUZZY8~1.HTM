@@ -1,0 +1,346 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy7.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy9.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+<CENTER><H3>Условные нечеткие подмножества.</H3></CENTER>
+
+Пусть <B>X</B> и <B>Y</B> - универсальные множества, взаимосвязь которых задана нечетким отношением <B>R</B>: (<B>X<FONT FACE="Symbol">&#180;</FONT>Y</B>)<FONT FACE="Symbol">&#174;</FONT>[0,1], т.е. для каждой пары (<I>x,y</I>)<FONT FACE="Symbol">&#206;</FONT><B>X<FONT FACE="Symbol">&#180;</FONT>Y</B> задано значение функции принадлежности <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(<I>x,y</I>)<FONT FACE="Symbol">&#206;</FONT>[0,1].<BR>
+
+Пусть <B>А</B> - некоторое нечеткое множество, заданное на <B>Х</B>, т.е. определена функция принадлежности <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) для всех <I>х</I> из <B>Х</B>. Тогда нечеткое множество <B>А</B> и нечеткое отношение <B>R</B> индуцируют в <B>Y</B> нечеткое подмножество B с функцией принадлежности 
+
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>y</I>) = <IMG SRC="image123.gif" WIDTH=32 HEIGHT=21 ALIGN="ABSMIDDLE">min[<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>), <B><FONT FACE="Symbol">&#109;</FONT>
+<SUB>R</SUB></B>(<I>x,y</I>)] = <IMG SRC="image124.gif" WIDTH=21  HEIGHT=34 ALIGN="ABSMIDDLE">[<B><FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB></B>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT> <B><FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB></B>(<I>x,y</I>)].<BR>
+</CENTER> 
+
+<I><U>Обозначение:</I></U> B = A<FONT FACE="Symbol">&#183;</FONT>R. <BR>
+<U>Пример: </U><BR>
+Пусть <B>X</B> = {<I>x</I><SUB>1</SUB>, <I>x</I><SUB>2</SUB>, <I>x</I><SUB>3</SUB>}, <B>Y</B> = {<I>y</I><SUB>1</SUB>, <I>y</I><SUB>2</SUB>, <I>y</I><SUB>3</SUB>, <I>y</I><SUB>4</SUB>} и заданы нечеткое отношение <BR>
+
+<CENTER>
+<TABLE BORDER CELLPADDING=7>
+<TR>
+<TH ROWSPAN=4><BR>XRY = </TH>
+<TH>&nbsp;</TH>
+<TH><I>y</I><SUB>1</SUB></TH>
+<TH><I>y</I><SUB>2</SUB></TH>
+<TH><I>y</I><SUB>3</SUB></TH>
+<TH><I>y</I><SUB>4</SUB></TH>
+</TR>
+<TR>
+<TD><B><I>x</I><SUB>1</SUB></B></TD>
+<TD>0,8</TD>
+<TD>1</TD>
+<TD>0</TD>
+<TD>0,3</TD>
+</TR>
+<TR>
+<TD><B><I>x</I><SUB>2</SUB></B></TD>
+<TD>0,8</TD>
+<TD>0,3</TD>
+<TD>0,8</TD>
+<TD>0,2</TD>
+</TR>
+<TR>
+<TD><B><I>x</I><SUB>3</SUB></B></TD>
+<TD>0,2</TD>
+<TD>0,3</TD>
+<TD>0</TD>
+<TD>0,4</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>и нечеткое множество <B>A</B> = {0,3/<I>x</I><SUB>1</SUB>,0,7/<I>x</I><SUB>2</SUB>,1/<I>x</I><SUB>3</SUB>}.<BR>
+Проведем операцию <FONT FACE="Symbol">&#76;</FONT> для <B>А</B> и столбца <I>y</I><SUB>1</SUB> : <BR>
+
+<TABLE CELLPADDING=7>
+<TR>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR>
+	<TH><I>x</I><SUB>1</SUB></TH>
+	<TH><I>x</I><SUB>2</SUB></TH>
+	<TH><I>x</I><SUB>3</SUB></TH>
+	</TR>
+	<TR>
+	<TD>0,3</TD>
+	<TD>0,7</TD>
+	<TD>1</TD>
+	</TR></TABLE>
+</TD>
+<TD><FONT FACE="Symbol">&#76;</FONT></TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TH><I>y</I><SUB>1</SUB> </TH>	</TR>
+	<TR><TD>0,8</TD></TR>
+	<TR><TD>0,8</TD></TR>
+	<TR><TD>0,2</TD></TR>
+	</TABLE>
+</TD>
+<TD> = </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR ALIGN=center><TH><I>y</I><SUB>1</SUB> </TH>	</TR>
+	<TR><TD>0,3<FONT FACE="Symbol">&#76;</FONT>0,8</TD></TR>
+	<TR><TD>0,7<FONT FACE="Symbol">&#76;</FONT>0,8</TD></TR>
+	<TR><TD>1<FONT FACE="Symbol">&#76;</FONT>0,2</TD></TR>
+	</TABLE>
+</TD>
+<TD> = </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TH><I>y</I><SUB>1</SUB> </TH>	</TR>
+	<TR><TD>0,3</TD></TR>
+	<TR><TD>0,7</TD></TR>
+	<TR><TD>0,2</TD></TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+<P>После выполнения операции V на элементах полученного столбца имеем: <BR>
+<DIR><DIR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>y</I><SUB>1</SUB>) = 0,3<FONT FACE="Arial Cyr">V</FONT>0,7<FONT FACE="Arial Cyr">V</FONT>0,2 = 0,7.<BR>  
+</DIR></DIR> 
+
+Проделав аналогичные вычисления для <I>y</I><SUB>2</SUB>, <I>y</I><SUB>3</SUB>,<I> y</I><SUB>4 </SUB>имеем:<BR> 
+<DIR><DIR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>y</I><SUB>2</SUB>) = 0,3 <BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>y</I><SUB>3</SUB>) = 0,7 <BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>y</I><SUB>4</SUB>) = 0,4.<BR> 
+</DIR></DIR>
+И окончательно:<BR>    
+
+<TABLE CELLPADDING=7>
+<TR>
+<TH>A</TH>
+<TH> </TH>
+<TH>R</TH>
+<TH></TH>
+<TH>B</TH>
+</TR>
+<TR>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,3</TD><TD>0,7</TD><TD>1</TD></TR>
+	</TABLE>
+</TD>
+<TD><B><FONT FACE="Symbol">&#183;</FONT></B> </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,8</TD><TD>1</TD><TD>0</TD><TD>0,3</TD></TR>
+	<TR><TD>0,8</TD><TD>0,3</TD><TD>0,8</TD><TD>0,2</TD></TR>
+	<TR><TD>0,2</TD><TD>0,3</TD><TD>0</TD><TD>0,4</TD></TR>
+	</TABLE>
+</TD>
+<TD> = </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,7</TD><TD>0,3</TD><TD>0,7</TD><TD>0,4</TD></TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+
+
+<P>
+<I><U>Замечание.</I></U> При заданном R, если А индуцирует В, то ближайшее четкое подмножество <U>А</U> индуцирует <U>В</U>. 
+<P>
+<U>Нечеткие подмножества последовательно обуславливающие друг друга</U> <BR>
+
+Если
+<DIR><DIR>
+<B>А<SUB>1</SUB></B> индуцирует <B>А<SUB>2</SUB></B> посредством <B>R<SUB>1</SUB></B>,<BR> <B>А<SUB>2</SUB></B> индуцирует <B>А<SUB>3</SUB></B> посредством <B>R<SUB>2</SUB></B>,<BR>
+.............................................<BR>
+<B>А<I><SUB>n-1</I></SUB></B> индуцирует <B>А<SUB><I>n</I></SUB></B> посредством R<SUB><I>n-1</I></SUB>,
+</DIR>
+то
+<DIR>
+<B>А<SUB>1</SUB></B> индуцирует <B>А<SUB><I>n</I></SUB></B> посредством <B>R<SUB><I>n-1</I></B><FONT FACE="Symbol">&#183;</FONT></SUB>R<SUB><I>n-2</I></SUB><FONT FACE="Symbol">&#183;</FONT> ...<FONT FACE="Symbol">&#183;</FONT>R<SUB>1</SUB>, </DIR></DIR>
+
+где <B>R<SUB><I>n-1</I></SUB><FONT FACE="Symbol">&#183;</FONT>R<SUB><I>n-2</I></SUB><FONT FACE="Symbol">&#183;</FONT> ...<FONT FACE="Symbol">&#183;</FONT>R<SUB>1</SUB></B> - определенная выше композиция нечетких отношений <B>R<SUB>1</SUB>, R<SUB>2</SUB>, ..., R<SUB>n</SUB></B>. 
+
+<P>
+<U>Пример:</U> 
+<P>  Вернемся к примеру (max-min)-композиции. 
+
+<CENTER>
+<TABLE CELLPADDING=7 >
+<TR ALIGN=center>
+<TH>R<SUB>1</SUB></TH>
+<TH ROWSPAN=2><FONT FACE="Symbol">&#183;</FONT> </TH>
+<TH>R<SUB>2</SUB></TH>
+<TH ROWSPAN=2> = </TH>
+<TH>R<SUB>1</SUB><FONT FACE="Symbol">&#183;</FONT>R<SUB>2</SUB></TH>
+</TR>
+
+<TR>
+<TD>
+	<TABLE CELLPADDING=7 BORDER=1>
+	<TR><TH>&nbsp;</TH><TH><I>y</I><SUB>1</SUB></TH><TH><I>y</I><SUB>2</SUB></TH><TH><I>y</I><SUB>3</SUB></TH></TR>
+	<TR><TH><I>x</I><SUB>1</SUB></TH><TD>0,1</TD><TD>0,7</TD><TD>0,4</TD></TR>
+	<TR><TH><I>x</I><SUB>2</SUB></TH><TD>1</TD><TD>0,5</TD><TD>0</TD></TR>
+	</TABLE>
+	</TD>
+
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TD>&nbsp;</TD>
+	<TH><I>z</I><SUB>1</SUB></TH><TH><I>z</I><SUB>2</SUB></TH><TH><I>z</I><SUB>3</SUB></TH><TH><I>z</I><SUB>4</SUB></TH></TR>
+	<TR><TH><I>y</I><SUB>1</SUB></TH><TD>0,9</TD><TD>0</TD><TD>1</TD><TD>0,2</TD></TR>
+	<TR><TH><I>y</I><SUB>2</SUB></TH><TD>0,3</TD><TD>0,6</TD><TD>0</TD><TD>0,9</TD></TR>
+	<TR><TH><I>y</I><SUB>3</SUB></TH><TD>0,1</TD><TD>1</TD><TD>0</TD><TD>0,5</TD></TR>
+	</TABLE>
+</TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TH>&nbsp;</TH><TH><I>z</I><SUB>1</SUB></TH><TH><I>z</I><SUB>2</SUB></TH><TH><I>z</I><SUB>3</SUB></TH><TH><I>z</I><SUB>4</SUB></TH></TR>
+	<TR><TH><I>x</I><SUB>1</SUB></TH><TD>0,3</TD><TD>0,6</TD><TD>0,1</TD><TD>0,7</TD></TR>
+	<TR><TH><I>x</I><SUB>2</SUB></TH><TD>0,9</TD><TD>0,5</TD><TD>1</TD><TD>0,5</TD></TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P> 
+Пусть А={0,3/<I>x</I><SUB>1</SUB>, 0,7/<I>x</I><SUB>2</SUB> }, тогда <BR>
+
+<CENTER>
+<TABLE CELLPADDING=5>
+<TR>
+<TH>А<SUB>1</SUB></TH>
+<TD>&nbsp;</TD>
+<TH>R<SUB>1</SUB></TH>
+<TD>&nbsp;</TD>
+<TH>А<SUB>2</SUB></TH>
+</TR>
+<TR>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,3</TD><TD>0,7</TD></TR>
+	</TABLE>
+</TD>
+<TD ROWSPAN=2><FONT FACE="Symbol">&#183;</FONT></TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,1</TD><TD>0,7</TD><TD>0,4</TD></TR>
+	<TR><TD>1</TD><TD>0,5</TD><TD>0</TD></TR>
+	</TABLE>
+</TD>
+<TD ROWSPAN=2> = </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,7</TD><TD>0,5</TD><TD>0,3</TD></TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<TABLE CELLPADDING=5>
+<TR>
+<TH>А<SUB>2</SUB></TH>
+<TD>&nbsp;</TD>
+<TH>R<SUB>2</SUB></TH>
+<TD>&nbsp;</TD>
+<TH>А<SUB>3</SUB></TH>
+</TR>
+<TR>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,7</TD><TD>0,5</TD><TD>0,3</TD></TR>
+	</TABLE>
+</TD>
+<TD ROWSPAN=2><FONT FACE="Symbol">&#183;</FONT></TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,9</TD><TD>0</TD><TD>1</TD><TD>0,2</TD></TR>
+	<TR><TD>0,3</TD><TD>0,6</TD><TD>0</TD><TD>0,9</TD></TR>
+	<TR><TD>0,1</TD><TD>1</TD><TD>0</TD><TD>0,5</TD></TR>
+	</TABLE>
+</TD>
+<TD ROWSPAN=2> = </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,7</TD><TD>0,5</TD><TD>0,7</TD><TD>0,5</TD></TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<TABLE CELLPADDING=5>
+<TR>
+<TH>А<SUB>1</SUB></TH>
+<TD>&nbsp;</TD>
+<TH>R<SUB>1</SUB><FONT FACE="Symbol">&#183;</FONT>R<SUB>2</SUB></TH>
+<TD>&nbsp;</TD>
+<TH>А<SUB>3</SUB></TH>
+</TR>
+<TR>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,3</TD><TD>0,7</TD></TR>
+	</TABLE>
+</TD>
+<TD ROWSPAN=2><FONT FACE="Symbol">&#183;</FONT></TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,3</TD><TD>0,6</TD><TD>0,1</TD><TD>0,7</TD></TR>
+	<TR><TD>0,9</TD><TD>0,5</TD><TD>1</TD><TD>0,5</TD></TR>
+	</TABLE>
+</TD>
+<TD ROWSPAN=2> = </TD>
+<TD>
+	<TABLE BORDER CELLPADDING=7>
+	<TR><TD>0,7</TD><TD>0,5</TD><TD>0,7</TD><TD>0,5</TD></TR>
+	</TABLE>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>
+<U>Немного о бинарных отношениях вида <B>XRX</B></U>
+<P>Нечеткие отношения вида <B>XRX</B> задаются функцией принадлежности <B><FONT FACE="Symbol">&#109;</FONT>
+<SUB>R</SUB></B>(<I>x,y</I>), но с условием, что <I>x</I> и <I>y</I> - элементы одного и того же универсального множества. В зависимости от своих свойств (основные - симметричность, рефлексивность, транзитивность) конкретные нечеткие отношения задают отношения сходства и различия, порядка или слабого порядка между элементами <B>Х</B>. Они имеют обширную сферу приложений в задачах автоматической классификации и принятия решений (сравнение альтернатив).
+
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy7.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy9.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+
+</BODY>
+</HTML>

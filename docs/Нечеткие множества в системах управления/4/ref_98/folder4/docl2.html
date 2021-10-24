@@ -1,0 +1,401 @@
+<!--DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.0 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<META NAME="Author" CONTENT="В.Д. Бобко, Ю.Н. Золотухин, А.А. Нестеров. & Тимиртдинов Ю.А.">   
+<META NAME="KeyWords" CONTENT="Fuzzy, нечеткое управление, Fuzzy Technologies, принцип максимума, ПИД-регулятор, Fuzzy logic">
+<META NAME="Description" CONTENT="In this paper a problem of improving of control quality by dynamic correction of PID - controller parameters is considered. A time optimal control law, based on the principle 
+of a maximum, was found and is used as a desirable trajectory. Transition from time domain, 
+in which optimal control is found, was carried out in phase space of system and fuzzy controller 
+was developed.">
+
+<TITLE>СТАТЬЯ: "... ОСНОВА ... НЕЧЕТКОГО ЛОГИЧЕСКОГО КОНТРОЛЛЕРА"</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../../back1.gif"  BGPROPERTIES=FIXED>
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100% BORDER=0>
+<TR>
+<TD><FONT SIZE=-2><A HREF="../../publ.html">Список трудов</A></FONT> </TD>
+<TD ALIGN="RIGHT"><B><FONT SIZE=+1><FONT COLOR=#800080>Fuzzy Technologies Lab.</FONT></FONT></B> </TD>
+</TR>
+</TABLE>
+<HR SIZE=2>
+<BR>
+
+<BLOCKQUOTE>
+
+<CENTER>
+<H3>ОПТИМАЛЬНАЯ ТРАЕКТОРИЯ КАК ОСНОВА ПОСТРОЕНИЯ БАЗЫ ЗНАНИЙ НЕЧЕТКОГО ЛОГИЧЕСКОГО КОНТРОЛЛЕРА</H3>
+
+<H4>В.Д. Бобко, Ю.Н. Золотухин, А.А. Нестеров.</H4>
+
+Лаборатория нечетких технологий<BR>
+Институт автоматики и электрометрии<BR>
+Сибирское отделение РАН<BR>
+630090 Новосибирск, просп. ак. Коптюга, 1<BR>
+Россия<BR>
+Тел.: (3832) 33 26 25, Факс: (3832) 33 38 63<BR>
+<A HREF="MAILTO:zolotukhin@iae.nsk.su ">E-mail: zolotukhin@iae.nsk.su</A> <BR>
+</CENTER>
+
+<P>
+<B><U>Ключевые слова:</U></B> нечеткое управление, принцип максимума, ПИД-регулятор.<BR>
+
+
+<P><BLOCKQUOTE>
+<B>Abstract.</B> In this paper a problem of improving of control quality by dynamic correction of 
+PID - controller parameters is considered. A time optimal control law, based on the principle 
+of a maximum, was found and is used as a desirable trajectory. Transition from time domain, 
+in which optimal control is found, was carried out in phase space of system and fuzzy controller 
+was developed. 
+</BLOCKQUOTE>
+<P>
+<H4>1. Введение</H4>
+
+ Проблема создания базы правил представляет одну из ключевых задач при построении нечеткого 
+логического контроллера. Для её решения используется интервьюирование опытного оператора, 
+либо фиксирование решений, принимаемых оператором в различных ситуациях, либо, наконец, 
+желательная траектория управления, полученная из каких-либо соображений.<BR> 
+
+В данной работе в качестве желаемой траектории принято найденное по принципу максимума <A HREF="#lit">[1]</A> 
+оптимальное по быстродействию управление для замкнутой системы регулирования. Осуществлен 
+переход из временной области, в которой найдено оптимальное управление, в фазовое пространство 
+системы, что позволило непосредственно применить полученное решение для построения нечеткого контроллера.<BR> 
+<P>
+<H4>2. Нахождение оптимальной траектории</H4>
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=0 BORDER=0 ALIGN="RIGHT" VALIGN="TOP">
+<TR>
+	<TD ALIGN="CENTER" COLSPAN=1 ROWSPAN=1>
+<IMG SRC="image1.gif" WIDTH=342 HEIGHT=75 HSPACE=3 VSPACE=3 BORDER=0><BR><BR>
+<B>Рис.1 </B>
+ </TD>
+</TR>
+</TABLE>
+
+Рассмотрим задачу коррекции качества переходного процесса путем динамического изменения в 
+определенных пределах параметров ПИД-регулятора. Структурная схема системы регулирования 
+с ПИД-регулятором показана на рис.1. <BR>Здесь <FONT SIZE=+1><NOBR>W<SUB>0</SUB>(S)</NOBR></FONT> и 
+<FONT SIZE=+1><NOBR>W<SUB>p</SUB>(S)</NOBR></FONT> - передаточные 
+функции объекта и регулятора соответственно. Для линейного объекта <FONT SIZE=+1>n</FONT> - порядка 
+и ПИД-регулятора с передаточной функцией <BR>
+
+<FONT SIZE=+1>W<SUB>p</SUB>(S)= K<SUB>1</SUB>+K<SUB>2</SUB>/S+K<SUB>3</SUB>S</FONT>
+&nbsp;&nbsp;&nbsp; (2.1) <BR>
+
+уравнение системы имеет вид<BR>
+
+<IMG SRC="formula01.gif" WIDTH=502 HEIGHT=28 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">(2.2) <BR>
+
+Введем переменную
+
+<IMG SRC="formula02.gif" WIDTH=101 HEIGHT=51 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">&nbsp;
+&nbsp;&nbsp; (2.3)<BR>
+
+и запишем уравнения движения в векторной форме
+<IMG SRC="formula03.gif" WIDTH=96 HEIGHT=20 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">
+&nbsp;&nbsp;&nbsp; (2.4)<BR>
+
+Здесь <FONT SIZE=+1>X</FONT> и <FONT SIZE=+1>B-(n+1)</FONT> - мерные векторы;  
+<FONT SIZE=+1>A</FONT> - матрица; <FONT SIZE=+1>u</FONT> - скаляр. 
+Для матрицы <FONT SIZE=+1>A</FONT> и элементов вектора <FONT SIZE=+1>B</FONT> 
+имеем следующие соотношения:<BR>
+
+<IMG SRC="formula04.gif" WIDTH=394 HEIGHT=109 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">
+&nbsp;&nbsp;&nbsp; (2.5)<BR>
+<I><FONT SIZE=+1>b<SUB>1</SUB> = 1; <BR>
+b<SUB>2</SUB> = b<SUB>3</SUB> = ... = b<SUB>n-1</SUB> = 0</FONT>;</I> <BR>
+<IMG SRC="f_06_1.gif" WIDTH=73 HEIGHT=45 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE"> <BR>
+<IMG SRC="f_06_2.gif" WIDTH=139 HEIGHT=45 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE"><BR>
+
+Предполагается, что параметры ПИД-регулятора в процессе управления можно изменять в некоторых интервалах
+
+<IMG SRC="formula05.gif" WIDTH=169 HEIGHT=27 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">.
+&nbsp;&nbsp;&nbsp; (2.6)<BR>
+
+Пусть при <FONT SIZE=+1>u = u(t)</FONT> и некоторых допустимых значениях параметров 
+<FONT SIZE=+1>K<SUB>i</SUB></FONT> система может быть переведена из состояния 
+<FONT SIZE=+1>X(t<SUB>0</SUB>) = X<SUP>0</SUP></FONT> в заданное состояние 
+<FONT SIZE=+1>X(t<SUB>1</SUB>) = X<SUP>1</SUP></FONT>. Ставится задача перевода 
+системы (2.5) из состояния <FONT SIZE=+1>X<SUP>0</SUP></FONT> в состояние 
+<FONT SIZE=+1>X<SUP>1</SUP></FONT> за минимальное время 
+<FONT SIZE=+1>t<SUB>1</SUB> - t<SUB>0</SUB></FONT> путем 
+динамического изменения параметров <FONT SIZE=+1>K<SUB>i</SUB></FONT> при 
+выполнении условий (2.6). В соответствии с принципом максимума вводим сопряженную систему<BR>
+
+<IMG SRC="formula06.gif" WIDTH=75 HEIGHT=20 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">
+&nbsp;&nbsp;&nbsp; (2.7)<BR>
+
+и определяем параметры <FONT SIZE=+1>K<SUB>i</SUB></FONT> из условия максимума функции<BR>
+
+<IMG SRC="formula07.gif" WIDTH=241 HEIGHT=25 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">
+&nbsp;&nbsp;&nbsp; (2.8)<BR>
+
+по <FONT SIZE=+1>K<SUB>i</SUB></FONT> при условиях (2.6). Оставляя в (2.8) только члены, 
+содержащие искомые параметры <FONT SIZE=+1>K<SUB>i</SUB></FONT>, приходим к задаче максимизации по 
+<FONT SIZE=+1>K<SUB>i</SUB></FONT> функции<BR>
+
+<IMG SRC="formula08.gif" WIDTH=471 HEIGHT=45 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">.
+&nbsp;&nbsp;&nbsp; (2.9)<BR>
+
+Введем параметры<BR>
+
+<IMG SRC="formula09.gif" WIDTH=405 HEIGHT=43 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">.
+&nbsp;&nbsp;&nbsp;  (2.10)<BR>
+
+Учитывая положительность коэффициента <FONT SIZE=+1>a<SUB>n</SUB></FONT>, 
+из (2.5), (2.6) и (2.9) получаем оптимальные 
+значения коэффициентов <FONT SIZE=+1>K<SUB>i</SUB></FONT>:<BR>
+<IMG SRC="formula10.gif" WIDTH=331 HEIGHT=105 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">
+&nbsp;&nbsp;&nbsp; (2.11)<BR>
+
+Соотношения (2.11), (2.4), (2.5) и (2.7) образуют замкнутую систему уравнений, описывающую 
+оптимальный переходный процесс при соответствующем выборе 
+<IMG SRC="formula11.gif" WIDTH=77 HEIGHT=24 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE"> 
+- начальных условий для сопряженной системы (2.7). Выбор этих условий производится исходя из 
+требования прохождения управляемой системы (2.7) через точку 
+<FONT SIZE=+1>X(t<SUB>1</SUB>) = X<SUP>1</SUP></FONT> в некоторый момент 
+<FONT SIZE=+1>t = t<SUB>1</SUB></FONT>. 
+
+Сопряженная система в соответствии с (2.11) определяет только моменты смены знаков управляющих 
+параметров. В свою очередь эти моменты зависят от 
+<FONT SIZE=+1>X<SUP>0</SUP></FONT>, <FONT SIZE=+1>u</FONT>, 
+<FONT SIZE=+1>X<SUP>1</SUP></FONT>. 
+ Однако, для режима перевода управляемой системы из одной точки статического равновесия 
+<FONT SIZE=+1>X<SUP>0</SUP></FONT> в другую точку статического равновесия 
+<FONT SIZE=+1>u</FONT> при ступенчатом изменении 
+<FONT SIZE=+1>X<SUP>1</SUP></FONT> моменты переключений управляющих параметров остаются 
+фиксированными для данной системы и могут быть рассчитаны заранее.
+
+<TABLE CELLPADDING=9 CELLSPACING=0 WIDTH=0 BORDER=0 ALIGN="LEFT" VALIGN="TOP">
+<TR>
+	<TD ALIGN="CENTER" COLSPAN=1 ROWSPAN=1>
+<IMG SRC="image177.gif" WIDTH=262 HEIGHT=150 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<B>Рис.2 </B>
+ </TD>
+</TR>
+</TABLE>
+
+ На рис.2 показаны результаты моделирования описан-ного выше способа управления для объекта 
+третьего по-рядка, состоящего из трех апериодических звеньев. (Т1=0,1с, Т2=0,2с, Т3=0,7с) Предложенный 
+метод коррекции переходного процесса дает хорошие результаты, но его реализция с помощью задания 
+оптимальной программы пере-ключений чрезвычайно чувствительна даже к малым изменениям параметров 
+объекта и действию возмущений.<BR>
+
+ Преодоление указанных недостатков можно искать на пути определения 
+<FONT SIZE=+1>K<SUB>i</SUB></FONT> в зависимости от фазовых координат
+системы с использованием методов нечеткого управления<BR CLEAR>
+ 
+<P>
+<H4>3. Построение нечеткого контроллера</H4>
+
+Основная функция, возлагаемая на нечеткий контроллер - формирование корректирующих поправок к 
+коэффициентам <FONT SIZE=+1>K<SUB>1</SUB></FONT>, <FONT SIZE=+1>K<SUB>2</SUB></FONT> 
+и <FONT SIZE=+1>K<SUB>3</SUB></FONT> ПИД-регулятора в зависимости от текущих координат 
+системы. В этом случае ПИД-регулятор с корректирующим нечетким контроллером представляет собой 
+нелинейную систему.<BR>
+
+Разработка нечеткого контроллера сводится к решению нескольких задач:<BR>
+<BLOCKQUOTE>
+<DL>- выбору входных лингвистических переменных на основе анализа поведения замкнутой системы в 
+рассчитанном ранее оптимальном режиме (см. рис. 2);</DL>
+<DL>- назначению для каждой из лингвистических переменных набора лингвистических значений (термов);</DL>
+
+<DL>- выбору для каждого из термов аппроксимирующего нечеткого множества;</DL>
+
+<DL>- созданию базы правил контроллера на основе анализа совокупности значений "входные переменные - 
+управление", полученной для оптимального режима;</DL>
+
+<DL>- принятию адекватного проблеме механизма нечеткого вывода и выбору эффективного метода 
+преобразования полученного нечеткого управления в "четкий" выходной сигнал.</DL>
+</BLOCKQUOTE>
+<BR>
+Процедура обработки входной (четкой) информации в контроллере вкратце может быть описана 
+следующим образом:<BR>
+<BLOCKQUOTE>
+<DL>- текущие значения входных переменных преобразуются в лингвистические (фазифицируются);</DL>
+<DL>- на основании полученных лингвистических значений и с использованием базы правил контроллера 
+производится нечеткий логический вывод, в результате которого вычисляются лингвистические значения 
+выходных переменных; </DL>
+<DL>- заключительным этапом обработки является вычисление "четких" значений управляющих параметров
+ (дефазификация).</DL>
+</BLOCKQUOTE>
+<BR> 
+
+Для решения рассматриваемой задачи необходима нечеткая система управления с несколькими входами 
+и тремя выходами.<BR>
+Функциональная схема системы управления с использованием динамически корректируемого ПИД-регулятора 
+приведена на рис. 3. 
+<TABLE>
+<TR ALIGN="CENTER">
+	<TD><IMG SRC="image3.gif" WIDTH=680 HEIGHT=150 BORDER=0>
+<!--IMG SRC="image181.gif" WIDTH=412 HEIGHT=473 HSPACE=5 VSPACE=5 BORDER=0 --><BR><BR>
+<B>рис. 3.</B><BR></TD>
+</TR>
+</TABLE>
+
+Каждый нечеткий контроллер, вырабатывающий поправки к соответствующим 
+коэффициентам регулятора в реальном масштабе времени, реализует закон управления, рассчитанный 
+в п.2 настоящей работы. На рис. 4. приведены законы изменения поправок для P-, I- и D-термов 
+ПИД-регулятора; а на рис. 5 - значения ошибки &nbsp;
+<FONT FACE="Arial Cyr"><FONT SIZE=+1>e</FONT> x <FONT SIZE=+1>1</FONT></FONT>&nbsp;&nbsp; и ее производных 
+<IMG SRC="formula12.gif" WIDTH=45 HEIGHT=19 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">&nbsp; 
+<IMG SRC="formula13.gif" WIDTH=55 HEIGHT=19 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">&nbsp;
+<IMG SRC="formula14.gif" WIDTH=61 HEIGHT=17 HSPACE=5 VSPACE=5 BORDER=0 ALIGN="MIDDLE">&nbsp;
+ как функции времени. Нечеткий контроллер реализует соответствующие законы управления 
+как функции фазовых координат системы.<BR>
+
+В качестве примера реализации основных этапов разработки нечеткого контроллера на рис. 6. 
+а-д представлены лингвистические термы и связанные с ними нечеткие множества для переменных
+"ошибка" и ее первой, второй и третьей производных, а также "выход", cоответственно.
+<BR CLEAR>
+<BR>
+
+<TABLE>
+<TR ALIGN="CENTER">
+<TD VALIGN="BOTTOM">
+<IMG SRC="image187.gif" WIDTH=319 HEIGHT=175 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<B>Рис. 4</B>
+</TD>
+<TD VALIGN="BOTTOM">
+<IMG SRC="image186.gif" WIDTH=369 HEIGHT=250 BORDER=0><BR><BR>
+<B>Рис.5</B>
+</TD>
+</TR>
+</TABLE>
+<P>
+<NOBR>В Таблице 1 приведена база правил нечеткого контроллера,</NOBR> реализующего коррекцию 
+D - терма (на рис. 6 а-д и в Таблице 1 использованы  следующие обозначения термов: 
+<NOBR>NVB - отрицательное очень большое,</NOBR><BR>
+<NOBR>NB - отрицательное большое,</NOBR> <BR>
+<NOBR>NM - отрицательное среднее,</NOBR><BR>
+<NOBR>NS - отрицательное малое, нуль,</NOBR> <BR>
+<NOBR>PS - пололжительное малое,</NOBR><BR>
+<NOBR>PM - положительное среднее,</NOBR><BR> 
+<NOBR>PB - положительное большое,</NOBR><BR>
+<NOBR>PVB - положительное очень большое,</NOBR><BR> 
+<NOBR>P - положительное,</NOBR><BR>
+<NOBR>N - отрицательное</NOBR>).<BR>
+
+Результаты моделирования отклика на единичный скачок для системы с традиционным ПИД-регулятором (a),
+ систем с оптимальной коррекцией во временной области (b) и нечеткой коррекцией (c) приведены 
+на рис. 7. Исходные (опорные) значения параметров <FONT SIZE=+1>K<SUB>i</SUB></FONT>
+ ПИД-регулятора рассчитаны методом Циглера-Николса<BR>
+
+<P>
+<TABLE>
+<TR ALIGN="CENTER"><TD>
+<IMG SRC="image6a.gif" WIDTH=444 HEIGHT=103 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<CENTER><B>Рис. 6а</B></CENTER>
+</TD></TR>
+</TABLE>
+
+<TABLE>
+<TR ALIGN="CENTER"><TD>
+<IMG SRC="image6b.gif" WIDTH=444 HEIGHT=109 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<CENTER><B>Рис. 6б</B></CENTER>
+</TD></TR>
+</TABLE>
+
+<TABLE>
+<TR ALIGN="CENTER"><TD>
+<IMG SRC="image6c.gif" WIDTH=444 HEIGHT=95 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<CENTER><B>Рис. 6в</B></CENTER>
+</TD></TR>
+</TABLE>
+
+<TABLE>
+<TR ALIGN="CENTER"><TD>
+<IMG SRC="image6d.gif" WIDTH=444 HEIGHT=103 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<CENTER><B>Рис. 6г</B></CENTER>
+</TD></TR>
+</TABLE>
+
+<TABLE>
+<TR ALIGN="CENTER"><TD>
+<IMG SRC="image6e.gif" WIDTH=444 HEIGHT=85 HSPACE=5 VSPACE=5 BORDER=0><BR><BR>
+<CENTER><B>Рис. 6д</B></CENTER>
+</TD></TR>
+</TABLE>
+
+<BR>
+
+</BLOCKQUOTE>
+
+<TABLE >
+<TR>
+<TD ALIGN="BOTTOM"> 
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=3>
+<!--CAPTION VALIGN="bottom"><B><BR>Табл.1</B></CAPTION-->
+<TR><TD COLSPAN=2 ROWSPAN=2>&nbsp;</TD><TD ALIGN="center" COLSPAN=9><FONT SIZE=+2>e</FONT></TD>
+</TR>
+<TR>
+<TD>NVB</TD><TD>NB</TD><TD>NM</TD>
+<TD>NS</TD><TD>ZE</TD><TD>PS</TD><TD>PM</TD><TD>PB</TD><TD>PVB</TD>
+</TR>
+<TR>
+<TD ROWSPAN=5><B>...</B><BR><FONT SIZE=+2>e</FONT></TD><TD>NB</TD><TD>P</TD><TD>P</TD><TD>P</TD>
+<TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>P</TD><TD>N</TD>
+</TR>
+<TR>
+<TD>NS</TD><TD>P</TD><TD>P</TD><TD>Z</TD>
+<TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>P</TD><TD>P</TD>
+</TR>
+<TR>
+<TD>ZE</TD><TD>P</TD><TD>P</TD><TD>Z</TD><TD>Z</TD>
+<TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>P</TD><TD>P</TD>
+</TR>
+<TR>
+<TD>PS</TD><TD>P</TD><TD>P</TD><TD>Z</TD>
+<TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>P</TD><TD>P</TD>
+</TR>
+<TR>
+<TD>PB</TD><TD>N</TD><TD>P</TD><TD>Z</TD>
+<TD>Z</TD><TD>Z</TD><TD>Z</TD><TD>P</TD><TD>P</TD><TD>P</TD>
+</TR>
+
+</TABLE>
+<CENTER><B><BR>Табл.1</B></CENTER>
+</TD>
+<TD VALIGN="BOTTOM" ALIGN="LEFT">
+<TABLE BORDER=0 >
+<TR>
+	<TD ALIGN="CENTER">
+<IMG SRC="image7.gif" WIDTH=396 HSPACE=3 VSPACE=3 BORDER=0><BR><BR>
+<B>Рис.7 </B>
+</TD>
+</TR>
+</TABLE>
+
+ </TD>
+</TR>
+</TABLE>
+
+<BLOCKQUOTE>
+
+<BR>
+<H4>4. Заключение</H4>
+
+Таким образом, в работе продемонстрирована возможность построения систем с нечеткой динамической 
+коррекцией параметров традиционных регуляторов. Использование методов нечеткого управления 
+позволило получить качественный переходный процесс без использования громоздких вычислительных 
+процедур, характерных для классического метода управления с использованием принципа максимума. <BR>
+
+</BLOCKQUOTE>
+<H4>Список литературы:</H4>
+<A NAME="lit"> </A>
+[1] <B>Понтрягин Л.С., Болтянский В.Г., Гамкрелидзе Р.В., Мищенко Е.Ф.</B> <BR>
+Математическая теория оптимальных процессов. М:, Физматгиз, 1961.
+
+<HR ALIGN=LEFT>
+<P ALIGN=RIGHT>&copy;1997, 1998 Fuzzy Technologies Lab. <BR>
+mailto: <A HREF="mailto:zolotukhin@iae.nsk.su">zolotukhin@iae.nsk.su</A></P>
+
+
+</BODY>
+</HTML>
+

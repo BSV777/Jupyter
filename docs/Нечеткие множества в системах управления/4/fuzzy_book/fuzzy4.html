@@ -1,0 +1,194 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy3.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy5.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+
+<CENTER>
+<H3>Расстояние между нечеткими множествами, индексы нечеткости</H3>
+</CENTER>
+
+<P>Пусть <B>A</B> и <B>B</B> - нечеткие подмножества универсального множества <B>E</B>. Введем понятие расстояния <FONT FACE="Symbol">&#114;</FONT>(<B>A</B>, <B>B</B>) между нечеткими множествами. При введении расстояния обычно предъявляются следующие требования:
+
+<OL>
+<LI><FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) <FONT FACE="Symbol">&#179;</FONT> 0 - неотрицательность; 
+<LI><FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) = <FONT FACE="Symbol">&#114;</FONT>(<B>B, A</B>) - симметричность; 
+<LI><FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) &lt; <FONT FACE="Symbol">&#114;</FONT>(<B>A, C</B>) + <FONT FACE="Symbol">&#114;</FONT>(<B>C, B</B>).
+</OL>
+
+К этим трем требованиям можно добавить четвертое: <FONT FACE="Symbol">&#114;</FONT>(<B>A, A</B>) = 0.<BR>
+
+<P>Определим следующие расстояния по формулам:<BR>
+<U>Расстояние Хемминга</U> (или <I>линейное расстояние</I>):<BR>
+<CENTER>
+<FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) = <IMG SRC="image173.gif" WIDTH=28 HEIGHT=55 BORDER=0 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#189;</FONT><B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(x<SUB>i</SUB>) - 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(x<SUB>i</SUB>)<FONT FACE="Symbol">&#189;</FONT>
+.<BR>
+
+
+</CENTER>
+Очевидно, что <FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>)<FONT FACE="Symbol">&#206;</FONT>[0, <I>n</I>].<BR>
+<U>Евклидово или квадратичное расстояние:</U><BR>
+<CENTER>
+<FONT FACE="Symbol">&#101;</FONT>(<B>A, B</B>) = <IMG SRC="image174.gif" WIDTH=197 HEIGHT=61 ALIGN="ABSMIDDLE">, <FONT FACE="Symbol">&#101;</FONT>(<B>A, B</B>)<FONT FACE="Symbol">&#206;</FONT>[0, <IMG SRC="image175.gif" WIDTH=25 HEIGHT=22 ALIGN="ABSMIDDLE">].<BR>
+</CENTER>
+<U>Относительное расстояние Хемминга:</U><BR>
+<CENTER>
+<FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) = <IMG SRC="image176.gif" WIDTH=17 HEIGHT=48 ALIGN="ABSMIDDLE"><IMG SRC="image177.gif" WIDTH=165 HEIGHT=55 ALIGN="ABSMIDDLE">, <FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>)<FONT FACE="Symbol">&#206;</FONT>[0,1].<BR>
+</CENTER>
+<U>Относительное евклидово расстояние:</U><BR>
+<CENTER>
+<FONT FACE="Symbol">&#101;</FONT>(<B>A, B</B>)=<IMG SRC="image178.gif" WIDTH=30 HEIGHT=50 ALIGN="ABSMIDDLE"><IMG SRC="image179.gif" WIDTH=197 HEIGHT=61 ALIGN="ABSMIDDLE">, <FONT FACE="Symbol">&#101;</FONT>(<B>A, B</B>)<FONT FACE="Symbol">&#206;</FONT>[0,1].<BR>
+</CENTER>
+Расстояние Хемминга и квадратичное расстояние, в случае когда <B>E</B> бесконечно, определяются аналогично с условием сходимости соответствующих сумм:<BR>
+если <B>E</B> счетное, то <BR>
+<CENTER>
+<FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) = <IMG SRC="image180.gif" WIDTH=28 HEIGHT=55 ALIGN="ABSMIDDLE">
+<FONT FACE="Symbol">&#189;</FONT><B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(x<SUB>i</SUB>) - 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(x<SUB>i</SUB>)<FONT FACE="Symbol">&#189;</FONT>
+,<BR>
+<FONT FACE="Symbol">&#101;</FONT>(<B>A, B</B>) = <IMG SRC="image181.gif" WIDTH=155 HEIGHT=50 ALIGN="ABSMIDDLE">;<BR>
+</CENTER>
+если <B>E</B> = <B>R</B> (числовая ось), то <BR>
+<CENTER>
+<FONT FACE="Symbol">&#114;</FONT>(<B>A, B</B>) = <IMG SRC="image182.gif" WIDTH=177 HEIGHT=60 ALIGN="ABSMIDDLE">,<BR>
+<FONT FACE="Symbol">&#101;</FONT>(<B>A, B</B>) = <IMG SRC="image183.gif" WIDTH=212 HEIGHT=65 ALIGN="ABSMIDDLE">.<BR>
+</CENTER>
+<U>Замечание.</U> Здесь приведены два наиболее часто встречающихся определения понятия расстояния. Разумеется, для нечетких множеств можно ввести и другие определения понятия расстояния.<BR>
+&nbsp;&nbsp;&nbsp;Перейдем к <I>индексам нечеткости</I> или <I>показателям размытости</I> нечетких множеств.<BR>
+Если объект <B><I>х</I></B> обладает свойством <B><I>R</I></B> (порождающим нечеткое множество <B>A</B>) лишь в частной мере, т.е. <BR>
+<NOBR>0<B>&lt;<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)</B>&lt;1,</NOBR> то внутренняя неопределенность, двусмысленность объекта <B><I>х</I></B> в отношении <B>R</B> проявляется в том, что он, хотя и в разной степени, принадлежит сразу двум противоположным классам: классу объектов, "обладающих свойством <B>R</B>", и классу объектов, "не обладающих свойством <B>R</B>". Эта двусмысленность максимальна, когда степени принадлежности объекта обеим классам равны, т.е. <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>) = <IMG SRC="image185.gif" WIDTH=25 HEIGHT=24 ALIGN="ABSMIDDLE">(<I>x</I>)</B> = 0,5, и минимальна, когда объект принадлежит только одному классу, т.е. либо <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>) = </B>1 и <B><IMG SRC="image185.gif" WIDTH=25 HEIGHT=24 ALIGN="ABSMIDDLE">(<I>x</I>)</B> = 0, либо <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>)</B> = 0 и <B><IMG SRC="image185.gif" WIDTH=25 HEIGHT=24 ALIGN="ABSMIDDLE">(<I>x</I>)</B> = 1.<BR>
+В общем случае показатель размытости нечеткого множества можно определить в виде функционала <B>d(A)</B> со значениями в <B>R</B> (положительная полуось), удовлетворяющего условиям:<BR>
+
+<OL>
+<LI><B>d(A)</B> = 0 тогда и только тогда, когда <B>А</B> - обычное множество; 
+<LI><B>d(A)</B> максимально тогда и только тогда, когда <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>)</B> = 0.5 для всех <B><I>x<FONT FACE="Symbol">&#206;</FONT>E</I></B>. 
+<LI><B>d(A)d(B)</B>, если <B>A</B> является <I>заострением <B>B</B></I>, т.е. <BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>)<B><FONT FACE="Symbol">&#163;&#109;</FONT><SUB>B</SUB></B>(<I>x</I>) при <B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>x</I>) &lt; 0,5;<BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>)<B><FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>x</I>) при <B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>x</I>) &gt; 0,5;<BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(<I>x</I>)- любое при <B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>(<I>x</I>) = 0,5.
+<LI><B>d(A) = d</B>(<IMG SRC="image154.gif" WIDTH=17 HEIGHT=20 ALIGN="ABSMIDDLE">) - симметричность по отношению к 0,5. 
+<LI><B>d(A<FONT FACE="Symbol">&#200;</FONT>B)+d(A<FONT FACE="Symbol">&#199;</FONT>B) = d(A)+d(B)</B>. 
+</OL>
+
+<BR>
+<U>Замечание.</U> Приведенная система аксиом при введении конкретных показателей размытости часто используется частично, т.е., например, ограничиваются свойствами <B>P1, P2</B> и <B>P3</B>, либо некоторые свойства усиливаются или ослабляются в зависимости от решаемой задачи.<BR>
+Рассмотрим индексы нечеткости (показатели размытости), которые можно определить, используя понятие расстояния. <BR>
+<BR>
+<U>Обычное множество, ближайшее к нечеткому</U><BR>
+<BR>
+
+Пусть <B>A</B> - нечеткое множество. <I>Вопрос:</I> какое обычное множество <B><U>A</U><FONT FACE="Symbol">&#204;</FONT>E</B> является ближайшим к <B>A</B>, т.е. находится на наименьшем евклидовом расстоянии от нечеткого множества <B>A</B>. Таким подмножеством, обозначаемым <B><U>A</U></B>, является подмножеством с характеристической функцией:<BR>
+<CENTER><IMG SRC="image186.gif" WIDTH=281 HEIGHT=74 ALIGN="ABSMIDDLE">.<BR></CENTER>
+Обычно принимают <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(x<SUB>i</SUB>) = 0, если <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>(x<SUB>i</SUB>) = 0,5.<BR>
+Используя понятие обычного множества, ближайшего к нечеткому, введем следующие индексы нечеткости нечеткого множества <B>А</B>.<BR>
+
+Линейный индекс нечеткости: <BR>
+<CENTER>
+<IMG SRC="image187.gif" WIDTH=120 HEIGHT=42 ALIGN="ABSMIDDLE"><BR>
+</CENTER>
+Здесь <FONT FACE="Symbol">&#114;</FONT>(<B>A, <U>A</U></B>) - линейное (хеммингово) расстояние, множитель - <IMG SRC="image188.gif" WIDTH=11 HEIGHT=23 ALIGN="ABSMIDDLE"> обеспечивает выполнение условия 0<U>&lt;</U>d(<B>A</B>)<U>&lt;</U>1.<BR><BR>
+
+Квадратичный индекс нечеткости<BR>
+<IMG SRC="image189.gif" WIDTH=127 HEIGHT=43 ALIGN="ABSMIDDLE">, 0<U>&lt;</U>d(<B>A</B>)<U>&lt;</U>1.<BR>
+Здесь <FONT FACE="Symbol">&#101;</FONT>(<B>A, <U>A</U></B>) - квадратичное (евклидово) расстояние.
+
+
+<P><I><U>Замечания.</U></I>
+
+<P>1. Мы ввели линейный и квадратичный индексы нечеткости, используя понятие расстояния и понятие обычного множества, ближайшего к нечеткому. Эти же индексы можно определить, используя операцию дополнения, следующим образом:<BR>
+<DIR><DIR>
+<IMG SRC="image190.gif" WIDTH=211 HEIGHT=46 ALIGN="ABSMIDDLE"> - линейный индекс,<P>
+<IMG SRC="image191.gif" WIDTH=253 HEIGHT=50 ALIGN="ABSMIDDLE"> - квадратичный индекс.<BR>
+</DIR></DIR>
+<P>2. Отметим следующие свойства, связанные с ближайшим обычным множеством: <BR>
+<B>
+<U>А<FONT FACE="Symbol">&#199;</FONT>В</U>=<U>А</U><FONT FACE="Symbol">&#199;</FONT><U>В</U>,<BR>
+<U>А<FONT FACE="Symbol">&#200;</FONT>В</U>=<U>А</U><FONT FACE="Symbol">&#200;</FONT><U>В</U>;<BR>
+</B>
+а также <B><FONT FACE="Symbol">&#34;</FONT>x<FONT FACE="Symbol">&#206;</FONT>E:|<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x<SUB>i</SUB>)-<FONT FACE="Symbol">&#109;</FONT><U><SUB>A</U></SUB>(x<SUB>i</SUB>)|=</B><IMG SRC="image193.gif" WIDTH=63 HEIGHT=26 ALIGN="ABSMIDDLE">, откуда для линейного индекса нечеткости имеем:<BR>
+<CENTER> <IMG SRC="image194.gif" WIDTH=146 HEIGHT=46 ALIGN="ABSMIDDLE">,<BR></CENTER>
+т.е. в этом представлении становится очевидным, что d(<B>A</B>)=d(<IMG SRC="image131.gif" WIDTH=16 HEIGHT=21 ALIGN="ABSMIDDLE">).
+
+<P>3. Нечеткое множество с функцией принадлежности <IMG SRC="image196.gif" WIDTH=73 HEIGHT=25 ALIGN="ABSMIDDLE">иногда называют векторным индикатором нечеткости.
+
+<P><U>Оценка нечеткости через энтропию</U><BR>
+<BR>
+Ограничимся случаем конечного универсального множества. Энтропия системы с n состояниями <FONT FACE="Symbol">&#101;</FONT><SUB>1</SUB>,<FONT FACE="Symbol">&#101;</FONT><SUB>2</SUB>, ..., <FONT FACE="Symbol">&#101;</FONT><SUB>n</SUB>, с которыми связаны вероятности p<SUB>1</SUB>,p<SUB>2</SUB>, ..., p<SUB>n</SUB> определяется выражением:<BR>
+<CENTER>
+H(<I>p</I><SUB>1</SUB>, <I>p</I><SUB>2</SUB>, ..., <I>p</I><SUB>n</SUB>) = <B>-
+<IMG SRC="image197.gif" WIDTH=51 HEIGHT=43 ALIGN="ABSMIDDLE"><I>p</I><SUB>i</SUB> ln <I>p</I><SUB>i</SUB></B>, H<SUB>min</SUB> = 0, H<SUB>max</SUB> = 1.<BR>
+</CENTER>
+В случае нечетких множеств положим: <BR>
+<CENTER><FONT FACE="Symbol">&#112;</FONT><SUB>A</SUB>(x<SUB>i</SUB>) = 
+<IMG SRC="image198.gif" WIDTH=71 HEIGHT=67  ALIGN="ABSMIDDLE"><BR></CENTER>
+Тогда общую формулу, позволяющую подсчитать энтропию по нечеткости, можно записать в следующем виде:<BR>
+<CENTER>
+H(<FONT FACE="Symbol">&#112;</FONT><SUB>A</SUB>(x<SUB>1</SUB>),
+<FONT FACE="Symbol">&#112;</FONT><SUB>A</SUB>(x<SUB>2</SUB>), ..., 
+<FONT FACE="Symbol">&#112;</FONT><SUB>A</SUB>(x<SUB>n</SUB>)) = - 
+<IMG SRC="image197.gif" WIDTH=51 HEIGHT=43 ALIGN="ABSMIDDLE">
+<FONT FACE="Symbol">&#112;</FONT><SUB>A</SUB>(x<SUB>i</SUB>) ln 
+<FONT FACE="Symbol">&#112;</FONT><SUB>A</SUB>(x<SUB>i</SUB>).
+<BR></CENTER>
+<I><U>Замечание.</U></I> Попытки использования энтропии в теории нечетких множеств (в приведенном выше виде) показали, что это не лучший способ оценки. Однако работы по обобщению понятия энтропии для нечетких множеств продолжаются.
+
+<CENTER><H4>Принцип обобщения</H4> </CENTER>
+
+<P>Принцип обобщения - одна из основных идей теории нечетких множеств - носит эвристический характер и используется для расширения области применения нечетких множеств на отображения. Пусть <B><B>X</B></B> и <B>Y</B> - два заданных универсальных множества. Говорят, что имеется функция, определенная на <B>X</B> со значением в <B>Y</B>, если, в силу некоторого закона f, каждому элементу <B>X</B><FONT FACE="Symbol">&#206;</FONT><B>X</B> соответствует элемент 
+y<FONT FACE="Symbol">&#206;</FONT><B>Y</B>.<BR>
+Когда функцию f: <B>X</B><FONT FACE="Symbol">&#174;</FONT><B>Y</B> называют отображением, значение f(x)<FONT FACE="Symbol">&#206;</FONT><B>Y</B>, которое она принимает на элементе x<FONT FACE="Symbol">&#206;</FONT><B>X</B>, обычно называют образом элемента x.<BR>
+Образом множества <B>А</B><FONT FACE="Symbol">&#204;</FONT>Х при отображении с<FONT FACE="Symbol">&#174;</FONT><B>Y</B> называют множество f(<B>A</B>)<FONT FACE="Symbol">&#204;</FONT><B>Y</B> тех элементов <B>Y</B>, которые являются образами элементов множества <B>А</B>.<BR>
+
+<I><U>Замечание.</U></I> Мы напомнили классическое определение отображения, которое в теории нечетких множеств принято называть четким отображением, т.к. наряду с ним мы введем понятие нечеткого отображения (или нечеткой функции).<BR>
+<BR>
+Будем говорить, что имеется нечеткая функция f, определенная на <B>X</B> со значением в <B>Y</B>, если она каждому элементу x<FONT FACE="Symbol">&#206;</FONT><B>X</B> ставит в соответствие элемент y<FONT FACE="Symbol">&#206;</FONT><B>Y</B> со степенью принадлежности <FONT FACE="Symbol">&#109;</FONT><SUB>f</SUB>(x,y). Нечеткая функция f определяет нечеткое отображение f<B>:</B><B>X</B><IMG SRC="image202.gif" WIDTH=23 HEIGHT=17 ALIGN="ABSMIDDLE"><B>Y</B>.<BR>
+
+<P>Принцип обобщения заключается в том, что при заданном четком f<B>:</B><B>X</B><FONT FACE="Symbol">&#174;</FONT><B>Y</B> или нечетком f<B>:</B><B>X</B><IMG SRC="image202.gif" WIDTH=23 HEIGHT=17  ALIGN="ABSMIDDLE"><B>Y</B> отображении для любого нечеткого множества <B>А</B>, заданного на <B>Х</B>, определяется нечеткое множество f(<B>A</B>) на <B>Y</B>, являющееся образом <B>A</B>.
+
+<P>Пусть f<B>:X<FONT FACE="Symbol">&#174;</FONT>Y</B> заданное четкое отображение, <BR>
+а <B>A</B> = {<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)/х}- нечеткое множество в <B>Х</B>. Тогда образом <B>А</B> при отображении f является нечеткое множество f(<B>A</B>) на <B>Y</B> с функцией принадлежности:<BR>
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT></B><SUB>f(A)</SUB>(y) =
+<IMG SRC="image204.gif" WIDTH=45 HEIGHT=28  ALIGN="ABSMIDDLE">
+<B><FONT FACE="Symbol">&#109;</FONT></B><SUB>A</SUB>(x);
+ y<FONT FACE="Symbol">&#206;</FONT><B>Y</B>, </CENTER><BR>
+где f<SUP> -1</SUP>(y)={x/f(x)=y}.<BR>
+В случае нечеткого отображения f<B>:</B><B>X</B><IMG SRC="image202.gif" WIDTH=23 HEIGHT=17 ALIGN="ABSMIDDLE"><B>Y</B>, когда для любых x<FONT FACE="Symbol">&#206;</FONT><B>X</B> и y<FONT FACE="Symbol">&#206;</FONT><B>Y</B> определена двуместная функция принадлежности <FONT FACE="Symbol">&#109;</FONT><SUB>f</SUB>(x,y), образом нечеткого множества <B>А</B>, заданного на Х, является нечеткое множество f(<B>A</B>) на <B>Y</B> с функцией принадлежности:<BR>
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT></B><SUB>f(A)</SUB>(y) =
+<IMG SRC="image205.gif" WIDTH=28 HEIGHT=28 ALIGN="ABSMIDDLE">
+<B>min(<FONT FACE="Symbol">&#109;</FONT></B><SUB>A</SUB>(x),
+<B><FONT FACE="Symbol">&#109;</FONT></B><SUB>f</SUB>(x,y)).
+</CENTER><BR>
+<I><U>Замечание.</U></I> Мы не приводим примеров использования принципа обобщения. Предлагаем подумать, каким образом можно определить нечеткое число и как с помощью принципа обобщения (не забывая декартова произведения) и классических операций возведения числа в степень(одноместная), сложения и умножения (двуместные) получать соответствующие нечеткие результаты. К нечетким отображениям мы вернемся, когда будем рассматривать понятие нечеткого отношения.
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy3.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy5.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,2652 @@
+From: <Сохранено Microsoft Internet Explorer 5>
+Subject: Richard Bowles' Idiot's Guide to Neural Networks
+Date: Fri, 3 Mar 2006 22:29:55 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_00C1_01C63F11.FEFC0140"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: text/html;
+	charset="windows-1251"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://richardbowles.tripod.com/neural/kohonen/kohonen.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Richard Bowles' Idiot's Guide to Neural =
+Networks</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1251">
+<META content=3D"MSHTML 6.00.2900.2180" name=3DGENERATOR></HEAD>
+<BODY text=3D#ffffff vLink=3D#00ffff aLink=3D#00ffff link=3D#00ffff=20
+background=3Dhttp://richardbowles.tripod.com/neural/neurons.gif><!-- =
+********************************************************** --><!-- * =
+START TRIPOD AD CODE - PLEASE REMOVE WHEN EDITING PAGE * --><!-- =
+********************************************************** --><!-- =
+revision: inline - $Change: 85315 $ --><!-- pt type=3D"text/javascript" =
+language=3D"JavaScript1.1" =
+src=3D"http://members.tripod.com/adm/ad/common_scripts.js"></scri-->
+<SCRIPT language=3DJavaScript1.1=20
+type=3Dtext/javascript>setAdGroup('84.19.181.92');</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+var lnb_S=3D0;=0A=
+var lnb_IV=3D1;=0A=
+var lnb_I=3D"VID=3D5905";=0A=
+//=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://hb.lycos.com/html_js/headerLayer.js"=20
+type=3Dtext/javascript></SCRIPT>
+<NOSCRIPT><IMG height=3D1 alt=3D""=20
+src=3D"http://hb.lycos.com/header?VID=3D5905&amp;LHIG=3D1&amp;ord=3D25622=
+8" width=3D1=20
+align=3Dleft> </NOSCRIPT><!-- START: Catman header -->
+<SCRIPT type=3Dtext/javascript>=0A=
+var cm_role =3D "live"=0A=
+var cm_host =3D "tripod.lycos.com"=0A=
+var cm_taxid =3D "/memberembedded"=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://scripts.lycos.com/catman/init.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+=0A=
+var category_obj =3D =
+{"dmoz":"computers\/programming","ontarget":"&CAT=3Dtechnology&L2CAT=3Dco=
+mputing&L3CAT=3Dprogramming","find_what":"web"}=0A=
+=0A=
+=0A=
+var objAdMgr =3D new AdManager();=0A=
+if (category_obj && category_obj.find_what) {=0A=
+    objAdMgr.setForcedParam("keyword", category_obj.find_what);=0A=
+}=0A=
+=0A=
+var if_Site_ID =3D "lycos";=0A=
+var if_sid=3D"2";=0A=
+var mep1=3D"&Site=3D" + escape("LycosTripod");=0A=
+=0A=
+if (category_obj && category_obj.ontarget) {=0A=
+    mep1 +=3D category_obj.ontarget;=0A=
+}=0A=
+=0A=
+if (this.adChannel && (adChannel !=3D "")) { =0A=
+	objAdMgr.setForcedParam("google_ad_channel", adChannel); =0A=
+}=0A=
+var strProdSetName =3D objAdMgr.chooseProductSet(); =
+objAdMgr.renderHeader();=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://lycos.realmedia.com/scripts/lycos_if.js"=20
+type=3Dtext/javascript></SCRIPT>
+<!-- END: Catman header -->
+<SCRIPT type=3Dtext/javascript>=0A=
+window.onload =3D function () {=0A=
+    commonOnload();=0A=
+=0A=
+    =0A=
+    var category_obj =3D =
+{"dmoz":"computers\/programming","ontarget":"&CAT=3Dtechnology&L2CAT=3Dco=
+mputing&L3CAT=3Dprogramming","find_what":"web"}=0A=
+    =0A=
+    if (category_obj && category_obj.find_what) {=0A=
+        setKeywordCookie(category_obj.find_what);=0A=
+    } else if (query) {=0A=
+        setKeywordCookie(query);=0A=
+    }=0A=
+=0A=
+    if (displayAd()) {=0A=
+        showAd('FooterAd_256228');=0A=
+    }=0A=
+}=0A=
+if (!displayAd()) document.write("<!" + "--");=0A=
+</SCRIPT>
+
+<DIV id=3DFooterAd_256228 style=3D"DISPLAY: none; LEFT: 0px; TOP: 0px" =
+align=3Dcenter=20
+name=3D"FooterAd_256228"><BR clear=3Dall>
+<SCRIPT type=3Dtext/javascript>=0A=
+if (objAdMgr.isSlotAvailable("leaderboard2")) {=0A=
+	objAdMgr.renderSlot("leaderboard2")=0A=
+}=0A=
+</SCRIPT>
+<NOSCRIPT><A=20
+href=3D"http://network.realmedia.com/RealMedia/ads/click_nx.ads/lycostrip=
+od/ros/728x90/wp/ss/a/256228@Top1?x"><FONT=20
+size=3D1>[AD]</FONT><AD- alt=3D"leaderboard2 ad" 256228@Top1? a ss wp =
+728x90 ros=20
+lycostripod adstream_nx.ads ads RealMedia etwork.realmedia.com /></A>=20
+</NOSCRIPT></DIV>
+<SCRIPT type=3Dtext/javascript>=0A=
+if(!displayTopAd()) {=0A=
+  var adImg=3Dd.createElement('IMG'); =
+adImg.src=3D"http://members.tripod.com/adm/img/common/ot_smallframe.gif?w=
+=3D"+pageWidth+"&h=3D"+pageHeight+"rand=3D611411";=0A=
+  if (displayAd()) {=0A=
+    document.write("<!" + "--");=0A=
+  }=0A=
+} else {=0A=
+  var adImg=3Dd.createElement('IMG'); =
+adImg.src=3D"http://members.tripod.com/adm/img/common/ot_adserved.gif?w=3D=
+"+pageWidth+"&h=3D"+pageHeight+"rand=3D611411";=0A=
+  function top100(dir) {=0A=
+    =
+top.location.href=3D'http://lt.tripod.com/tp_toolbar/'+dir+'/_h_/www.trip=
+od.lycos.com/bin/top100/top100.pl?a=3D'+dir+"&url=3D"+location.href;=0A=
+  }=0A=
+}=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+function openSlideShow(showname)=0A=
+{=0A=
+var showPath =3D "/slideshows/" + showname + ".asp";=0A=
+var showWindow =3D window.open(showPath, 'slidewindow', =
+'width=3D780,height=3D700,left=3D200,top=3D50,scrollbars=3D0,resizable=3D=
+1');=0A=
+return(false);=0A=
+}=0A=
+=0A=
+function openSlideURL(showURL) {=0A=
+var showPath =3D showURL;=0A=
+var showWindow =3D window.open(showPath, 'slidewindow', =
+'width=3D780,height=3D700,left=3D200,top=3D50,scrollbars=3D0,resizable=3D=
+1');=0A=
+return(false);=0A=
+}=0A=
+</SCRIPT>
+<NOSCRIPT><IMG height=3D1 alt=3Ddot=20
+src=3D"http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=3D61=
+1411"=20
+width=3D150> </NOSCRIPT>
+<STYLE type=3Dtext/css>#tb {
+	MARGIN-BOTTOM: 10px; WIDTH: 800px
+}
+#tb TD {
+	FONT-SIZE: 10px; COLOR: #333; FONT-FAMILY: verdana
+}
+#tb TD A {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #666
+}
+#top100 A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00f
+}
+#top100 A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00f
+}
+#top100 A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00f
+}
+</STYLE>
+
+<DIV style=3D"WIDTH: 100%" align=3Dcenter>
+<DIV id=3Dtb>
+<FORM style=3D"MARGIN: 0px" name=3Dlycos_search=20
+action=3Dhttp://r.hotbot.com/r/memberpgs_lycos_searchbox/http://www.tripo=
+d.lycos.com/bin/search/pursuit=20
+method=3Dget target=3D_new>
+<TABLE id=3Dtbtable=20
+style=3D"BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid"=20
+cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR style=3D"BACKGROUND-COLOR: #eeeeee">
+    <TD colSpan=3D3>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+        <TBODY>
+        <TR>
+          <TD>&nbsp;Search:</TD>
+          <TD><INPUT type=3Dradio CHECKED value=3Dlycos name=3Dcat></TD>
+          <TD noWrap>The Web</TD>
+          <TD><INPUT type=3Dradio value=3Dtripod_member name=3Dcat></TD>
+          <TD noWrap>Tripod</TD>
+          <TD noWrap>&nbsp;&nbsp;&nbsp;<IMG=20
+            src=3D"http://af.lygo.com/d/toolbar/enticon.gif"></TD>
+          <TD noWrap>&nbsp;<A=20
+            =
+href=3D"javascript:survivorWin=3Dwindow.open('http://r.lycos.com/r/toolba=
+r_ss_lastholiday/http://entertainment.lycos.com/slideshow.php?id=3Dlastho=
+liday', =
+'slidewindow','width=3D780,height=3D700,left=3D200,top=3D50,scrollbars=3D=
+0,resizable=3D1');survivorWin.focus();">Last=20
+            Holiday</A></TD></TR></TBODY></TABLE>
+    <TD><IMG height=3D8 alt=3D"share this page" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/share.gif" width=3D30 =
+border=3D0></TD>
+    <TD noWrap><A id=3Dshare=20
+      href=3D"http://richardbowles.tripod.com/neural/kohonen/" =
+target=3D_top>Share=20
+      This Page</A>&nbsp;</TD>
+    <TD><IMG height=3D8 alt=3D"report abuse" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/abuse.gif" width=3D8 =
+border=3D0></TD>
+    <TD noWrap><A style=3D"FONT-WEIGHT: bold; COLOR: #666"=20
+      href=3D"http://help.lycos.com/watchdog/watchdog_form.asp" =
+target=3D_top>Report=20
+      Abuse</A>&nbsp;</TD>
+    <TD><IMG height=3D10 alt=3D"build a page" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/build.gif" width=3D9 =
+border=3D0></TD>
+    <TD noWrap><A=20
+      =
+href=3D"http://lt.tripod.com/tp_toolbar/edit/_h_/www.tripod.lycos.com/bui=
+ld/index.html"=20
+      target=3D_top><SPAN id=3Dbuild>Edit your =
+Site</SPAN></A>&nbsp;</TD>
+    <TD><IMG height=3D10 alt=3D"show site directory" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/dir.gif" width=3D8 =
+border=3D0></TD>
+    <TD noWrap><A=20
+      =
+href=3D"http://lt.tripod.com/tp_toolbar/browse/_h_/www.tripod.lycos.com/d=
+irectory/"=20
+      target=3D_top>Browse Sites</A>&nbsp;</TD>
+    <TD><A href=3D"http://www.tripod.lycos.com/" target=3D_top><IMG =
+height=3D26=20
+      alt=3D"hosted by tripod" =
+src=3D"http://af.lygo.com/d/toolbar/logo_top2.gif"=20
+      width=3D143 border=3D0></A></TD></TR>
+  <TR style=3D"BACKGROUND-COLOR: #eee">
+    <TD vAlign=3Dcenter noWrap>&nbsp;<INPUT id=3Dsearchbox=20
+      style=3D"FONT-SIZE: 10px; BACKGROUND-COLOR: #fff" size=3D30 =
+name=3Dquery></TD>
+    <TD vAlign=3Dcenter noWrap>&nbsp;<INPUT class=3Dbuttons=20
+      style=3D"BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px"=20
+      type=3Dimage =
+src=3D"http://ly.lygo.com/ly/srch/hp/go_get_it_web_78x19.gif"=20
+      value=3Dimage name=3Dsubmit></TD>
+    <TD align=3Dright><IMG =
+src=3D"http://af.lygo.com/d/toolbar/angle.gif"=20
+    border=3D0></TD>
+    <TD=20
+    style=3D"BACKGROUND: url(http://af.lygo.com/d/toolbar/bg.gif) #fff =
+repeat-x; TEXT-ALIGN: center"=20
+    colSpan=3D8><SPAN style=3D"FONT-SIZE: 11px"><SPAN=20
+      style=3D"FONT-WEIGHT: bold; COLOR: #00f">=AB</SPAN> <SPAN =
+id=3Dtop100><A=20
+      href=3D"javascript:void%20top100('prev')" =
+target=3D_top>Previous</A> | <A=20
+      =
+href=3D"http://lt.tripod.com/tp_toolbar/top100/_h_/www.tripod.lycos.com/m=
+embers/top100_1.html"=20
+      target=3D_top>Top 100</A> | <A =
+href=3D"javascript:void%20top100('next')"=20
+      target=3D_top>Next</A> </SPAN><SPAN=20
+      style=3D"FONT-WEIGHT: bold; COLOR: #00f">=BB</SPAN> </SPAN></TD>
+    <TD=20
+    style=3D"BACKGROUND: url(http://af.lygo.com/d/toolbar/bg.gif) #fff =
+repeat-x"=20
+    vAlign=3Dtop><A href=3D"http://www.tripod.lycos.com/" =
+target=3D_top><IMG=20
+      height=3D22 alt=3D"hosted by tripod"=20
+      src=3D"http://af.lygo.com/d/toolbar/logo_bot2.gif" width=3D143=20
+  border=3D0></A></TD></TR></TBODY></TABLE></FORM></DIV>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D728 border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <SCRIPT type=3Dtext/javascript>=0A=
+if (objAdMgr.isSlotAvailable("leaderboard")) {=0A=
+	objAdMgr.renderSlot("leaderboard")=0A=
+}=0A=
+</SCRIPT>
+      <NOSCRIPT><A=20
+      =
+href=3D"http://network.realmedia.com/RealMedia/ads/click_nx.ads/lycostrip=
+od/ros/728x90/wp/ss/a/611411@Top1?x"><FONT=20
+      size=3D1>[AD]</FONT><AD- alt=3D"leaderboard ad" a ss wp 728x90 ros =
+lycostripod=20
+      adstream_nx.ads ads RealMedia etwork.realmedia.com 611411@Top1? =
+/></A>=20
+      </NOSCRIPT></TD></TR></TBODY></TABLE></DIV>
+<SCRIPT type=3Dtext/javascript>=0A=
+if (displayTopAd()) {=0A=
+    if (this.GeoIP && GeoIP["COUNTRY_CODE"] && =0A=
+	(GeoIP["COUNTRY_CODE"] =3D=3D "CA")) {=0A=
+=0A=
+	var caFrame =3D document.createElement('iframe');=0A=
+	caFrame.src =3D "http://www.lycos.ca/header-tripod-member/";=0A=
+	caFrame.scrolling =3D "no";=0A=
+	caFrame.width =3D "100%";=0A=
+	caFrame.height =3D 50;=0A=
+	caFrame.frameBorder =3D 0;=0A=
+	caFrame.marginHeight =3D 0;=0A=
+	caFrame.marginWidth =3D 0;=0A=
+=0A=
+	var caCell =3D document.createElement('td');=0A=
+	caCell.colSpan =3D 12;=0A=
+	caCell.appendChild(caFrame);=0A=
+=0A=
+	var caRow =3D document.createElement('tr');=0A=
+	caRow.style.backgroundColor =3D "#eeeeee";=0A=
+	caRow.appendChild(caCell);=0A=
+=0A=
+	var tbTable =3D document.getElementById('tbtable');=0A=
+	tbTable.tBodies[0].insertBefore(caRow, tbTable.tBodies[0].firstChild);=0A=
+    }=0A=
+=0A=
+    if (GetCookie("Authorization") =3D=3D null) {=0A=
+        b =3D document.getElementById("build");=0A=
+        b.innerHTML =3D "Build a Site";=0A=
+        =
+b.parentNode.href=3D"http://lt.tripod.com/tp_toolbar/build/_h_/www.tripod=
+.lycos.com/campaigns/landing/toolbar.html";=0A=
+    }=0A=
+    var elem=3Ddocument.getElementById("share");=0A=
+    var subj =3D "Wanted to share this Tripod webpage";=0A=
+    var body =3D top.location.href+"\n";=0A=
+    elem.href=3D"mailto:?body=3D"+body+"&subject=3D"+subj;=0A=
+}=0A=
+//-->=0A=
+</SCRIPT>
+<!-- START: Catman Footer -->
+<SCRIPT language=3DJavaScript1.1 type=3Dtext/javascript>=0A=
+if (displayAd() || displayTopAd()) {=0A=
+    objAdMgr.renderFooter();=0A=
+}=0A=
+</SCRIPT>
+<!-- END: Catman Footer --><!-- revision: ubiquitous - $Change: 85838 $ =
+--><!-- ******************************************************** --><!-- =
+* END TRIPOD AD CODE - PLEASE REMOVE WHEN EDITING PAGE * --><!-- =
+******************************************************** --><A=20
+name=3Dtop><A =
+href=3D"http://richardbowles.tripod.com/neural/neural.htm"><IMG=20
+src=3D"http://richardbowles.tripod.com/neural/smallnet.gif" =
+border=3D0>Main Menu</A>=20
+<FONT size=3D+1>
+<CENTER>
+<H1><FONT color=3Dcyan>The Kohonen Self-Organising =
+Map</FONT></H1></CENTER>This=20
+architecture was pioneered by Professor Teuvo Kohonen at the University =
+of=20
+Helsinki. It is unlike the other architectures that we have met before =
+as it=20
+involves <I>unsupervised training</I>. It learns the patterns for itself =
+without=20
+being told what it is supposed to be learning!=20
+<P>In <I>supervised learning</I>, which is what we have been using up to =
+now, we=20
+train the networks by presenting them with an input pattern together =
+with a=20
+corresponding output pattern, and the networks adjust their connections =
+so as to=20
+learn the relationship. However, with the Self-Organising Map (SOM), we =
+just=20
+give it a series of input patterns, and it learns for itself how to =
+group these=20
+together so that similar patterns produce similar outputs.=20
+<P>It's about time that we saw for ourselves what the SOM looks like =
+....=20
+<P>
+<TABLE width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD><FONT size=3D+1>Well, that's the Kohonen SOM on the right. It =
+consists=20
+      of a single layer of cells, all of which are connected to a series =
+of=20
+      inputs. The inputs themselves are not cells and do no processing - =
+they=20
+      are just the points where the input signal enters the system.=20
+      <P>The cells in the diagram appear to have connections between =
+them (and=20
+      indeed, descriptions of Kohonen nets I have read generally refer =
+to=20
+      "lateral inhibitory connections"), but the algorithm for training =
+the net=20
+      never mentions them, and so, I shan't refer to them again! =
+</FONT></P></TD>
+    <TD><IMG=20
+  =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/koh1.gif"></TD></TR=
+></TBODY></TABLE>
+<H2><FONT color=3D#80ffff>Training the Kohonen SOM</FONT></H2>The SOM is =
+generally=20
+speaking a two-dimensional structure - a rectangular grid of cells - =
+which=20
+allows "blobs" of activity to appear on its surface and represent =
+groupings. If=20
+it were three dimensions or more, then it would be hard for anyone to =
+visualise=20
+the patterns of activity.=20
+<P>However, for the purposes of describing the training algorithm, I =
+shall use a=20
+one-dimensional example. The idea behind the training is that the =
+weights=20
+(strengths of connections between the inputs and each of the nodes in =
+the grid)=20
+are set to random values. Then the patterns are presented one after each =
+other.=20
+Each pattern is "run forward" in the net, so that the net produces an =
+output.=20
+<P>Although the weights are random, one of the nodes has to produce a =
+slightly=20
+higher output than the others, and that node is chosen as the "winner." =
+The=20
+weights of the winning node and those in its immediate neighbourhood are =
+updated=20
+slightly so that they are more likely to correspond to the input pattern =
+in=20
+future. In this way, groups of nodes across the SOM become dedicated to =
+classes=20
+of input pattern and those similar to them.=20
+<P>
+<OL>
+  <LI><FONT color=3D#80ffff>Initialise the network</FONT>=20
+  <P>Let's say that <FONT face=3D"Courier New"=20
+  color=3D#ffff00><B>w<SUB>ij</SUB></B></FONT> is the weight from input =
+number=20
+  <FONT face=3D"Courier New" color=3D#ffff00><B>i</B></FONT> to cell =
+number <FONT=20
+  face=3D"Courier New" color=3D#ffff00><B>j</B></FONT>. We will also =
+assume that=20
+  there are <FONT face=3D"Courier New" color=3D#ffff00><B>n</B></FONT> =
+input values,=20
+  and number them from 1 to <FONT face=3D"Courier New"=20
+  color=3D#ffff00><B>n</B></FONT>.=20
+  <P>These weights are set up to be small random values. No reference =
+paper has=20
+  ever told me exactly how small "small" is, so I tend to make them =
+<I>very</I>=20
+  small, i.e. some random number in the range 0 to 0.01. We also have to =
+decide=20
+  upon the size of the neighbourhood of each cell, which we call for =
+cell <FONT=20
+  face=3D"Courier New" color=3D#ffff00><B>j</B></FONT>, <FONT =
+face=3D"Courier New"=20
+  color=3D#ffff00><B>N</B></FONT>. This is set to a large value =
+(typically almost=20
+  the size of the entire grid). I have chosen to implement the size in =
+terms of=20
+  a radius, i.e. a distance from the central winning node.=20
+  <P>
+  <BLOCKQUOTE><FONT face=3D"Courier New" color=3D#ffff00><B><PRE>const n =
+=3D 2;           {How many inputs}
+      NUMCELLS =3D 10;   {How many cells in grid}
+
+var radius : byte;
+var w : array [1..M, 1..NUMCELLS] of real;
+
+      .....
+
+procedure initialise;
+var i,j : byte;
+begin for i :=3D 1 to n do
+       for j :=3D 1 to NUMCELLS do
+        w[i,j] :=3D random(100) / 10000; {Range 0 to 0.01}
+      radius :=3D NUMCELLS div 2 - 1;    {Try 4}
+end;
+</PRE></B></FONT></BLOCKQUOTE>
+  <P></P>
+  <LI><FONT color=3D#80ffff>Present input</FONT>=20
+  <P>Present the first input pattern, which we call <FONT =
+face=3D"Courier New"=20
+  color=3D#ffff00><B>x<SUB>1</SUB></B></FONT> to <FONT face=3D"Courier =
+New"=20
+  color=3D#ffff00><B>x<SUB>n</SUB></B></FONT>, where <FONT =
+face=3D"Courier New"=20
+  color=3D#ffff00><B>x<SUB>i</SUB></B></FONT> is the input to mode <FONT =
+
+  face=3D"Courier New" color=3D#ffff00><B>i</B></FONT>. We don't seem to =
+need to run=20
+  the network forward, as far as I can see.=20
+  <P>
+  <BLOCKQUOTE><FONT face=3D"Courier New" color=3D#ffff00><B><PRE>var x : =
+array [1..n] of real;    {Contains input}
+</PRE></B></FONT></BLOCKQUOTE>
+  <P></P>
+  <LI><FONT color=3D#80ffff>Calculate distances</FONT>=20
+  <P>Calculate the distances between the input and each of the output =
+nodes in=20
+  turn. We produce a distance figure for each cell <FONT face=3D"Courier =
+New"=20
+  color=3D#ffff00><B>j</B></FONT>, and do it by going through all the =
+inputs and=20
+  adding the squares of the differences between the input value and the =
+weight=20
+  (yes, I kid you not - the weight, not the output value!). As an =
+equation, this=20
+  is written as follows:=20
+  <P>
+  <CENTER>
+  <TABLE>
+    <TBODY>
+    <TR>
+      <TD><FONT face=3D"Courier New" size=3D+1><B>d<SUB>j</SUB> =3D =
+</B></FONT></TD>
+      <TD><FONT face=3D"Courier New" size=3D+1><B>
+        <CENTER>n-1<BR><FONT face=3DSymbol=20
+        size=3D+3>S</FONT><BR>0</CENTER></B></FONT></TD>
+      <TD><FONT face=3D"Courier New" size=3D+1><B>(x<SUB>i</SUB> -=20
+        =
+w<SUB>ij</SUB>)<SUP>2</SUP></B></FONT></TD></TR></TBODY></TABLE></CENTER>=
+
+  <P>and if you prefer that in non-gobbledy gook,=20
+  <P>
+  <BLOCKQUOTE><FONT face=3D"Courier New" color=3D#ffff00><B><PRE>var d : =
+array [1..NUMCELLS] of real;    {Contains differences}
+
+....
+
+for j :=3D 1 to NUMCELLS do
+ begin d[j] :=3D 0;
+       for i :=3D 1 to n do
+        d[j] :=3D d[j] + (x[i] - w[i,j]) * (x[i] - w[i,j])
+                       {This last part squares x[i] - w[i,j]}
+ end;
+</PRE></B></FONT></BLOCKQUOTE>
+  <P></P>
+  <LI><FONT color=3D#80ffff>Select the minimum distance</FONT>=20
+  <P>Find the cell with the minimum difference, and call that node <FONT =
+
+  face=3D"Courier New" color=3D#ffff00><B>j<SUP>*</SUP></B></FONT>=20
+  <P>
+  <BLOCKQUOTE><FONT face=3D"Courier New" color=3D#ffff00><B><PRE>var =
+j_star : byte;
+    temp_d : real;
+
+....
+
+{Set temp_d to a dummy high distance value}
+temp_d :=3D 10000;
+for j :=3D 1 to NUMCELLS do
+ if d[j] &lt; temp_d    {Bound to happen sooner or later}
+  then begin temp_d :=3D d[j];
+             j_star :=3D j
+       end;
+</PRE></B></FONT></BLOCKQUOTE>
+  <P></P>
+  <LI><FONT color=3D#80ffff>Update the weights</FONT>=20
+  <P>Update the weights for node <FONT face=3D"Courier New"=20
+  color=3D#ffff00><B>j<SUP>*</SUP></B></FONT> and all the nodes in the =
+same=20
+  neighbourhood (as defined by the size of <FONT face=3D"Courier New"=20
+  color=3D#ffff00><B>N</B></FONT>. New weights are given by the =
+following formula=20
+  <P>
+  <CENTER><FONT face=3D"Courier New" color=3D#ffff00><B><PRE>new =
+w<SUB>ij</SUB> =3D old w<SUB>ij</SUB> + <FONT =
+face=3DSymbol>h</FONT>(x<SUB>i</SUB> - w<SUB>ij</SUB>)
+</PRE></B></FONT></CENTER>
+  <P>The weights that are not in the neighbourhood are not changed at =
+all. <FONT=20
+  face=3DSymbol color=3D#ffff00><B>h</B></FONT> is a gain term between 0 =
+and 1 which=20
+  decreases slowly over time, thereby slowing down the rate at which =
+weights=20
+  adapt. The size of the neighbourhood, <FONT face=3D"Courier New"=20
+  color=3D#ffff00><B>N</B></FONT> also decreases slowly as time goes on, =
+thus=20
+  localising the area of maximum activity. Unfortunately, Kohonen and =
+those that=20
+  have come after him have stated that there are "no hard and fast =
+rules"=20
+  determining how quickly and at what point these values should =
+decrease.=20
+  <P></P>
+  <LI><FONT color=3D#80ffff>Repeat the process</FONT>=20
+  <P>Repeat the process by going back to step 2. You should present =
+different=20
+  input patterns cyclically (no, not using ESP, just cycle through the =
+patterns:=20
+  1, 2, 3, 1, 2, 3 etc.) and at regular intervals (undefined) reduce the =
+
+  neighbourhood size and gain term. The convergence does seem to be =
+rather slow=20
+  - typically a few hundred cycles should happen before these sizes are =
+reduced=20
+  at all. </P></LI></OL>
+<H2><FONT color=3D#80ffff>Running the Kohonen SOM</FONT></H2>This part I =
+have=20
+never seen in any literature about SOMs - not once. Nobody seems to =
+write about=20
+it, so I have had to work out the rule for myself. However, it does seem =
+to=20
+work.=20
+<P>To calculate the output for each cell, just apply the required input =
+to all=20
+the nodes. Then, for each cell in the grid, multiply corresponding =
+inputs and=20
+weights, and sum the values, and that is the output for that node. There =
+doesn't=20
+seem to be any need for a transfer function.=20
+<P>
+<BLOCKQUOTE><FONT face=3D"Courier New" color=3D#ffff00><B><PRE>for j =
+:=3D 1 to NUMCELLS do
+ begin sum :=3D 0.0;
+       for i :=3D 1 to n do
+        sum :=3D sum + w[i,j] * x[i];  {Weight times input}
+       writeln('Output for cell ' + j + ' : ' + sum)
+ end
+</PRE></B></FONT></BLOCKQUOTE>
+<P>We can't guarantee that the output of the cells will be in the range =
+0.0 to=20
+1.0. It may be above 1.0, so there may be occasions where you have to =
+impose a=20
+ceiling on it. In the example below, I artificially impose a ceiling of =
+1.0 so=20
+that the pictures are displayed correctly.=20
+<H2><FONT color=3D#80ffff>An example of a Kohonen SOM</FONT></H2>This =
+example=20
+shows a JavaScript version of the one-dimensional SOM that I have just=20
+described. It has 10 output cells and two inputs. During training, the =
+program=20
+is designed to present two types of input to the SOM, either the first =
+input=20
+high (in the range 0.8 to 1.0) and the second low (0.0 to 0.2) or =
+vice-versa.=20
+<P>
+<CENTER><INPUT onclick=3Dtrain1(); type=3Dbutton value=3D"Train =
+SOM"></INPUT> <INPUT onclick=3Dtest1(); type=3Dbutton value=3D"Test =
+SOM"></INPUT>=20
+<TABLE border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD><FONT size=3D+1>Two inputs:</FONT><BR><INPUT=20
+            style=3D"FONT-SIZE: 24pt" size=3D4 =
+name=3Dinp1></INPUT><BR><INPUT=20
+            style=3D"FONT-SIZE: 24pt" size=3D4 name=3Dinp2></INPUT> =
+</TD>
+          <TD><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/koh2.gif"></TD>
+          <TD><IMG =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9> </TD>
+          <TD><FONT size=3D+1>Initial range (2-4)<BR><INPUT value=3D4=20
+            name=3Drange_size></INPUT>
+            <P>Iterations<BR><INPUT value=3D200 =
+name=3Diterations></INPUT>=20
+            =
+</FONT></P></TD></TR></TBODY></TABLE></FONT></TD></TR></TBODY></TABLE></C=
+ENTER>
+<P>To see how this program works, view the source code and use the =
+Search=20
+facility (F3 in Notepad) to search for the string <FONT =
+color=3D#80ffff>&lt;!--=20
+This is the code!! --&gt;</FONT>.=20
+<H2><FONT color=3D#80ffff>A two-dimensional Kohonen SOM</FONT></H2>The =
+Kohonen SOM=20
+really comes into its own with a two-dimensional grid of cells. The =
+example I=20
+have included below is similar to the one dimensional example except =
+that all=20
+the variables have been given the suffix '2' to distinguish them from =
+the=20
+variables in the one-dimensional example. For instance, the weights are =
+stored=20
+in the array <FONT face=3D"Courier New" =
+color=3D#ffff00><B>w2</B></FONT>. However,=20
+the input still uses the array <FONT face=3D"Courier New"=20
+color=3D#ffff00><B>x</B></FONT>.=20
+<P>This time the input consists of four groups of numbers: Low-low, =
+Low-high,=20
+High-low and High-high, created in the same manner as before. We =
+<I>should</I>=20
+find that four large "islands" of activation form in the grid, although =
+we can't=20
+predict exactly where.=20
+<P>
+<CENTER><INPUT onclick=3Dtrain2(); type=3Dbutton value=3D"Train =
+SOM"></INPUT> <INPUT onclick=3Dtest2(); type=3Dbutton value=3D"Test =
+SOM"></INPUT>=20
+<TABLE border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD><FONT size=3D+1>Two inputs:</FONT><BR><INPUT=20
+            style=3D"FONT-SIZE: 24pt" size=3D4 =
+name=3Dinp2_1></INPUT><BR><INPUT=20
+            style=3D"FONT-SIZE: 24pt" size=3D4 name=3Dinp2_2></INPUT> =
+</TD>
+          <TD><IMG =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic0_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic1_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic2_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic3_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic4_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic5_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic6_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic7_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic8_9><BR><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_0><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_1><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_2><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_3><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_4><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_5><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_6><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_7><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_8><IMG=20
+            =
+src=3D"http://richardbowles.tripod.com/neural/kohonen/v0.gif"=20
+            name=3Dpic9_9> </TD>
+          <TD><FONT size=3D+1>Initial range (2-4)<BR><INPUT value=3D4=20
+            name=3Drange_size2></INPUT>
+            <P>Iterations<BR><INPUT value=3D200 =
+name=3Diterations2></INPUT>=20
+            =
+</FONT></P></TD></TR></TBODY></TABLE></FONT></TD></TR></TBODY></TABLE></C=
+ENTER>
+<P>
+<TABLE width=3D"100%" border=3D1>
+  <TBODY>
+  <TR>
+    <TD><FONT size=3D+1>N.B. Some academic literature refers to the SOM =
+as a=20
+      <I>Self-Organising Feature Map</I> (SOFM), so consider this =
+alternative=20
+      name when you search for them with a search=20
+engine.</FONT></TD></TR></TBODY></TABLE>
+<P>
+<HR>
+
+<P><A =
+href=3D"http://richardbowles.tripod.com/neural/wisard/wisard.htm"><IMG=20
+src=3D"http://richardbowles.tripod.com/shared/prev.gif" border=3D0></A> =
+<A=20
+href=3D"http://richardbowles.tripod.com/neural/kohonen/kohonen.htm#top"><=
+IMG=20
+src=3D"http://richardbowles.tripod.com/shared/top.gif" border=3D0></A> =
+<!-- <A HREF=3D"../xxxx.htm"><IMG SRC=3D"../../shared/next.gif" =
+BORDER=3D0></A> --><!-- This is the code!! -->
+<SCRIPT language=3DJavaScript>
+var n =3D 2, NUMCELLS =3D 10;
+var i,j;
+
+// Set up array of weights, 2 inputs by 10 outputs
+var w =3D new Array();
+w[0] =3D new Array();
+w[1] =3D new Array();
+for (i =3D 0; i < n; i++)
+ for (j =3D 0; j < NUMCELLS; j++)
+  w[i][j] =3D Math.random() * 0.01;
+
+// Array x holds the inputs for training and testing
+var x =3D new Array ();
+
+// Array d holds the differences during training
+var d =3D new Array ();
+
+var j_star;             // Identity of winning node
+var LEARN_RATE =3D 0.01;  // Rate at which weights change
+
+// Here is the code for the one-dimensional example
+
+// Train the SOM
+function train1 ()
+{ var r_copy =3D parseInt(range_size.value); // Field value will be =
+restored afterwards
+  var N;
+  var iter =3D parseInt(iterations.value); // Number of iterations for =
+each range
+  for (N =3D r_copy; N >=3D 0; N--)          // Decreases radius to 0 =
+(single cell)
+   { range_size.value =3D N;               // Display value in field
+     for (count =3D 0; count < iter; count++)
+      { iterations.value =3D count;        // Display value in field
+        random_input(2);
+        calculate_distances();
+        select_minimum_distance();
+        update_weights(N);
+      }
+   }
+  range_size.value =3D r_copy;      // Restore the values in the fields
+  iterations.value =3D iter;
+  alert("Network trained");
+}
+
+// Pick a random pattern, High-Low or Low-High (equally likely)
+function random_input (limit)
+{ var which =3D Math.floor(Math.random() * limit);
+  x[0] =3D Math.random() * 0.2;                // Set 2 low values
+  x[1] =3D Math.random() * 0.2;
+  if (which =3D=3D 0 || which =3D=3D 3)
+   x[1] +=3D 0.8;
+  if (which =3D=3D 1 || which =3D=3D 3)
+   x[0] +=3D 0.8;
+}
+
+function calculate_distances ()
+{ var i,j;
+  for (j =3D 0; j < NUMCELLS; j++)
+   { d[j] =3D 0.0;
+     for (i =3D 0; i < n; i++)
+      d[j] +=3D (x[i] - w[i][j]) * (x[i] - w[i][j]);
+   }
+}
+
+function select_minimum_distance ()
+{ var temp_d =3D 100000;      // dummy value
+  var j;
+  for (j =3D 0; j < NUMCELLS; j++)
+   if (d[j] < temp_d)
+    { temp_d =3D d[j];
+      j_star =3D j;     // Tracks index of minimum distance
+    }
+}
+
+function update_weights (N)
+{ // Go through all the cells and only update those within N units of =
+j_star
+  var j;
+  for (j =3D 0; j < NUMCELLS; j++)
+   if (j >=3D j_star - N && j <=3D j_star + N)
+    for (i =3D 0; i < n; i++)                // Update weights from all =
+inputs
+     w[i][j] +=3D LEARN_RATE * (x[i] - w[i][j]);
+}
+
+// Test the SOM on the current input
+function test1 ()
+{ x[0] =3D parseFloat(inp1.value);
+  x[1] =3D parseFloat(inp2.value);
+  // Calculate output for each cell
+  for (j =3D 0; j < NUMCELLS; j++)
+   { var sum =3D 0;     // Build up weighted sum of inputs
+     for (i =3D 0; i < n; i++)
+      sum +=3D x[i] * w[i][j];
+     // Set the image based on the (rounded) output
+     var rounded =3D Math.round(sum * 10 - 0.5);    // Always round down
+     if (rounded > 9) // Ensures all values can be displayed
+      rounded =3D 9;    // Normally this artificial ceiling is =
+unnecessary
+     document.images["pic" + j].src =3D "v" + rounded + ".gif";
+   }
+}
+
+// Here is the code for the two-dimensional example
+// Same as before, but functions have suffix '2'
+
+var j_star_row, j_star_col;     // 2-d equivalent of j_star
+
+// w2[i][j][k] =3D weight from input i to cell j,k
+var w2 =3D new Array();
+var i,j,k;
+for (i =3D 0; i < n; i++)
+ { w2[i] =3D new Array();
+   for (j =3D 0; j < NUMCELLS; j++)
+    w2[i][j] =3D new Array();
+ }
+
+// d2[j][k] =3D distance to cell j,k
+var d2 =3D new Array();
+for (j =3D 0; j < NUMCELLS; j++)
+ d2[j] =3D new Array();
+
+// Now set up the weights to small random values (0 to 0.01)
+for (i =3D 0; i < n; i++)
+ for (j =3D 0; j < NUMCELLS; j++)
+  for (k =3D 0; k < NUMCELLS; k++)
+   w2[i][j][k] =3D Math.random() * 0.01;
+
+function train2 ()
+{ var r_copy =3D parseInt(range_size.value);
+  var N;
+  var iter =3D parseInt(iterations2.value); // Number of iterations for =
+each range
+  for (N =3D r_copy; N >=3D 0; N--)          // Decreases radius to 0 =
+(single cell)
+   { for (count =3D 0; count < iter; count++)
+      { random_input(4);
+        calculate_distances2();
+        select_minimum_distance2();
+        update_weights2(N);
+      }
+   }
+  alert("Network trained");
+}
+
+function calculate_distances2 ()
+{ var i,j,k;
+  for (j =3D 0; j < NUMCELLS; j++)
+   for (k =3D 0; k < NUMCELLS; k++)
+    { d2[j][k] =3D 0.0;
+      for (i =3D 0; i < n; i++)
+       d2[j][k] +=3D (x[i] - w2[i][j][k]) * (x[i] - w2[i][j][k]);
+    }
+}
+
+function select_minimum_distance2 ()
+{ var temp_d =3D 100000;      // dummy value
+  var j,k;
+  for (j =3D 0; j < NUMCELLS; j++)
+   for (k =3D 0; k < NUMCELLS; k++)
+    if (d2[j][k] < temp_d)
+     { temp_d =3D d2[j][k];
+       j_star_row =3D j;     // Tracks index of minimum distance
+       j_star_col =3D k;
+     }
+}
+
+function update_weights2 (N)
+{ // Go through all the cells and only update those within N units of =
+j_star_row, j_star_col
+  var i,j,k;
+  for (j =3D 0; j < NUMCELLS; j++)
+   for (k =3D 0; k < NUMCELLS; k++)
+    if (j >=3D j_star_row - N && j <=3D j_star_row + N &&
+        k >=3D j_star_col - N && k <=3D j_star_col + N)
+     for (i =3D 0; i < n; i++)                // Update weights from all =
+inputs
+      w2[i][j][k] +=3D LEARN_RATE * (x[i] - w2[i][j][k]);
+}
+
+// Test the SOM on the current input
+function test2 ()
+{ x[0] =3D parseFloat(inp2_1.value);
+  x[1] =3D parseFloat(inp2_2.value);
+  // Calculate output for each cell
+  for (j =3D 0; j < NUMCELLS; j++)
+   for (k =3D 0; k < NUMCELLS; k++)
+    { var sum =3D 0;     // Build up weighted sum of inputs
+      for (i =3D 0; i < n; i++)
+       sum +=3D x[i] * w2[i][j][k];
+      // Set the image based on the (rounded) output
+      var rounded =3D Math.round(sum * 10 - 0.5);    // Always round =
+down
+      if (rounded > 9) // Ensures all values can be displayed
+       rounded =3D 9;    // Normally this artificial ceiling is =
+unnecessary
+      document.images["pic" + j + "_" + k].src =3D "v" + rounded + =
+".gif";
+    }
+}
+</SCRIPT>
+</P></FONT></BODY></HTML>
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://hb.lycos.com/header?VID=5905&LHIG=1&ord=256228
+
+R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOwo=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=611411
+
+R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/enticon.gif
+
+R0lGODlhEAAOALMAAGBgYFBQULCwsNDQ0ODg4KCgoJCQkPDw8MDAwDAwMCAgIICAgEBAQBAQEAAA
+AP///yH5BAEAAA8ALAAAAAAQAA4AAARn8DBHq3XtPaZUWiA4TYPmKI6grUzTMOvpIKvWvqsyAfWz
+OK2DxgB0EGqHRkKxWCUozNAChTk+BsULVLdaKFOIMELgSDQKmiSqWQOUFSuAC1ZDyOI6+soecKQb
+fWwrAUpwD09aFg0DEQA7
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/share.gif
+
+R0lGODlhHgAIAKL/AMwzAIF/f8DAwMzMzAAAAAAAAAAAAAAAACH5BAEAAAIALAAAAAAeAAgAAAMy
+KLrc9DDKJiQR49IFQKVDGCrZxnnaYl0l8wSP2ogimVYEfO+WbTo/Rma1Ci5oyORgkwAAOw==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/abuse.gif
+
+R0lGODlhCAAIAJH/AMwzAMDAwMzMzAAAACH5BAEAAAEALAAAAAAIAAgAAAIUDBB5csD7Wgpxmoau
+a48+IUxgUAAAOw==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/build.gif
+
+R0lGODlhCQAKAJH/AMDAwMzMzDMzMwAAACH5BAEAAAAALAAAAAAJAAoAAAIahI4AIaq32hjmMOfE
+ndNc7ElcCIbIGaRqChQAOw==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/dir.gif
+
+R0lGODlhCAAKAKL/AAAAzAAAmTMz/8DAwMzMzAAAAAAAAAAAACH5BAEAAAMALAAAAAAIAAoAAAMY
+ODqyG6A9QGW4UQjC4V6E54TRKILYyC0JADs=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/logo_top2.gif
+
+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
+BtFYADzEjpp5YFgI+aAGS1JSDb3qHSECAQA7
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/angle.gif
+
+R0lGODlhFgAWAJH/AP///8DAwMzMzAAAACH5BAEAAAEALAAAAAAWABYAAAI5jI+pyysNgwCRTVrT
+xdlsnn1gJI5NaTrAyq4V6kJwbLU2rcxsfd9q79MAe8Jh0GMkIpNB3VDCBBYAADs=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/logo_bot2.gif
+
+R0lGODlhjwAWAOYAAAMBA3t6e1vI/2LK/2XL/2bM/2jN/4HV/5ve/73p/9vz/+v4//b8//z+/17E
+7WLJ82vR/XDU/0+44D2lwwBbaiySphd7hgJgaRN3fwBiZw9zeAxwcwBlZgBmZghoaCZ9fgBnZgBm
+ZABWVQJkYwBgXQhqZw1+SyCUV0LFSMzezQACADbHNklLST0+Pdvd22hpaP7//pmamVnpN07qIzBD
+K4Chd2X/NBUfEig2JFRoTniOcZevkKK4m1n/HVn/IV3/J2D/K2H/LWT/MWb/MwQKAgIFAWf/NGn/
+N2XzNW7/PnX/SIP/WZX9c6b/h7j/n6XGmrLGq+Xz4Pz/+2n/LXD2OwwUCR4tGMX/r9X9xuD/1Kq6
+pOr35cnTxXD/L0hZQer/4fD+6vP+7u716/b+8vn/9fv/+P7//f//+/z8/Pj4+PT09O3t7ePj49PT
+08zMzMHBwbS0tKioqIiIiHNzc2BgYFRUVC8vLyUlJRoaGhISEgsLCwUFBQICAgEBAQAAAMDAwCH5
+BAEAAH8ALAAAAACPABYAAAf/gG6Cg4SFhoeHChEDBY2OjxESGyQdlZaVHBQnMk5lL0V+fkQ8MGVQ
+RKF+OWNXS2VcOKl1fwF7oXhlZXF6oXpxLi18oXW5d6F8LGtxtn54bGwxeaF7MYiEf9jZ2tvc3d0L
+CAKP4wQRDhiUl5YZmlRYZSypVilhYzWpRDpnTUxlWjeh+tD5U+dYizZp5jC70wYOnj5++sz50wZP
+rwBraoVq4eLPC2Z54HgbSbKbn5J/GiQQN84RAQgQKqRT1+FCiRVLwKSIFYpGlDJicqS6wYMMkyZn
+dFTpJQdNPD/I2LRpEbDFmmjT5PyZw6sZnDV1hPlp8SzYxo7YUqFcm+0kSgUH/1i2LGAgwoQRI2hm
+OjHDVYyloazs2CKGRiocXL4suTImB6hmbd4Yi3hHjsJeL9JghTrHhR2DLoBB9JMnBp2ufuikSduW
+7Vq1f9y6zaZSAKO55RxomFkJBAUPKHosORMAQKpQULAA3BgFC5MsLgyHsvNHjthUo/3cefMnjsVb
+k5vFoMgi+/FQWv/kiR0qtuuSst3L1wZOAIG5dCPIDGEJBLsTRwh3hhyopFJFCk+kokIOZlzBxBj/
+QLVHCzAEkIoed3TFBx5yqPEHG6ddx8cela3xR0Ya5pHHHizmEQdr7c33nkkwssYNXPbhF8kkIHTg
+nyYydCFcGG3kQAMOONCgw/8YUHiRw5M7/NHEEmFAkQMdWMahBh2ptABHAHbcwUIMJmLTRgAshGkH
+Cy/AsZqZL4TZQgxyvGDnHG3UeNJsM3ITX3zd4HjbOHXtlwmQXRgBxBFOnBFGClxwkYIYX4CxxaVb
+jJHFEkpcQVgaaZjIxWR8DKTGG3DkuU0akcHxRhtlarMGqnmiscatsc7HZ5/bwMbertoogIABtrUE
+wQMWiEDBBZskaoMNQCTRBBZZVJsFFk04ccW2VzjBhBBALJHFNnCIpUcAvKbra7qvkbRAAsMKYNsA
+9ApggAQfmIACEs4OYcMQQAyhxMAEH2HwwUcA7AMTX2wTQyqlsSvxxCTFWNLcuwggcMABEWyMQAIp
+MNHDFEYMYfLJQQCh8spCBOHyy0D8wPCqL0DMHcU45zwjAwso4LPPCzTwxxdNxDxEyScnrbTJJf8Q
+RBMNrwpHHFTD4aHOWGfNKxhOKNEDEEYgvfTJJQPhgxJOgKH12mznTIZzAf4gxNFGPGtD2EYI8UMP
+STCBBRltBy44rzCAge0SQPTgww8r/+BDD0EsMW0YZgxu+eVrSaFpt/ws4flR2mZBhhSYl266NzBI
+QQYYX1j7RRhlSFH56bTXzg0MMNiu++689+7778AHL/zwxGMeCAA7
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/neural/smallnet.gif
+
+R0lGODlhMQAhAPf/AP///8z//5n//2b//zP//wD////M/8zM/5nM/2bM/zPM/wDM//+Z/8yZ/5mZ
+/2aZ/zOZ/wCZ//9m/8xm/5lm/2Zm/zNm/wBm//8z/8wz/5kz/2Yz/zMz/wAz//8A/8wA/5kA/2YA
+/zMA/wAA////zMz/zJn/zGb/zDP/zAD/zP/MzMzMzJnMzGbMzDPMzADMzP+ZzMyZzJmZzGaZzDOZ
+zACZzP9mzMxmzJlmzGZmzDNmzABmzP8zzMwzzJkzzGYzzDMzzAAzzP8AzMwAzJkAzGYAzDMAzAAA
+zP//mcz/mZn/mWb/mTP/mQD/mf/MmczMmZnMmWbMmTPMmQDMmf+ZmcyZmZmZmWaZmTOZmQCZmf9m
+mcxmmZlmmWZmmTNmmQBmmf8zmcwzmZkzmWYzmTMzmQAzmf8AmcwAmZkAmWYAmTMAmQAAmf//Zsz/
+Zpn/Zmb/ZjP/ZgD/Zv/MZszMZpnMZmbMZjPMZgDMZv+ZZsyZZpmZZmaZZjOZZgCZZv9mZsxmZplm
+ZmZmZjNmZgBmZv8zZswzZpkzZmYzZjMzZgAzZv8AZswAZpkAZmYAZjMAZgAAZv//M8z/M5n/M2b/
+MzP/MwD/M//MM8zMM5nMM2bMMzPMMwDMM/+ZM8yZM5mZM2aZMzOZMwCZM/9mM8xmM5lmM2ZmMzNm
+MwBmM/8zM8wzM5kzM2YzMzMzMwAzM/8AM8wAM5kAM2YAMzMAMwAAM///AMz/AJn/AGb/ADP/AAD/
+AP/MAMzMAJnMAGbMADPMAADMAP+ZAMyZAJmZAGaZADOZAACZAP9mAMxmAJlmAGZmADNmAABmAP8z
+AMwzAJkzAGYzADMzAAAzAP8AAMwAAJkAAGYAADMAAAAAAP//////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////wAAACH/C05FVFNDQVBFMi4wAwEA
+AAAh+QQFCgDXACwAAAAAMQAhAAAI5AABCBxIsKDBgwgTKjT4r+G/hRAjIvxHqyKthxIzIpxAkKJF
+jBozOvyXQUKGkRYvNgzJEkCGjilXjkw4s2XBmiABOLwZU2AumxMZ7vRYsWGuoyN3tswptCeAn0AP
+Mh3o0GlUmjcfalV6VSEzAMxWCpzadWHYjmWlchUY9uvYtAx7EhALkmxZohcJ6EVrV2LSv3gbEmAI
+V2pPsW/73l1L921hvzkVP6aqE6PkyTqpah27dvJUlB8xZ54YWLTdqh8Bd9b4ma5VoDg7ItY822bg
+upfvxqyZVjXoorkflxa9kDfx4wsDAgAh+QQFCgDXACwAAAMAKwAPAAAIXACvCRwoMAPBgwgTKlz4
+79+EhRAjSrz2cKLFixgtAsh1jWPGjwIb/vMIEuTGjiVTqlyp8t81ACwz/mMWUyKBawRmNqNZcyGA
+mwJ5ZiQ50eXPlLmSYoS5kmhPiAEBACH5BAUKANcALAAAAwAsAA8AAAhTAK8JHAjg2oSBCBMqXMiw
+YQYJGRpKnCixYESKGDNq3IiwIMePDXPlAknymseSKFOqXMly47+WE09eewlzIgECKkdmpHmN2bVm
+HwHwrIlRJ1GGAQEAIfkEBQoA1wAsAQADACwADwAACFgArwkceA3AhGsZCCpcyLChw38QDzqcSHEi
+gIQSK2rcyLEjwVweQyqEKLLkQpAmU6pcybLlRALXYLrUCIDAv4IzJ96s+Y+ZSAA/C/r0KTIXypBE
+PQLNqTEgACH5BAUKANcALAIAAwAsAA8AAAhUAK8JHHgNwLV/BBMqXMiw4UCEDiNKZGgQ4sSLGDNe
+NKixY8NcuTyKLDiypMmTJQmgzAhApcqVF/+9hCkRoUGOI0NqBMCMZ8d/Fjv6zOmR2bVmHQMCACH5
+BAUKANcALAMABgAsAA4AAAhJAK8JHEiwoMGDCA/mSsiwIcN//xxKnGhwIcWLGDNq3EiQAEeNACJ+
+/OhxpEmMADhGFKkxl0WMLFGqvPaP2UmMzJrZvElx58WAAAAh+QQFCgDXACwAAAMAMAATAAAIYQCv
+TbhGsKDBgwgTKlx4LYOEDAwjSpwIcaLFixgzWgSgsaPEXLk8iizIcaTJkwgJoPQIQKXKlRr/vYSJ
+8d+1kjRzagypc+I/mz0z8tSIM2hEAP+KGo3IbKnEpk4ZNm2WMSAAIfkEBQoA1wAsAAADADEAFAAA
+CFwArwnMILCgwYMIEypceA3AvwkMI0qcWBAixYsYM2qUmGujR4T//n0cmbAjyZMoCxJIudEhS5Ir
+X8qcSfMggJoac5nEyfAmz59AKd70GVThP2ZFjSJFmjQhU4wBAQAh+QQFCgDXACwBAAMAMAAVAAAI
+aAABXJtwraDBgwgTKlzI8FoGCRkaSpwoUWBEihgzatyIMNdCgQI5asxFcuE/kRw9KgSJMiGBljAL
+Anj5MmbLfzVtimSps6fPnymBZvx3UmhQo0iTKk0acilDAMygOmX4j9lUhlatZgwIACH5BAUKANcA
+LAIAAwAmABUAAAhfAK8BmHAtw7WDCBMqXMhQ4b+HBBseZCaxYkIABiMyZNaMosWPHz2CXJhrpEmH
+/06qJLlSIoGWJgGkhLnyJc2bOHPqBAlgJ8hKJX0u7Cm0qNGjSHGmJJr02symPZ8mDAgAIfkEBQoA
+1wAsBAADACUADwAACFwAAUwAcK2gwYMIEypMmEFChoUF/0GceBBABoIL//3DSLHjRADMroX0WJAj
+SZEnD1bKRTLkyIQEFJpMmRBAzJg0U/7DmZMkwZk9gwodSrQny6IZ/1VC2vEo02sBAQAh+QQFCgDX
+ACwEAAMAJgAPAAAIWACvCcwgsKDBgwgTJvz3b4LChxAjOoxIsWLEf9cAWESYayNGhQSuhTzIsNJG
+jQ8BjFTY0SKzZswQavy3cqPCmAlR2tzJs6fPn0CDRtQpNGKuSi2L5lSKMCAAOw==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/neural/kohonen/koh1.gif
+
+R0lGODlhAgHIAPf/AP///8z//5n//2b//zP//wD////M/8zM/5nM/2bM/zPM/wDM//+Z/8yZ/5mZ
+/2aZ/zOZ/wCZ//9m/8xm/5lm/2Zm/zNm/wBm//8z/8wz/5kz/2Yz/zMz/wAz//8A/8wA/5kA/2YA
+/zMA/wAA////zMz/zJn/zGb/zDP/zAD/zP/MzMzMzJnMzGbMzDPMzADMzP+ZzMyZzJmZzGaZzDOZ
+zACZzP9mzMxmzJlmzGZmzDNmzABmzP8zzMwzzJkzzGYzzDMzzAAzzP8AzMwAzJkAzGYAzDMAzAAA
+zP//mcz/mZn/mWb/mTP/mQD/mf/MmczMmZnMmWbMmTPMmQDMmf+ZmcyZmZmZmWaZmTOZmQCZmf9m
+mcxmmZlmmWZmmTNmmQBmmf8zmcwzmZkzmWYzmTMzmQAzmf8AmcwAmZkAmWYAmTMAmQAAmf//Zsz/
+Zpn/Zmb/ZjP/ZgD/Zv/MZszMZpnMZmbMZjPMZgDMZv+ZZsyZZpmZZmaZZjOZZgCZZv9mZsxmZplm
+ZmZmZjNmZgBmZv8zZswzZpkzZmYzZjMzZgAzZv8AZswAZpkAZmYAZjMAZgAAZv//M8z/M5n/M2b/
+MzP/MwD/M//MM8zMM5nMM2bMMzPMMwDMM/+ZM8yZM5mZM2aZMzOZMwCZM/9mM8xmM5lmM2ZmMzNm
+MwBmM/8zM8wzM5kzM2YzMzMzMwAzM/8AM8wAM5kAM2YAMzMAMwAAM///AMz/AJn/AGb/ADP/AAD/
+AP/MAMzMAJnMAGbMADPMAADMAP+ZAMyZAJmZAGaZADOZAACZAP9mAMxmAJlmAGZmADNmAABmAP8z
+AMwzAJkzAGYzADMzAAAzAP8AAMwAAJkAAGYAADMAAAAAAP//////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////wAAACH5BAUAAP8ALAAAAAACAcgA
+AAj+AP8JHEiwoMGDCBMqXMiwocOFtGg9nEixosWLGDNq3MixI8KI165F9EiypMmTKFOqPEjrWoGQ
+IUeunEmzps2bGEEW2AkzpkycQIMKHdqxZcidL3vC/Em0qdOnREEedUlV6VKJULNq3UpSKsyXYK0q
+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
+8ZUvCqNA8Zy9yXABAQAAOw==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/neural/kohonen/koh2.gif
+
+R0lGODlhcQCfAPf/AP///8z//5n//2b//zP//wD////M/8zM/5nM/2bM/zPM/wDM//+Z/8yZ/5mZ
+/2aZ/zOZ/wCZ//9m/8xm/5lm/2Zm/zNm/wBm//8z/8wz/5kz/2Yz/zMz/wAz//8A/8wA/5kA/2YA
+/zMA/wAA////zMz/zJn/zGb/zDP/zAD/zP/MzMzMzJnMzGbMzDPMzADMzP+ZzMyZzJmZzGaZzDOZ
+zACZzP9mzMxmzJlmzGZmzDNmzABmzP8zzMwzzJkzzGYzzDMzzAAzzP8AzMwAzJkAzGYAzDMAzAAA
+zP//mcz/mZn/mWb/mTP/mQD/mf/MmczMmZnMmWbMmTPMmQDMmf+ZmcyZmZmZmWaZmTOZmQCZmf9m
+mcxmmZlmmWZmmTNmmQBmmf8zmcwzmZkzmWYzmTMzmQAzmf8AmcwAmZkAmWYAmTMAmQAAmf//Zsz/
+Zpn/Zmb/ZjP/ZgD/Zv/MZszMZpnMZmbMZjPMZgDMZv+ZZsyZZpmZZmaZZjOZZgCZZv9mZsxmZplm
+ZmZmZjNmZgBmZv8zZswzZpkzZmYzZjMzZgAzZv8AZswAZpkAZmYAZjMAZgAAZv//M8z/M5n/M2b/
+MzP/MwD/M//MM8zMM5nMM2bMMzPMMwDMM/+ZM8yZM5mZM2aZMzOZMwCZM/9mM8xmM5lmM2ZmMzNm
+MwBmM/8zM8wzM5kzM2YzMzMzMwAzM/8AM8wAM5kAM2YAMzMAMwAAM///AMz/AJn/AGb/ADP/AAD/
+AP/MAMzMAJnMAGbMADPMAADMAP+ZAMyZAJmZAGaZADOZAACZAP9mAMxmAJlmAGZmADNmAABmAP8z
+AMwzAJkzAGYzADMzAAAzAP8AAMwAAJkAAGYAADMAAAAAAP//////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////wAAACH5BAUAAP8ALAAAAABxAJ8A
+AAj+AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDMypKWxo8ePtDh+HElSYkiRJVOqPBjyH8qV
+MFO2dBmzJsmZNG3qzIgz586fE3v6BEq0odChRZOyfDmQqdKnLp0KlAqV6NGmVaFexZo16VauXa1u
+DGuVKkGzZGWiBavwa1qIbs9uXPvWKF22Bk/erZswbkGqJ6fypej379KmewefTYw3MF7Fc4Muzgv5
+YWGWU68yHnx56dfNdTsfblt5oei/fkGTPT2ZruqurDOLXBsbdtCetEsjZH00t27UER0bJv0bcXCz
+vouLFo6ZuOXaHTsz323aoV7oPBNfTr5b+GuN26X+t5V6nXJZ65vRMtXb9/vFwtONEmdfHSj818jp
+R/6ZGrrT8nDZRxt2OQGI1Fg7xUWgbOTB5R5h4z2oX3PW8ZdfRQBeiF6CgMU2oWDUWcahZybF99iJ
+femkGWMGphiiXTb1Ft5yLspXk4x2eVijaQ8+h5p6Hwa3o3NzXafdSyYyCN6QNRrp5GQbGpdXkO91
+96OTVFoZZVTrJckTYliaqJp0KOHm5W1h4gajST5yyaWHaW7VIILHbfhke3HiRyGRWxbJXp49Mnng
+lHU6aGRRc/JpY4l5xpSolm0SxtGhYN6J0X/crfneTC1lySCli6IoV6TglcnpmVNiOeqqkIbqEU7+
+E7Z4XJj19TmSd0F6qmiaUZEq01Cdrrided2pClyMvUr5mZf/KbqYsY6CqKxbsR472n6VghrdpOtB
+GaGagl6LHrSSIWWmb57eB5KuIQrlLmCGVetqqRaVSeizrB7IbmbrBmrvva0NRyiVC1q7JL/E4iut
+wM9y+2rBe5KHJJgv4kkgqtlJCRySsQ54ZaHIogjrxjzySC3EbGoMophJntbxU90uPB3HDKMZ6MEU
+g/XvlRKaivFKXTa27M+pfivWyr0l6y3Cmo5783M0q3wqnlTXS/Sls8228NLjGVwqyua9a+WRV0sK
+tk9mmht1hEo/fLbOK7fWYauyYf22wGvney3+qryVXS9bk27s2nIK+n0p4Ma5S3XfH9unc9Ditr21
+009DqHSzgwrG7F703S0i2pBPznTJnnVYeYVoey3z1GvuqzLQ0uZNmWY5fme4kAVOzHZ7pes9601x
+v66w5MOl2yPYWsOqYcIN+4rm4TSZWmyt8toqKYa97qx6scs3jaHL0WddtMla12r99fIFTnzhtJuP
+us3scuvw8Km6hu35jQrJ6fZvghwuz5ZaUrBy1ry/kY9WAHtV/0a3wK/xakyVk1/dlGQ2Xt3vc3aT
+YAO/Ra7/1ex8hgrMh/IHvQuC0E+AihHn0Ec5z2FvXs7jXgC9ckITWuxUgLrd++hUrnFtEIXkKcSg
+DWu4N9eFMIcB+t7vGna62uXQPYwrXRPpxsEg8m933IMJiziHQEYdsCTp8QoXdVgx73Foi2QUlQdv
+BEH/pEwpOpQVD4mowk39jDdZSWOl3GdGMW5LTD2sih7rp70YwnGKb9LTalz4wyHCDJG5Ixok7XaT
+Lp1pkhm71Q0TmJZBfrB3aswjytBoxEfibImQGSQmw3Kx4thRia602gtj+b0x0RJrb7xlLZOoy00J
+sZe7nCMwYdm1YVLSWca8DTKT6cU9MfOVn3wmMUUnzWBmrpqwZKQxRYjNW2mTmd/spjg1EhAAADs=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/neural/kohonen/v0.gif
+
+R0lGODlhEwARAPf/AP///8z//5n//2b//zP//wD////M/8zM/5nM/2bM/zPM/wDM//+Z/8yZ/5mZ
+/2aZ/zOZ/wCZ//9m/8xm/5lm/2Zm/zNm/wBm//8z/8wz/5kz/2Yz/zMz/wAz//8A/8wA/5kA/2YA
+/zMA/wAA////zMz/zJn/zGb/zDP/zAD/zP/MzMzMzJnMzGbMzDPMzADMzP+ZzMyZzJmZzGaZzDOZ
+zACZzP9mzMxmzJlmzGZmzDNmzABmzP8zzMwzzJkzzGYzzDMzzAAzzP8AzMwAzJkAzGYAzDMAzAAA
+zP//mcz/mZn/mWb/mTP/mQD/mf/MmczMmZnMmWbMmTPMmQDMmf+ZmcyZmZmZmWaZmTOZmQCZmf9m
+mcxmmZlmmWZmmTNmmQBmmf8zmcwzmZkzmWYzmTMzmQAzmf8AmcwAmZkAmWYAmTMAmQAAmf//Zsz/
+Zpn/Zmb/ZjP/ZgD/Zv/MZszMZpnMZmbMZjPMZgDMZv+ZZsyZZpmZZmaZZjOZZgCZZv9mZsxmZplm
+ZmZmZjNmZgBmZv8zZswzZpkzZmYzZjMzZgAzZv8AZswAZpkAZmYAZjMAZgAAZv//M8z/M5n/M2b/
+MzP/MwD/M//MM8zMM5nMM2bMMzPMMwDMM/+ZM8yZM5mZM2aZMzOZMwCZM/9mM8xmM5lmM2ZmMzNm
+MwBmM/8zM8wzM5kzM2YzMzMzMwAzM/8AM8wAM5kAM2YAMzMAMwAAM///AMz/AJn/AGb/ADP/AAD/
+AP/MAMzMAJnMAGbMADPMAADMAP+ZAMyZAJmZAGaZADOZAACZAP9mAMxmAJlmAGZmADNmAABmAP8z
+AMwzAJkzAGYzADMzAAAzAP8AAMwAAJkAAGYAADMAAAAAAP//////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////wAAACH5BAUAAP8ALAAAAAATABEA
+AAhRAP8JHAigoEEAAxMSBHCtocNrBRUKZPiwIkSFFC1WRDhRo0eOGT0+RBhS5MiSJhsWTGlxJcuT
+L0f+QykSZMyLHVlyJJhyZ0KXG31KPGhQYkAAADs=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/shared/prev.gif
+
+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
+Ow==
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/shared/top.gif
+
+R0lGODlhLAArAKIGAAAAAEr/UoT397UpAP8AAP///wCE/wCE/yH/C05FVFNDQVBFMi4wAwEAAAAh
++QQFCgAHACwAAAAALAArAAAE/lDISSe4NestS+ECMIwAuHkohaaVSJrZygqyLLlDee17XP/ATyhX
+AASOyGNJhQIEn8NLgEAlHK2BJa3pfAKj0/BVvGxmvb9bDokVY3nGM3plWY/v4qQyXcuI4nltVlVt
+XTYwf2yKY4J7fYh2gYqNcnQwYHhTg5JZW0KXmHqLhEhaoHVxcDuLSaanYK4WmUqvFH+xtqKdtaiI
+erinf5dwvC05xchqwMmQy8wgws+10dLBx9XWztjG2tu9LRje3zeGPd7UFz/m0tHpT93Dx+5e8Ca3
+cx7hyfP4Rcz8/fTxMtSPSzGCBQ2+AphQIaKG77ohhFhD20SKMnDxwIhGFUOOA/QiAAAh+QQFCgAH
+ACwSAAMAEwAQAAAESVDISWm5F+i9K75BKIrA9GlESoRpyG0BEKxsPY4yPYurque8oI4GtO2Grp2x
+F4wpnz0V6TlrUZO3m4704hhJFYosWwqLu+Z0OAIAIfkEBQoABwAsEAAEABUADgAABD9QyEmrKBiD
+zbv/QSiOJAkERJqGKtuGJysSM1oHsS3L9J73Ohuw97sJXzjjMCgq7oQlp6sHbJau1492C7B4vxEA
+IfkEBQoABwAsEQAEABIADgAABDdQyEkluLhaDIL/HPZ9ROkRI4kGK3uWa+yeZE23uO3mdL/DI94u
+5cu1gjUTUTfzhC7EkEbwnFIiACH5BAUKAAcALBEAAwAUABAAAARPUMhJJbi36MpB+B+wddhHnGEB
+VB4YECAceNhlyvIb5rGp+7MX6qfLyVqwZO80DBKNRBCy5+OFgE+Xa1o91q7R3IpCw84wHEFpm07X
+xm1KBAAh+QQFCgAHACwRAAMAFAAQAAAESFDISWu5t2oBus+a1wVkKZ5lSawmkapuEMskIK9xTpOx
+vf+uWY+nKgprxCQNN/MdiTOT8hhFAm+vlDMVPdlGr1MIwBFvzuhzBAAh+QQFCgAHACwRAAQAEgAO
+AAAEM1DISWu5IOvNdfhgKIJEWX4mmpIsGhDtG8Owa8tuje86vd69XSiYGwlXOqNS1GlyKtBoBAAh
++QQFCgAHACwQAAQAFQAOAAAESLCASau4t2gNgv8ggG1SR5ynlwYVxX4ErIJ0N99BjMaencsz3u+F
+E+qAPqNMSRw6dahPEhR1SmlY3LXV0vZEmPDFFxKbx9xLBAA7
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://ly.lygo.com/ly/srch/hp/go_get_it_web_78x19.gif
+
+R0lGODlhTgATAMQfADNmmbfJ21iBq3WYun+fv2WLsqe904uoxczZ5UNyof///zprnKqmcZmyzEx5
+pmyKnG+Tt9q7TVJ9qD9vnzZom9ni7PL1+TRmmejCQ4aWiZGtyOXs8mWHoZ+vsUh2pAAAACH5BAEA
+AB8ALAAAAABOABMAAAX/4CeKEZM9Qppyauu+cCzPa8ZEY/5hjBH8wKBwSCwaj0gDA6OLdAKGqNSg
+ORym2CzVqu1GudjGQeONBjo4EaZjaLjdmsJCUCh4IO98Pj6v3/VvGgN5dAUCbgNWDoYHgHoGHUwf
+DGJWVgSHFgqbFQmWn5aYDZqcnqAHAhOYlgCbABAeAw4DBQoNBVYBCgcKBruWDQwfEQcExscSvhZt
+bgIEAwIei8cEyQrLb84DEtIQEK0KAAXG4AAeCAoFErUNzgQKAe+61AQHJQTe+QUO1wIOEgAhpDqA
+IMA+b/v6/QsoYYKBgg4c+FKAANM3VwQ0VTDAToI3XRAUhMznjYAJCHVS/zrgFSCBh5QTFlRQUEGT
+rH0sXcKcsMHCKAsON1VcVy4jTY62FqVcyhTCiRcJGthKAC7dAIoLam2gICDq1Kq4FBAAcHWsKw8p
+yi1AVyABuwQ0VKCISNdBAnkTJhSYWUBqgwnl7OLVyxfdpk0NAkdUyzbB2mh1I0cW8CCB5csT+Iml
+QIHtOwQUalWgkCDzJgKc2eriWMeBWsvlOqdbMKHdhMu4c1t+kCHmgt+/KbyjiUBTgQszayoYQCH4
+8ArF0wnQiGDDBeQ0BfyO7WsDAamggYsfT9sGVQDo0wMQ8LDgXwC1CxZQj549AveAJd43AFhAAAQC
+pHcfehP8R4ADBtGnYF56CdwQ4IIQRijhhBRWmJ4AODAAmIUcduhhhBMIs8MDFHxo4okVUvCAJMM8
+sGGFF9AXo4QzKlijejdWOMEDaYzAQ1cloijkh6QJsIQOI5TwVAssxOXkk09yYEOPIoQAADs=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/neural/neurons.gif
+
+R0lGODdhugCwAPcAAAAAAAAAhABCQoQAAIRCAISEQv//////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////ywAAAAAugCwAAAI/gABCBxI
+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
+C0W7BPS8MtMSAQEAADs=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://hb.lycos.com/html_js/headerLayer.js
+
+var lnb_host =3D location.href;=0A=
+var lnb_protocol;=0A=
+if (lnb_host.substring(0,5) =3D=3D 'https') {=0A=
+    lnb_protocol =3D 'https://';=0A=
+} else {=0A=
+    lnb_protocol =3D 'http://';=0A=
+}=0A=
+=0A=
+var lnb_URL=3Dlnb_protocol+'hb.lycos.com/header';=0A=
+var lnb_onloadH;=0A=
+=0A=
+var GeoIP =3D new Array();=0A=
+GeoIP["COUNTRY_CODE"] =3D 'RU';=0A=
+GeoIP["REGION"]       =3D '43';=0A=
+GeoIP["CITY"]         =3D 'Lipetsk';=0A=
+GeoIP["DMA_CODE"]     =3D '0';=0A=
+GeoIP["AREA_CODE"]    =3D '0';=0A=
+GeoIP["LATITUDE"]     =3D '52.618599'; =0A=
+GeoIP["LONGITUDE"]    =3D '39.568901';=0A=
+=0A=
+=0A=
+for (var geo_data in GeoIP) {=0A=
+    var geo_override =3D readCookie("GEOIP_"+geo_data);=0A=
+    if (null !=3D geo_override) {=0A=
+	GeoIP[geo_data] =3D geo_override;=0A=
+    }=0A=
+}=0A=
+=0A=
+var cmhb_display;=0A=
+var cmhb;	=0A=
+=0A=
+var lnb_query_string =3D new obj_querystring();=0A=
+var lnb_qs_loc =3D lnb_query_string.get('loc');=0A=
+=0A=
+function readCookie(name) {=0A=
+    var nameEQ =3D name + "=3D";=0A=
+    var ca =3D document.cookie.split(';');=0A=
+    for (var i=3D0; i < ca.length; i++) {=0A=
+	var c =3D ca[i];=0A=
+	while (c.charAt(0) =3D=3D ' ') {c =3D c.substring(1,c.length);}=0A=
+	if (c.indexOf(nameEQ) =3D=3D 0) {return =
+c.substring(nameEQ.length,c.length)};=0A=
+    }=0A=
+    return null;=0A=
+}=0A=
+=0A=
+function createCookie(name, value, days, domain) {=0A=
+    if (days) {=0A=
+        var date =3D new Date();=0A=
+        date.setTime(date.getTime()+(days*24*60*60*1000));=0A=
+        var expires =3D "; expires=3D"+date.toGMTString();=0A=
+    } else {=0A=
+        var expires =3D "";=0A=
+    }=0A=
+    document.cookie =3D name+"=3D"+value+expires+"; path=3D/"+=0A=
+                      ((domain) ? ";domain=3D" + domain : "");=0A=
+}=0A=
+=0A=
+function eraseCookie(name, domain) {=0A=
+    createCookie(name, "", -1, domain);=0A=
+}=0A=
+=0A=
+function getDomain(fqdn) {=0A=
+    var firstDot =3D fqdn.indexOf(".");=0A=
+    if ((firstDot !=3D -1) && (firstDot !=3D fqdn.lastIndexOf("."))) {=0A=
+        return fqdn.substring(firstDot, fqdn.length);=0A=
+    } else {=0A=
+        return fqdn; // no domain=0A=
+    }=0A=
+}=0A=
+=0A=
+function lnb_onload() {=0A=
+    if (document.layers && document.layers['LNB_LAYER']) {=0A=
+	document.layers['LNB_LAYER'].src=3Dlnb_URL;=0A=
+	if (lnb_onloadH) {=0A=
+	    lnb_onloadH();=0A=
+	}=0A=
+    }=0A=
+}=0A=
+=0A=
+function lnb_write() {=0A=
+    if (this.lnb_OURL) {=0A=
+	lnb_URL=3Dthis.lnb_OURL;=0A=
+    }=0A=
+    var r=3DMath.floor(Math.random()*1000000);=0A=
+    lnb_URL+=3D'?Z=3D'+r;=0A=
+    if (this.lnb_I) {=0A=
+	lnb_URL+=3D'&'+this.lnb_I;=0A=
+    }=0A=
+    if (this.lnb_G) {=0A=
+	lnb_URL+=3D'&LHG=3D'+escape(this.lnb_G);=0A=
+    }=0A=
+    var h=3D50;=0A=
+    var s=3D1;=0A=
+    if (this.lnb_S !=3D null) {=0A=
+	if =
+(this.lnb_S=3D=3D9||this.lnb_S=3D=3D3||this.lnb_S=3D=3D6||this.lnb_S=3D=3D=
+7) {h=3D24;}=0A=
+	if (this.lnb_S=3D=3D0||this.lnb_S=3D=3D2||this.lnb_S=3D=3D12) {h=3D34;}=0A=
+	s=3Dthis.lnb_S;=0A=
+    }=0A=
+    lnb_URL+=3D"&LHS=3D"+s;=0A=
+    =0A=
+    if (GeoIP["COUNTRY_CODE"] && (GeoIP["COUNTRY_CODE"] =3D=3D "CA")) {=0A=
+	if (!readCookie("NoCanadaRedirect")) {=0A=
+	    if (location.href =3D=3D =
+"http://search.lycos.com/default.asp?query=3Dtravel&loc=3Dtravel") {=0A=
+		top.location =3D "http://www.lycos.ca/travel/";=0A=
+	    }=0A=
+	    var caRedirects=3D[[/multimedia\.lycos\.com$/i,    =
+"http://www.lycos.ca/entertainment/"],=0A=
+			     [/((realestate\.lycos\.com)|(livingchoices\.com))$/i,    =
+"http://www.lycos.ca/home-garden/real-estate.html"],=0A=
+			     [/shop\.lycos\.com$/i,          "http://www.lycos.ca/shopping/"],=0A=
+			     [/travel\.lycos\.com$/i,        "http://www.lycos.ca/travel/"],=0A=
+			     [/entertainment\.lycos\.com$/i, =
+"http://www.lycos.ca/entertainment/"],=0A=
+			     [/tv\.lycos\.com$/i,            =
+"http://www.lycos.ca/entertainment/television.html"],=0A=
+			     [/video\.lycos\.com$/i,         =
+"http://www.lycos.ca/entertainment/music-videos.html"],=0A=
+			     [/music\.lycos\.com$/i,         =
+"http://www.lycos.ca/entertainment/music.html"],=0A=
+			     [/^(www\.)?lycos\.com$/i,       "http://www.lycos.ca"]];=0A=
+	    for (var i=3D0; i<caRedirects.length; i++) {=0A=
+		if (location.host.match(caRedirects[i][0])) {=0A=
+		    top.location =3D caRedirects[i][1];=0A=
+		    break;=0A=
+		}=0A=
+	    }=0A=
+	} else {=0A=
+	    // upgrade cookie=0A=
+	    createCookie("GEOIP_COUNTRY_CODE", "US", 365, =0A=
+                         getDomain(this.location.hostname));=0A=
+        }=0A=
+	=0A=
+	var caHeader=3D-1;=0A=
+	var caHeaders=3D[/angelfire\.lycos\.com$/i, =0A=
+		       /gamesville(\.lycos)?\.com$/i, =0A=
+		       /hotbot(\.lycos)?\.com$/i, =0A=
+		       /matchmaker(\.lycos)?\.com$/i, =0A=
+		       /tripod\.lycos\.com$/i, =0A=
+		       /wired(news)?(\.lycos)?\.com$/i,=0A=
+		       /webmonkey(\.wired)?\.com$/i,=0A=
+		       /quote\.com$/i,=0A=
+		       /ragingbull(\.lycos)?\.com$/i,=0A=
+		       /(lycos)?mail(\.lycos)\?.com$/i];=0A=
+	=0A=
+	for (var i=3D0; i<caHeaders.length; i++) {=0A=
+	    if (location.host.match(caHeaders[i])) {=0A=
+		caHeader =3D i;=0A=
+		break;=0A=
+	    }=0A=
+	}=0A=
+	if (caHeader !=3D -1) {=0A=
+	    this.lnb_IV =3D null;=0A=
+	    h=3D100;=0A=
+	    lnb_URL+=3D"&LHCA=3D1&LHCAHF=3D"+caHeader;=0A=
+	    if (this.lnb_I && this.lnb_I.indexOf("LHM=3D1")>=3D0) {=0A=
+		h+=3D20;=0A=
+	    }=0A=
+	}=0A=
+    }=0A=
+    =0A=
+    if (this.lnb_IV && (this.lnb_IV=3D=3D1)) {=0A=
+	h=3D0;=0A=
+	lnb_URL+=3D'&LHIV=3D1';=0A=
+    }=0A=
+    lnb_URL+=3D"&REF=3D"+escape(document.referrer);=0A=
+    var BrsrSize;=0A=
+    if (document.all) {=0A=
+	if (document.body) =
+{BrsrSize=3Ddocument.body.clientWidth+"x"+document.body.clientHeight;}=0A=
+    } else {=0A=
+	BrsrSize=3D(this.innerWidth-30)+"x"+(this.innerHeight-30);=0A=
+    }=0A=
+    var ScrnSize=3Dscreen.width+"x"+screen.height;=0A=
+    var ClientTime=3Dnew Date().toString();=0A=
+    var TimeZone=3Descape(ClientTime);=0A=
+    lnb_URL+=3D"&SCRNSZ=3D"+ScrnSize;=0A=
+    lnb_URL+=3D"&BRSRSZ=3D"+BrsrSize;=0A=
+    =0A=
+    // catman call in header bar=0A=
+    if (cmhb_display =3D=3D 1) {=0A=
+	for (k in cmhb) {=0A=
+	    lnb_URL+=3D"&cm_" + k + "=3D" + escape(cmhb[k]);=0A=
+	}=0A=
+	lnb_URL+=3D"&LHSSB=3D1";=0A=
+    } else {=0A=
+	// Vonage hack (only if plain http)=0A=
+	if (lnb_protocol =3D=3D 'http://') {=0A=
+	    if (h >=3D 50) {=0A=
+		=
+lnb_URL+=3D"&cm_role=3Dlive&cm_host=3Dhb.lycos.com&cm_taxid=3D/global&cm_=
+adid=3D0&LHSSB=3D1";=0A=
+	    } else if (((h =3D=3D 34) && (s =3D=3D 0)) || (h > 34)) {=0A=
+		=
+lnb_URL+=3D"&cm_role=3Dlive&cm_host=3Dhb.lycos.com&cm_taxid=3D/slimglobal=
+&cm_adid=3D0&LHSSB=3D1";=0A=
+	    }	=0A=
+	}=0A=
+    }=0A=
+=0A=
+    //loc parameter=0A=
+    if (lnb_qs_loc) {=0A=
+	lnb_URL+=3D"&loc=3D" + escape(lnb_qs_loc);=0A=
+    }=0A=
+    =0A=
+    if (document.all||document.getElementById) {=0A=
+	lnb_URL+=3D'&TIME=3D'+TimeZone;=0A=
+	if (this.lnb_IV!=3D1) {document.write('<table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td>');}=0A=
+	document.write('<iframe src=3D"'+lnb_URL+'" width=3D"100%" =
+frameborder=3D"0" height=3D"'+h+'" marginheight=3D"0" marginwidth=3D"0" =
+scrolling=3D"no"></iframe>');=0A=
+	if (this.lnb_IV!=3D1) {document.write('</td></tr></table>');}=0A=
+    }=0A=
+    else if (document.layers) {=0A=
+	document.write('<layer left=3D"0" top=3D"0" id=3D"LNB_LAYER" =
+width=3D"100%"></layer><table width=3D"100%" height=3D"'+h+'" =
+border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tr><td></td></tr></table>');=0A=
+	lnb_onloadH=3Dwindow.onload;=0A=
+	window.onload=3Dlnb_onload;=0A=
+    }=0A=
+}=0A=
+=0A=
+function obj_querystring() {=0A=
+    var querystring =3D =
+location.search.substring(1,location.search.length);=0A=
+    var args =3D querystring.split('&');=0A=
+    for (var i=3D0;i<args.length;i++) { =0A=
+	var pair =3D args[i].split('=3D');=0A=
+	temp =3D unescape(pair[0]).split('+');=0A=
+	temp0 =3D temp.join(' ');=0A=
+	temp =3D unescape(pair[1]).split('+');=0A=
+	temp1 =3D temp.join(' ');=0A=
+	this[temp0]=3Dtemp1;=0A=
+    }=0A=
+    this.get =3D function(strKey) {=0A=
+	var value=3Dthis[strKey];=0A=
+	return value;=0A=
+    }=0A=
+}=0A=
+=0A=
+lnb_write();=0A=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://scripts.lycos.com/catman/init.js
+
+var $a=3D"scr"+"ipts.lycos.com";var $b=3D"9999";function =
+getParam($c){var =
+$d=3D"";if(document.all){$d=3DString(document.URL);}else{$d=3D(document.l=
+ocation)?String(document.location.search):"";};var =
+$e=3D$d.split("?");if($e.length>1){var =
+$f=3D$e[1].split("&");if($f.length){for(var i=3D0;i<$f.length;i++){var =
+$g=3D$f[i].split("=3D");if($g.length>1){var $h=3D$g[0];var =
+$i=3D($g[1])?$g[1]:null;if($h=3D=3D$c)return $i;}}}};return null;};var =
+$j=3DgetParam("cm_role");if($j!=3Dnull){if($j!=3D"live"){$a=3D$j+"."+$a+"=
+:"+$b;}}else{if((this.cm_role)&&(this.cm_role!=3D"live")){$a=3Dthis.cm_ro=
+le+"."+$a+":"+$b;}};var $k=3D'\<SCR'+'IPT language=3D"JavaScript1.1" =
+SRC=3D"http://'+$a+'/catman/global/catman.js"><\/SCR'+'IPT>';var =
+$l=3D'\<SCR'+'IPT language=3D"JavaScript1.1" =
+SRC=3D"http://'+$a+'/catman/'+this.cm_host+'.cm'+this.cm_taxid+'.js"><\/S=
+CR'+'IPT>';document.write($l);document.write($k);=0A=
+=0A=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://lycos.realmedia.com/scripts/lycos_if.js
+
+var n=3Dnavigator;=0A=
+var =
+br0=3Dn.appName.indexOf("Microsoft")!=3D-1&&parseInt(n.appVersion)>=3D4&&=
+n.appVersion.indexOf("Macintosh")=3D=3D-1; =0A=
+var =
+br1=3Dn.appName.indexOf("Microsoft")!=3D-1&&parseInt(n.appVersion)<4; =0A=
+var =
+br2=3Dn.appName.indexOf("Netscape")!=3D-1&&parseInt(n.appVersion)>=3D4&&p=
+arseInt(n.appVersion)<5; =0A=
+var =
+br3=3Dn.appVersion.indexOf("Macintosh")!=3D-1&&parseInt(n.appVersion)<5; =0A=
+var DataColl=3D"http://ds.247realmedia.com/DS/LRC?"; =0A=
+=0A=
+var xe_protocol =3D window.location.protocol;=0A=
+if (xe_protocol =3D=3D "https:") {=0A=
+        var DataColl2=3D"https://lycos.realmedia.com/data/?";=0A=
+} else {=0A=
+        var =
+DataColl2=3D"http://"+if_Site_ID+"Collect.realmedia.com/data/?";=0A=
+}=0A=
+=0A=
+var if7=3D""; =0A=
+var if8=3D"; path=3D/"; =0A=
+var ifb=3Dnew Date();=0A=
+var CookieId=3D"IFsess"; =0A=
+var w=3Dwindow;=0A=
+var d=3Ddocument;=0A=
+=0A=
+if(typeof if_sid=3D=3D"undefined" || if_sid=3D=3Dnull )if_sid=3D"1";=0A=
+=0A=
+var agt=3Dn.userAgent.toLowerCase();=0A=
+var fullUrl=3Ddocument.location;=0A=
+var sPath =3D location.href;=0A=
+if(sPath.indexOf("?") !=3D -1) {=0A=
+	var sFile1 =3D sPath.lastIndexOf( "/" ) + 1;=0A=
+	var sFile2 =3D sPath.indexOf( "?" );=0A=
+	var fu=3DsPath.substring(0,sFile2);=0A=
+} else {=0A=
+	var fu=3Ddocument.location;=0A=
+}=0A=
+=0A=
+function tax_browser() { =0A=
+	var msg=3D""; =0A=
+	var plug=3D""; =0A=
+	var ln=3D""; =0A=
+	var ct=3D""; =0A=
+	var swidth=3D0; =0A=
+	var sheight=3D0; =0A=
+	var scolordepth=3D0; =0A=
+	var is_ja=3Dn.javaEnabled(); =0A=
+	var is_major=3DparseInt(n.appVersion); =0A=
+	var is_minor=3DparseFloat(n.appVersion); =0A=
+	var =
+is_nav=3D((agt.indexOf('mozilla')!=3D-1)&&(agt.indexOf('spoofer')=3D=3D-1=
+)&&(agt.indexOf('compatible')=3D=3D-1)&&(agt.indexOf('opera')=3D=3D-1)&&(=
+agt.indexOf('webtv')=3D=3D-1)&&(agt.indexOf('safari')=3D=3D-1)); =0A=
+=0A=
+	var is_ie=3D(agt.indexOf("msie")!=3D-1); =0A=
+	var is_nav2=3D(is_nav&&(is_major=3D=3D2)); =0A=
+	var is_nav3=3D(is_nav&&(is_major=3D=3D3)); =0A=
+	var is_nav4=3D(is_nav&&(is_major=3D=3D4)); =0A=
+	var is_nav5=3D(is_nav&&(is_major=3D=3D5)); =0A=
+	var is_nav6=3D(is_nav&&(agt.indexOf('netscape6')!=3D-1)); =0A=
+	var is_nav7=3D(is_nav&&(agt.indexOf('netscape/7')!=3D-1)); =0A=
+	var is_ie3=3D(is_ie&&(is_major<4)); =0A=
+	var is_ie4=3D(is_ie&&(agt.indexOf("msie =
+5.0")=3D=3D-1)&&(agt.indexOf("msie 5.5")=3D=3D-1)&&(agt.indexOf("msie =
+6")=3D=3D-1)&&(agt.indexOf("mac")=3D=3D-1)); =0A=
+	var is_ie5=3D(is_ie&&(agt.indexOf("msie 5.0")!=3D-1 || =
+(agt.indexOf("msie 5.1" !=3D -1) && agt.indexOf("mac") !=3D -1))); =0A=
+	var is_ie55=3D(is_ie&&(agt.indexOf("msie 5.5")!=3D-1) ); =0A=
+	var is_ie6=3D(is_ie&&(agt.indexOf("msie 6")!=3D-1) ); =0A=
+	var is_aol=3D(agt.indexOf("aol")!=3D-1); =0A=
+	var is_aol3=3D(agt.indexOf("aol 3.0") !=3D-1 );=0A=
+	var is_aol4=3D(agt.indexOf("aol 4.0") !=3D-1 );=0A=
+	var is_aol5=3D(agt.indexOf("aol 5.0") !=3D-1 );=0A=
+	var is_aol6=3D(agt.indexOf("aol 6.0") !=3D-1 );=0A=
+	var is_aol7=3D(agt.indexOf("aol 7.0") !=3D-1 );=0A=
+	var is_aol8=3D(agt.indexOf("aol 8.0") !=3D-1 );=0A=
+	var is_opera=3D(agt.indexOf("opera")!=3D-1);=0A=
+	var is_webtv=3D(agt.indexOf("webtv")!=3D-1); =0A=
+	var is_js; if (is_nav2||is_ie3)is_js=3D1.0; else =
+if(is_nav3||is_opera)is_js=3D1.1; else =
+if((is_nav4&&(is_minor<=3D4.05))||is_ie4)is_js=3D1.2; else =
+if((is_nav4&&(is_minor>4.05))||is_ie5||is_ie55||is_ie6)is_js=3D1.3; else =
+if(is_nav5)is_js=3D1.4; else is_js=3D0.0; =0A=
+	var is_win=3D( (agt.indexOf("win")!=3D-1)||(agt.indexOf("16bit")!=3D-1) =
+); =0A=
+	var is_win95=3D((agt.indexOf("win95")!=3D-1)||(agt.indexOf("windows =
+95")!=3D-1)); =0A=
+	var is_win98=3D((agt.indexOf("win98")!=3D-1)||(agt.indexOf("windows =
+98")!=3D-1)); =0A=
+	var is_winnt=3D((agt.indexOf("winnt")!=3D-1)||(agt.indexOf("windows =
+nt")!=3D-1)); =0A=
+	var is_win2k=3D(agt.indexOf("windows nt 5.0")!=3D-1); =0A=
+	var is_xp=3D(agt.indexOf("windows nt 5.1")!=3D-1); =0A=
+	var is_mac=3D(agt.indexOf("mac") !=3D-1 ); =0A=
+	var is_sun=3D(agt.indexOf("sunos")!=3D-1); =0A=
+	var is_hpux=3D(agt.indexOf("hp-ux")!=3D-1); =0A=
+	var is_linux=3D(agt.indexOf("linux")!=3D-1); =0A=
+	var is_unix=3D((agt.indexOf("x11")!=3D-1)||is_sun||is_hpux||is_linux); =
+is_macOSX=3D(is_mac && (agt.indexOf("os x") !=3D -1)); =
+is_macPPC=3D((agt.indexOf("powerpc") !=3D -1) || agt.indexOf("ppc") !=3D =
+-1 ); =0A=
+	var is_safari=3D(agt.indexOf("safari")!=3D-1);=0A=
+	var safari_ver=3D"";=0A=
+	if(is_safari) {=0A=
+		var if_s1=3Dagt.indexOf("safari");=0A=
+		var if_sLength=3Dagt.length;=0A=
+		safari_ver=3Dagt.substring(if_s1,if_sLength);=0A=
+	}=0A=
+=0A=
+	var BOS=3D"";=0A=
+	var BT=3D"";=0A=
+	var BV=3D""; =0A=
+=0A=
+	if(is_win95) { =0A=
+		BOS=3D"Windows95"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWindows95";=0A=
+	} else if(is_win98) { =0A=
+		BOS=3D"Windows98"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWindows98";=0A=
+	} else if(is_xp) { =0A=
+		BOS=3D"XP";  =0A=
+		msg+=3D"&if_nt_Browser_OS=3DXP"; =0A=
+	} else if(is_winnt&&is_win2k){=0A=
+		BOS=3D"Win2000"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWin2000"; =0A=
+	} else if(is_winnt&&!is_win2k){=0A=
+		BOS=3D"WinNT"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWinNT"; =0A=
+	} else if(is_macOSX){=0A=
+		BOS=3D"Mac_OS_X"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DMac_OS_X"; =0A=
+	} else if(is_macPPC) {=0A=
+		BOS=3D"Mac_PPC_-_non_OS_X"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DMac_PPC_-_non_OS_X"; =0A=
+	} else if(is_mac) {=0A=
+		BOS=3D"Mac_-_non PPC"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DMac_-_non_PPC"; =0A=
+	} else if(is_sun){=0A=
+		BOS=3D"SunOS"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DSunOS"; =0A=
+	} else if(is_hpux){=0A=
+		BOS=3D"HPUX"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DHPUX"; =0A=
+	} else if(is_linux){=0A=
+		BOS=3D"Linux"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DLinux"; =0A=
+	} else {=0A=
+		BOS=3Dagt; =0A=
+	} =0A=
+=0A=
+	if(is_ie&&is_aol3){=0A=
+		BT=3D"AOL3"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL3"; =0A=
+	} else if(is_ie&&is_aol4){	=0A=
+		BT=3D"AOL4"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL4"; =0A=
+	} else if(is_ie&&is_aol5){=0A=
+		BT=3D"AOL5"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL5"; =0A=
+	} else if(is_ie&&is_aol6){=0A=
+		BT=3D"AOL6"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL6"; =0A=
+	} else if(is_ie&&is_aol7){=0A=
+		BT=3D"AOL7"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL7"; =0A=
+	} else if(is_ie&&is_aol8){=0A=
+		BT=3D"AOL8"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL8"; =0A=
+	} else if(is_ie&&!is_aol){=0A=
+		BT=3D"MSIE"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DMSIE"; =0A=
+	} else if(is_nav){=0A=
+		BT=3D"Netscape"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DNetscape"; =0A=
+	} else if(is_webtv){=0A=
+		BT=3D"WebTV"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DWebTV"; =0A=
+	} else if(is_opera){=0A=
+		BT=3D"Opera"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DOpera"; =0A=
+	} else if(is_safari){=0A=
+		BT=3D"Safari"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DSafari"; =0A=
+	} else {=0A=
+		BT=3Dagt;=0A=
+	} =0A=
+=0A=
+	if(is_ie5){=0A=
+		BV=3D"5.0"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D5.0"; =0A=
+	} else if(is_ie55){=0A=
+		BV=3D"5.5"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D5.5"; =0A=
+	} else if(is_ie6){=0A=
+		BV=3D"6"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D6"; =0A=
+	} else if(is_nav6){=0A=
+		BV=3D"6"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D6"; =0A=
+	} else if(is_nav7){=0A=
+		BV=3D"7"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D7"; =0A=
+	} else if(is_safari){=0A=
+		BV=3Dsafari_ver;=0A=
+		msg+=3D"&if_nt_Browser_Version=3D"+safari_ver;=0A=
+	} else {=0A=
+		BV=3Dis_minor; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D"+is_minor;=0A=
+	} =0A=
+=0A=
+	msg+=3D"&if_nt_Browser_Combination=3D" + BOS + "_" + BT + "_" + BV; =0A=
+=0A=
+	if((typeof(w.screen)!=3D"undefined")&&(w.screen!=3Dnull)) { =0A=
+		swidth=3Dw.screen.width; =0A=
+		sheight=3Dw.screen.height; =0A=
+		scolordepth=3Dw.screen.colorDepth; =0A=
+	} =0A=
+	msg+=3D"&if_nt_Screen_Attr=3D"+swidth+"x"+sheight+"x"+scolordepth; =0A=
+	msg+=3D"&if_nt_JS_Ver=3D"+is_js; =0A=
+=0A=
+	if(is_mac) {=0A=
+		msg+=3D"&if_nt_PC_Type=3DMac"; =0A=
+	} else if(is_unix) {=0A=
+		msg+=3D"&if_nt_PC_Type=3DUnix"; =0A=
+	} else {=0A=
+		msg+=3D"&if_nt_PC_Type=3DWindows"; =0A=
+	}=0A=
+=0A=
+	if(is_ja) {=0A=
+		msg+=3D"&if_nt_Java_Enabled=3DY"; =0A=
+	} else {=0A=
+		msg+=3D"&if_nt_Java_Enabled=3DN"; =0A=
+	}=0A=
+	=0A=
+	if(is_nav) { =0A=
+		ln=3Dn.language; =0A=
+		ct=3Dn.plugins.length; =0A=
+		msg+=3D"&if_nt_Browser_Lang=3D"+ln+"&if_nt_PlugIn_Count=3D"+ct; =0A=
+	} else if(is_ie) { =0A=
+		ln=3Dn.systemLanguage; =0A=
+		msg+=3D"&if_nt_Browser_Lang=3D"+ln; =0A=
+	} =0A=
+=0A=
+	if(((is_ie5 || is_ie55 || is_ie6) && (!is_mac))) { =0A=
+		try {=0A=
+			if(d.body){ =0A=
+				d.body.addBehavior("#default#homePage");=0A=
+				var hp=3D(d.body.isHomePage(location.href))?"y":"n"; =0A=
+				if (hp =3D=3D "y")hp=3D"Yes"; =0A=
+				if (hp =3D=3D "n")hp=3D"No"; =0A=
+				d.body.addBehavior("#default#clientCaps");=0A=
+				var ct=3Dd.body.connectionType; =0A=
+				msg +=3D"&if_nt_Connection_Type=3D" + ct + "&if_nt_HomePage=3D" + =
+hp; =0A=
+			} =0A=
+		} catch (e) {}=0A=
+	}=0A=
+	ifr(msg); =0A=
+}=0A=
+function cookie_check(ifd,ife){ var s=3Dife.indexOf(ifd);	=
+if(s=3D=3D-1)return ""; s+=3Difd.length; var e=3Dife.indexOf(";",s); =
+if(e=3D=3D-1)e=3Dife.length; return ife.substring(s,e); } function =
+iff(refUrl){ var index=3DrefUrl.indexOf(":\/\/"); =
+if(index!=3D-1&&index+3<refUrl.length) { var bDomainIndex=3Dindex+3; var =
+eDomainIndex=3DrefUrl.length; var =
+colonIndex=3DrefUrl.indexOf(":",bDomainIndex); =
+if(colonIndex!=3D-1&&colonIndex<eDomainIndex)eDomainIndex=3DcolonIndex; =
+var slashIndex=3DrefUrl.indexOf("/",bDomainIndex); =
+if(slashIndex!=3D-1&&slashIndex<eDomainIndex)eDomainIndex=3DslashIndex; =
+return document.domain=3D=3DrefUrl.substring(bDomainIndex,eDomainIndex); =
+} return false; } function ifg(u1,u2){ var =
+ifh=3D(u1.indexOf("https")=3D=3D0); var =
+ifi=3D(u2.indexOf("https")=3D=3D0); if(ifh!=3Difi)return false; else =
+if(ifh&&ifi)return true; else return =
+(u1.indexOf("http")=3D=3D0)&&(u2.indexOf("http")=3D=3D0); } function =
+return_url(url) { return url.toString(); } function write_cookie() { var =
+d=3Dnew Date(); var m=3Dd.getTime(); =
+document.cookie=3D"IF_SessionCookie1=3D"+m.toString(); var =
+v=3Dcookie_check("IF_SessionCookie1=3D",document.cookie); =
+if(v!=3Dm.toString())return false; d.setTime(m+3600000); =
+document.cookie=3D"IF_SessionCookie2=3D"+m.toString()+";expires=3D"+d.toG=
+MTString()+";path=3D/"; =
+v=3Dcookie_check("IF_SessionCookie2=3D",document.cookie); =
+if(v!=3Dm.toString())return false; d.setTime(m-3600000); =
+document.cookie=3D"IF_SessionCookie1=3D"+m.toString()+";expires=3D"+d.toG=
+MTString()+";path=3D/"; =
+document.cookie=3D"IF_SessionCookie2=3D"+m.toString()+";expires=3D"+d.toG=
+MTString()+";path=3D/"; return true; } function tz(stamp) { var =
+msg=3D"if_nt_TimeZoneOffset=3D"+(stamp.getTimezoneOffset()*-1); return =
+msg; } =0A=
+function ifX(sys) { var msg=3D""; =
+if((d.referrer)&&(d.referrer!=3D"[unknown origin]")) { =
+if(d.referrer.indexOf("?") =3D=3D -1) {	=
+msg+=3D"&tax23_RefDocLoc=3D"+escape(return_url(d.referrer)); } else { =
+var rdl=3Dd.referrer; var rdl1=3Drdl.indexOf("?"); var =
+rdl2=3Drdl.substring(0,rdl1); =
+msg+=3D"&tax23_RefDocLoc=3D"+escape(return_url(d.referrer)); if ( =
+(rdl.indexOf("search.msn.com") !=3D -1 ) || (rdl.indexOf("altavista") =
+!=3D -1) || (rdl.indexOf("google") !=3D -1) ) { var =
+rdlLength=3Drdl.length; var qS =3D rdl.substring(rdl1+1,rdlLength); var =
+pairs =3D qS.split("&"); for (var i =3D 0; i < pairs.length; i++) { 	if =
+(pairs[i].indexOf("q=3D") =3D=3D 0 ) { var pL=3Dpairs[i].length; var =
+sekw =3D pairs[i].substring(2,pL); msg+=3D"&if_nt_SearchEngine_KW=3D" + =
+sekw.toUpperCase(); } } } else if (rdl.indexOf("search.yahoo.com") !=3D =
+-1) { var rdlLength=3Drdl.length; var qS =3D =
+rdl.substring(rdl1+1,rdlLength); var pairs =3D qS.split("&"); for (var i =
+=3D 0; i < pairs.length; i++) { if (pairs[i].indexOf("p=3D") =3D=3D 0 ) =
+{ var pL=3Dpairs[i].length; var sekw =3D pairs[i].substring(2,pL); =
+msg+=3D"&if_nt_SearchEngine_KW=3D" + sekw.toUpperCase(); } } } else if =
+((rdl.indexOf("aolsearch.aol.com") !=3D -1) || (rdl.indexOf("lycos") =
+!=3D -1) ) { var rdlLength=3Drdl.length; var qS =3D =
+rdl.substring(rdl1+1,rdlLength); var pairs =3D qS.split("&"); for (var i =
+=3D 0; i < pairs.length; i++) { if (pairs[i].indexOf("query=3D") =3D=3D =
+0 ) { var pL=3Dpairs[i].length; var sekw =3D pairs[i].substring(6,pL); =
+msg+=3D"&if_nt_SearchEngine_KW=3D" + sekw.toUpperCase(); } } } else if =
+(rdl.indexOf("looksmart") !=3D -1) { var rdlLength=3Drdl.length; var qS =
+=3D rdl.substring(rdl1+1,rdlLength); var pairs =3D qS.split("&"); for =
+(var i =3D 0; i < pairs.length; i++) { if (pairs[i].indexOf("key=3D") =
+=3D=3D 0 ) { var pL=3Dpairs[i].length; var sekw =3D =
+pairs[i].substring(4,pL); msg+=3D"&if_nt_SearchEngine_KW=3D" + =
+sekw.toUpperCase(); } } } else if (rdl.indexOf("netscape") !=3D -1) { =
+var rdlLength=3Drdl.length; var qS =3D rdl.substring(rdl1+1,rdlLength); =
+var pairs =3D qS.split("&"); for (var i =3D 0; i < pairs.length; i++) { =
+if (pairs[i].indexOf("search=3D") =3D=3D 0 ) { var pL=3Dpairs[i].length; =
+var sekw =3D pairs[i].substring(7,pL); =
+msg+=3D"&if_nt_SearchEngine_KW=3D" + sekw.toUpperCase(); } } } } } =
+ifr(msg); w.ifsq+=3D1; =
+w.d.cookie=3DCookieId+"=3D"+w.ifsq.toString()+if8+if7; } =0A=
+=0A=
+function ifr(s) { var now=3Dnew Date(); var then=3Difb.getTime(); var =
+delta=3Dnow.getTime()-ifb.getTime(); if(w.ifw=3D=3Dnull)w.ifw=3Dtz(ifb); =
+w.ifw+=3Ds; } =0A=
+=0A=
+function ckDS()=0A=
+{=0A=
+var ifcook =3D "ifr";=0A=
+if ((cookie_check(ifcook, document.cookie)).length > 0) return true;=0A=
+setDS(); return false;=0A=
+}       =0A=
+function setDS() {=0A=
+var dotCount=3D2;         =0A=
+var l=3Ddocument.location.toString();=0A=
+var domB=3Dl.indexOf('//');=0A=
+var domEIndex=3Dl.indexOf('/', domB+2);=0A=
+var domSIndex=3Dl.indexOf(':', domB+2);=0A=
+if ((domSIndex !=3D -1) && (domSIndex < domEIndex)){ var =
+durl=3Dl.substring(domB+2, domSIndex); }=0A=
+else { var durl=3Dl.substring(domB+2, domEIndex);} =0A=
+var domTIndex=3Ddurl.indexOf('.');=0A=
+if (domTIndex !=3D -1){ var domUIndex=3Ddurl.lastIndexOf('.'); var =
+tld=3Ddurl.substring(domUIndex+1, durl.length); if (tld !=3D 'com' && =
+tld !=3D 'edu' && tld !=3D 'org' && tld !=3D 'gov') {dotCount =3D 3;} =
+for (var c=3D0;c < durl.length; c++){ if (durl.charAt(c) =3D=3D '.') =
+dotCount--;} if (dotCount >0) { durl =3D '.'+durl;} else if( domTIndex < =
+domUIndex ) { durl=3Ddurl.substring(domTIndex, durl.length);} }=0A=
+var d=3Dnew Date();=0A=
+var m=3Dd.getTime();=0A=
+d.setTime(m+7776000000);=0A=
+document.cookie=3D"ifr=3Dy;expires=3D"+d.toGMTString()+";path=3D/;domain=3D=
+"+durl;=0A=
+}=0A=
+=0A=
+function ifx(tx)=0A=
+{=0A=
+	var w=3Dwindow;=0A=
+	var d=3Ddocument;=0A=
+=0A=
+        if (isNaN(document.axel)) {=0A=
+		document.axel =3D Math.random() + "";=0A=
+		xe_random =3D document.axel * 1000000000000000000;=0A=
+        }=0A=
+=0A=
+	if(d.ePingI=3D=3Dnull||typeof(d.ePingI)=3D=3D"undefined")d.ePingI=3Dnew =
+Image();=0A=
+	=0A=
+	if(typeof if_tfsm_page!=3D"undefined" && if_tfsm_page!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_page=3D" + if_tfsm_page;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_category!=3D"undefined" && if_tfsm_category!=3Dnull ) =
+{=0A=
+		mep1 +=3D "&if_tfsm_CAT=3D" + if_tfsm_category;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_CAT!=3D"undefined" && if_tfsm_CAT!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_CAT=3D" + if_tfsm_CAT;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_L2CAT!=3D"undefined" && if_tfsm_L2CAT!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_L2CAT=3D" + if_tfsm_L2CAT;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_L3CAT!=3D"undefined" && if_tfsm_L3CAT!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_L3CAT=3D" + if_tfsm_L3CAT;=0A=
+	}=0A=
+=0A=
+	if(if_sid =3D=3D 1)mep1 +=3D "&if_tfsm_SubSite=3DLycos Homepage";=0A=
+	if(if_sid =3D=3D 2)mep1 +=3D "&if_tfsm_SubSite=3DLycos Tripod";=0A=
+	if(if_sid =3D=3D 3)mep1 +=3D "&if_tfsm_SubSite=3DLycos Angelfire";=0A=
+	if(if_sid =3D=3D 4)mep1 +=3D "&if_tfsm_SubSite=3DLycos Dating";=0A=
+	if(if_sid =3D=3D 5)mep1 +=3D "&if_tfsm_SubSite=3DLycos Wired";=0A=
+	if(if_sid =3D=3D 6)mep1 +=3D "&if_tfsm_SubSite=3DLycos Quote";=0A=
+	if(if_sid =3D=3D 7)mep1 +=3D "&if_tfsm_SubSite=3DLycos Raging Bull";=0A=
+	if(if_sid =3D=3D 8)mep1 +=3D "&if_tfsm_SubSite=3DLycos Gamesville";=0A=
+	if(if_sid =3D=3D 9)mep1 +=3D "&if_tfsm_SubSite=3DLycos Webmonkey";=0A=
+	if(if_sid =3D=3D 11)mep1 +=3D "&if_tfsm_SubSite=3DLycos Search";=0A=
+	if(if_sid =3D=3D 12)mep1 +=3D "&if_tfsm_SubSite=3DLycos Entertainment";=0A=
+	if(if_sid =3D=3D 13)mep1 +=3D "&if_tfsm_SubSite=3DLycos Whowhere";=0A=
+	if(if_sid =3D=3D 14)mep1 +=3D "&if_tfsm_SubSite=3DLycos E-Commerce";=0A=
+	if(if_sid =3D=3D 15)mep1 +=3D "&if_tfsm_SubSite=3DLycos Travel";=0A=
+	if(if_sid =3D=3D 16)mep1 +=3D "&if_tfsm_SubSite=3DLycos My Lycos";=0A=
+	if(if_sid =3D=3D 17)mep1 +=3D "&if_tfsm_SubSite=3DLycos Mail";=0A=
+	if(if_sid =3D=3D 18)mep1 +=3D "&if_tfsm_SubSite=3DLycos Music";=0A=
+	if(if_sid =3D=3D 20)mep1 +=3D "&if_tfsm_SubSite=3DLycos Animation =
+Express";=0A=
+	if(if_sid =3D=3D 28)mep1 +=3D "&if_tfsm_SubSite=3DLycos Maya";=0A=
+	if(if_sid =3D=3D 21)mep1 +=3D "&if_tfsm_SubSite=3DLycos Hotwired =
+Archive";=0A=
+	=0A=
+	mep1 +=3D"&if_tfsm_Site=3DLycos";=0A=
+=0A=
+	var xe_mep1 =3D "";=0A=
+=0A=
+	var xe_tmp=3Dmep1.replace(/amp;/g,"");=0A=
+	var xe_tmp2=3Dxe_tmp.replace(/science&technology/g,"science and =
+technology");=0A=
+	var xe_tmp3=3Dxe_tmp2.replace(/business&finance/g,"business and =
+finance");=0A=
+	var xe_tmp4=3Dxe_tmp3.replace(/arts&entertainment/g,"arts and =
+entertainment");=0A=
+=0A=
+	xe_mep1 =3D xe_tmp4;=0A=
+=0A=
+    if(xe_mep1.indexOf("if_xtransValue") !=3D -1 ) {=0A=
+        xe_mep1+=3D"&if_xtransAction=3Dcheckout";=0A=
+    }=0A=
+=0A=
+    if(xe_mep1.indexOf("if_xtransValue=3D0.00") !=3D -1 ) {=0A=
+        xe_mep1+=3D"&if_xtransItem=3DFREE";=0A=
+    }=0A=
+	=0A=
+		=0A=
+	var mep2=3Dxe_mep1.replace(/ /g,"%20");=0A=
+	tx+=3Dmep2 + =
+"&tax25_CookieAccept=3D"+CA+"&tax0_SiteID=3D"+if_sid+"&if_nt_URL=3D" + =
+escape(fu);=0A=
+=0A=
+	//if (ckDS()) DataColl =3D DataColl2;=0A=
+	DataColl =3D DataColl2;=0A=
+	if(if_sid !=3D 2) {=0A=
+		d.ePingI.src=3DDataColl+tx;=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+if(!br1) { var ifW=3D0; var CA=3D"N"; if(write_cookie())ifW=3D1; =
+if(write_cookie())CA=3D"Y"; var ifY=3D(top!=3Dwindow); var ifw=3Dnull; =
+var ifv=3Dnull; var ifu=3Dfalse; var ifR=3Dfalse; var =
+ifZ8=3Dcookie_check(CookieId+"=3D",document.cookie); if(typeof =
+w.uniq=3D=3D"undefined"||w.uniq=3D=3Dnull) { w.uniq=3Dtrue; ifu=3Dtrue; =
+} if(ifu) { w.CookieId=3Dthis.CookieId; w.ifid=3D""; w.ifsq=3D""; =
+if(w.document.cookie!=3Dnull) { =
+w.ifid=3Dcookie_check(CookieId+"=3D",w.document.cookie); =
+w.ifsq=3DparseInt(cookie_check(CookieId+"=3D",w.document.cookie)); } =
+if(w.ifid=3D=3D"") { w.ifsq=3D0; w.ifid=3D"x"+ifb.getTime().toString(); =
+w.ifid=3Dw.ifid+Math.random().toString().substring(2,2+20-w.ifid.length);=
+ w.document.cookie=3DCookieId+"=3D"+w.ifid+if8+if7; =
+w.document.cookie=3DCookieId+"=3D0"+if8+if7; tax_browser(); } } =
+ifX(true); var msg=3D""; if(ifu&&!(ifv=3D=3Dnull))msg+=3Difv; =
+if(!(ifw=3D=3Dnull)) { msg+=3Difw; ifx(msg); ifw=3Dnull; ifv=3Dnull; } }=0A=
+
+------=_NextPart_000_00C1_01C63F11.FEFC0140--

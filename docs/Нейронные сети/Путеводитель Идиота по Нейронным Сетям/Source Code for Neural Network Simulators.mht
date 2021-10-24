@@ -1,0 +1,1691 @@
+From: <Сохранено Microsoft Internet Explorer 5>
+Subject: Richard Bowles' Idiot's Guide to Neural Networks
+Date: Fri, 3 Mar 2006 22:31:39 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_016F_01C63F12.3CFDE030"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: text/html;
+	charset="windows-1251"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://richardbowles.tripod.com/neural/source/source1.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Richard Bowles' Idiot's Guide to Neural =
+Networks</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1251">
+<META content=3D"MSHTML 6.00.2900.2180" name=3DGENERATOR></HEAD>
+<BODY text=3D#000000 vLink=3D#0000ff aLink=3D#0000ff link=3D#0000ff =
+bgColor=3D#ffffff><!-- =
+********************************************************** --><!-- * =
+START TRIPOD AD CODE - PLEASE REMOVE WHEN EDITING PAGE * --><!-- =
+********************************************************** --><!-- =
+revision: inline - $Change: 85315 $ --><!-- pt type=3D"text/javascript" =
+language=3D"JavaScript1.1" =
+src=3D"http://members.tripod.com/adm/ad/common_scripts.js"></scri-->
+<SCRIPT language=3DJavaScript1.1=20
+type=3Dtext/javascript>setAdGroup('84.19.181.92');</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+var lnb_S=3D0;=0A=
+var lnb_IV=3D1;=0A=
+var lnb_I=3D"VID=3D5905";=0A=
+//=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://hb.lycos.com/html_js/headerLayer.js"=20
+type=3Dtext/javascript></SCRIPT>
+<NOSCRIPT><IMG height=3D1 alt=3D""=20
+src=3D"http://hb.lycos.com/header?VID=3D5905&amp;LHIG=3D1&amp;ord=3D16609=
+5" width=3D1=20
+align=3Dleft> </NOSCRIPT><!-- START: Catman header -->
+<SCRIPT type=3Dtext/javascript>=0A=
+var cm_role =3D "live"=0A=
+var cm_host =3D "tripod.lycos.com"=0A=
+var cm_taxid =3D "/memberembedded"=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://scripts.lycos.com/catman/init.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+=0A=
+var category_obj =3D =
+{"dmoz":"computers\/programming","ontarget":"&CAT=3Dtechnology&L2CAT=3Dco=
+mputing&L3CAT=3Dprogramming","find_what":"web"}=0A=
+=0A=
+=0A=
+var objAdMgr =3D new AdManager();=0A=
+if (category_obj && category_obj.find_what) {=0A=
+    objAdMgr.setForcedParam("keyword", category_obj.find_what);=0A=
+}=0A=
+=0A=
+var if_Site_ID =3D "lycos";=0A=
+var if_sid=3D"2";=0A=
+var mep1=3D"&Site=3D" + escape("LycosTripod");=0A=
+=0A=
+if (category_obj && category_obj.ontarget) {=0A=
+    mep1 +=3D category_obj.ontarget;=0A=
+}=0A=
+=0A=
+if (this.adChannel && (adChannel !=3D "")) { =0A=
+	objAdMgr.setForcedParam("google_ad_channel", adChannel); =0A=
+}=0A=
+var strProdSetName =3D objAdMgr.chooseProductSet(); =
+objAdMgr.renderHeader();=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://lycos.realmedia.com/scripts/lycos_if.js"=20
+type=3Dtext/javascript></SCRIPT>
+<!-- END: Catman header -->
+<SCRIPT type=3Dtext/javascript>=0A=
+window.onload =3D function () {=0A=
+    commonOnload();=0A=
+=0A=
+    =0A=
+    var category_obj =3D =
+{"dmoz":"computers\/programming","ontarget":"&CAT=3Dtechnology&L2CAT=3Dco=
+mputing&L3CAT=3Dprogramming","find_what":"web"}=0A=
+    =0A=
+    if (category_obj && category_obj.find_what) {=0A=
+        setKeywordCookie(category_obj.find_what);=0A=
+    } else if (query) {=0A=
+        setKeywordCookie(query);=0A=
+    }=0A=
+=0A=
+    if (displayAd()) {=0A=
+        showAd('FooterAd_166095');=0A=
+    }=0A=
+}=0A=
+if (!displayAd()) document.write("<!" + "--");=0A=
+</SCRIPT>
+
+<DIV id=3DFooterAd_166095 style=3D"DISPLAY: none; LEFT: 0px; TOP: 0px" =
+align=3Dcenter=20
+name=3D"FooterAd_166095"><BR clear=3Dall>
+<SCRIPT type=3Dtext/javascript>=0A=
+if (objAdMgr.isSlotAvailable("leaderboard2")) {=0A=
+	objAdMgr.renderSlot("leaderboard2")=0A=
+}=0A=
+</SCRIPT>
+<NOSCRIPT><A=20
+href=3D"http://network.realmedia.com/RealMedia/ads/click_nx.ads/lycostrip=
+od/ros/728x90/wp/ss/a/166095@Top1?x"><FONT=20
+size=3D1>[AD]</FONT><AD- alt=3D"leaderboard2 ad" 166095@Top1? a ss wp =
+728x90 ros=20
+lycostripod adstream_nx.ads ads RealMedia etwork.realmedia.com /></A>=20
+</NOSCRIPT></DIV>
+<SCRIPT type=3Dtext/javascript>=0A=
+if(!displayTopAd()) {=0A=
+  var adImg=3Dd.createElement('IMG'); =
+adImg.src=3D"http://members.tripod.com/adm/img/common/ot_smallframe.gif?w=
+=3D"+pageWidth+"&h=3D"+pageHeight+"rand=3D6981";=0A=
+  if (displayAd()) {=0A=
+    document.write("<!" + "--");=0A=
+  }=0A=
+} else {=0A=
+  var adImg=3Dd.createElement('IMG'); =
+adImg.src=3D"http://members.tripod.com/adm/img/common/ot_adserved.gif?w=3D=
+"+pageWidth+"&h=3D"+pageHeight+"rand=3D6981";=0A=
+  function top100(dir) {=0A=
+    =
+top.location.href=3D'http://lt.tripod.com/tp_toolbar/'+dir+'/_h_/www.trip=
+od.lycos.com/bin/top100/top100.pl?a=3D'+dir+"&url=3D"+location.href;=0A=
+  }=0A=
+}=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+function openSlideShow(showname)=0A=
+{=0A=
+var showPath =3D "/slideshows/" + showname + ".asp";=0A=
+var showWindow =3D window.open(showPath, 'slidewindow', =
+'width=3D780,height=3D700,left=3D200,top=3D50,scrollbars=3D0,resizable=3D=
+1');=0A=
+return(false);=0A=
+}=0A=
+=0A=
+function openSlideURL(showURL) {=0A=
+var showPath =3D showURL;=0A=
+var showWindow =3D window.open(showPath, 'slidewindow', =
+'width=3D780,height=3D700,left=3D200,top=3D50,scrollbars=3D0,resizable=3D=
+1');=0A=
+return(false);=0A=
+}=0A=
+</SCRIPT>
+<NOSCRIPT><IMG height=3D1 alt=3Ddot=20
+src=3D"http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=3D69=
+81"=20
+width=3D150> </NOSCRIPT>
+<STYLE type=3Dtext/css>#tb {
+	MARGIN-BOTTOM: 10px; WIDTH: 800px
+}
+#tb TD {
+	FONT-SIZE: 10px; COLOR: #333; FONT-FAMILY: verdana
+}
+#tb TD A {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #666
+}
+#top100 A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00f
+}
+#top100 A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00f
+}
+#top100 A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00f
+}
+</STYLE>
+
+<DIV style=3D"WIDTH: 100%" align=3Dcenter>
+<DIV id=3Dtb>
+<FORM style=3D"MARGIN: 0px" name=3Dlycos_search=20
+action=3Dhttp://r.hotbot.com/r/memberpgs_lycos_searchbox/http://www.tripo=
+d.lycos.com/bin/search/pursuit=20
+method=3Dget target=3D_new>
+<TABLE id=3Dtbtable=20
+style=3D"BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid"=20
+cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR style=3D"BACKGROUND-COLOR: #eeeeee">
+    <TD colSpan=3D3>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+        <TBODY>
+        <TR>
+          <TD>&nbsp;Search:</TD>
+          <TD><INPUT type=3Dradio CHECKED value=3Dlycos name=3Dcat></TD>
+          <TD noWrap>The Web</TD>
+          <TD><INPUT type=3Dradio value=3Dtripod_member name=3Dcat></TD>
+          <TD noWrap>Tripod</TD>
+          <TD noWrap>&nbsp;&nbsp;&nbsp;<IMG=20
+            src=3D"http://af.lygo.com/d/toolbar/wiredicon.gif"></TD>
+          <TD noWrap>&nbsp;<A=20
+            =
+href=3D"http://r.lycos.com/r/tlbr_wired_gadgets/http://blog.wired.com/gad=
+gets/"=20
+            target=3D_new>Gear Factor</A></TD></TR></TBODY></TABLE>
+    <TD><IMG height=3D8 alt=3D"share this page" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/share.gif" width=3D30 =
+border=3D0></TD>
+    <TD noWrap><A id=3Dshare=20
+      href=3D"http://richardbowles.tripod.com/neural/source/" =
+target=3D_top>Share=20
+      This Page</A>&nbsp;</TD>
+    <TD><IMG height=3D8 alt=3D"report abuse" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/abuse.gif" width=3D8 =
+border=3D0></TD>
+    <TD noWrap><A style=3D"FONT-WEIGHT: bold; COLOR: #666"=20
+      href=3D"http://help.lycos.com/watchdog/watchdog_form.asp" =
+target=3D_top>Report=20
+      Abuse</A>&nbsp;</TD>
+    <TD><IMG height=3D10 alt=3D"build a page" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/build.gif" width=3D9 =
+border=3D0></TD>
+    <TD noWrap><A=20
+      =
+href=3D"http://lt.tripod.com/tp_toolbar/edit/_h_/www.tripod.lycos.com/bui=
+ld/index.html"=20
+      target=3D_top><SPAN id=3Dbuild>Edit your =
+Site</SPAN></A>&nbsp;</TD>
+    <TD><IMG height=3D10 alt=3D"show site directory" hspace=3D3=20
+      src=3D"http://af.lygo.com/d/toolbar/dir.gif" width=3D8 =
+border=3D0></TD>
+    <TD noWrap><A=20
+      =
+href=3D"http://lt.tripod.com/tp_toolbar/browse/_h_/www.tripod.lycos.com/d=
+irectory/"=20
+      target=3D_top>Browse Sites</A>&nbsp;</TD>
+    <TD><A href=3D"http://www.tripod.lycos.com/" target=3D_top><IMG =
+height=3D26=20
+      alt=3D"hosted by tripod" =
+src=3D"http://af.lygo.com/d/toolbar/logo_top2.gif"=20
+      width=3D143 border=3D0></A></TD></TR>
+  <TR style=3D"BACKGROUND-COLOR: #eee">
+    <TD vAlign=3Dcenter noWrap>&nbsp;<INPUT id=3Dsearchbox=20
+      style=3D"FONT-SIZE: 10px; BACKGROUND-COLOR: #fff" size=3D30 =
+name=3Dquery></TD>
+    <TD vAlign=3Dcenter noWrap>&nbsp;<INPUT class=3Dbuttons=20
+      style=3D"BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px"=20
+      type=3Dimage =
+src=3D"http://ly.lygo.com/ly/srch/hp/go_get_it_web_78x19.gif"=20
+      value=3Dimage name=3Dsubmit></TD>
+    <TD align=3Dright><IMG =
+src=3D"http://af.lygo.com/d/toolbar/angle.gif"=20
+    border=3D0></TD>
+    <TD=20
+    style=3D"BACKGROUND: url(http://af.lygo.com/d/toolbar/bg.gif) #fff =
+repeat-x; TEXT-ALIGN: center"=20
+    colSpan=3D8><SPAN style=3D"FONT-SIZE: 11px"><SPAN=20
+      style=3D"FONT-WEIGHT: bold; COLOR: #00f">=AB</SPAN> <SPAN =
+id=3Dtop100><A=20
+      href=3D"javascript:void%20top100('prev')" =
+target=3D_top>Previous</A> | <A=20
+      =
+href=3D"http://lt.tripod.com/tp_toolbar/top100/_h_/www.tripod.lycos.com/m=
+embers/top100_1.html"=20
+      target=3D_top>Top 100</A> | <A =
+href=3D"javascript:void%20top100('next')"=20
+      target=3D_top>Next</A> </SPAN><SPAN=20
+      style=3D"FONT-WEIGHT: bold; COLOR: #00f">=BB</SPAN> </SPAN></TD>
+    <TD=20
+    style=3D"BACKGROUND: url(http://af.lygo.com/d/toolbar/bg.gif) #fff =
+repeat-x"=20
+    vAlign=3Dtop><A href=3D"http://www.tripod.lycos.com/" =
+target=3D_top><IMG=20
+      height=3D22 alt=3D"hosted by tripod"=20
+      src=3D"http://af.lygo.com/d/toolbar/logo_bot2.gif" width=3D143=20
+  border=3D0></A></TD></TR></TBODY></TABLE></FORM></DIV>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D728 border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <SCRIPT type=3Dtext/javascript>=0A=
+if (objAdMgr.isSlotAvailable("leaderboard")) {=0A=
+	objAdMgr.renderSlot("leaderboard")=0A=
+}=0A=
+</SCRIPT>
+      <NOSCRIPT><A=20
+      =
+href=3D"http://network.realmedia.com/RealMedia/ads/click_nx.ads/lycostrip=
+od/ros/728x90/wp/ss/a/6981@Top1?x"><FONT=20
+      size=3D1>[AD]</FONT><AD- alt=3D"leaderboard ad" a ss wp 728x90 ros =
+lycostripod=20
+      adstream_nx.ads ads RealMedia etwork.realmedia.com 6981@Top1? =
+/></A>=20
+      </NOSCRIPT></TD></TR></TBODY></TABLE></DIV>
+<SCRIPT type=3Dtext/javascript>=0A=
+if (displayTopAd()) {=0A=
+    if (this.GeoIP && GeoIP["COUNTRY_CODE"] && =0A=
+	(GeoIP["COUNTRY_CODE"] =3D=3D "CA")) {=0A=
+=0A=
+	var caFrame =3D document.createElement('iframe');=0A=
+	caFrame.src =3D "http://www.lycos.ca/header-tripod-member/";=0A=
+	caFrame.scrolling =3D "no";=0A=
+	caFrame.width =3D "100%";=0A=
+	caFrame.height =3D 50;=0A=
+	caFrame.frameBorder =3D 0;=0A=
+	caFrame.marginHeight =3D 0;=0A=
+	caFrame.marginWidth =3D 0;=0A=
+=0A=
+	var caCell =3D document.createElement('td');=0A=
+	caCell.colSpan =3D 12;=0A=
+	caCell.appendChild(caFrame);=0A=
+=0A=
+	var caRow =3D document.createElement('tr');=0A=
+	caRow.style.backgroundColor =3D "#eeeeee";=0A=
+	caRow.appendChild(caCell);=0A=
+=0A=
+	var tbTable =3D document.getElementById('tbtable');=0A=
+	tbTable.tBodies[0].insertBefore(caRow, tbTable.tBodies[0].firstChild);=0A=
+    }=0A=
+=0A=
+    if (GetCookie("Authorization") =3D=3D null) {=0A=
+        b =3D document.getElementById("build");=0A=
+        b.innerHTML =3D "Build a Site";=0A=
+        =
+b.parentNode.href=3D"http://lt.tripod.com/tp_toolbar/build/_h_/www.tripod=
+.lycos.com/campaigns/landing/toolbar.html";=0A=
+    }=0A=
+    var elem=3Ddocument.getElementById("share");=0A=
+    var subj =3D "Wanted to share this Tripod webpage";=0A=
+    var body =3D top.location.href+"\n";=0A=
+    elem.href=3D"mailto:?body=3D"+body+"&subject=3D"+subj;=0A=
+}=0A=
+//-->=0A=
+</SCRIPT>
+<!-- START: Catman Footer -->
+<SCRIPT language=3DJavaScript1.1 type=3Dtext/javascript>=0A=
+if (displayAd() || displayTopAd()) {=0A=
+    objAdMgr.renderFooter();=0A=
+}=0A=
+</SCRIPT>
+<!-- END: Catman Footer --><!-- revision: ubiquitous - $Change: 85838 $ =
+--><!-- ******************************************************** --><!-- =
+* END TRIPOD AD CODE - PLEASE REMOVE WHEN EDITING PAGE * --><!-- =
+******************************************************** --><FONT=20
+size=3D+1><A name=3Dtop><A=20
+href=3D"http://richardbowles.tripod.com/neural/neural.htm"><IMG=20
+src=3D"http://richardbowles.tripod.com/neural/smallnet.gif" =
+border=3D0></A> <A=20
+href=3D"http://richardbowles.tripod.com/neural/neural.htm">Main Menu</A> =
+
+<H2>Source Code for Neural Network Simulators</H2>You come here to =
+download=20
+source code for the various programs. At the moment, the source code is =
+mainly=20
+Turbo Pascal 6.0 (sorry!) One or two of the programs I have converted to =
+
+C<CODE>++</CODE>, so it's worth you looking further down the page. =
+However, it=20
+should be possible to convert them all to other languages without too =
+much=20
+bother. All the source code is fully commented.=20
+<P>By the way, all these programs have been written by me over the years =
+(which=20
+is why some are more "primitive" than others). Feel free to copy, adapt =
+etc. any=20
+of this code that you like!=20
+<P>Here is how you go about downloading code.=20
+<UL>
+  <LI>Don't bother with things like "ftp" - far too complicated!=20
+  <LI>Click on one of the links below to take you to the source file.=20
+  <LI>On your "Edit" menu, click on the "Select All" option.=20
+  <LI>Use "Copy" on the Edit menu to place it in the clipboard=20
+  <LI>Then activate some sort of text editor and paste the text in.=20
+  <LI>The program should compile without you needing to make any =
+changes. Feel=20
+  free to change it as much as you like, of course. You will need to =
+ensure that=20
+  the file has the correct extension - .PAS for Pascal, .CPP for C++. =
+</LI></UL>
+<P>If you are using Netscape Navigator, you won't be able to use that =
+procedure.=20
+This is because when you view the source code, there don't seem to be =
+any menus=20
+at the top of the screen. Here's the alternative:=20
+<UL>
+  <LI>Click on one of the links below to take you to the source file.=20
+  <LI>Highlight the entire text of the program by clicking the mouse at =
+the top=20
+  of the code and dragging the mouse down the screen.=20
+  <LI>Select Copy from the Edit menu at the top of the screen. If for =
+some=20
+  reason you don't have an Edit menu, you can press &lt;Ctrl&gt; and C =
+to put=20
+  the selected text in the clipboard (it does the same thing as Copy).=20
+  <LI>Enter Turbo Pascal, and select Paste from the Edit menu to paste =
+the=20
+  copied text into a Pascal program. You can, of course, paste the =
+program into=20
+  any application - Notepad, Microsoft Word, whatever - as it is just =
+plain=20
+  text. </LI></UL><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/simple1.htm">Simple=
+ Network=20
+Demonstration</A>=20
+<BLOCKQUOTE>This is a demonstration of a simple neural network, 4 =
+neurons in=20
+  each of the input and hidden layers and two in the output layer, that =
+codes=20
+  inputs. There is a simple set of training data included in the =
+program:=20
+  <P align=3Dcenter>
+  <TABLE border=3D1>
+    <TBODY>
+    <TR>
+      <TD><FONT size=3D+1>Inputs </FONT></TD>
+      <TD><FONT size=3D+1>Desired Output </FONT></TD></TR>
+    <TR>
+      <TD align=3Dmiddle><FONT size=3D+1>0001 </FONT></TD>
+      <TD align=3Dmiddle><FONT size=3D+1>00 </FONT></TD></TR>
+    <TR>
+      <TD align=3Dmiddle><FONT size=3D+1>0010 </FONT></TD>
+      <TD align=3Dmiddle><FONT size=3D+1>01 </FONT></TD></TR>
+    <TR>
+      <TD align=3Dmiddle><FONT size=3D+1>0100 </FONT></TD>
+      <TD align=3Dmiddle><FONT size=3D+1>10 </FONT></TD></TR>
+    <TR>
+      <TD align=3Dmiddle><FONT size=3D+1>1000 </FONT></TD>
+      <TD align=3Dmiddle><FONT size=3D+1>11 =
+</FONT></TD></TR></TBODY></TABLE>
+  <P>The program has no frills or graphics in it at all - merely=20
+  <CODE>writeln</CODE> statements. This is to aid in converting to other =
+
+  languages.=20
+  <P>Speaking of other languages, this is one of the programs which I =
+have=20
+  converted to C<CODE>++</CODE>. You will find the C<CODE>++</CODE> =
+version if=20
+  you <A =
+href=3D"http://richardbowles.tripod.com/neural/source/netcpp1.htm">click =
+
+  here</A>. </P></BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/evolvnet.htm">Train=
+ing=20
+Neural Nets by Evolution</A>=20
+<BLOCKQUOTE>This is a program that demonstrates how neural networks can =
+be=20
+  trained by evolution. It deals with very small networks (4 input layer =
+
+  neurons, 4 in the hidden layer, 2 in the output layer). There is a =
+facility to=20
+  create, load and save both training data and the neural networks =
+themselves,=20
+  though, just to get you started, here are two sets of data for you: <A =
+
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/binary1.htm">BINARY=
+1.TRN</A>=20
+  and <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/bintodec.htm">BINTO=
+DEC.TRN</A>=20
+  which should be saved with the <B>.TRN</B> extension.=20
+  <P>This program does contain graphical operations, but they are only =
+used to=20
+  display the neural networks themselves, and the program can operate =
+perfectly=20
+  well without them. To remove the graphical part, remove the routine=20
+  <CODE>show_single_net</CODE> and any reference to it, and to routines =
+that it=20
+  calls such as <CODE>intographix</CODE> and the like. It should be =
+fairly=20
+  obvious which routines are concerned with graphics mode. =
+</P></BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/evolvpic.htm">Evolu=
+tion of a=20
+Two-dimensional neural net</A>=20
+<BLOCKQUOTE>Now I have applied the evolution technique to recognising =
+simple=20
+  pictures - and I mean simple! Due to the fact that evolving networks =
+eat up=20
+  memory as though it were going out of fashion, I have had to limit the =
+
+  pictures to 16-by-16 block pixels, each of which can be any one of 16 =
+colours.=20
+
+  <P>The main program is called EVOLVPIC.PAS and works entirely in text =
+mode.=20
+  However, you will also need the <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/picedit.htm">Pictur=
+e=20
+  Editor</A> to create the pictures in the first place. This also works =
+in text=20
+  mode as the resolution of the pictures is so poor, but it does use the =
+Crt=20
+  unit provided in Turbo Pascal to do things like clearing the screen =
+and=20
+  changing colours. </P></BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/wisard1.htm">WISARD=
+=20
+Architecture Demonstration</A>=20
+<BLOCKQUOTE>This demonstration, however, does have graphics in it. It is =
+a=20
+  demo of a small network that runs on the WISARD architecture developed =
+by=20
+  Prof. Igor Alexander at Imperial College London. Input patterns are =
+drawn on=20
+  an 8-by-8 grid using a (very) simple editor. The networks can then be =
+trained=20
+  on this data and tested on similar data (again created using the =
+editor). I=20
+  have included a couple of data files (in the form of plain text). They =
+are an=20
+  <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/apattern.htm">A-pat=
+tern</A>=20
+  and a <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/bpattern.htm">B-pat=
+tern</A>,=20
+  and they can be viewed/saved the same way as the program - but you =
+should=20
+  change the file extension to <B>.WD1</B> as that is what the program =
+expects.=20
+</BLOCKQUOTE><A name=3Dhop1></A><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/simphop.htm">Hopfie=
+ld=20
+Demonstration</A>=20
+<BLOCKQUOTE>This is a simple no-frills demonstration of a =
+one-dimensional=20
+  Hopfield Net. It has a built-in library of 2 "classes" (library =
+patterns),=20
+  with the +1s and -1s represented on the screen as * and . The two =
+library=20
+  patterns are:=20
+  <P><PRE> ****....         and          ....****</PRE>
+  <P>You enter the test strings the same way and then the system =
+iterates,=20
+  producing something similar to the following:=20
+  <P><PRE>                **.*..*.
+                ****....
+                ****....
+                ****....
+                ****....
+                ****....
+                ****....
+                ****....
+                ****....
+                ****....
+                ****....
+</PRE>
+  <P>You can see that the outputs of the Hopfield net have converged =
+almost=20
+  instantly to one of the library classes. You can add other classes to =
+the=20
+  library (such as **....**) but you will find that it converges less =
+often.=20
+  <P>There is a C<CODE>++</CODE> version of this program. <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/hopcpp1.htm">Click =
+
+  here</A> to get to it. </P></BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/simphop2.htm">A =
+slightly=20
+more sophisticated Hopfield Demonstration</A>=20
+<BLOCKQUOTE>This is a step up on the previous program. You can have up =
+to 8=20
+  classes, each of which is 16 elements long. The classes are displayed =
+on the=20
+  screen and you can click on them with the mouse (left button to set an =
+element=20
+  to +1, right button to clear it to -1). The same thing applies to the =
+test=20
+  pattern. The library classes can be saved/loaded to/from disc. The =
+program=20
+  uses text mode only. </BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/hop_2d.htm">2-D =
+Hopfield Net=20
+for graphical input</A>=20
+<BLOCKQUOTE>This is a two-dimensional version of the Hopfield net. It is =
+
+  designed to use pictures which are 10-by-12 pixels, binary values. A =
+sample=20
+  set of pictures is provided as the file <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/digits.hop">DIGITS.=
+HOP</A>.=20
+  These digits try to duplicate the example data set in the <A=20
+  href=3D"http://richardbowles.tripod.com/neural/NeurRefs.htm">Lippmann =
+paper</A>=20
+  as far as I can (which were "hand-crafted for good performance"). Even =
+so the=20
+  test data is not guaranteed to converge on one of the library =
+templates.=20
+  <P>The program needs the Crt, Dos and Graph units to deal with the =
+graphical=20
+  and file operations. </P></BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/maxnet.htm">Simple =
+MAXNET=20
+Demonstration</A>=20
+<BLOCKQUOTE>This is the demonstration of a single net comparator that =
+compares=20
+  two numbers and indicates which is the greater of the two. It does not =
+require=20
+  any units and has no bells or whistles.=20
+  <P><A =
+href=3D"http://richardbowles.tripod.com/neural/source/maxntcpp.htm">Click=
+=20
+  here</A> for the C<CODE>++</CODE> version of the Maxnet program.=20
+</P></BLOCKQUOTE><A=20
+href=3D"http://richardbowles.tripod.com/neural/source/maxnet2.htm">A =
+more complex=20
+MAXNET Demonstration</A>=20
+<BLOCKQUOTE>This more complicated demonstration uses three layers of =
+subnet=20
+  comparators, as shown in section <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/maxnets.htm">Maxnets</A> =
+to=20
+  compare 8 numbers. Four subnets in the first layer feed into two =
+subnets in=20
+  the second layer feeding into one subnet in the last layer which gives =
+the=20
+  final output of the program.=20
+  <P><A =
+href=3D"http://richardbowles.tripod.com/neural/source/maxcpp2.htm">Click =
+
+  here</A> for the C<CODE>++</CODE> version of the Maxnet 2 program.=20
+</P></BLOCKQUOTE>
+<H2>The What-Where Task</H2>The following listings are my attempt to =
+implement a=20
+neural network solution to the "what-where" task. If you want a brief=20
+description of the problem, <A=20
+href=3D"http://richardbowles.tripod.com/neural/ww_task/ww.htm">click =
+here</A>.=20
+<P>
+<BLOCKQUOTE>Here is a simple multi-layer perceptron which can solve both =
+the=20
+  "what" and "where" tasks. For the Turbo Pascal listing, <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/ww_task/ww_mlp.htm">click =
+
+  here</A>. Alternatively, if you want the C++ version, <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/ww_task/ww_mlp2.htm">click=
+=20
+  here</A>. </BLOCKQUOTE>
+<P>
+<BLOCKQUOTE>Here is a Hebbian network that can also be tried with th =
+"what"=20
+  and "where" tasks. You will find that it can handle the "what" task, =
+but falls=20
+  down on the "where" task. You can also choose the rule used to change =
+the=20
+  synapse strengths. <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/ww_task/ww_hebb.htm">Click=
+=20
+  here</A> for the Turbo Pascal code. </BLOCKQUOTE>
+<P><A =
+href=3D"http://richardbowles.tripod.com/neural/source/eliza.htm">ELIZA</A=
+>=20
+<BLOCKQUOTE>All right, this is nothing to do with neural networks, but I =
+
+  thought I'd include it anyway as it is so much fun. This program is my =
+own=20
+  version of the famous conversation program produced by Joseph =
+Weisenbaum in=20
+  the 1960s. You "talk" to it by typing in your comments at the keyboard =
+and it=20
+  replies on the screen. See how long it takes before you get thoroughly =
+
+  exasperated by its replies. I don't know how well it resembles the =
+original,=20
+  never having seen it myself.=20
+  <P>If you want to change or edit the phrases that trigger Eliza's =
+responses,=20
+  type <B>Edit</B> at the prompt. You will need to copy the <A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/english.liz">phrase=
+s=20
+  file</A> which should be saved under the name <B>ENGLISH.LIZ</B>=20
+</P></BLOCKQUOTE>
+<H2>Contributions from other authors</H2>So far, I have only had two =
+other=20
+authors who have contributed anything. My thanks go out to Adam Shamblin =
+for=20
+this ANN written in Python.=20
+<P>
+<BLOCKQUOTE><A=20
+  =
+href=3D"http://richardbowles.tripod.com/neural/source/shamblin.htm">Click=
+ here=20
+  for Adam's program</A> </BLOCKQUOTE>
+<P>Jordan Tiona has created a backpropagation network that recognises =
+the=20
+digits. Visit his projects page <A=20
+href=3D"http://www.torahteen.co.nr/programming.html">here</A>.=20
+<P>
+<HR>
+<A =
+href=3D"http://richardbowles.tripod.com/neural/source/source1.htm#top"><I=
+MG=20
+src=3D"http://richardbowles.tripod.com/shared/top.gif" border=3D0></A>=20
+</FONT></BODY></HTML>
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://hb.lycos.com/header?VID=5905&LHIG=1&ord=166095
+
+R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOwo=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=6981
+
+R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/wiredicon.gif
+
+R0lGODlhDgAQAMQAAP4CAfsBAv7////9//3//P///fwAAf4BAP7//f8BA/7+/v78/f4AA//++v0A
+AP0AAv/+//8BAf8BAP4AAv////4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAAAOABAAAAWBYCWKCTmKUcVI0yS2ElOlE7RUE0W5C+QGEh0OgXDpJIEUBQI8BiCUWcWx
+FAkEIqgDRcBWhBUBIYWDisBLl5HC0k2C0YkyGtHNpRFF9AGBPL4KZBUFbBUNDRVBBSIPLhUDFAAA
+FAMvfxUPdZWPFBGXWxIGEgciB6ESUy8AWy1TAI4hADs=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/share.gif
+
+R0lGODlhHgAIAKL/AMwzAIF/f8DAwMzMzAAAAAAAAAAAAAAAACH5BAEAAAIALAAAAAAeAAgAAAMy
+KLrc9DDKJiQR49IFQKVDGCrZxnnaYl0l8wSP2ogimVYEfO+WbTo/Rma1Ci5oyORgkwAAOw==
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/abuse.gif
+
+R0lGODlhCAAIAJH/AMwzAMDAwMzMzAAAACH5BAEAAAEALAAAAAAIAAgAAAIUDBB5csD7Wgpxmoau
+a48+IUxgUAAAOw==
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/build.gif
+
+R0lGODlhCQAKAJH/AMDAwMzMzDMzMwAAACH5BAEAAAAALAAAAAAJAAoAAAIahI4AIaq32hjmMOfE
+ndNc7ElcCIbIGaRqChQAOw==
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/dir.gif
+
+R0lGODlhCAAKAKL/AAAAzAAAmTMz/8DAwMzMzAAAAAAAAAAAACH5BAEAAAMALAAAAAAIAAoAAAMY
+ODqyG6A9QGW4UQjC4V6E54TRKILYyC0JADs=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/logo_top2.gif
+
+R0lGODlhjwAaAOYAAMDAwP///2b/M2bM/wBmZgAAACAfIPTy9e34/ljH/1/J/2TL/2XM/2fM/2fO
+/4XW/Zvd/cXq/N7z/Vi+6WDI8XDV/k2122LJ7/T8/0OqyABaayqPogBeaRd7hg1xdwBkZwhqbQBl
+ZQJkZAVoaR99f/7//+Dh4QBnZgBmZQBjYgBhXgBbWAZpZQtvZA56YgV2VhiLUyuiUQADAAABABES
+Efz+/PDx8MvMy6eop5GSkUXMQ1fZTkHXMF/sOAYKBUJUPWL/MBEiDFBnSThIM73Qt1f/HVz/JmD/
+LGL/LmT/MWX/Mmj/NWz+O3T/RYX+XKr8jr39piMvHyo2JnSLbK7Kpdrp1fv++mP4KWn5Mpr+dRwn
+GNj9yZOni9DiyWT/IW3/L+P+1+z+5AUHBAsNCujy4/X98fH96vn/9f7/+/7+/HV0dP7+/vz8/Pr6
++vn5+fb29vX19fLy8u/v7+vr69fX17y8vGBgYEhISDg4OCwsLCQkJBkZGQUFBQMDAwEBAQAAACH5
+BAEAAAAALAAAAACPABoAAAf/gACCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmZcjZxnp42cpqjpKWW
+NnBvbm2srG5vcDams7S1AHJwbTVrazVlv7+7vWxworbHyJC4bAFWYVtQT07T009QW2FWAcTGyd7f
+g3FtAWdb0khHSEnr6+hITk9g2m1x4PajnDb6xrhrVmBPmBRBIqCgwYMCkBRhEm9XsXsQI3GCs4qN
+RTZtXr0JUAZKkyJHliAcaVBhEyhlArzpFrElIhtuapTAgAGBTZsYSgQw8+SIEZJADxoB8sRMiZUu
+kxLCJROBhAgQHkiVCiGCiScDRQJVwrWrkoM+s4QJAEepUpgBMEBdkECB27cO/yyQgKEDyxegSY7o
+3UvQ4BIkRoquqWc2oo1xEiA0SLCAwYDHAxZUoNBhhQYWMXrcRbiOGrUmSb4WXKIXyhk2b1KrfiNr
+lpw4cGKnIgwRrYQHbRtAhtygwoYVIQhw0JB5c0ElQJxsAcOcucfQfo0w2VIjwBwT2E3kal0KTo04
+c0TN+Q5RzsbbCRjo3h25ggUQKggQODEchuaSTba4IcKfSBee6hy0RBFiBaDGHQjecQN5pchBTA52
+qCFhAG5AFMcaCEDA2HrsOeAbcPLNN1wMdhVkhBNoEBHFilpMUcYTRuyVzhFF5BcAHnz00QcNN7BB
+2yg21GCCAWMUmQeFigSg5P+SlTB5SxslRKDAAhzuJtkEHsQX4gknXKbDXeg8gQYXYhRg5hRnPLFE
+E2w2wUQT04BxgAFmFqCHCWyEomcncYRSiD596sOdIJz06d0NdfJhh0pJFqCko0kqiUgAkAIQRwno
+VblbbxmIkEKIIX6ggX1fAJGFGQEIUWYBPhARwBawxnqNGWCcMYcaduSawxs1rNLKRWy40ZoNb7QB
+rEWsCRKHG8CugUOdNOCwRlmJUProkpJie622ACwJqRxuRJkee5BJ5psKKIAaIgcs6ODFqWYQocUM
+ZtJARRU1kNFFFftyRAUVZthABx033GDCGtmZcCEdddRhwjadsLGGwA3XQYf/DWsIGwczJjQ8nh11
+7tHjj4ZYa7KZ3qJc56OOsgypDWxkmICm5VZwQQdaqkvABxzEcAUUAUwRhR91ihHFFGgILYUUQlAx
+hRZCgMFFggq6cQceWKuRAx555HFHHb1KXIcdXHeNhx03rGEsGzjc0bUddehhph954DloyXU62rLe
+2u59rd+WriFBBQqQu1sFWOasrqj2bXHGEHnPzUUYkJs5RhRjFGAHGEIQ7QePJvBR5xg01NmHHQ+v
+kYMeoufNxx10BKC6HkQXwEcefZipaC4s4f33tigDvzLgcKwhpeG8uQfCpzrLp8ELO4DRhRT01jlD
+EFvcEESdMtSZwxZDVH+H/wk5tB65mXikjcMedXIdsrQ34FH7+WPkUMMbi5ysv7fAY0u88TND3gA4
+NQLmNe95O9gCGagQhTr5YApEOAMOuhe5IPBHC3VSwxvskLsCjEFr7EPfDaxWOwXVoXY0sF8OMmcm
+O+CATvUCG7Wq5TdK7S14wrshpIoXgQAij4AGVFeX2iUWM0ihTlLowv2mkLcocIE/Z+ACC/2QAzfk
+oU55uAEd5Gem8dUhhAWw3w1atwccAICDZtLDDW4UsgWRrGTaiqOT5BhHAPDQh4YDYvOc1wIeOMEM
+XcCgmYRghjCQQQij40INzpCGM0zBB5bDwRxgqKgA3CAPtbODG9TQujHgIF8AOOigASyGhzrZoVtX
+LEAfxpene9xRgAOsQAYKuEcCaMAFPMhCALhQujOh4Qx0EGQBhlCFMGRBgT+goBrr0MsUBqAOMOyD
+BtFYADzEjpp5YFgI+aAGS1JSDb3qHSECAQA7
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/angle.gif
+
+R0lGODlhFgAWAJH/AP///8DAwMzMzAAAACH5BAEAAAEALAAAAAAWABYAAAI5jI+pyysNgwCRTVrT
+xdlsnn1gJI5NaTrAyq4V6kJwbLU2rcxsfd9q79MAe8Jh0GMkIpNB3VDCBBYAADs=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://af.lygo.com/d/toolbar/logo_bot2.gif
+
+R0lGODlhjwAWAOYAAAMBA3t6e1vI/2LK/2XL/2bM/2jN/4HV/5ve/73p/9vz/+v4//b8//z+/17E
+7WLJ82vR/XDU/0+44D2lwwBbaiySphd7hgJgaRN3fwBiZw9zeAxwcwBlZgBmZghoaCZ9fgBnZgBm
+ZABWVQJkYwBgXQhqZw1+SyCUV0LFSMzezQACADbHNklLST0+Pdvd22hpaP7//pmamVnpN07qIzBD
+K4Chd2X/NBUfEig2JFRoTniOcZevkKK4m1n/HVn/IV3/J2D/K2H/LWT/MWb/MwQKAgIFAWf/NGn/
+N2XzNW7/PnX/SIP/WZX9c6b/h7j/n6XGmrLGq+Xz4Pz/+2n/LXD2OwwUCR4tGMX/r9X9xuD/1Kq6
+pOr35cnTxXD/L0hZQer/4fD+6vP+7u716/b+8vn/9fv/+P7//f//+/z8/Pj4+PT09O3t7ePj49PT
+08zMzMHBwbS0tKioqIiIiHNzc2BgYFRUVC8vLyUlJRoaGhISEgsLCwUFBQICAgEBAQAAAMDAwCH5
+BAEAAH8ALAAAAACPABYAAAf/gG6Cg4SFhoeHChEDBY2OjxESGyQdlZaVHBQnMk5lL0V+fkQ8MGVQ
+RKF+OWNXS2VcOKl1fwF7oXhlZXF6oXpxLi18oXW5d6F8LGtxtn54bGwxeaF7MYiEf9jZ2tvc3d0L
+CAKP4wQRDhiUl5YZmlRYZSypVilhYzWpRDpnTUxlWjeh+tD5U+dYizZp5jC70wYOnj5++sz50wZP
+rwBraoVq4eLPC2Z54HgbSbKbn5J/GiQQN84RAQgQKqRT1+FCiRVLwKSIFYpGlDJicqS6wYMMkyZn
+dFTpJQdNPD/I2LRpEbDFmmjT5PyZw6sZnDV1hPlp8SzYxo7YUqFcm+0kSgUH/1i2LGAgwoQRI2hm
+OjHDVYyloazs2CKGRiocXL4suTImB6hmbd4Yi3hHjsJeL9JghTrHhR2DLoBB9JMnBp2ufuikSduW
+7Vq1f9y6zaZSAKO55RxomFkJBAUPKHosORMAQKpQULAA3BgFC5MsLgyHsvNHjthUo/3cefMnjsVb
+k5vFoMgi+/FQWv/kiR0qtuuSst3L1wZOAIG5dCPIDGEJBLsTRwh3hhyopFJFCk+kokIOZlzBxBj/
+QLVHCzAEkIoed3TFBx5yqPEHG6ddx8cela3xR0Ya5pHHHizmEQdr7c33nkkwssYNXPbhF8kkIHTg
+nyYydCFcGG3kQAMOONCgw/8YUHiRw5M7/NHEEmFAkQMdWMahBh2ptABHAHbcwUIMJmLTRgAshGkH
+Cy/AsZqZL4TZQgxyvGDnHG3UeNJsM3ITX3zd4HjbOHXtlwmQXRgBxBFOnBFGClxwkYIYX4CxxaVb
+jJHFEkpcQVgaaZjIxWR8DKTGG3DkuU0akcHxRhtlarMGqnmiscatsc7HZ5/bwMbertoogIABtrUE
+wQMWiEDBBZskaoMNQCTRBBZZVJsFFk04ccW2VzjBhBBALJHFNnCIpUcAvKbra7qvkbRAAsMKYNsA
+9ApggAQfmIACEs4OYcMQQAyhxMAEH2HwwUcA7AMTX2wTQyqlsSvxxCTFWNLcuwggcMABEWyMQAIp
+MNHDFEYMYfLJQQCh8spCBOHyy0D8wPCqL0DMHcU45zwjAwso4LPPCzTwxxdNxDxEyScnrbTJJf8Q
+RBMNrwpHHFTD4aHOWGfNKxhOKNEDEEYgvfTJJQPhgxJOgKH12mznTIZzAf4gxNFGPGtD2EYI8UMP
+STCBBRltBy44rzCAge0SQPTgww8r/+BDD0EsMW0YZgxu+eVrSaFpt/ws4flR2mZBhhSYl266NzBI
+QQYYX1j7RRhlSFH56bTXzg0MMNiu++689+7778AHL/zwxGMeCAA7
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/neural/smallnet.gif
+
+R0lGODlhMQAhAPf/AP///8z//5n//2b//zP//wD////M/8zM/5nM/2bM/zPM/wDM//+Z/8yZ/5mZ
+/2aZ/zOZ/wCZ//9m/8xm/5lm/2Zm/zNm/wBm//8z/8wz/5kz/2Yz/zMz/wAz//8A/8wA/5kA/2YA
+/zMA/wAA////zMz/zJn/zGb/zDP/zAD/zP/MzMzMzJnMzGbMzDPMzADMzP+ZzMyZzJmZzGaZzDOZ
+zACZzP9mzMxmzJlmzGZmzDNmzABmzP8zzMwzzJkzzGYzzDMzzAAzzP8AzMwAzJkAzGYAzDMAzAAA
+zP//mcz/mZn/mWb/mTP/mQD/mf/MmczMmZnMmWbMmTPMmQDMmf+ZmcyZmZmZmWaZmTOZmQCZmf9m
+mcxmmZlmmWZmmTNmmQBmmf8zmcwzmZkzmWYzmTMzmQAzmf8AmcwAmZkAmWYAmTMAmQAAmf//Zsz/
+Zpn/Zmb/ZjP/ZgD/Zv/MZszMZpnMZmbMZjPMZgDMZv+ZZsyZZpmZZmaZZjOZZgCZZv9mZsxmZplm
+ZmZmZjNmZgBmZv8zZswzZpkzZmYzZjMzZgAzZv8AZswAZpkAZmYAZjMAZgAAZv//M8z/M5n/M2b/
+MzP/MwD/M//MM8zMM5nMM2bMMzPMMwDMM/+ZM8yZM5mZM2aZMzOZMwCZM/9mM8xmM5lmM2ZmMzNm
+MwBmM/8zM8wzM5kzM2YzMzMzMwAzM/8AM8wAM5kAM2YAMzMAMwAAM///AMz/AJn/AGb/ADP/AAD/
+AP/MAMzMAJnMAGbMADPMAADMAP+ZAMyZAJmZAGaZADOZAACZAP9mAMxmAJlmAGZmADNmAABmAP8z
+AMwzAJkzAGYzADMzAAAzAP8AAMwAAJkAAGYAADMAAAAAAP//////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////wAAACH/C05FVFNDQVBFMi4wAwEA
+AAAh+QQFCgDXACwAAAAAMQAhAAAI5AABCBxIsKDBgwgTKjT4r+G/hRAjIvxHqyKthxIzIpxAkKJF
+jBozOvyXQUKGkRYvNgzJEkCGjilXjkw4s2XBmiABOLwZU2AumxMZ7vRYsWGuoyN3tswptCeAn0AP
+Mh3o0GlUmjcfalV6VSEzAMxWCpzadWHYjmWlchUY9uvYtAx7EhALkmxZohcJ6EVrV2LSv3gbEmAI
+V2pPsW/73l1L921hvzkVP6aqE6PkyTqpah27dvJUlB8xZ54YWLTdqh8Bd9b4ma5VoDg7ItY822bg
+upfvxqyZVjXoorkflxa9kDfx4wsDAgAh+QQFCgDXACwAAAMAKwAPAAAIXACvCRwoMAPBgwgTKlz4
+79+EhRAjSrz2cKLFixgtAsh1jWPGjwIb/vMIEuTGjiVTqlyp8t81ACwz/mMWUyKBawRmNqNZcyGA
+mwJ5ZiQ50eXPlLmSYoS5kmhPiAEBACH5BAUKANcALAAAAwAsAA8AAAhTAK8JHAjg2oSBCBMqXMiw
+YQYJGRpKnCixYESKGDNq3IiwIMePDXPlAknymseSKFOqXMly47+WE09eewlzIgECKkdmpHmN2bVm
+HwHwrIlRJ1GGAQEAIfkEBQoA1wAsAQADACwADwAACFgArwkceA3AhGsZCCpcyLChw38QDzqcSHEi
+gIQSK2rcyLEjwVweQyqEKLLkQpAmU6pcybLlRALXYLrUCIDAv4IzJ96s+Y+ZSAA/C/r0KTIXypBE
+PQLNqTEgACH5BAUKANcALAIAAwAsAA8AAAhUAK8JHHgNwLV/BBMqXMiw4UCEDiNKZGgQ4sSLGDNe
+NKixY8NcuTyKLDiypMmTJQmgzAhApcqVF/+9hCkRoUGOI0NqBMCMZ8d/Fjv6zOmR2bVmHQMCACH5
+BAUKANcALAMABgAsAA4AAAhJAK8JHEiwoMGDCA/mSsiwIcN//xxKnGhwIcWLGDNq3EiQAEeNACJ+
+/OhxpEmMADhGFKkxl0WMLFGqvPaP2UmMzJrZvElx58WAAAAh+QQFCgDXACwAAAMAMAATAAAIYQCv
+TbhGsKDBgwgTKlx4LYOEDAwjSpwIcaLFixgzWgSgsaPEXLk8iizIcaTJkwgJoPQIQKXKlRr/vYSJ
+8d+1kjRzagypc+I/mz0z8tSIM2hEAP+KGo3IbKnEpk4ZNm2WMSAAIfkEBQoA1wAsAAADADEAFAAA
+CFwArwnMILCgwYMIEypceA3AvwkMI0qcWBAixYsYM2qUmGujR4T//n0cmbAjyZMoCxJIudEhS5Ir
+X8qcSfMggJoac5nEyfAmz59AKd70GVThP2ZFjSJFmjQhU4wBAQAh+QQFCgDXACwBAAMAMAAVAAAI
+aAABXJtwraDBgwgTKlzI8FoGCRkaSpwoUWBEihgzatyIMNdCgQI5asxFcuE/kRw9KgSJMiGBljAL
+Anj5MmbLfzVtimSps6fPnymBZvx3UmhQo0iTKk0acilDAMygOmX4j9lUhlatZgwIACH5BAUKANcA
+LAIAAwAmABUAAAhfAK8BmHAtw7WDCBMqXMhQ4b+HBBseZCaxYkIABiMyZNaMosWPHz2CXJhrpEmH
+/06qJLlSIoGWJgGkhLnyJc2bOHPqBAlgJ8hKJX0u7Cm0qNGjSHGmJJr02symPZ8mDAgAIfkEBQoA
+1wAsBAADACUADwAACFwAAUwAcK2gwYMIEypMmEFChoUF/0GceBBABoIL//3DSLHjRADMroX0WJAj
+SZEnD1bKRTLkyIQEFJpMmRBAzJg0U/7DmZMkwZk9gwodSrQny6IZ/1VC2vEo02sBAQAh+QQFCgDX
+ACwEAAMAJgAPAAAIWACvCcwgsKDBgwgTJvz3b4LChxAjOoxIsWLEf9cAWESYayNGhQSuhTzIsNJG
+jQ8BjFTY0SKzZswQavy3cqPCmAlR2tzJs6fPn0CDRtQpNGKuSi2L5lSKMCAAOw==
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://richardbowles.tripod.com/shared/top.gif
+
+R0lGODlhLAArAKIGAAAAAEr/UoT397UpAP8AAP///wCE/wCE/yH/C05FVFNDQVBFMi4wAwEAAAAh
++QQFCgAHACwAAAAALAArAAAE/lDISSe4NestS+ECMIwAuHkohaaVSJrZygqyLLlDee17XP/ATyhX
+AASOyGNJhQIEn8NLgEAlHK2BJa3pfAKj0/BVvGxmvb9bDokVY3nGM3plWY/v4qQyXcuI4nltVlVt
+XTYwf2yKY4J7fYh2gYqNcnQwYHhTg5JZW0KXmHqLhEhaoHVxcDuLSaanYK4WmUqvFH+xtqKdtaiI
+erinf5dwvC05xchqwMmQy8wgws+10dLBx9XWztjG2tu9LRje3zeGPd7UFz/m0tHpT93Dx+5e8Ca3
+cx7hyfP4Rcz8/fTxMtSPSzGCBQ2+AphQIaKG77ohhFhD20SKMnDxwIhGFUOOA/QiAAAh+QQFCgAH
+ACwSAAMAEwAQAAAESVDISWm5F+i9K75BKIrA9GlESoRpyG0BEKxsPY4yPYurque8oI4GtO2Grp2x
+F4wpnz0V6TlrUZO3m4704hhJFYosWwqLu+Z0OAIAIfkEBQoABwAsEAAEABUADgAABD9QyEmrKBiD
+zbv/QSiOJAkERJqGKtuGJysSM1oHsS3L9J73Ohuw97sJXzjjMCgq7oQlp6sHbJau1492C7B4vxEA
+IfkEBQoABwAsEQAEABIADgAABDdQyEkluLhaDIL/HPZ9ROkRI4kGK3uWa+yeZE23uO3mdL/DI94u
+5cu1gjUTUTfzhC7EkEbwnFIiACH5BAUKAAcALBEAAwAUABAAAARPUMhJJbi36MpB+B+wddhHnGEB
+VB4YECAceNhlyvIb5rGp+7MX6qfLyVqwZO80DBKNRBCy5+OFgE+Xa1o91q7R3IpCw84wHEFpm07X
+xm1KBAAh+QQFCgAHACwRAAMAFAAQAAAESFDISWu5t2oBus+a1wVkKZ5lSawmkapuEMskIK9xTpOx
+vf+uWY+nKgprxCQNN/MdiTOT8hhFAm+vlDMVPdlGr1MIwBFvzuhzBAAh+QQFCgAHACwRAAQAEgAO
+AAAEM1DISWu5IOvNdfhgKIJEWX4mmpIsGhDtG8Owa8tuje86vd69XSiYGwlXOqNS1GlyKtBoBAAh
++QQFCgAHACwQAAQAFQAOAAAESLCASau4t2gNgv8ggG1SR5ynlwYVxX4ErIJ0N99BjMaencsz3u+F
+E+qAPqNMSRw6dahPEhR1SmlY3LXV0vZEmPDFFxKbx9xLBAA7
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://ly.lygo.com/ly/srch/hp/go_get_it_web_78x19.gif
+
+R0lGODlhTgATAMQfADNmmbfJ21iBq3WYun+fv2WLsqe904uoxczZ5UNyof///zprnKqmcZmyzEx5
+pmyKnG+Tt9q7TVJ9qD9vnzZom9ni7PL1+TRmmejCQ4aWiZGtyOXs8mWHoZ+vsUh2pAAAACH5BAEA
+AB8ALAAAAABOABMAAAX/4CeKEZM9Qppyauu+cCzPa8ZEY/5hjBH8wKBwSCwaj0gDA6OLdAKGqNSg
+ORym2CzVqu1GudjGQeONBjo4EaZjaLjdmsJCUCh4IO98Pj6v3/VvGgN5dAUCbgNWDoYHgHoGHUwf
+DGJWVgSHFgqbFQmWn5aYDZqcnqAHAhOYlgCbABAeAw4DBQoNBVYBCgcKBruWDQwfEQcExscSvhZt
+bgIEAwIei8cEyQrLb84DEtIQEK0KAAXG4AAeCAoFErUNzgQKAe+61AQHJQTe+QUO1wIOEgAhpDqA
+IMA+b/v6/QsoYYKBgg4c+FKAANM3VwQ0VTDAToI3XRAUhMznjYAJCHVS/zrgFSCBh5QTFlRQUEGT
+rH0sXcKcsMHCKAsON1VcVy4jTY62FqVcyhTCiRcJGthKAC7dAIoLam2gICDq1Kq4FBAAcHWsKw8p
+yi1AVyABuwQ0VKCISNdBAnkTJhSYWUBqgwnl7OLVyxfdpk0NAkdUyzbB2mh1I0cW8CCB5csT+Iml
+QIHtOwQUalWgkCDzJgKc2eriWMeBWsvlOqdbMKHdhMu4c1t+kCHmgt+/KbyjiUBTgQszayoYQCH4
+8ArF0wnQiGDDBeQ0BfyO7WsDAamggYsfT9sGVQDo0wMQ8LDgXwC1CxZQj549AveAJd43AFhAAAQC
+pHcfehP8R4ADBtGnYF56CdwQ4IIQRijhhBRWmJ4AODAAmIUcduhhhBMIs8MDFHxo4okVUvCAJMM8
+sGGFF9AXo4QzKlijejdWOMEDaYzAQ1cloijkh6QJsIQOI5TwVAssxOXkk09yYEOPIoQAADs=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://hb.lycos.com/html_js/headerLayer.js
+
+var lnb_host =3D location.href;=0A=
+var lnb_protocol;=0A=
+if (lnb_host.substring(0,5) =3D=3D 'https') {=0A=
+    lnb_protocol =3D 'https://';=0A=
+} else {=0A=
+    lnb_protocol =3D 'http://';=0A=
+}=0A=
+=0A=
+var lnb_URL=3Dlnb_protocol+'hb.lycos.com/header';=0A=
+var lnb_onloadH;=0A=
+=0A=
+var GeoIP =3D new Array();=0A=
+GeoIP["COUNTRY_CODE"] =3D 'RU';=0A=
+GeoIP["REGION"]       =3D '43';=0A=
+GeoIP["CITY"]         =3D 'Lipetsk';=0A=
+GeoIP["DMA_CODE"]     =3D '0';=0A=
+GeoIP["AREA_CODE"]    =3D '0';=0A=
+GeoIP["LATITUDE"]     =3D '52.618599'; =0A=
+GeoIP["LONGITUDE"]    =3D '39.568901';=0A=
+=0A=
+=0A=
+for (var geo_data in GeoIP) {=0A=
+    var geo_override =3D readCookie("GEOIP_"+geo_data);=0A=
+    if (null !=3D geo_override) {=0A=
+	GeoIP[geo_data] =3D geo_override;=0A=
+    }=0A=
+}=0A=
+=0A=
+var cmhb_display;=0A=
+var cmhb;	=0A=
+=0A=
+var lnb_query_string =3D new obj_querystring();=0A=
+var lnb_qs_loc =3D lnb_query_string.get('loc');=0A=
+=0A=
+function readCookie(name) {=0A=
+    var nameEQ =3D name + "=3D";=0A=
+    var ca =3D document.cookie.split(';');=0A=
+    for (var i=3D0; i < ca.length; i++) {=0A=
+	var c =3D ca[i];=0A=
+	while (c.charAt(0) =3D=3D ' ') {c =3D c.substring(1,c.length);}=0A=
+	if (c.indexOf(nameEQ) =3D=3D 0) {return =
+c.substring(nameEQ.length,c.length)};=0A=
+    }=0A=
+    return null;=0A=
+}=0A=
+=0A=
+function createCookie(name, value, days, domain) {=0A=
+    if (days) {=0A=
+        var date =3D new Date();=0A=
+        date.setTime(date.getTime()+(days*24*60*60*1000));=0A=
+        var expires =3D "; expires=3D"+date.toGMTString();=0A=
+    } else {=0A=
+        var expires =3D "";=0A=
+    }=0A=
+    document.cookie =3D name+"=3D"+value+expires+"; path=3D/"+=0A=
+                      ((domain) ? ";domain=3D" + domain : "");=0A=
+}=0A=
+=0A=
+function eraseCookie(name, domain) {=0A=
+    createCookie(name, "", -1, domain);=0A=
+}=0A=
+=0A=
+function getDomain(fqdn) {=0A=
+    var firstDot =3D fqdn.indexOf(".");=0A=
+    if ((firstDot !=3D -1) && (firstDot !=3D fqdn.lastIndexOf("."))) {=0A=
+        return fqdn.substring(firstDot, fqdn.length);=0A=
+    } else {=0A=
+        return fqdn; // no domain=0A=
+    }=0A=
+}=0A=
+=0A=
+function lnb_onload() {=0A=
+    if (document.layers && document.layers['LNB_LAYER']) {=0A=
+	document.layers['LNB_LAYER'].src=3Dlnb_URL;=0A=
+	if (lnb_onloadH) {=0A=
+	    lnb_onloadH();=0A=
+	}=0A=
+    }=0A=
+}=0A=
+=0A=
+function lnb_write() {=0A=
+    if (this.lnb_OURL) {=0A=
+	lnb_URL=3Dthis.lnb_OURL;=0A=
+    }=0A=
+    var r=3DMath.floor(Math.random()*1000000);=0A=
+    lnb_URL+=3D'?Z=3D'+r;=0A=
+    if (this.lnb_I) {=0A=
+	lnb_URL+=3D'&'+this.lnb_I;=0A=
+    }=0A=
+    if (this.lnb_G) {=0A=
+	lnb_URL+=3D'&LHG=3D'+escape(this.lnb_G);=0A=
+    }=0A=
+    var h=3D50;=0A=
+    var s=3D1;=0A=
+    if (this.lnb_S !=3D null) {=0A=
+	if =
+(this.lnb_S=3D=3D9||this.lnb_S=3D=3D3||this.lnb_S=3D=3D6||this.lnb_S=3D=3D=
+7) {h=3D24;}=0A=
+	if (this.lnb_S=3D=3D0||this.lnb_S=3D=3D2||this.lnb_S=3D=3D12) {h=3D34;}=0A=
+	s=3Dthis.lnb_S;=0A=
+    }=0A=
+    lnb_URL+=3D"&LHS=3D"+s;=0A=
+    =0A=
+    if (GeoIP["COUNTRY_CODE"] && (GeoIP["COUNTRY_CODE"] =3D=3D "CA")) {=0A=
+	if (!readCookie("NoCanadaRedirect")) {=0A=
+	    if (location.href =3D=3D =
+"http://search.lycos.com/default.asp?query=3Dtravel&loc=3Dtravel") {=0A=
+		top.location =3D "http://www.lycos.ca/travel/";=0A=
+	    }=0A=
+	    var caRedirects=3D[[/multimedia\.lycos\.com$/i,    =
+"http://www.lycos.ca/entertainment/"],=0A=
+			     [/((realestate\.lycos\.com)|(livingchoices\.com))$/i,    =
+"http://www.lycos.ca/home-garden/real-estate.html"],=0A=
+			     [/shop\.lycos\.com$/i,          "http://www.lycos.ca/shopping/"],=0A=
+			     [/travel\.lycos\.com$/i,        "http://www.lycos.ca/travel/"],=0A=
+			     [/entertainment\.lycos\.com$/i, =
+"http://www.lycos.ca/entertainment/"],=0A=
+			     [/tv\.lycos\.com$/i,            =
+"http://www.lycos.ca/entertainment/television.html"],=0A=
+			     [/video\.lycos\.com$/i,         =
+"http://www.lycos.ca/entertainment/music-videos.html"],=0A=
+			     [/music\.lycos\.com$/i,         =
+"http://www.lycos.ca/entertainment/music.html"],=0A=
+			     [/^(www\.)?lycos\.com$/i,       "http://www.lycos.ca"]];=0A=
+	    for (var i=3D0; i<caRedirects.length; i++) {=0A=
+		if (location.host.match(caRedirects[i][0])) {=0A=
+		    top.location =3D caRedirects[i][1];=0A=
+		    break;=0A=
+		}=0A=
+	    }=0A=
+	} else {=0A=
+	    // upgrade cookie=0A=
+	    createCookie("GEOIP_COUNTRY_CODE", "US", 365, =0A=
+                         getDomain(this.location.hostname));=0A=
+        }=0A=
+	=0A=
+	var caHeader=3D-1;=0A=
+	var caHeaders=3D[/angelfire\.lycos\.com$/i, =0A=
+		       /gamesville(\.lycos)?\.com$/i, =0A=
+		       /hotbot(\.lycos)?\.com$/i, =0A=
+		       /matchmaker(\.lycos)?\.com$/i, =0A=
+		       /tripod\.lycos\.com$/i, =0A=
+		       /wired(news)?(\.lycos)?\.com$/i,=0A=
+		       /webmonkey(\.wired)?\.com$/i,=0A=
+		       /quote\.com$/i,=0A=
+		       /ragingbull(\.lycos)?\.com$/i,=0A=
+		       /(lycos)?mail(\.lycos)\?.com$/i];=0A=
+	=0A=
+	for (var i=3D0; i<caHeaders.length; i++) {=0A=
+	    if (location.host.match(caHeaders[i])) {=0A=
+		caHeader =3D i;=0A=
+		break;=0A=
+	    }=0A=
+	}=0A=
+	if (caHeader !=3D -1) {=0A=
+	    this.lnb_IV =3D null;=0A=
+	    h=3D100;=0A=
+	    lnb_URL+=3D"&LHCA=3D1&LHCAHF=3D"+caHeader;=0A=
+	    if (this.lnb_I && this.lnb_I.indexOf("LHM=3D1")>=3D0) {=0A=
+		h+=3D20;=0A=
+	    }=0A=
+	}=0A=
+    }=0A=
+    =0A=
+    if (this.lnb_IV && (this.lnb_IV=3D=3D1)) {=0A=
+	h=3D0;=0A=
+	lnb_URL+=3D'&LHIV=3D1';=0A=
+    }=0A=
+    lnb_URL+=3D"&REF=3D"+escape(document.referrer);=0A=
+    var BrsrSize;=0A=
+    if (document.all) {=0A=
+	if (document.body) =
+{BrsrSize=3Ddocument.body.clientWidth+"x"+document.body.clientHeight;}=0A=
+    } else {=0A=
+	BrsrSize=3D(this.innerWidth-30)+"x"+(this.innerHeight-30);=0A=
+    }=0A=
+    var ScrnSize=3Dscreen.width+"x"+screen.height;=0A=
+    var ClientTime=3Dnew Date().toString();=0A=
+    var TimeZone=3Descape(ClientTime);=0A=
+    lnb_URL+=3D"&SCRNSZ=3D"+ScrnSize;=0A=
+    lnb_URL+=3D"&BRSRSZ=3D"+BrsrSize;=0A=
+    =0A=
+    // catman call in header bar=0A=
+    if (cmhb_display =3D=3D 1) {=0A=
+	for (k in cmhb) {=0A=
+	    lnb_URL+=3D"&cm_" + k + "=3D" + escape(cmhb[k]);=0A=
+	}=0A=
+	lnb_URL+=3D"&LHSSB=3D1";=0A=
+    } else {=0A=
+	// Vonage hack (only if plain http)=0A=
+	if (lnb_protocol =3D=3D 'http://') {=0A=
+	    if (h >=3D 50) {=0A=
+		=
+lnb_URL+=3D"&cm_role=3Dlive&cm_host=3Dhb.lycos.com&cm_taxid=3D/global&cm_=
+adid=3D0&LHSSB=3D1";=0A=
+	    } else if (((h =3D=3D 34) && (s =3D=3D 0)) || (h > 34)) {=0A=
+		=
+lnb_URL+=3D"&cm_role=3Dlive&cm_host=3Dhb.lycos.com&cm_taxid=3D/slimglobal=
+&cm_adid=3D0&LHSSB=3D1";=0A=
+	    }	=0A=
+	}=0A=
+    }=0A=
+=0A=
+    //loc parameter=0A=
+    if (lnb_qs_loc) {=0A=
+	lnb_URL+=3D"&loc=3D" + escape(lnb_qs_loc);=0A=
+    }=0A=
+    =0A=
+    if (document.all||document.getElementById) {=0A=
+	lnb_URL+=3D'&TIME=3D'+TimeZone;=0A=
+	if (this.lnb_IV!=3D1) {document.write('<table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td>');}=0A=
+	document.write('<iframe src=3D"'+lnb_URL+'" width=3D"100%" =
+frameborder=3D"0" height=3D"'+h+'" marginheight=3D"0" marginwidth=3D"0" =
+scrolling=3D"no"></iframe>');=0A=
+	if (this.lnb_IV!=3D1) {document.write('</td></tr></table>');}=0A=
+    }=0A=
+    else if (document.layers) {=0A=
+	document.write('<layer left=3D"0" top=3D"0" id=3D"LNB_LAYER" =
+width=3D"100%"></layer><table width=3D"100%" height=3D"'+h+'" =
+border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tr><td></td></tr></table>');=0A=
+	lnb_onloadH=3Dwindow.onload;=0A=
+	window.onload=3Dlnb_onload;=0A=
+    }=0A=
+}=0A=
+=0A=
+function obj_querystring() {=0A=
+    var querystring =3D =
+location.search.substring(1,location.search.length);=0A=
+    var args =3D querystring.split('&');=0A=
+    for (var i=3D0;i<args.length;i++) { =0A=
+	var pair =3D args[i].split('=3D');=0A=
+	temp =3D unescape(pair[0]).split('+');=0A=
+	temp0 =3D temp.join(' ');=0A=
+	temp =3D unescape(pair[1]).split('+');=0A=
+	temp1 =3D temp.join(' ');=0A=
+	this[temp0]=3Dtemp1;=0A=
+    }=0A=
+    this.get =3D function(strKey) {=0A=
+	var value=3Dthis[strKey];=0A=
+	return value;=0A=
+    }=0A=
+}=0A=
+=0A=
+lnb_write();=0A=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://scripts.lycos.com/catman/init.js
+
+var $a=3D"scr"+"ipts.lycos.com";var $b=3D"9999";function =
+getParam($c){var =
+$d=3D"";if(document.all){$d=3DString(document.URL);}else{$d=3D(document.l=
+ocation)?String(document.location.search):"";};var =
+$e=3D$d.split("?");if($e.length>1){var =
+$f=3D$e[1].split("&");if($f.length){for(var i=3D0;i<$f.length;i++){var =
+$g=3D$f[i].split("=3D");if($g.length>1){var $h=3D$g[0];var =
+$i=3D($g[1])?$g[1]:null;if($h=3D=3D$c)return $i;}}}};return null;};var =
+$j=3DgetParam("cm_role");if($j!=3Dnull){if($j!=3D"live"){$a=3D$j+"."+$a+"=
+:"+$b;}}else{if((this.cm_role)&&(this.cm_role!=3D"live")){$a=3Dthis.cm_ro=
+le+"."+$a+":"+$b;}};var $k=3D'\<SCR'+'IPT language=3D"JavaScript1.1" =
+SRC=3D"http://'+$a+'/catman/global/catman.js"><\/SCR'+'IPT>';var =
+$l=3D'\<SCR'+'IPT language=3D"JavaScript1.1" =
+SRC=3D"http://'+$a+'/catman/'+this.cm_host+'.cm'+this.cm_taxid+'.js"><\/S=
+CR'+'IPT>';document.write($l);document.write($k);=0A=
+=0A=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://lycos.realmedia.com/scripts/lycos_if.js
+
+var n=3Dnavigator;=0A=
+var =
+br0=3Dn.appName.indexOf("Microsoft")!=3D-1&&parseInt(n.appVersion)>=3D4&&=
+n.appVersion.indexOf("Macintosh")=3D=3D-1; =0A=
+var =
+br1=3Dn.appName.indexOf("Microsoft")!=3D-1&&parseInt(n.appVersion)<4; =0A=
+var =
+br2=3Dn.appName.indexOf("Netscape")!=3D-1&&parseInt(n.appVersion)>=3D4&&p=
+arseInt(n.appVersion)<5; =0A=
+var =
+br3=3Dn.appVersion.indexOf("Macintosh")!=3D-1&&parseInt(n.appVersion)<5; =0A=
+var DataColl=3D"http://ds.247realmedia.com/DS/LRC?"; =0A=
+=0A=
+var xe_protocol =3D window.location.protocol;=0A=
+if (xe_protocol =3D=3D "https:") {=0A=
+        var DataColl2=3D"https://lycos.realmedia.com/data/?";=0A=
+} else {=0A=
+        var =
+DataColl2=3D"http://"+if_Site_ID+"Collect.realmedia.com/data/?";=0A=
+}=0A=
+=0A=
+var if7=3D""; =0A=
+var if8=3D"; path=3D/"; =0A=
+var ifb=3Dnew Date();=0A=
+var CookieId=3D"IFsess"; =0A=
+var w=3Dwindow;=0A=
+var d=3Ddocument;=0A=
+=0A=
+if(typeof if_sid=3D=3D"undefined" || if_sid=3D=3Dnull )if_sid=3D"1";=0A=
+=0A=
+var agt=3Dn.userAgent.toLowerCase();=0A=
+var fullUrl=3Ddocument.location;=0A=
+var sPath =3D location.href;=0A=
+if(sPath.indexOf("?") !=3D -1) {=0A=
+	var sFile1 =3D sPath.lastIndexOf( "/" ) + 1;=0A=
+	var sFile2 =3D sPath.indexOf( "?" );=0A=
+	var fu=3DsPath.substring(0,sFile2);=0A=
+} else {=0A=
+	var fu=3Ddocument.location;=0A=
+}=0A=
+=0A=
+function tax_browser() { =0A=
+	var msg=3D""; =0A=
+	var plug=3D""; =0A=
+	var ln=3D""; =0A=
+	var ct=3D""; =0A=
+	var swidth=3D0; =0A=
+	var sheight=3D0; =0A=
+	var scolordepth=3D0; =0A=
+	var is_ja=3Dn.javaEnabled(); =0A=
+	var is_major=3DparseInt(n.appVersion); =0A=
+	var is_minor=3DparseFloat(n.appVersion); =0A=
+	var =
+is_nav=3D((agt.indexOf('mozilla')!=3D-1)&&(agt.indexOf('spoofer')=3D=3D-1=
+)&&(agt.indexOf('compatible')=3D=3D-1)&&(agt.indexOf('opera')=3D=3D-1)&&(=
+agt.indexOf('webtv')=3D=3D-1)&&(agt.indexOf('safari')=3D=3D-1)); =0A=
+=0A=
+	var is_ie=3D(agt.indexOf("msie")!=3D-1); =0A=
+	var is_nav2=3D(is_nav&&(is_major=3D=3D2)); =0A=
+	var is_nav3=3D(is_nav&&(is_major=3D=3D3)); =0A=
+	var is_nav4=3D(is_nav&&(is_major=3D=3D4)); =0A=
+	var is_nav5=3D(is_nav&&(is_major=3D=3D5)); =0A=
+	var is_nav6=3D(is_nav&&(agt.indexOf('netscape6')!=3D-1)); =0A=
+	var is_nav7=3D(is_nav&&(agt.indexOf('netscape/7')!=3D-1)); =0A=
+	var is_ie3=3D(is_ie&&(is_major<4)); =0A=
+	var is_ie4=3D(is_ie&&(agt.indexOf("msie =
+5.0")=3D=3D-1)&&(agt.indexOf("msie 5.5")=3D=3D-1)&&(agt.indexOf("msie =
+6")=3D=3D-1)&&(agt.indexOf("mac")=3D=3D-1)); =0A=
+	var is_ie5=3D(is_ie&&(agt.indexOf("msie 5.0")!=3D-1 || =
+(agt.indexOf("msie 5.1" !=3D -1) && agt.indexOf("mac") !=3D -1))); =0A=
+	var is_ie55=3D(is_ie&&(agt.indexOf("msie 5.5")!=3D-1) ); =0A=
+	var is_ie6=3D(is_ie&&(agt.indexOf("msie 6")!=3D-1) ); =0A=
+	var is_aol=3D(agt.indexOf("aol")!=3D-1); =0A=
+	var is_aol3=3D(agt.indexOf("aol 3.0") !=3D-1 );=0A=
+	var is_aol4=3D(agt.indexOf("aol 4.0") !=3D-1 );=0A=
+	var is_aol5=3D(agt.indexOf("aol 5.0") !=3D-1 );=0A=
+	var is_aol6=3D(agt.indexOf("aol 6.0") !=3D-1 );=0A=
+	var is_aol7=3D(agt.indexOf("aol 7.0") !=3D-1 );=0A=
+	var is_aol8=3D(agt.indexOf("aol 8.0") !=3D-1 );=0A=
+	var is_opera=3D(agt.indexOf("opera")!=3D-1);=0A=
+	var is_webtv=3D(agt.indexOf("webtv")!=3D-1); =0A=
+	var is_js; if (is_nav2||is_ie3)is_js=3D1.0; else =
+if(is_nav3||is_opera)is_js=3D1.1; else =
+if((is_nav4&&(is_minor<=3D4.05))||is_ie4)is_js=3D1.2; else =
+if((is_nav4&&(is_minor>4.05))||is_ie5||is_ie55||is_ie6)is_js=3D1.3; else =
+if(is_nav5)is_js=3D1.4; else is_js=3D0.0; =0A=
+	var is_win=3D( (agt.indexOf("win")!=3D-1)||(agt.indexOf("16bit")!=3D-1) =
+); =0A=
+	var is_win95=3D((agt.indexOf("win95")!=3D-1)||(agt.indexOf("windows =
+95")!=3D-1)); =0A=
+	var is_win98=3D((agt.indexOf("win98")!=3D-1)||(agt.indexOf("windows =
+98")!=3D-1)); =0A=
+	var is_winnt=3D((agt.indexOf("winnt")!=3D-1)||(agt.indexOf("windows =
+nt")!=3D-1)); =0A=
+	var is_win2k=3D(agt.indexOf("windows nt 5.0")!=3D-1); =0A=
+	var is_xp=3D(agt.indexOf("windows nt 5.1")!=3D-1); =0A=
+	var is_mac=3D(agt.indexOf("mac") !=3D-1 ); =0A=
+	var is_sun=3D(agt.indexOf("sunos")!=3D-1); =0A=
+	var is_hpux=3D(agt.indexOf("hp-ux")!=3D-1); =0A=
+	var is_linux=3D(agt.indexOf("linux")!=3D-1); =0A=
+	var is_unix=3D((agt.indexOf("x11")!=3D-1)||is_sun||is_hpux||is_linux); =
+is_macOSX=3D(is_mac && (agt.indexOf("os x") !=3D -1)); =
+is_macPPC=3D((agt.indexOf("powerpc") !=3D -1) || agt.indexOf("ppc") !=3D =
+-1 ); =0A=
+	var is_safari=3D(agt.indexOf("safari")!=3D-1);=0A=
+	var safari_ver=3D"";=0A=
+	if(is_safari) {=0A=
+		var if_s1=3Dagt.indexOf("safari");=0A=
+		var if_sLength=3Dagt.length;=0A=
+		safari_ver=3Dagt.substring(if_s1,if_sLength);=0A=
+	}=0A=
+=0A=
+	var BOS=3D"";=0A=
+	var BT=3D"";=0A=
+	var BV=3D""; =0A=
+=0A=
+	if(is_win95) { =0A=
+		BOS=3D"Windows95"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWindows95";=0A=
+	} else if(is_win98) { =0A=
+		BOS=3D"Windows98"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWindows98";=0A=
+	} else if(is_xp) { =0A=
+		BOS=3D"XP";  =0A=
+		msg+=3D"&if_nt_Browser_OS=3DXP"; =0A=
+	} else if(is_winnt&&is_win2k){=0A=
+		BOS=3D"Win2000"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWin2000"; =0A=
+	} else if(is_winnt&&!is_win2k){=0A=
+		BOS=3D"WinNT"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DWinNT"; =0A=
+	} else if(is_macOSX){=0A=
+		BOS=3D"Mac_OS_X"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DMac_OS_X"; =0A=
+	} else if(is_macPPC) {=0A=
+		BOS=3D"Mac_PPC_-_non_OS_X"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DMac_PPC_-_non_OS_X"; =0A=
+	} else if(is_mac) {=0A=
+		BOS=3D"Mac_-_non PPC"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DMac_-_non_PPC"; =0A=
+	} else if(is_sun){=0A=
+		BOS=3D"SunOS"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DSunOS"; =0A=
+	} else if(is_hpux){=0A=
+		BOS=3D"HPUX"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DHPUX"; =0A=
+	} else if(is_linux){=0A=
+		BOS=3D"Linux"; =0A=
+		msg+=3D"&if_nt_Browser_OS=3DLinux"; =0A=
+	} else {=0A=
+		BOS=3Dagt; =0A=
+	} =0A=
+=0A=
+	if(is_ie&&is_aol3){=0A=
+		BT=3D"AOL3"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL3"; =0A=
+	} else if(is_ie&&is_aol4){	=0A=
+		BT=3D"AOL4"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL4"; =0A=
+	} else if(is_ie&&is_aol5){=0A=
+		BT=3D"AOL5"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL5"; =0A=
+	} else if(is_ie&&is_aol6){=0A=
+		BT=3D"AOL6"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL6"; =0A=
+	} else if(is_ie&&is_aol7){=0A=
+		BT=3D"AOL7"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL7"; =0A=
+	} else if(is_ie&&is_aol8){=0A=
+		BT=3D"AOL8"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DAOL8"; =0A=
+	} else if(is_ie&&!is_aol){=0A=
+		BT=3D"MSIE"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DMSIE"; =0A=
+	} else if(is_nav){=0A=
+		BT=3D"Netscape"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DNetscape"; =0A=
+	} else if(is_webtv){=0A=
+		BT=3D"WebTV"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DWebTV"; =0A=
+	} else if(is_opera){=0A=
+		BT=3D"Opera"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DOpera"; =0A=
+	} else if(is_safari){=0A=
+		BT=3D"Safari"; =0A=
+		msg+=3D"&if_nt_Browser_Type=3DSafari"; =0A=
+	} else {=0A=
+		BT=3Dagt;=0A=
+	} =0A=
+=0A=
+	if(is_ie5){=0A=
+		BV=3D"5.0"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D5.0"; =0A=
+	} else if(is_ie55){=0A=
+		BV=3D"5.5"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D5.5"; =0A=
+	} else if(is_ie6){=0A=
+		BV=3D"6"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D6"; =0A=
+	} else if(is_nav6){=0A=
+		BV=3D"6"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D6"; =0A=
+	} else if(is_nav7){=0A=
+		BV=3D"7"; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D7"; =0A=
+	} else if(is_safari){=0A=
+		BV=3Dsafari_ver;=0A=
+		msg+=3D"&if_nt_Browser_Version=3D"+safari_ver;=0A=
+	} else {=0A=
+		BV=3Dis_minor; =0A=
+		msg+=3D"&if_nt_Browser_Version=3D"+is_minor;=0A=
+	} =0A=
+=0A=
+	msg+=3D"&if_nt_Browser_Combination=3D" + BOS + "_" + BT + "_" + BV; =0A=
+=0A=
+	if((typeof(w.screen)!=3D"undefined")&&(w.screen!=3Dnull)) { =0A=
+		swidth=3Dw.screen.width; =0A=
+		sheight=3Dw.screen.height; =0A=
+		scolordepth=3Dw.screen.colorDepth; =0A=
+	} =0A=
+	msg+=3D"&if_nt_Screen_Attr=3D"+swidth+"x"+sheight+"x"+scolordepth; =0A=
+	msg+=3D"&if_nt_JS_Ver=3D"+is_js; =0A=
+=0A=
+	if(is_mac) {=0A=
+		msg+=3D"&if_nt_PC_Type=3DMac"; =0A=
+	} else if(is_unix) {=0A=
+		msg+=3D"&if_nt_PC_Type=3DUnix"; =0A=
+	} else {=0A=
+		msg+=3D"&if_nt_PC_Type=3DWindows"; =0A=
+	}=0A=
+=0A=
+	if(is_ja) {=0A=
+		msg+=3D"&if_nt_Java_Enabled=3DY"; =0A=
+	} else {=0A=
+		msg+=3D"&if_nt_Java_Enabled=3DN"; =0A=
+	}=0A=
+	=0A=
+	if(is_nav) { =0A=
+		ln=3Dn.language; =0A=
+		ct=3Dn.plugins.length; =0A=
+		msg+=3D"&if_nt_Browser_Lang=3D"+ln+"&if_nt_PlugIn_Count=3D"+ct; =0A=
+	} else if(is_ie) { =0A=
+		ln=3Dn.systemLanguage; =0A=
+		msg+=3D"&if_nt_Browser_Lang=3D"+ln; =0A=
+	} =0A=
+=0A=
+	if(((is_ie5 || is_ie55 || is_ie6) && (!is_mac))) { =0A=
+		try {=0A=
+			if(d.body){ =0A=
+				d.body.addBehavior("#default#homePage");=0A=
+				var hp=3D(d.body.isHomePage(location.href))?"y":"n"; =0A=
+				if (hp =3D=3D "y")hp=3D"Yes"; =0A=
+				if (hp =3D=3D "n")hp=3D"No"; =0A=
+				d.body.addBehavior("#default#clientCaps");=0A=
+				var ct=3Dd.body.connectionType; =0A=
+				msg +=3D"&if_nt_Connection_Type=3D" + ct + "&if_nt_HomePage=3D" + =
+hp; =0A=
+			} =0A=
+		} catch (e) {}=0A=
+	}=0A=
+	ifr(msg); =0A=
+}=0A=
+function cookie_check(ifd,ife){ var s=3Dife.indexOf(ifd);	=
+if(s=3D=3D-1)return ""; s+=3Difd.length; var e=3Dife.indexOf(";",s); =
+if(e=3D=3D-1)e=3Dife.length; return ife.substring(s,e); } function =
+iff(refUrl){ var index=3DrefUrl.indexOf(":\/\/"); =
+if(index!=3D-1&&index+3<refUrl.length) { var bDomainIndex=3Dindex+3; var =
+eDomainIndex=3DrefUrl.length; var =
+colonIndex=3DrefUrl.indexOf(":",bDomainIndex); =
+if(colonIndex!=3D-1&&colonIndex<eDomainIndex)eDomainIndex=3DcolonIndex; =
+var slashIndex=3DrefUrl.indexOf("/",bDomainIndex); =
+if(slashIndex!=3D-1&&slashIndex<eDomainIndex)eDomainIndex=3DslashIndex; =
+return document.domain=3D=3DrefUrl.substring(bDomainIndex,eDomainIndex); =
+} return false; } function ifg(u1,u2){ var =
+ifh=3D(u1.indexOf("https")=3D=3D0); var =
+ifi=3D(u2.indexOf("https")=3D=3D0); if(ifh!=3Difi)return false; else =
+if(ifh&&ifi)return true; else return =
+(u1.indexOf("http")=3D=3D0)&&(u2.indexOf("http")=3D=3D0); } function =
+return_url(url) { return url.toString(); } function write_cookie() { var =
+d=3Dnew Date(); var m=3Dd.getTime(); =
+document.cookie=3D"IF_SessionCookie1=3D"+m.toString(); var =
+v=3Dcookie_check("IF_SessionCookie1=3D",document.cookie); =
+if(v!=3Dm.toString())return false; d.setTime(m+3600000); =
+document.cookie=3D"IF_SessionCookie2=3D"+m.toString()+";expires=3D"+d.toG=
+MTString()+";path=3D/"; =
+v=3Dcookie_check("IF_SessionCookie2=3D",document.cookie); =
+if(v!=3Dm.toString())return false; d.setTime(m-3600000); =
+document.cookie=3D"IF_SessionCookie1=3D"+m.toString()+";expires=3D"+d.toG=
+MTString()+";path=3D/"; =
+document.cookie=3D"IF_SessionCookie2=3D"+m.toString()+";expires=3D"+d.toG=
+MTString()+";path=3D/"; return true; } function tz(stamp) { var =
+msg=3D"if_nt_TimeZoneOffset=3D"+(stamp.getTimezoneOffset()*-1); return =
+msg; } =0A=
+function ifX(sys) { var msg=3D""; =
+if((d.referrer)&&(d.referrer!=3D"[unknown origin]")) { =
+if(d.referrer.indexOf("?") =3D=3D -1) {	=
+msg+=3D"&tax23_RefDocLoc=3D"+escape(return_url(d.referrer)); } else { =
+var rdl=3Dd.referrer; var rdl1=3Drdl.indexOf("?"); var =
+rdl2=3Drdl.substring(0,rdl1); =
+msg+=3D"&tax23_RefDocLoc=3D"+escape(return_url(d.referrer)); if ( =
+(rdl.indexOf("search.msn.com") !=3D -1 ) || (rdl.indexOf("altavista") =
+!=3D -1) || (rdl.indexOf("google") !=3D -1) ) { var =
+rdlLength=3Drdl.length; var qS =3D rdl.substring(rdl1+1,rdlLength); var =
+pairs =3D qS.split("&"); for (var i =3D 0; i < pairs.length; i++) { 	if =
+(pairs[i].indexOf("q=3D") =3D=3D 0 ) { var pL=3Dpairs[i].length; var =
+sekw =3D pairs[i].substring(2,pL); msg+=3D"&if_nt_SearchEngine_KW=3D" + =
+sekw.toUpperCase(); } } } else if (rdl.indexOf("search.yahoo.com") !=3D =
+-1) { var rdlLength=3Drdl.length; var qS =3D =
+rdl.substring(rdl1+1,rdlLength); var pairs =3D qS.split("&"); for (var i =
+=3D 0; i < pairs.length; i++) { if (pairs[i].indexOf("p=3D") =3D=3D 0 ) =
+{ var pL=3Dpairs[i].length; var sekw =3D pairs[i].substring(2,pL); =
+msg+=3D"&if_nt_SearchEngine_KW=3D" + sekw.toUpperCase(); } } } else if =
+((rdl.indexOf("aolsearch.aol.com") !=3D -1) || (rdl.indexOf("lycos") =
+!=3D -1) ) { var rdlLength=3Drdl.length; var qS =3D =
+rdl.substring(rdl1+1,rdlLength); var pairs =3D qS.split("&"); for (var i =
+=3D 0; i < pairs.length; i++) { if (pairs[i].indexOf("query=3D") =3D=3D =
+0 ) { var pL=3Dpairs[i].length; var sekw =3D pairs[i].substring(6,pL); =
+msg+=3D"&if_nt_SearchEngine_KW=3D" + sekw.toUpperCase(); } } } else if =
+(rdl.indexOf("looksmart") !=3D -1) { var rdlLength=3Drdl.length; var qS =
+=3D rdl.substring(rdl1+1,rdlLength); var pairs =3D qS.split("&"); for =
+(var i =3D 0; i < pairs.length; i++) { if (pairs[i].indexOf("key=3D") =
+=3D=3D 0 ) { var pL=3Dpairs[i].length; var sekw =3D =
+pairs[i].substring(4,pL); msg+=3D"&if_nt_SearchEngine_KW=3D" + =
+sekw.toUpperCase(); } } } else if (rdl.indexOf("netscape") !=3D -1) { =
+var rdlLength=3Drdl.length; var qS =3D rdl.substring(rdl1+1,rdlLength); =
+var pairs =3D qS.split("&"); for (var i =3D 0; i < pairs.length; i++) { =
+if (pairs[i].indexOf("search=3D") =3D=3D 0 ) { var pL=3Dpairs[i].length; =
+var sekw =3D pairs[i].substring(7,pL); =
+msg+=3D"&if_nt_SearchEngine_KW=3D" + sekw.toUpperCase(); } } } } } =
+ifr(msg); w.ifsq+=3D1; =
+w.d.cookie=3DCookieId+"=3D"+w.ifsq.toString()+if8+if7; } =0A=
+=0A=
+function ifr(s) { var now=3Dnew Date(); var then=3Difb.getTime(); var =
+delta=3Dnow.getTime()-ifb.getTime(); if(w.ifw=3D=3Dnull)w.ifw=3Dtz(ifb); =
+w.ifw+=3Ds; } =0A=
+=0A=
+function ckDS()=0A=
+{=0A=
+var ifcook =3D "ifr";=0A=
+if ((cookie_check(ifcook, document.cookie)).length > 0) return true;=0A=
+setDS(); return false;=0A=
+}       =0A=
+function setDS() {=0A=
+var dotCount=3D2;         =0A=
+var l=3Ddocument.location.toString();=0A=
+var domB=3Dl.indexOf('//');=0A=
+var domEIndex=3Dl.indexOf('/', domB+2);=0A=
+var domSIndex=3Dl.indexOf(':', domB+2);=0A=
+if ((domSIndex !=3D -1) && (domSIndex < domEIndex)){ var =
+durl=3Dl.substring(domB+2, domSIndex); }=0A=
+else { var durl=3Dl.substring(domB+2, domEIndex);} =0A=
+var domTIndex=3Ddurl.indexOf('.');=0A=
+if (domTIndex !=3D -1){ var domUIndex=3Ddurl.lastIndexOf('.'); var =
+tld=3Ddurl.substring(domUIndex+1, durl.length); if (tld !=3D 'com' && =
+tld !=3D 'edu' && tld !=3D 'org' && tld !=3D 'gov') {dotCount =3D 3;} =
+for (var c=3D0;c < durl.length; c++){ if (durl.charAt(c) =3D=3D '.') =
+dotCount--;} if (dotCount >0) { durl =3D '.'+durl;} else if( domTIndex < =
+domUIndex ) { durl=3Ddurl.substring(domTIndex, durl.length);} }=0A=
+var d=3Dnew Date();=0A=
+var m=3Dd.getTime();=0A=
+d.setTime(m+7776000000);=0A=
+document.cookie=3D"ifr=3Dy;expires=3D"+d.toGMTString()+";path=3D/;domain=3D=
+"+durl;=0A=
+}=0A=
+=0A=
+function ifx(tx)=0A=
+{=0A=
+	var w=3Dwindow;=0A=
+	var d=3Ddocument;=0A=
+=0A=
+        if (isNaN(document.axel)) {=0A=
+		document.axel =3D Math.random() + "";=0A=
+		xe_random =3D document.axel * 1000000000000000000;=0A=
+        }=0A=
+=0A=
+	if(d.ePingI=3D=3Dnull||typeof(d.ePingI)=3D=3D"undefined")d.ePingI=3Dnew =
+Image();=0A=
+	=0A=
+	if(typeof if_tfsm_page!=3D"undefined" && if_tfsm_page!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_page=3D" + if_tfsm_page;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_category!=3D"undefined" && if_tfsm_category!=3Dnull ) =
+{=0A=
+		mep1 +=3D "&if_tfsm_CAT=3D" + if_tfsm_category;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_CAT!=3D"undefined" && if_tfsm_CAT!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_CAT=3D" + if_tfsm_CAT;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_L2CAT!=3D"undefined" && if_tfsm_L2CAT!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_L2CAT=3D" + if_tfsm_L2CAT;=0A=
+	}=0A=
+	=0A=
+	if(typeof if_tfsm_L3CAT!=3D"undefined" && if_tfsm_L3CAT!=3Dnull ) {=0A=
+		mep1 +=3D "&if_tfsm_L3CAT=3D" + if_tfsm_L3CAT;=0A=
+	}=0A=
+=0A=
+	if(if_sid =3D=3D 1)mep1 +=3D "&if_tfsm_SubSite=3DLycos Homepage";=0A=
+	if(if_sid =3D=3D 2)mep1 +=3D "&if_tfsm_SubSite=3DLycos Tripod";=0A=
+	if(if_sid =3D=3D 3)mep1 +=3D "&if_tfsm_SubSite=3DLycos Angelfire";=0A=
+	if(if_sid =3D=3D 4)mep1 +=3D "&if_tfsm_SubSite=3DLycos Dating";=0A=
+	if(if_sid =3D=3D 5)mep1 +=3D "&if_tfsm_SubSite=3DLycos Wired";=0A=
+	if(if_sid =3D=3D 6)mep1 +=3D "&if_tfsm_SubSite=3DLycos Quote";=0A=
+	if(if_sid =3D=3D 7)mep1 +=3D "&if_tfsm_SubSite=3DLycos Raging Bull";=0A=
+	if(if_sid =3D=3D 8)mep1 +=3D "&if_tfsm_SubSite=3DLycos Gamesville";=0A=
+	if(if_sid =3D=3D 9)mep1 +=3D "&if_tfsm_SubSite=3DLycos Webmonkey";=0A=
+	if(if_sid =3D=3D 11)mep1 +=3D "&if_tfsm_SubSite=3DLycos Search";=0A=
+	if(if_sid =3D=3D 12)mep1 +=3D "&if_tfsm_SubSite=3DLycos Entertainment";=0A=
+	if(if_sid =3D=3D 13)mep1 +=3D "&if_tfsm_SubSite=3DLycos Whowhere";=0A=
+	if(if_sid =3D=3D 14)mep1 +=3D "&if_tfsm_SubSite=3DLycos E-Commerce";=0A=
+	if(if_sid =3D=3D 15)mep1 +=3D "&if_tfsm_SubSite=3DLycos Travel";=0A=
+	if(if_sid =3D=3D 16)mep1 +=3D "&if_tfsm_SubSite=3DLycos My Lycos";=0A=
+	if(if_sid =3D=3D 17)mep1 +=3D "&if_tfsm_SubSite=3DLycos Mail";=0A=
+	if(if_sid =3D=3D 18)mep1 +=3D "&if_tfsm_SubSite=3DLycos Music";=0A=
+	if(if_sid =3D=3D 20)mep1 +=3D "&if_tfsm_SubSite=3DLycos Animation =
+Express";=0A=
+	if(if_sid =3D=3D 28)mep1 +=3D "&if_tfsm_SubSite=3DLycos Maya";=0A=
+	if(if_sid =3D=3D 21)mep1 +=3D "&if_tfsm_SubSite=3DLycos Hotwired =
+Archive";=0A=
+	=0A=
+	mep1 +=3D"&if_tfsm_Site=3DLycos";=0A=
+=0A=
+	var xe_mep1 =3D "";=0A=
+=0A=
+	var xe_tmp=3Dmep1.replace(/amp;/g,"");=0A=
+	var xe_tmp2=3Dxe_tmp.replace(/science&technology/g,"science and =
+technology");=0A=
+	var xe_tmp3=3Dxe_tmp2.replace(/business&finance/g,"business and =
+finance");=0A=
+	var xe_tmp4=3Dxe_tmp3.replace(/arts&entertainment/g,"arts and =
+entertainment");=0A=
+=0A=
+	xe_mep1 =3D xe_tmp4;=0A=
+=0A=
+    if(xe_mep1.indexOf("if_xtransValue") !=3D -1 ) {=0A=
+        xe_mep1+=3D"&if_xtransAction=3Dcheckout";=0A=
+    }=0A=
+=0A=
+    if(xe_mep1.indexOf("if_xtransValue=3D0.00") !=3D -1 ) {=0A=
+        xe_mep1+=3D"&if_xtransItem=3DFREE";=0A=
+    }=0A=
+	=0A=
+		=0A=
+	var mep2=3Dxe_mep1.replace(/ /g,"%20");=0A=
+	tx+=3Dmep2 + =
+"&tax25_CookieAccept=3D"+CA+"&tax0_SiteID=3D"+if_sid+"&if_nt_URL=3D" + =
+escape(fu);=0A=
+=0A=
+	//if (ckDS()) DataColl =3D DataColl2;=0A=
+	DataColl =3D DataColl2;=0A=
+	if(if_sid !=3D 2) {=0A=
+		d.ePingI.src=3DDataColl+tx;=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+if(!br1) { var ifW=3D0; var CA=3D"N"; if(write_cookie())ifW=3D1; =
+if(write_cookie())CA=3D"Y"; var ifY=3D(top!=3Dwindow); var ifw=3Dnull; =
+var ifv=3Dnull; var ifu=3Dfalse; var ifR=3Dfalse; var =
+ifZ8=3Dcookie_check(CookieId+"=3D",document.cookie); if(typeof =
+w.uniq=3D=3D"undefined"||w.uniq=3D=3Dnull) { w.uniq=3Dtrue; ifu=3Dtrue; =
+} if(ifu) { w.CookieId=3Dthis.CookieId; w.ifid=3D""; w.ifsq=3D""; =
+if(w.document.cookie!=3Dnull) { =
+w.ifid=3Dcookie_check(CookieId+"=3D",w.document.cookie); =
+w.ifsq=3DparseInt(cookie_check(CookieId+"=3D",w.document.cookie)); } =
+if(w.ifid=3D=3D"") { w.ifsq=3D0; w.ifid=3D"x"+ifb.getTime().toString(); =
+w.ifid=3Dw.ifid+Math.random().toString().substring(2,2+20-w.ifid.length);=
+ w.document.cookie=3DCookieId+"=3D"+w.ifid+if8+if7; =
+w.document.cookie=3DCookieId+"=3D0"+if8+if7; tax_browser(); } } =
+ifX(true); var msg=3D""; if(ifu&&!(ifv=3D=3Dnull))msg+=3Difv; =
+if(!(ifw=3D=3Dnull)) { msg+=3Difw; ifx(msg); ifw=3Dnull; ifv=3Dnull; } }=0A=
+
+------=_NextPart_000_016F_01C63F12.3CFDE030--

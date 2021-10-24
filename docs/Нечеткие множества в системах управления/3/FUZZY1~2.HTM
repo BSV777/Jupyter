@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<A HREF="fuzzy9.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy11.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+<CENTER><H3>4. НЕЧЕТКИЕ ВЫСКАЗЫВАНИЯ И НЕЧЕТКИЕ МОДЕЛИ СИСТЕМ</H3></CENTER>
+
+Нечеткими высказываниями будем называть высказывания следующего вида: 
+
+<OL>
+<LI>Высказывание &lt;<FONT FACE="Symbol">&#98;</FONT> есть <FONT FACE="Symbol">&#98;</FONT>'&gt;, где <FONT FACE="Symbol">&#98;</FONT> - наименование лингвистической переменной, <FONT FACE="Symbol">&#98;</FONT>' - ее значение, которому соответствует нечеткое множество на универсальном множестве Х.<BR>
+<U>Например </U> высказывание &lt;<I>давление большое</I>&gt; предполагает, что лингвистической переменной <I>&quot;давление&quot;</I> придается значение <I>&quot;большое&quot;</I>, для которого на универсальном множестве Х переменной <I>&quot;давление&quot;</I> определено соответствующее данному значению &quot;<I>большое</I>&quot; нечеткое множество.
+
+<LI>Высказывание &lt;<FONT FACE="Symbol">&#98;</FONT> есть m<FONT FACE="Symbol">&#98;</FONT>'&gt;, где m - модификатор, которому соответствуют слова &quot;<I>ОЧЕНЬ</I>&quot;, &quot;<I>БОЛЕЕ ИЛИ МЕНЕЕ</I>&quot;, &quot;<I>МНОГО БОЛЬШЕ</I>&quot; и др. <BR>
+<U>Например: </U>&lt;<I>давление очень большое</I>&gt;, &lt;<I>скорость много больше средней</I>&gt; и др. <BR>
+<LI>Составные высказывания, образованные из высказываний видов 1. и 2. и союзов &quot;<I>И</I>&quot;, &quot;<I>ИЛИ</I>&quot;, &quot;<I>ЕСЛИ</I>.., <I>ТО...&quot;, &quot;ЕСЛИ.., ТО.., ИНАЧЕ</I>&quot;. 
+</OL>
+
+<U>Высказывания на множестве значений фиксированной лингвистической переменной</U><BR>
+То, что значения фиксированной лингвистической переменной соответствуют нечетким множествам одного и того же универсального множества Х, позволяет отождествлять модификаторы &quot;<I>очень</I>&quot; или &quot;<I>не</I>&quot; с операциями "CON" и &quot;<I>дополнение</I>&quot;, а союзы &quot;<I>И</I>&quot;, &quot;<I>ИЛИ</I>&quot; с операциями &quot;<I>пересечение</I>&quot; и &quot;<I>объединение</I>&quot; над нечеткими множествами . <BR>
+
+Для иллюстрации понятия лингвистической переменной мы в качестве примера рассматривали лингвистическую переменную &quot;<I>толщина изделия</I>&quot; с базовым терм-множеством Т = {&quot;<I>малая</I>&quot;, &quot;<I>средняя</I>&quot;, &quot;<I>большая</I>&quot;}. При этом на Х = [10, 80] мы определили нечеткие множества А<SUB>1</SUB>, А<SUB>2</SUB>, А<SUB>3</SUB>, соответствующие базовым значениям: &quot;<I>малая</I>&quot;, &quot;<I>средняя</I>&quot;, &quot;<I>большая</I>&quot;. <BR>
+
+В этом случае высказыванию &lt;<I>толщина изделия очень малая</I>&gt; соответствует нечеткое множество CONA = A<SUP>2</SUP>; высказыванию &lt;<I>толщина изделия не большая или средняя</I>&gt; - нечеткое множество А<SUB>2</SUB><FONT FACE="Symbol">&#200;</FONT><IMG SRC="image231.gif" WIDTH=21 HEIGHT=20 ALIGN="ABSMIDDLE"> высказыванию &lt;<I>толщина изделия не малая и не большая</I>&gt; А<SUB>1</SUB><FONT FACE="Symbol">&#199;</FONT><IMG SRC="image231.gif" WIDTH=21 HEIGHT=20 ALIGN="ABSMIDDLE">. <BR>
+
+Высказывания &lt;<I>толщина изделия много больше средней</I>&gt; или &lt;<I>толщина изделия близка к средней</I>&gt; требуют использования нечетких отношений R (&quot;<I>много больше,чем</I>&quot;) и R ("близко к"), заданных на Х<FONT FACE="Symbol">&#180;</FONT>Х. Тогда этим высказываниям будут соответствовать нечеткие множества A<FONT FACE="Symbol">&#183;</FONT>R<SUB>1</SUB> и A<FONT FACE="Symbol">&#183;</FONT>R<SUB>2</SUB>, индуцированные нечеткими отношениями R<SUB>1</SUB> и R<SUB>2</SUB>. <BR>
+<P>
+<U>Случай двух и более лингвистических переменных</U>
+
+<P>Пусть &lt;<FONT FACE="Symbol">&#97;</FONT>, T<SUB><FONT FACE="Symbol">&#97;</FONT></SUB>, X, G<SUB><FONT FACE="Symbol">&#97;</FONT></SUB>, M<SUB><FONT FACE="Symbol">&#97;</FONT></SUB>&gt; и &lt;<FONT FACE="Symbol">&#98;</FONT>, T<SUB><FONT FACE="Symbol">&#98;</FONT></SUB>, Y, G<SUB><FONT FACE="Symbol">&#98;</FONT></SUB>, M<SUB><FONT FACE="Symbol">&#98;</FONT></SUB>&gt; - лингвистические переменные, и высказываниям &lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>'&gt;, &lt;<FONT FACE="Symbol">&#98;</FONT> есть <FONT FACE="Symbol">&#98;</FONT>
+'&gt; соответствуют нечеткие множества А и В заданные на X и Y. <BR>
+
+Составные нечеткие высказывания вида 3, связывающие значения лингвистических переменных <FONT FACE="Symbol">&#97;</FONT> и <FONT FACE="Symbol">&#98;</FONT>, можно привести к высказываниям вида 1, введя лингвистическую переменную (<FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>), значениям которой будут соответствовать нечеткие множества на X<FONT FACE="Symbol">&#180;</FONT>Y.<BR>
+ 
+Напомним, что нечеткие множества А и В, заданные на X и Y, порождают на X<FONT FACE="Symbol">&#180;</FONT>Y нечеткие множества <IMG SRC="image232.gif" WIDTH=13 HEIGHT=16 ALIGN="ABSMIDDLE"> и <IMG SRC="image233.gif" WIDTH=11 HEIGHT=19 ALIGN="ABSMIDDLE">, называемые цилиндрическими продолжениями, с функциями принадлежности: <BR>
+<CENTER>
+<IMG SRC="image234.gif" WIDTH=22 HEIGHT=15 ALIGN="ABSMIDDLE">(<I>x,y</I>) = <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) при любом <I>y</I>, <BR>
+
+<IMG SRC="image236.gif" WIDTH=25 HEIGHT=27 ALIGN="ABSMIDDLE">(<I>x,y</I>) = <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>) при любом <I>x</I>,</CENTER> <BR>
+где (<I>x,y</I>) X<FONT FACE="Symbol">&#180;</FONT>Y.<BR>
+Нечеткие множества, соответствующие составным высказываниям <BR>
+<CENTER>
+&lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>' и <FONT FACE="Symbol">&#98;</FONT> есть <FONT FACE="Symbol">&#98;</FONT>'&gt; и <BR>
+&lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>' или 
+<FONT FACE="Symbol">&#98;</FONT> есть <FONT FACE="Symbol">&#98;</FONT>'&gt;, </CENTER><BR>
+определяются по следующим правилам (преобразования к виду 1), справедливым при условии невзаимодействия переменных, т.е. множества X и Y таковы, что их элементы не связаны какой-либо функциональной зависимостью. 
+
+<P>
+<CENTER><H4>Правила преобразований нечетких высказываний</H4></CENTER>
+
+<U>Правило преобразования конъюнктивной формы</U>
+<P>Справедливо выражение: <BR>
+&lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>' и <FONT FACE="Symbol">&#98;</FONT>
+ есть <FONT FACE="Symbol">&#98;</FONT>'&gt;<FONT FACE="Symbol">&#222;</FONT>&lt;(<FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>) есть (<FONT FACE="Symbol">&#97;</FONT>'<FONT FACE="Symbol">&#199;</FONT><FONT FACE="Symbol">&#98;</FONT>')&gt;. <BR>
+
+Здесь <FONT FACE="Symbol">&#222;</FONT> - знак подстановки, <FONT FACE="Symbol">&#97;</FONT>'<FONT FACE="Symbol">&#199;</FONT><FONT FACE="Symbol">&#98;</FONT>' - значение лингвистической переменной (<FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>), соответствующее исходному высказыванию &lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>' и <FONT FACE="Symbol">&#98;</FONT>
+ есть <FONT FACE="Symbol">&#98;</FONT>'&gt;, которому на X<FONT FACE="Symbol">&#180;</FONT>Y ставится в соответствие нечеткое множество <IMG SRC="image232.gif" WIDTH=13 HEIGHT=16 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#199;</FONT>
+<IMG SRC="image233.gif" WIDTH=11 HEIGHT=19 ALIGN="ABSMIDDLE"> c функцией принадлежности <BR>
+<CENTER>
+<IMG SRC="image238.gif" WIDTH=46 HEIGHT=27 ALIGN="ABSMIDDLE">(<I>x,y</I>) = <IMG SRC="image234.gif" WIDTH=22 HEIGHT=15 ALIGN="ABSMIDDLE">(<I>x,y</I>)<FONT FACE="Symbol">&#76;</FONT><IMG SRC="image236.gif" WIDTH=25 HEIGHT=27 ALIGN="ABSMIDDLE">(<I>x,y</I>) = <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>).</CENTER> 
+<P>
+<U>Правило преобразования дизъюнктивной формы </U>
+<P>Справедливо выражение: <BR>&lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>'
+ или <FONT FACE="Symbol">&#98;</FONT> есть <FONT FACE="Symbol">&#98;</FONT>'&gt;<FONT FACE="Symbol">&#222;</FONT>&lt;(<FONT FACE="Symbol">&#97;</FONT>,<FONT FACE="Symbol">&#98;</FONT>) есть (<FONT FACE="Symbol">&#97;</FONT>'<FONT FACE="Symbol">&#200;</FONT><FONT FACE="Symbol">&#98;</FONT>')&gt;, где значению (<FONT FACE="Symbol">&#97;</FONT>'<FONT FACE="Symbol">&#200;</FONT><FONT FACE="Symbol">&#98;</FONT>') лингвистической переменной (<FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>) соответствует нечеткое множество <IMG SRC="image232.gif" WIDTH=13 HEIGHT=16 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#200;</FONT><IMG SRC="image233.gif" WIDTH=11 HEIGHT=19 ALIGN="ABSMIDDLE">, с функцией принадлежности <BR>
+<CENTER>
+<IMG SRC="image239.gif" WIDTH=48 HEIGHT=27 ALIGN="ABSMIDDLE">(<I>x,y</I>) = <IMG SRC="image234.gif" WIDTH=22 HEIGHT=15 ALIGN="ABSMIDDLE">(<I>x,y</I>)V<IMG SRC="image236.gif" WIDTH=25 HEIGHT=27 ALIGN="ABSMIDDLE">(<I>x,y</I>) = <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)V<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>).</CENTER> 
+<P>
+<I><U>Замечание 1.</U></I> Правила справедливы также для переменных вида &lt;<FONT FACE="Symbol">&#97;</FONT>, T<SUB>1</SUB>, X, G<SUB>1</SUB>,M<SUB>1</SUB>&gt; и &lt;<FONT FACE="Symbol">&#97;</FONT>, T<SUB>2</SUB>, Y, G<SUB>2</SUB>, M<SUB>2</SUB>&gt;, когда в форме значений лингвистических переменных формализованы невзаимодействующие характеристики одного и того же объекта. Например, для построения нечеткого множества высказывания &lt;<I>ночь теплая и очень темная</I>&gt; нужно использовать правило конъюнктивной формы, а для высказывания <I>&lt;ночь теплая или очень темная</I>&gt; - правило дизъюнктивной формы. 
+<P>
+<I><U>Замечание 2.</U></I> Если задана совокупность лингвистических переменных {&lt;<FONT FACE="Symbol">&#97;</FONT><I><SUB>i</I></SUB>, T<I><SUB>i</I></SUB>, X<I><SUB>i</I></SUB>, G<I><SUB>i</I></SUB>, M<I><SUB>i</I></SUB>&gt;}, <I>i</I> = 1, 2, .., <I>n</I>, то любое составное высказывание, полученное из высказываний &lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>'&gt; с использованием модификаторов &quot;<I>очень</I>&quot;, &quot;<I>не</I>&quot;, &quot;<I>более или менее</I>&quot; и др. и связок &quot;<I>и</I>&quot;, &quot;<I>или</I>&quot;, можно привести к виду &lt;<FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>'&gt;, где <FONT FACE="Symbol">&#97;</FONT> - составная лингвистическая переменная (<FONT FACE="Symbol">&#97;</FONT><SUB>1</SUB>,<FONT FACE="Symbol">&#97;</FONT><SUB>2</SUB>,..,<FONT FACE="Symbol">&#97;</FONT><I><SUB>n</I></SUB> ), <FONT FACE="Symbol">&#97;</FONT>' - ее значение, определяемое (как и функция принадлежности) в соответствии с вышеуказанными правилами.
+<P>
+<U>Правило преобразования высказываний импликативной формы </U>
+
+<P>Справедливо выражение: <BR>
+&lt;если <FONT FACE="Symbol">&#97;</FONT> есть <FONT FACE="Symbol">&#97;</FONT>', то <FONT FACE="Symbol">&#98;</FONT> есть <FONT FACE="Symbol">&#98;</FONT>'&gt;<FONT FACE="Symbol">&#222;</FONT>
+&lt;(<FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>) есть (<FONT FACE="Symbol">&#97;</FONT>'<FONT FACE="Symbol">&#174;</FONT><FONT FACE="Symbol">&#98;</FONT>')&gt;, где значению (<FONT FACE="Symbol">&#97;</FONT>'<FONT FACE="Symbol">&#174;</FONT><FONT FACE="Symbol">&#98;</FONT>') лингвистической переменной (<FONT FACE="Symbol">&#97;</FONT>, <FONT FACE="Symbol">&#98;</FONT>) соответствует нечеткое отношение XRY на X<FONT FACE="Symbol">&#180;</FONT>Y. <BR>
+Функция принадлежности <FONT FACE="Symbol">&#109;</FONT><SUB>R</SUB>(<I>x,y</I>) зависит от выбранного способа задания нечеткой импликации.
+<P>
+<CENTER><U>Способы определения нечеткой импликации</U></CENTER>
+<P>Будем считать, что заданы универсальные множества X и Y, содержащие конечное число элементов. Под способом определения нечеткой импликации &quot;<I>если</I> А, <I>то</I> В" (где А и В нечеткие множества на X и Y соответственно) будем понимать способ задания нечеткого отношения R на X<FONT FACE="Symbol">&#180;</FONT>Y, соответствующего данному высказыванию. <BR>
+С целью обоснованного выбора определения нечеткой импликации, японскими математиками Мидзумото, Танака и Фуками было проведено исследование всех известных по литературе определений (плюс предложенные авторами). Рассмотренные определения задавали следующие нечеткие отношения для высказывания "если А, то В": 
+
+<OL>
+
+<LI>R<SUB>m</SUB> = (A<FONT FACE="Symbol">&#180;</FONT>B)<FONT FACE="Symbol">&#200;</FONT>(<IMG SRC="image240.gif" WIDTH=19 HEIGHT=22 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#180;</FONT>Y)<BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>m</SUB></SUB>(<I>x,y</I>) = 
+(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT> 
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>)) V (1 - 
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)); 
+
+<LI>R<SUB>a</SUB> = (<IMG SRC="image240.gif" WIDTH=19 HEIGHT=22 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#180;</FONT>Y)<FONT FACE="Symbol">&#197;</FONT>(X<FONT FACE="Symbol">&#180;</FONT>B) <BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>a</SUB></SUB>(<I>x,y</I>) = 1 <FONT FACE="Symbol">&#76;</FONT>
+ (1-<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) + 
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>));
+
+<LI>R<SUB>c</SUB> = A<FONT FACE="Symbol">&#180;</FONT>B<BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>c</SUB></SUB>(<I>x,y</I>) = 
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#76;</FONT>
+ <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>y</I>); 
+
+<LI>R<SUB>s</SUB> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image244.gif" WIDTH=21 HEIGHT=12 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B<BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>s</SUB></SUB>(<I>x,y</I>) = <IMG SRC="image246.gif" WIDTH=182 HEIGHT=50 ALIGN="ABSMIDDLE">;
+
+<LI>R<SUB>g</SUB> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image247.gif" WIDTH=21 HEIGHT=15 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B<BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>g</SUB></SUB>(<I>x,y</I>) = <IMG SRC="image249.gif" WIDTH=201 HEIGHT=50 ALIGN="ABSMIDDLE">;
+
+<LI>R<SUB>sg</SUB> = ( A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image250.gif" WIDTH=21 HEIGHT=12 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B ) <FONT FACE="Symbol">&#199;</FONT> ( <IMG SRC="image251.gif" WIDTH=121 HEIGHT=29 ALIGN="ABSMIDDLE">)<BR>
+<IMG SRC="image252.gif" WIDTH=415 HEIGHT=26 ALIGN="ABSMIDDLE">;
+
+<LI>R<SUB>gg</SUB> = ( A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image253.gif" WIDTH=22 HEIGHT=14>X<FONT FACE="Symbol">&#180;</FONT>B) <FONT FACE="Symbol">&#199;</FONT> (<IMG SRC="image251.gif" WIDTH=121 HEIGHT=29 ALIGN="ABSMIDDLE">) <BR>
+<IMG SRC="image254.gif" WIDTH=418 HEIGHT=26>;
+
+<LI>R<SUB>gs</SUB> = ( A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image253.gif" WIDTH=22 HEIGHT=14 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B) <FONT FACE="Symbol">&#199;</FONT> (<IMG SRC="image255.gif" WIDTH=118 HEIGHT=26 ALIGN="ABSMIDDLE">) <BR>
+<IMG SRC="image256.gif" WIDTH=414 HEIGHT=26>;
+
+<LI>R<SUB>ss</SUB> = ( A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image257.gif" WIDTH=37 HEIGHT=18>X<FONT FACE="Symbol">&#180;</FONT>B) <FONT FACE="Symbol">&#199;</FONT> (<IMG SRC="image255.gif" WIDTH=118 HEIGHT=26 ALIGN="ABSMIDDLE">) <BR>
+<IMG SRC="image258.gif" WIDTH=410 HEIGHT=25>;
+
+<LI>R<SUB>b</SUB> = (<IMG SRC="image240.gif" WIDTH=19 HEIGHT=22 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#180;</FONT>Y)<FONT FACE="Symbol">&#200;</FONT>(X<FONT FACE="Symbol">&#180;</FONT>B)<BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>b</SUB></SUB>(x,y) = (1-<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)) <FONT FACE="Symbol">&#218;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(y);
+
+<LI>R<FONT FACE="Symbol">&#224;</FONT> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image260.gif" WIDTH=18 HEIGHT=11 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B<BR>
+<IMG SRC="image261.gif" WIDTH=301 HEIGHT=72 ALIGN="ABSMIDDLE">;
+
+<LI>R<FONT FACE="Symbol">&#183;</FONT> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image262.gif" WIDTH=16 HEIGHT=9 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B<BR>
+<IMG SRC="image263.gif" WIDTH=373 HEIGHT=72>
+
+<LI>R<SUB>*</SUB> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image264.gif" WIDTH=17 HEIGHT=12 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B <BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>*</SUB></SUB>(x,y) = 1 - <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)+ <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)<FONT FACE="Symbol">&#215;</FONT>
+ <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(y);
+
+<LI>R<SUB>#</SUB> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image266.gif" WIDTH=19 HEIGHT=13 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B <BR>
+<FONT FACE="Symbol">&#109;</FONT><SUB>R<SUB>#</SUB></SUB>(x,y)=( <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)<FONT FACE="Symbol">&#217;</FONT> <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(y))<FONT FACE="Symbol">&#218;</FONT>
+((1 - <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)) <FONT FACE="Symbol">&#217;</FONT>(1 - <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(y)) <FONT FACE="Symbol">&#218;</FONT>(<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(y) <FONT FACE="Symbol">&#217;</FONT>(1 - <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> (x));
+
+<LI>R<FONT FACE="Symbol">&#209;</FONT> = A<FONT FACE="Symbol">&#180;</FONT>Y<IMG SRC="image268.gif" WIDTH=22 HEIGHT=13 ALIGN="ABSMIDDLE">X<FONT FACE="Symbol">&#180;</FONT>B <BR>
+<IMG SRC="image269.gif" WIDTH=344 HEIGHT=49 ALIGN="ABSMIDDLE">
+
+</OL>
+
+<P>Правилом вывода являлось композиционное правило вывода с использованием (max-min)-композиции. <BR>
+В качестве значений на входе системы рассматривались: <BR>
+A' = A; <BR>
+A' = "очень А"= А<SUP>2</SUP> , <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB><SUP>0,5</SUP>(x) = <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)<SUP>2</SUP> ; <BR>
+A' = "более или менее А" = А<SUP>0,5</SUP> <FONT FACE="Symbol">&#109;</FONT><SUB>A<SUP>0,5</SUP></SUB>(x)= <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)<SUP>0,5</SUP>; <BR>
+A' = <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(x)<SUP>0,5</SUP>, <IMG SRC="image273.gif" WIDTH=18 HEIGHT=13 ALIGN="ABSMIDDLE">(x) = 1 - <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> (x). <BR>
+Приведем таблицу итогов исследования. В ней символ "0" означает выполнение соответствующей схемы вход-выход, символ "x" - невыполнение. Следствие "неизвестно" (Н) соответствует утверждению: "если x=A, то нельзя получить никакой информации об y". <BR>
+В данной таблице первая графа -"Посылка", вторая -"Следствие". <BR>
+
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=4>
+<TR>
+<TD>1</TD><TD>2</TD><TD>R<SUB>m</SUB></TD><TD>R<SUB>a</SUB></TD><TD>R<SUB>c</SUB></TD><TD>R<SUB>s</SUB></TD>
+<TD>R<SUB>g</SUB></TD><TD>R<SUB>sg</SUB></TD><TD>R<SUB>gg</SUB></TD><TD>R<SUB>gs</SUB></TD> <TD>R<SUB>ss</SUB></TD><TD>R<SUB>b</SUB></TD><TD>R<FONT FACE="Symbol">&#224;</FONT></TD> 
+<TD>R<FONT FACE="Symbol">&#183;</FONT></TD><TD>R<SUB>*</SUB></TD><TD>R<SUB>#</SUB></TD>
+<TD>R<FONT FACE="Symbol">&#209;</FONT></TD>
+</TR>
+<TR>
+<TD>A</TD><TD>B</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD>
+<TD>0</TD><TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+</TR>
+<TR>
+<TD>A<SUP>2</SUP></TD><TD>B<SUP>2</SUP></TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>x</TD><TD>0</TD>
+<TD>x</TD><TD>x</TD><TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+</TR>
+<TR>
+<TD>A<SUP>2</SUP></TD><TD>B</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>x</TD><TD>0</TD><TD>x</TD>
+<TD>0</TD><TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+</TR>
+<TR>
+<TD>A<SUP>0,5</SUP></TD><TD>B<SUP>0,5</SUP></TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>0</TD>
+<TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+</TR>
+<TR>
+<TD>A<SUP>0,5</SUP></TD><TD>B</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+<TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+</TR>
+<TR>
+<TD><IMG SRC="image274.gif" WIDTH=10 HEIGHT=13></TD><TD>Н</TD><TD>0</TD><TD>0</TD><TD>x</TD><TD>0</TD>
+<TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>x</TD><TD>x</TD>
+</TR>
+<TR>
+<TD>A</TD><TD>B</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>0</TD><TD>0</TD><TD>0</TD>
+<TD>0</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD><TD>x</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>Кроме ответа о выполнении соответствующей схемы (0 или х),авторами исследованы явные выражения для функций принадлежности следствий по каждому из вариантов определения нечеткой импликации, на основе чего ими был сформулирован вывод:
+<DIR><DIR>
+- R<SUB>m</SUB> и R<SUB>a</SUB> не могут быть использованы; <BR>
+- R<SUB>c</SUB> может использоваться частично; 
+- R<SUB>s</SUB> , R<SUB>g</SUB> , R<SUB>sg</SUB> , R<SUB>gg</SUB> , R<SUB>gs</SUB> , R<SUB>ss</SUB> рекомендованы к использованию; <BR>
+- R<SUB>b</SUB> , R<FONT FACE="Symbol">&#224;</FONT>, R<FONT FACE="Symbol">&#183;</FONT>, R<SUB>*</SUB> , R<SUB>#</SUB> , R<FONT FACE="Symbol">&#209;</FONT> не рекомендованы к использованию.
+</DIR></DIR> 
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<TABLE BORDER=0><TR>
+<TD>
+<A HREF="fuzzy9.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A></TD>
+<TD>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A></TD>
+<TD>
+<A HREF="fuzzy11.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD></TR></TABLE>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+
+</BODY>
+</HTML>

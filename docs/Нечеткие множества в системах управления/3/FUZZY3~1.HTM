@@ -1,0 +1,218 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy2.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy4.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+<CENTER><H4>Алгебраические операции над нечеткими множествами</H4></CENTER>
+
+<U>Алгебраическое произведение</U> <B>A</B> и <B>B</B> обозначается <B>A<FONT FACE="Symbol">&#215;</FONT>B</B>
+ и определяется так:<BR>
+<B><FONT FACE="Symbol">&#34;</FONT>x<FONT FACE="Symbol">&#206;</FONT>E
+<FONT FACE="Symbol">&#109;</FONT><SUB>A<FONT FACE="Symbol">&#215;</FONT>B</SUB> (<I>x</I>) =
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>).
+</B><P>
+<U>Алгебраическая сумма</U> этих множеств обозначается 
+<IMG SRC="image146.gif" WIDTH=43 HEIGHT=18 ALIGN="ABSMIDDLE"> и определяется так:<BR>
+<B><FONT FACE="Symbol">&#34;</FONT><I>x<FONT FACE="Symbol">&#206;</FONT>E</I></B>
+<IMG SRC="image147.gif" WIDTH=38 HEIGHT=22 ALIGN="ABSMIDDLE"><B>= <FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB>(<I>x</I>) + <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>)<FONT FACE="Symbol">&#45;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>).</B><BR>
+
+Для операций {<FONT FACE="Symbol">&#215;</FONT>, <IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">} выполняются свойства:
+<UL>
+<LI><IMG SRC="image149.gif" WIDTH=108 HEIGHT=49 ALIGN="ABSMIDDLE"> - коммутативность;</LI></P>
+<LI><IMG SRC="image150.gif" WIDTH=184 HEIGHT=49 ALIGN="ABSMIDDLE">- ассоциативность;
+<LI><B>A<FONT FACE="Symbol">&#215;</FONT><FONT FACE="Symbol">&#198;</FONT> =
+<FONT FACE="Symbol">&#198;</FONT></B>, 
+<B>A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#198;</FONT> = A</B>,
+ <B>A<FONT FACE="Symbol">&#215;</FONT>E = A, A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">E = E</B>
+
+<LI><IMG SRC="image151.gif" WIDTH=102 HEIGHT=53 ALIGN="ABSMIDDLE"> - теоремы де Моргана.
+</UL>
+
+Не выполняются:
+<UL>
+<LI><IMG SRC="image152.gif" WIDTH=85 HEIGHT=49 ALIGN="ABSMIDDLE">- идемпотентность;
+<LI><IMG SRC="image153.gif" WIDTH=213 HEIGHT=50 ALIGN="ABSMIDDLE"> - дистрибутивность;
+<LI>а также <B>A<FONT FACE="Symbol">&#215;</FONT><IMG SRC="image131.gif" WIDTH=17 HEIGHT=20 ALIGN="ABSMIDDLE"> =
+<FONT FACE="Symbol">&#198;</FONT>, A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">
+<IMG SRC="image154.gif" WIDTH=17 HEIGHT=20> = E</B>. 
+</UL>
+
+<U>Замечание</U>. Доказательства приводимых свойств операций над нечеткими множествами мы оставляем читателю. 
+<BR>
+Для примера докажем свойство: <IMG SRC="image154.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">. Обозначим 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)</B> через <B><I>a</I></B>, 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>)</B> через <B><I>b</I></B>. Тогда в левой части для каждого элемента <B><I>х</I></B> имеем: 1-<B><I>ab</I></B>, а в правой: 
+(1-<B><I>a</I></B>)+(1-<B><I>b</I></B>)-(1-<B><I>a</I></B>)(1-<B><I>b</I></B>) = 1-<B><I>a</I></B>+1-<B><I>b</I>-</B>1+<B><I>a</I></B>+<B><I>b-ab</I></B> = 
+1-<B><I>ab</I></B>. <FONT FACE="Courier New">&#127;</FONT><BR>
+
+Докажем, что свойство дистрибутивности не выполняется, т.е. 
+<B>A<FONT FACE="Symbol">&#215;</FONT>(B<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">C) <FONT FACE="Symbol">&#185;</FONT> 
+(A<FONT FACE="Symbol">&#215;</FONT>B)<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">(A<FONT FACE="Symbol">&#215;</FONT>C)</B>. Для левой части имеем: 
+<B><I>a</I></B>(<B><I>b</I></B>+<B><I>c-bc</I></B>) = <B><I>ab</I></B>+<B><I>ac-abc</I></B>; 
+для правой: 
+<B><I>ab</I></B>+<B><I>ac</I></B>-(<B><I>ab</I></B>)(<B><I>ac</I></B>) = <B><I>ab</I></B>+<B><I>ac</I></B>+<B><I>a</I><SUP>2</SUP><I>bc</I></B>. Это означает, что дистрибутивность не выполняется при 
+<B><I>a<FONT FACE="Symbol">&#185;</FONT>a</I><SUP>2</B></SUP>. <FONT FACE="Courier New">&#127;</FONT>
+<BR>
+<U>Замечание.</U> При совместном использовании операций {<FONT FACE="Symbol">&#200;</FONT>,
+<FONT FACE="Symbol">&#199;</FONT>,<FONT FACE="Symbol">&#43;</FONT>,<FONT FACE="Symbol">&#215;</FONT>}
+выполняются свойства:
+
+<UL>
+<LI><B>А<FONT FACE="Symbol">&#215;</FONT>(B<FONT FACE="Symbol">&#200;</FONT>C) = 
+(A<FONT FACE="Symbol">&#215;</FONT>B)<FONT FACE="Symbol">&#200;</FONT>(A <FONT FACE="Symbol">&#215;</FONT>
+C);</B>
+<LI><B>А<FONT FACE="Symbol">&#215;</FONT> (B<FONT FACE="Symbol">&#199;</FONT>C) =
+(A<FONT FACE="Symbol">&#215;</FONT>B)<FONT FACE="Symbol">&#199;</FONT>(A<FONT FACE="Symbol">&#215;</FONT>C);</B>
+<LI><B>А<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">(B<FONT FACE="Symbol">&#200;</FONT>C) = 
+(A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">B)<FONT FACE="Symbol">&#200;</FONT>(A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">C);</B>
+<LI><B>А<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">(B<FONT FACE="Symbol">&#199;</FONT>C)=(A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">B)<FONT FACE="Symbol">&#199;</FONT>(A<IMG SRC="image148.gif" WIDTH=14 HEIGHT=18 ALIGN="ABSMIDDLE">C).</B>
+</UL>
+
+<P>
+Продолжим обзор основных операций над нечеткими множествами.<BR>
+На основе операции алгебраического произведения (по крайней мере для целых <B><FONT FACE="Symbol">&#97;</FONT></B>
+ эта основа очевидна) определяется операция <I><U>возведения в степень</I></U> <B><FONT FACE="Symbol">&#97;</FONT></B> нечеткого множества <B>A</B>, где <B><FONT FACE="Symbol">&#97;</FONT></B> - положительное число. Нечеткое множество <B>A<FONT FACE="Symbol">&#97;</FONT></B> определяется функцией принадлежности 
+<NOBR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A<SUP><FONT FACE="Symbol">&#97;</FONT></SUP></SUB>
+= <FONT FACE="Symbol">&#109;</FONT><SUP><FONT FACE="Symbol">&#97;</FONT></SUP><SUB>A</SUB>(x)</B>.
+</NOBR> Частным случаем возведения в степень являются:
+
+<UL>
+<LI><B>CON(A) = A<SUP>2</SUP></B> - операция <I>концентрирования</I>,
+<LI><B>DIL(A) = A<SUP>0,5</SUP></B> - операция <I>растяжения</I>, 
+</UL>
+которые используются при работе с лингвистическими неопределенностями.<BR>
+<CENTER><IMG SRC="image158.gif" WIDTH=425 HEIGHT=143></CENTER>
+
+<P><U>Умножение на число.</U> Если <B><FONT FACE="Symbol">&#97;</FONT></B> - положительное число, такое, что
+<B><FONT FACE="Symbol">&#97;</FONT><IMG SRC="image159.gif" WIDTH=41 HEIGHT=36 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB>(<I>x</I>)<FONT FACE="Symbol">&#163;</FONT></B>1, то нечеткое множество 
+<B><FONT FACE="Symbol">&#97;</FONT>A</B> имеет функцию принадлежности:<BR>
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><FONT FACE="Symbol">&#97;</FONT>A(<I>x</I>) = 
+<FONT FACE="Symbol">&#97;</FONT><FONT FACE="Symbol">&#109;</FONT>A(<I>x</I>).</B>
+</CENTER>
+
+<P><U>Выпуклая комбинация нечетких множеств.</U> Пусть <B>A</B><SUB>1</SUB>, <B>A</B><SUB>2</SUB>,.., <B>A</B><SUB>n</SUB> - нечеткие множества универсального множества <B>E</B>, а <B><FONT FACE="Symbol">&#119;</FONT><SUB>1</SUB>, 
+<FONT FACE="Symbol">&#119;</FONT><SUB>2</SUB>, ..., <FONT FACE="Symbol">&#119;</FONT><SUB>n</SUB></B> - неотрицательные числа, сумма которых равна 1. <BR>
+Выпуклой комбинацией <B>A</B><SUB>1</SUB>, <B>A</B><SUB>2</SUB>,.., <B>A</B><SUB>n</SUB> называется нечеткое множество <B>A</B> с функцией принадлежности:<BR>
+<B><FONT FACE="Symbol">&#34;</FONT><I>x<FONT FACE="Symbol">&#206;</FONT>E</I> 
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I><SUB>1</SUB>, <I>x</I><SUB>1</SUB>,..., <I>x</I><SUB>n</SUB>) = 
+<FONT FACE="Symbol">&#119;</FONT><SUB>1</SUB><FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB>1</SUB></SUB>(<I>x</I>) + 
+<FONT FACE="Symbol">&#119;</FONT><SUB>2</SUB><FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB>2</SUB></SUB>(<I>x</I>) + ... + <FONT FACE="Symbol">&#119;</FONT><SUB>n</SUB><FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB>i</SUB></SUB>(<I>x</I>).</B>
+
+<P><U>Декартово произведение нечетких множеств.</U> Пусть <B>A</B><SUB>1</SUB>, <B>A</B><SUB>2</SUB>, ..., <B>A</B><SUB>n</SUB> - нечеткие подмножества универсальных множеств <B>E</B><SUB>1</SUB>, <B>E</B><SUB>2</SUB>, ..., <B>E</B><SUB>n</SUB> соответственно. Декартово произведение <B>A = A</B><SUB>1</SUB><FONT FACE="Symbol">&#180;</FONT><B>A</B><SUB>2</SUB>
+<FONT FACE="Symbol">&#180;</FONT> ...<FONT FACE="Symbol">&#180;</FONT><B>A</B><SUB>n</SUB> является нечетким подмножеством множества <B>E = E</B><SUB>1</SUB><FONT FACE="Symbol">&#180;</FONT><B>E</B><SUB>2</SUB>
+<FONT FACE="Symbol">&#180;</FONT> <B>...</B><FONT FACE="Symbol">&#180;</FONT><B>E</B><SUB>n</SUB> с функцией принадлежности:<BR>
+
+<CENTER>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I><SUB>1</SUB>,<I> x</I><SUB>1</SUB>, ...,<I> x</I><SUB>n</SUB>) = min{
+<FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB>1</SUB></SUB>(<I>x</I><SUB>1</SUB>),
+<FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB>2</SUB></SUB>(<I>x</I><SUB>2</SUB>) , ... , 
+<FONT FACE="Symbol">&#109;</FONT><SUB>A<SUB>i</SUB></SUB>(<I>x</I><SUB>n</SUB>) }.</B>
+</CENTER>
+
+<P><U>Оператор увеличения нечеткости</U> используется для преобразования четких множеств в нечеткие и для увеличения нечеткости нечеткого множества.<BR>
+Пусть <B>A</B> - нечеткое множество, <B>E</B> - универсальное множество и для всех <B><I>x<FONT FACE="Symbol">&#206;</FONT>E</I></B> определены нечеткие множества <B>K(<I>х</I>)</B>. Совокупность всех <B>K(<I>х</I>)</B> называется ядром оператора увеличения нечеткости <B>Ф</B>. Результатом действия оператора <B>Ф</B> на нечеткое множество A является нечеткое множество вида:<BR>
+
+<CENTER>
+<B>Ф(A, K) = <IMG SRC="image166.gif" WIDTH=37 HEIGHT=42 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>
+(<I>x</I>)K(<I>х</I>)</B>,<BR>
+</CENTER>
+где <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)K(<I>х</I>)</B> - произведение числа на нечеткое множество.
+
+<P> <U>Пример</U>:<BR>
+<DIR><DIR><B>E</B> = {1,2,3,4};<BR>
+<B>A</B> = 0,8/1+0,6/2+0/3+0/4;<BR>
+<B>K</B>(1) = 1/1+0,4/2;<BR>
+<B>K</B>(2) = 1/2+0,4/1+0,4/3;<BR>
+<B>K</B>(3) = 1/3+0,5/4;<BR>
+<B>K</B>(4) = 1/4.<BR></DIR></DIR>
+<BR>
+Тогда<BR>
+<CENTER>
+<B>Ф(A,K)</B> = <FONT FACE="Symbol">&#109;</FONT><B><SUB>A</SUB></B>(1) <B>K</B>(1) <B>
+<FONT FACE="Symbol">&#200;&#109;</FONT><SUB>A</SUB></B>(2)<B>K</B>(2) <B>
+<FONT FACE="Symbol">&#200;&#109;</FONT><SUB>A</SUB></B>(3)<B>K</B>(3)<B>
+<FONT FACE="Symbol">&#200;&#109;</FONT><SUB>A</SUB></B>(4)<B>K</B>(4) = <BR>
+= 0,8(1/1+0,4/2) <FONT FACE="Symbol">&#200;</FONT> 0,6(1/2+0,4/1+0,4/3) = <BR>
+= 0,8/1+0,6/2+0,24/3.
+</CENTER>
+<P>
+<I><U>Четкое множество <FONT FACE="Symbol">&#97;</FONT>-уровня (или уровня <FONT FACE="Symbol">&#97;</FONT>)</U></I>. Множеством <FONT FACE="Symbol">&#97;</FONT>-уровня нечеткого множества <B>A</B> универсального множества <B>E</B> называется <I>четкое</I> подмножество <B>A</B><FONT FACE="Symbol">&#97;</FONT> универсального множества <B>E</B>, определяемое в виде:<BR>
+
+<CENTER><B>A<FONT FACE="Symbol">&#97;</FONT></B> ={<B><I>x</I></B>/<FONT FACE="Symbol">&#109;</FONT>
+<B><SUB>A</SUB></B>(<B><I>x</I></B>)<FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#97;</FONT>}, где <FONT FACE="Symbol">&#97;</FONT><FONT FACE="Symbol">&#163;</FONT>1.<BR>
+</CENTER>
+<U>Пример:</U> <B>A</B> = 0,2/x<SUB>1</SUB> + 0/x<SUB>2</SUB> + 0,5/x<SUB>3</SUB> + 1/x<SUB>4</SUB> ,<BR>
+<DIR>тогда <B>A<SUB>0.3</SUB></B> = {<B><I>x</I></B><SUB>3</SUB>,<B><I>x</I></B><SUB>4</SUB>},<BR> 
+<DIR><DIR><B>A<SUB>0.7</SUB></B> = {<B><I>x</I></B><SUB>4</SUB>}.</DIR></DIR>
+</DIR>
+
+Достаточно очевидное свойство: если <FONT FACE="Symbol">&#97;</FONT><SUB>1</SUB>
+<FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#97;</FONT><SUB>2</SUB> , то
+<B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT>1</SUB><FONT FACE="Symbol">&#163;</FONT>
+<B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT>2</SUB>
+.
+
+<P><U>Теорема о декомпозиции.</U> Всякое нечеткое множество <B>A</B> разложимо по его множествам уровня в виде:<BR>
+ <B>A</B> = <IMG SRC="image168.gif" WIDTH=40 HEIGHT=42 ALIGN="ABSMIDDLE"><B><FONT FACE="Symbol">&#97;</FONT>A
+<SUB><FONT FACE="Symbol">&#97;</FONT></SUB></B>, где <B><FONT FACE="Symbol">&#97;</FONT>A<SUB><FONT FACE="Symbol">&#97;</FONT></SUB></B> 
+- произведение числа <B><FONT FACE="Symbol">&#97;</FONT></B> на множество <B>A</B>, и 
+<B><FONT FACE="Symbol">&#97;</FONT></B> "пробегает" область значений <B>M</B> функции принадлежности нечеткого множества <B>A</B>.<BR>
+<U>Пример: </U> <B>A</B> = 0,1/<B><I>x</I></B><SUB>1</SUB> + 0/<B><I>x</I></B><SUB>2</SUB> + 0,7/<B><I>x</I></B><SUB>3</SUB> + 1/<B><I>x</I></B><SUB>4</SUB> представимо в виде:<BR>
+<CENTER>
+<B>A</B> = 0,1(1,0,1,1) <FONT FACE="Symbol">&#200;</FONT> 0,7(0,0,1,1,) <FONT FACE="Symbol">&#200;</FONT>
+ 1(0,0,0,1)= <BR>
+= (0,1/x<SUB>1</SUB> + 0/x<SUB>2</SUB> + 0,1/x<SUB>3</SUB> + 0,1/x<SUB>4</SUB>)<FONT FACE="Symbol">&#200;</FONT>
+(0/x<SUB>1</SUB> + 0/x<SUB>2</SUB> + 0,7/x<SUB>3</SUB> + 0,7/x<SUB>4</SUB>)<FONT FACE="Symbol">&#200;</FONT><BR>
+<FONT FACE="Symbol">&#200;</FONT>(0/x<SUB>1</SUB>  + 0/x<SUB>2</SUB> + 0/x<SUB>3</SUB> + 1/x<SUB>4</SUB>) =
+0,1/x<SUB>1</SUB> +0/x<SUB>2</SUB> +0,7/x<SUB>3</SUB> +1/x<SUB>4</SUB> .<BR>
+</CENTER>
+Если область значений функции принадлежности состоит из <B><I>n</I></B> градаций 
+<FONT FACE="Symbol">&#97;</FONT><SUB>1</SUB><FONT FACE="Symbol">&#163;</FONT>
+<FONT FACE="Symbol">&#97;</FONT><SUB>2</SUB><FONT FACE="Symbol">&#163;</FONT>
+<FONT FACE="Symbol">&#97;</FONT><SUB>3</SUB><FONT FACE="Symbol">&#163;</FONT>
+...<FONT FACE="Symbol">&#163;</FONT>
+<FONT FACE="Symbol">&#97;</FONT><SUB>n</SUB></SUB>, то <B>A</B>
+ (при фиксированных значениях градаций) представимо в виде:<BR>
+<CENTER><B>A</B> = <IMG SRC="image169.gif" WIDTH=23 HEIGHT=43 ALIGN="ABSMIDDLE">
+<B><FONT FACE="Symbol">&#97;</FONT></B><SUB>i</SUB><B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>i</SUB></SUB>,<BR>
+</CENTER>
+т.е. определяется совокупностью обычных множеств {
+<B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>1</SUB></SUB>, 
+<B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>2</SUB></SUB>,
+ ..., 
+<B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>i</SUB></SUB>}, 
+где <B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>1</SUB></SUB>
+<FONT FACE="Symbol">&#179;</FONT><B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>2</SUB></SUB><FONT FACE="Symbol">&#179;</FONT>
+, ..., <FONT FACE="Symbol">&#179;</FONT><B>A</B><SUB><FONT FACE="Symbol">&#97;</FONT><SUB>i</SUB></SUB>.
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy2.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy4.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+</BODY>
+</HTML>

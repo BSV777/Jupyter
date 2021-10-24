@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Нечеткие множества в системах управления</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#000080" VLINK="#800080" ALINK="#FF0000" 
+BACKGROUND="../back1.gif">
+
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT><A HREF="fuzzy1.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+<A HREF="fuzzy3.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD>
+<TD ALIGN=RIGHT><B><FONT SIZE=+1 COLOR=#800080>Fuzzy Technologies Lab.</FONT></B></TD>
+</TR></TABLE>
+<HR ALIGN=CENTER SIZE=3>
+
+<BLOCKQUOTE>
+
+
+<CENTER><H4>Операции над нечеткими множествами</H4> </CENTER>
+
+<B><I>Включение</I></B>. <BR>
+Пусть <B>A</B> и <B>B</B> - нечеткие множества на универсальном множестве E. <BR>
+Говорят, что <B>A</B> содержится в <B>B</B>, если <B><FONT FACE="Symbol">&#34;</FONT><I>x
+<FONT FACE="Symbol">&#206;</FONT>E</I> <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) 
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>).</B><BR>
+<I><U>Обозначение</U></I>: <B>A <FONT FACE="Symbol">&#204;</FONT> B</B>.<BR>
+Иногда используют термин "<I>доминирование</I>", т.е. в случае когда <B>A</B> <FONT FACE="Symbol">&#204;</FONT> <B>B</B>, говорят, что <B>B</B> доминирует <B>A</B>.
+
+<P>
+<B><I>Равенство</I></B>. <BR>
+<B>A</B> и <B>B</B> равны, если <B><FONT FACE="Symbol">&#34;</FONT><I>x<FONT FACE="Symbol">&#206;</FONT>E</I>
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) = <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> (<I>x</I>).</B><BR>
+<I><U>Обозначение</U></I>: <B>A</B> = <B>B</B>. <BR>
+
+<P>
+<B><I>Дополнение.</I></B> <BR>
+Пусть <FONT FACE="Symbol">&#77;</FONT> = [0,1], <B>A</B> и <B>B</B> - нечеткие множества, заданные на <B>E</B>. <B>A</B> и <B>B</B> дополняют друг друга, если <BR>
+<B><FONT FACE="Symbol">&#34;</FONT><I>x<FONT FACE="Symbol">&#206;</FONT>E</I> 
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>) = 1 - <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>(<I>x</I>).</B><BR>
+<I><U>Обозначение</U></I>: <B>B</B> = <IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"> или <B>A</B> = <IMG SRC="image132.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">. <BR>
+Очевидно, что <IMG SRC="image133.gif" WIDTH=26 HEIGHT=28 ALIGN="ABSMIDDLE"> = <B>A</B>. (Дополнение определено для <B>M</B>
+= [0,1], но очевидно, что его можно определить для любого упорядоченного <B>M</B>). 
+
+<P>
+<B><I>Пересечение</I></B>.<BR>
+<B>A</B><FONT FACE="Symbol">&#199;</FONT><B>B</B> - наибольшее нечеткое подмножество, содержащееся одновременно в <B>A</B> и <B>B</B>.<BR>
+<B><FONT FACE="Symbol">&#109;</FONT>A<FONT FACE="Symbol">&#199;</FONT>B(<I>x</I>) = min(
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>), <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>(<I>x</I>)).</B>
+
+<P>
+<B><I>Объединение.</I><BR>
+А <FONT FACE="Symbol">&#200;</FONT> В</B> - наименьшее нечеткое подмножество, включающее как <B>А</B>, так и <B>В</B>, с функцией принадлежности: <BR>
+<B><FONT FACE="Symbol">&#109;</FONT>A<FONT FACE="Symbol">&#200;</FONT>
+B(<I>x</I>) = max(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>), <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>(<I>x</I>)).</B>
+
+<P>
+<B><I>Разность.</I></B><BR>
+<B>А - B = А<FONT FACE="Symbol">&#199;</FONT><IMG SRC="image132.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"></B> с функцией принадлежности:<BR><B>
+<FONT FACE="Symbol">&#109;</FONT><SUB>A-B</SUB>(<I>x</I>) = <FONT FACE="Symbol">&#109;</FONT>A
+<FONT FACE="Symbol">&#199;</FONT><SUB><IMG SRC="image132.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"></SUB> (<I>x</I>) = min(
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>), 1 - <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>(<I>x</I>)).</B>
+
+<P>
+<B><I>Дизъюнктивная сумма.</I><BR>
+А<FONT FACE="Symbol">&#197;</FONT>B = (А - B)<FONT FACE="Symbol">&#200;</FONT>(B - А) = (А
+<FONT FACE="Symbol">&#199;</FONT><IMG SRC="image132.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">)
+<FONT FACE="Symbol">&#200;</FONT>(<IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#199;</FONT>
+B)</B> с функцией принадлежности:<BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A-B</SUB>(<I>x</I>) = max{[min{<FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB>(<I>x</I>), 1 - <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>)}];[min{1 -
+<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>), 
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>(<I>x</I>)}] }</B><BR>
+
+<U>Примеры.</U><BR>
+Пусть:
+<DIR><DIR>
+<B>A</B> = 0,4/ <B>x</B><SUB>1</SUB> + 0,2/ <B>x</B><SUB>2</SUB>+0/ <B>x</B><SUB>3</SUB>+1/ <B>x</B><SUB>4</SUB>;
+<BR><B>B</B> = 0,7/ <B>x</B><SUB>1</SUB>+0,9/ <B>x</B><SUB>2</SUB>+0,1/ <B>x</B><SUB>3</SUB>+1/ <B>x</B><SUB>4</SUB>; <BR>
+<B>C</B> = 0,1/ <B>x</B><SUB>1</SUB>+1/ <B>x</B><SUB>2</SUB>+0,2/ <B>x</B><SUB>3</SUB>+0,9/ <B>x</B><SUB>4</SUB>.
+</DIR></DIR>
+Здесь:
+<OL>
+
+<LI><B>A<FONT FACE="Symbol">&#204;</FONT>B</B>, т.е. <B>A</B> содержится в <B>B</B> или <B>B</B> доминирует <B>A</B>, <B>С</B> <I>несравнимо</I> ни с <B>A</B>, ни с <B>B</B>, т.е. пары {<B>A, С</B>} и {<B>A, С</B>} - пары недоминируемых нечетких множеств.
+
+<LI><B>A <FONT FACE="Symbol">&#185;</FONT> B <FONT FACE="Symbol">&#185;</FONT> C.</B>
+
+<LI><IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"> = 0,6/ <B>x</B><SUB>1</SUB> + 0,8/<B>x</B><SUB>2</SUB> + 1/<B>x</B><SUB>3</SUB> + 0/<B>x</B><SUB>4</SUB>;<BR>
+<IMG SRC="image132.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"> = 0,3/<B>x</B><SUB>1</SUB> + 0,1/<B>x</B><SUB>2</SUB> + 0,9/<B>x</B><SUB>3</SUB> + 0/<B>x</B><SUB>4</SUB>.
+
+<LI><B>A<FONT FACE="Symbol">&#199;</FONT>B</B> = 0,4/<B>x</B><SUB>1</SUB> + 0,2/<B>x</B><SUB>2</SUB> + 0/<B>x</B><SUB>3</SUB> + 1/<B>x</B><SUB>4</SUB>.
+
+<LI><B>А<FONT FACE="Symbol">&#200;</FONT>В</B> = 0,7/<B>x</B><SUB>1</SUB> + 0,9/<B>x</B><SUB>2</SUB> + 0,1/<B>x</B><SUB>3</SUB> + 1/<B>x</B><SUB>4</SUB>.
+
+<LI><B>А - В</B> = <B>А<FONT FACE="Symbol">&#199;</FONT>
+</B><IMG SRC="image132.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"> = 0,3/<B>x</B><SUB>1</SUB> + 0,1/<B>x</B><SUB>2</SUB> + 0/<B>x</B><SUB>3</SUB> + 0/<B>x</B><SUB>4</SUB>;<BR>
+<B>В - А</B> =<B> </B><IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE"><FONT FACE="Symbol">&#199;</FONT>
+<B>В</B> = 0,6/<B>x</B><SUB>1</SUB> + 0,8/<B>x</B><SUB>2</SUB> + 0,1/<B>x</B><SUB>3</SUB> + 0/<B>x</B><SUB>4</SUB>.
+
+<LI><B>А <FONT FACE="Symbol">&#197;</FONT> В</B> = 0,6/<B>x</B><SUB>1</SUB> + 0,8/<B>x</B><SUB>2</SUB> + 0,1/<B>x</B><SUB>3</SUB> + 0/<B>x</B><SUB>4</SUB>. 
+
+</OL>
+
+
+<CENTER>
+<H4>Наглядное представление операций над нечеткими множествами</H4>
+</CENTER>
+
+&nbsp;&nbsp;&nbsp;Для нечетких множеств можно строить визуальное представление. Рассмотрим прямоугольную систему координат, на оси ординат которой откладываются значения <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>(<I>x</I>)</B>, на оси абсцисс в произвольном порядке расположены элементы <B>E</B> (мы уже использовали такое представление в примерах нечетких множеств). Если <B>E</B> по своей природе упорядочено, то этот порядок желательно сохранить в расположении элементов на оси абсцисс. Такое представление делает наглядными простые операции над нечеткими множествами.<BR>
+<CENTER>
+<IMG SRC="image137a.gif" WIDTH=200 HEIGHT=100>&nbsp;<BR>
+<IMG SRC="image137b.gif" WIDTH=200 HEIGHT=100>&nbsp;
+<IMG SRC="image137c.gif" WIDTH=200 HEIGHT=100>&nbsp;
+<IMG SRC="image137d.gif" WIDTH=200 HEIGHT=100>&nbsp;<BR>
+</CENTER>
+<BR>
+На верхней части рисунка заштрихованная часть соответствует нечеткому множеству <B>A</B> и, если говорить точно, изображает область значений <B>А</B> и всех нечетких множеств, содержащихся в <B>A</B>. На нижней - даны 
+<IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">, <B>A</B><FONT FACE="Symbol">&#199;</FONT>
+<IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">, <B>A</B><FONT FACE="Symbol">&#200;</FONT>
+<IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">.<BR>
+
+<CENTER>
+<H4>Свойства операций <FONT FACE="Symbol">&#200;</FONT> и <FONT FACE="Symbol">&#199;</FONT>.</H4> 
+</CENTER>
+Пусть <B>А, В, С</B> - нечеткие множества, тогда выполняются следующие свойства:
+
+<UL>
+<LI><IMG SRC="image141.gif" WIDTH=130 HEIGHT=55 ALIGN="ABSMIDDLE"> - коммутативность;<P>
+<LI><IMG SRC="image142.gif" WIDTH=203 HEIGHT=49 ALIGN="ABSMIDDLE"> - ассоциативность;<P>
+<LI><IMG SRC="image143.gif" WIDTH=99 HEIGHT=55 ALIGN="ABSMIDDLE">  - идемпотентность;<P>
+<LI><IMG SRC="image144.gif" WIDTH=246 HEIGHT=49 ALIGN="ABSMIDDLE"> - дистрибутивность;
+<LI><B>A<FONT FACE="Symbol">&#200;</FONT><FONT FACE="Symbol">&#198;</FONT> = A</B>, где
+<B><FONT FACE="Symbol">&#198;</FONT></B> - <I>пустое множество</I>, т.е.
+<B><FONT FACE="Symbol">&#109;</FONT><FONT FACE="Symbol">&#198;</FONT>(x) = 0
+<FONT FACE="Symbol">&#34;</FONT>>x<FONT FACE="Symbol">&#206;</FONT>E</B>;
+<LI><B>A<FONT FACE="Symbol">&#199;</FONT><FONT FACE="Symbol">&#198;</FONT> = <FONT FACE="Symbol">&#198;</FONT></B>;
+<LI><B>A<FONT FACE="Symbol">&#199;</FONT>E = A</B>, где <B>E</B> - универсальное множество;
+<LI><B>A<FONT FACE="Symbol">&#200;</FONT>E = E</B>;
+<LI><IMG SRC="image145.gif" ALIGN="ABSMIDDLE" WIDTH=142 HEIGHT=59> - теоремы де Моргана.
+</UL>
+
+
+В отличие от четких множеств, для нечетких множеств в общем случае:<BR>
+<DIR><DIR>
+<B>A<FONT FACE="Symbol">&#199;</FONT><IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">
+<FONT FACE="Symbol">&#185;</FONT> <FONT FACE="Symbol">&#198;</FONT></B>,<BR>
+<B>A<FONT FACE="Symbol">&#200;</FONT><IMG SRC="image131.gif" WIDTH=17 HEIGHT=19 ALIGN="ABSMIDDLE">
+<FONT FACE="Symbol">&#185;</FONT> E</B>.<BR>
+</DIR></DIR>
+(Что, в частности, проиллюстрировано выше в примере наглядного представления нечетких множеств).
+
+<P>
+<U>Замечание.</U> Введенные выше операции над нечеткими множествами основаны на использовании операций <B>max</B> и <B>min</B>. В теории нечетких множеств разрабатываются вопросы построения обобщенных, параметризованных операторов пересечения, объединения и дополнения, позволяющих учесть разнообразные смысловые оттенки соответствующих им связок "<I>и</I>", "<I>или</I>", "<I>не</I>".
+<P>
+Один из подходов к операторам пересечения и объединения заключается в их определении в <I>классе треугольных норм и конорм</I>.
+<P>
+<B><I>Треугольной нормой</I></B> (<B><I>t</B>-нормой</I>) называется двуместная действительная функция 
+<B>T</B>:[0,1]<FONT FACE="Symbol">&#180;</FONT>[0,1]<FONT FACE="Symbol">&#174;</FONT>[0,1], удовлетворяющая следующим условиям:
+<OL>
+<LI><B>T</B>(0,0)=0; <B>T</B>(<FONT FACE="Symbol">&#109;</FONT><B><SUB>A</SUB></B>, 1) = 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B>; <B>T</B>(1,<B> <FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB></B>) = <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B> - <I>ограниченность</I>;
+
+<LI><B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>, <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>)
+<FONT FACE="Symbol">&#163;</FONT>T(<FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>, 
+<FONT FACE="Symbol">&#109;</FONT><SUB>D</SUB>)</B>, если 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB><FONT FACE="Symbol">&#163;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB></B> , <B><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB><FONT FACE="Symbol">&#163;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>D</SUB></B> &#9;- <I>монотонность</I>;
+
+<LI><B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> , <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>) = T(<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>, <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>) </B> - <I>коммутативность</I>;
+
+<LI><B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>, T(<FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>, <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>))= T( T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>, <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB>), <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>)</B> - <I>ассоциативность</I>;
+</OL>
+
+Простым случаем треугольных норм являются:<BR>
+<DIR><DIR>
+<B>min</B>(<FONT FACE="Symbol">&#109;</FONT><B><SUB>A</SUB></B> ,<B> <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB></B>)<BR>
+произведение <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB><FONT FACE="Symbol">&#215;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B><BR>
+<B>max</B>(0,<B> <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B> +<B> <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB></B> -1).<BR>
+</DIR></DIR>
+<B><I>Треугольной конормой</I></B> (<B><I>t</B>-конормой</I>) называется двуместная действительная функция <FONT FACE="Symbol">&#94;</FONT>:[0,1]<FONT FACE="Symbol">&#180;</FONT>[0,1]<FONT FACE="Symbol">&#174;</FONT>
+[0,1], со свойствами:<BR>
+
+<OL>
+
+<LI><B>T</B>(1,1) = 1; <B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B> ,0) = <B><FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB></B> ; <B>T</B>(0, <B><FONT FACE="Symbol">&#109;</FONT>
+<SUB>A</SUB></B>) = <B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB></B> - <I>ограниченность</I>;
+
+<LI><B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>, <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> )<FONT FACE="Symbol">&#179;</FONT> T(<FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB>, <FONT FACE="Symbol">&#109;</FONT><SUB>D</SUB> )</B>, 
+если 
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> <FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB> , <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> <FONT FACE="Symbol">&#179;</FONT><FONT FACE="Symbol">&#109;</FONT><SUB>D</SUB></B> - <I>монотонность</I>;
+
+<LI><B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> , <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> ) = T(<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> , <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> )</B> - <I>коммутативность</I>;
+
+<LI><B>T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>, 
+T(<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> , 
+<FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB> )) = T(T(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> , <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> ), <FONT FACE="Symbol">&#109;</FONT><SUB>C</SUB> )</B> - <I>ассоциативность</I>.
+</OL>
+
+Примеры <B><I>t</I></B>-конорм:<BR>
+<DIR><DIR>
+<B>max(<FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB>, <FONT FACE="Symbol">&#109;</FONT>
+<SUB>B</SUB>)</B><BR>
+<B><FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> + <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB> - <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB><FONT FACE="Symbol">&#215;</FONT>
+<FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B><BR>
+<B>min</B>(1,<B> <FONT FACE="Symbol">&#109;</FONT><SUB>A</SUB> + <FONT FACE="Symbol">&#109;</FONT><SUB>B</SUB></B>). 
+</DIR></DIR>
+
+</BLOCKQUOTE>
+<HR ALIGN=CENTER SIZE=3>
+<TABLE CELLPADDING=3 WIDTH="100%"><TR>
+<TD WIDTH=130 ALIGN=LEFT>
+<TABLE BORDER=0><TR>
+<TD>
+<A HREF="fuzzy1.html"><IMG SRC="../toleft.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Previous page"></A>
+</TD><TD>
+<A HREF="content.html"><IMG SRC="../totop.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Content page"></A>
+</TD><TD>
+<A HREF="fuzzy3.html"><IMG SRC="../toright.gif" WIDTH=37 HEIGHT=37 BORDER=0 ALT="Next page"></A>
+</TD></TR></TABLE>
+</TD>
+<TD ALIGN=CENTER><B><I><FONT SIZE=+1 COLOR="#8000FF">Нечеткие множества в системах управления</FONT></I></B></TD>
+<TD ALIGN=RIGHT><B><I><FONT COLOR="#7000DD"> В.Я. Пивкин, Е.П. Бакулин, Д.И. Кореньков</FONT></I></B></TD>
+</TR></TABLE>
+</BODY>
+</HTML>

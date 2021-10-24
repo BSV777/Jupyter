@@ -1,0 +1,281 @@
+<!doctype html public "-//ietf//dtd html//en">
+<html>
+
+<head>
+<meta http-equiv="content-type"
+content="text/html; charset=iso-8859-1">
+<meta name="generator" content="microsoft frontpage 2.0">
+<title>fuzzyTECH: NeuroFuzzy und FuzzyCluster Modul</title>
+</head>
+
+<body bgcolor="#c0c0c0">
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+    <tr>
+        <td bgcolor="#000080"><font color="#00ffff" size="5"
+        face="arial"><b><i>fuzzy</i></b><b>TECH:
+        NeuroFuzzy&trade; und FuzzyCluster&trade; Modul</b></font></td>
+        <td align="center" bgcolor="#ffff00"><a
+        href="d_index.htm"><font size="2" face="arial"><img
+        src="home.gif" alt="zur fuzzytech home page (deutsch)"
+        width="21" height="21"></font></a><a href="e_nf.htm"><font
+        size="2" face="arial"><img src="wld16x16.gif"
+        alt="english" width="21" height="21"></font></a><a
+        href="d_nmm.htm"><font face="arial"><img
+        src="previous.gif" alt="zum plantmodel modul" width="21"
+        height="21"></font></a><a href="d_wfact.htm"><font
+        size="2" face="arial"><img src="next.gif"
+        alt="zum simulation modul" width="21" height="21"></font></a></td>
+    </tr>
+</table>
+
+<p><font size="2" face="arial">In vielen praktischen Anwendungen
+ist gesuchtes Systemverhalten durch Datensätze repräsentiert.
+In der Regelungstechnik können diese Datensätze beispielsweise
+Betriebszustände oder ein Anlagenführerverhalten beschreiben.
+In Entscheidungssystemen und in der Datenanalyse liegen häufig
+Musterentscheidungen als Datensätze vor. Mit dem NeuroFuzzy Module
+können aus diesen Datensätzen automatisch Regeln und
+Zugehörigkeitsfunktionen eines Fuzzy-Systems erzeugt bzw.
+optimiert werden. Das NeuroFuzzy Modul ist keine eigenständige
+Software, sondern integriert sich bei der Installation komplett
+in jede <i>fuzzy</i>TECH Edition (Das NeuroFuzzy Modul fügt
+neue Menüeinträge, Funktionen und Dialoge in <i>fuzzy</i>TECH
+ein). Das </font><a href="d_nf.htm#fc"><font size="2"
+face="arial">FuzzyCluster Modul</font></a><font size="2"
+face="arial"> wird immer zusammen mit den NeuroFuzzy Modul
+ausgeliefert und ergänzt <em>fuzzy</em>TECH analog um
+Clustering-Funktionen. </font></p>
+
+<p><img src="nn_fl_nf.gif" width="180" height="192"> <br>
+<font size="2" face="arial"><i>Ein modifiziertes
+&quot;Error-Backpropagation&quot;-Trainingsverfahren<br>
+erzeugt neuronale Netze  und optimiert Fuzzy-Systeme</i></font></p>
+
+<p><font size="2" face="arial">Das NeuroFuzzy Modul verwendet ein
+Lernverfahren, mit dem normalerweise neuronale Netze trainiert
+werden, das sogenannte
+&quot;Error-Backpropagation&quot;-Verfahren. Bei diesem Verfahren
+wird der momentane Fehler eines zu trainierenden Systems
+&quot;von hinten durch das System geschoben&quot;, um zu
+erkennen, welcher Parameter in welcher Stärke modifiziert werden
+sollte. Berechnet beispielsweise ein neuronales Netz für einen
+Trainingsdatensatz einen Wert einer Ausgangsvariablen von 4, und
+ist der Sollwert im Trainingsdatensatz aber 2, so versucht
+Error-Backpropagation herauszufinden, welches Neuron in welcher
+Weise zu verändern ist, damit sich der Fehler vermindert. Dieses
+führt Error-Backpropagation solange mit allen
+Trainingsdatensätzen durch, bis der Fehler unterhalb einer
+gesetzten Schranke liegt. </font></p>
+
+<p><font size="2" face="arial">Um dieses Training durchzuführen,
+berechnet Error-Backpropagation die partiellen
+Übertragungskennlinien aller Neuronen, um so eine Schätzgröße
+für den lokalen Einfluß jedes Parameters zu bekommen. Für das
+Training von Fuzzy-Systemen (statt neuronaler Netze) mußte
+INFORM daher Error-Backpropagation modifizieren, denn die
+einzelnen Elemente eines Fuzzy-Systems sind nicht stetig
+differenzierbar. Dieses modifizierte
+Error-Backpropagation-Verfahren ist die Basis des
+NeuroFuzzy-Moduls. Für den Anwender sind die eingesetzten
+Verfahren aber weitgehend transparent. Die zu
+trainierenden Komponenten (Regeln, Variable, ..) werden selektiert und der
+Trainingsdatensatz ausgewählt. Interaktiv wird auf dem Bildschirm dargestellt,
+welche Regeln erzeugt oder verworfen werden und wie
+Zugehörigkeitsfunktionen vom NeuroFuzzy Modul umgeformt werden.</font></p>
+
+<p><font size="2" face="arial">Der Vorteil gegenüber neuronalen
+Netzen: Wenn Sie ein neuronales Netz trainiert haben, dann ist es
+weitgehend eine &quot;block-box&quot;. Wenn Sie diese öffnen,
+dann sehen Sie nur Gewichtungsfaktoren, Offsets, und weitere
+Parameter, die Ihnen keine Information darüber liefern, warum
+das neuronale Netz Entscheidungen fällt. Sie haben somit fast
+keine einfache Möglichkeit, das Verhalten eines neuronalen
+Netzes zu verifizieren oder explizit zu optimieren. In einigen
+Anwendungen ist das auch nicht erforderlich; hier sollten Sie
+direkt ein neuronales Netz einsetzen. In den meisten Anwendungen
+ist es jedoch sehr hilfreich, explizit nachzuvollziehen,
+warum und wie das System Entscheidungen fällt. Hier ist der
+NeuroFuzzy-Ansatz ideal. Ergebnis des NeuroFuzzy-Trainings ist
+nicht eine &quot;block-box&quot;, sondern ein reines Fuzzy-System,
+in dem jede Komponente (Regel, Variable) ja gerade so definiert
+ist, daß sie der menschlichen Intuition möglichst nahe kommt.
+Das Ergebnis des NeuroFuzzy-Trainings können Sie also immer
+leicht interpretieren, verifizieren und manuell optimieren. Eine detailierte Diskussion der Technologie und der Vor- und
+Nachteile im Vergleich mit anderen Techniken finden Sie in dem Buch </font><a
+href="d_litera.htm#1"><font size="2" face="arial">&quot;Fuzzy
+Logic -Band 1: Technologie&quot;</font></a><font size="2"
+face="arial">.</font></p>
+
+<p><font size="2"><img src="nf_train.gif" width="370"
+height="433"> <br>
+</font><font size="2" face="arial"><i>Während des Trainings
+erlaubt der Learn Control Dialog Steuerung und Überwachung des
+Trainings</i></font></p>
+
+<p><font size="2" face="arial">Der im NeuroFuzzy-Modul
+eingesetzte modifizierte Trainingsalgorithmus basiert auf der in
+allen <i>fuzzy</i>TECH Editionen implementierten
+Inferenzerweiterung &quot;Fuzzy Associative Maps&quot; (FAM).
+FAMs sind generalisierte Fuzzy-Regeln mit einer assoziierten
+individuellen Gewichtung.</font></p>
+
+<p><font size="2"><img src="nf_matx.gif" width="228" height="185">
+<br>
+</font><font size="2" face="arial"><i>&quot;Fuzzy Associative
+Maps&quot; (FAM) stellen eine<br>
+erweiterte Form der Fuzzy-Inferenz dar</i></font></p>
+
+<p><font size="2" face="arial">Solche FAM-Regeln können vom
+NeuroFuzzy-Trainingsverfahren als generalisierte Neuronen
+betrachtet werden, wodurch das modifizierte
+Error-Backpropagation-Verfahren anwendbar wird. </font></p>
+
+<p><font size="2"><img src="nf_open.gif" width="220" height="175">
+<br>
+</font><font size="2" face="arial"><i>Beim NeuroFuzzy-Training
+können genau die Komponenten <br>
+spezifiziert werden, die der Trainingsalgorithmus modifizieren
+soll</i></font></p>
+
+<p><font size="2" face="arial">Das NeuroFuzzy Modul kann ebenfalls zur Optimierung
+bereits existierender Fuzzy-Systeme verwendet werden.
+Mit unterschiedlichen
+Beispieldatensätzen können unterschiedliche Komponenten des
+Fuzzy-Systems trainiert werden. So kann beispielsweise ein erster
+Datensatz zum Training der linguistischen Variablen, ein zweiter
+für den ersten Regelblock und ein dritter für die anderen
+Regelblöcke eingesetzt werden. Auch können die im NeuroFuzzy
+Modul enthaltenen Lernverfahren modifiziert und um eigene
+Verfahren ergänzt werden (offene DLL-Schnittstelle).</font></p>
+
+<h2><a name="fc"><font size="4" face="arial">Fuzzy-Clustering</font></a></h2>
+
+<p><font size="2" face="arial">NeuroFuzzy ist eine
+leistungsfähige Technik zur Umwandlung von Daten in Regeln. In der
+Praxis stellt dies ein großes Potential dar. Fuzzy-Regeln
+können nachvollzogen und explizit durch den Entwickler oder
+Anwender modifiziert werden. Allerdings verlangt NeuroFuzzy --
+wie jedes lernfähige Verfahren -- eine gute Aufbereitung der
+Eingangsdaten. Schlecht aufbereitete Eingangsdaten sind nach dem
+Prinzip <em>&quot;Garbage in, garbage out&quot;</em> der in der
+Praxis häufigste Grund für ein Versagen lernfähiger Verfahren.
+Aus diesem Grund liefern wir mit dem NeuroFuzzy Modul auch das
+FuzzyCluster Modul aus, welches zwei wesentliche Komponenten der
+Datenaufbereitung liefert:</font></p>
+
+<ul>
+    <li><font size="2" face="arial">Entfernen redundanter
+        Datensätze</font></li>
+    <li><font size="2" face="arial">Entfernen inkonsistenter
+        Datensätze</font></li>
+</ul>
+
+<p><font size="2"><img src="fc_prind.gif" width="605"
+height="548"> <br>
+</font><font size="2" face="arial"><i>Alternative Wege zur Erzeugung eines
+Fuzzy-Systems: Direkte Definition von Variablen und
+Regeln durch einen Experten oder Training durch NeuroFuzzy auf der
+Basis typischer Datensätze. Um aus Rohdaten diese
+&quot;typischen&quot; Datensätze zu erzeugen, werden
+Clusterverfahren eingesetzt. </i></font></p>
+
+<h3><font size="3" face="arial">Anwendungen in Betriebs- und
+Finanzwirtschaft</font></h3>
+
+<p><font size="2" face="arial">Ein finanzwirtschaftliches
+Beispiel für den Einsatz von Fuzzy-Clusterverfahren: Sie
+möchten ein Entscheidungssystem für die Risikoklassifikation
+von Kreditnehmern auf der Basis vergangener Fälle erstellen.
+Typischerweise stellen etwa 98% der Datensätze Standardfälle
+dar, nur 2% beschreiben ungewöhnliche Fälle. Wenn Sie diese
+Daten direkt trainieren (egal mit welchem Verfahren), dann wird
+das Lernverfahren die Hauptaufmerksamkeit nur auf die
+Standardfälle richten. Dies verlängert die Trainingszeit
+beträchtlich und verschlechtert möglicherweise wesentlich das
+Ergebnis. Daher ist die Entfernung redundanter Daten wichtig.</font></p>
+
+<p><font size="2" face="arial">Es kann leicht passieren, daß Trainingsdaten auch teilweise widersprüchliche Datensätze enthalten, da jeder
+Sachbearbeiter andere Kriterien berücksichtigt und Fakten
+anders wertet. Diese Widersprüche sind meist schwer zu
+entdecken, da Kreditsachbearbeiter in einigen Fällen völlig
+übereinstimmen können, gleichzeitig aber in anderen überhaupt
+nicht. Wenn Sie Trainingsdaten mit inkonsistenten Datensätzen im
+NeuroFuzzy Module verwenden, so wird das NeuroFuzzy Modul immer
+versuchen, zwischen den Entscheidungen zu mitteln, um den
+durchschnittlichen Gesamtfehler zu minimieren. Daher ist es wichtig, inkonsistente Daten zu entfernen.</font></p>
+
+<h3><font size="3" face="arial">Technische Anwendungen</font></h3>
+
+<p><font size="2" face="arial"> Anhand eines technischen Beispiels für den
+Einsatz von Fuzzy-Clusterverfahren soll ein weiterer Grund für die Entfernung redundanter Daten verdeutlicht werden: Sie möchten eine
+Regelstrategie für einen kontinuierlichen, verfahrenstechnischen
+Prozeß entwickeln. Da sich der Prozeß hauptsächlich in seinem
+stabilen Arbeitspunkt befindet, repräsentieren etwa 98% der
+Datensätze stabile Arbeitspunkte und nur 2% kritische und
+interessante Arbeitspunkte. Da das Trainingsverfahren jeden
+Trainingsdatensatz gleich behandelt, verbringt es die meiste Zeit
+mit dem stabilen Arbeitspunkt anstatt mit den interessanten
+kritischen Zuständen. Dies verlängert die Trainingszeit
+beträchtlich und verschlechtert möglicherweise das
+Ergebnis wesentlich .</font></p>
+
+<p><font size="2"><img src="fc_conf.gif" width="382" height="277">
+<br>
+</font><font size="2" face="arial"><i>FuzzyClustering verwendet
+Fuzzy-Zugehörigkeitsfunktionen um die Ähnlichkeit zweier
+Datensätze zu beschreiben</i></font></p>
+
+<p><font size="2" face="arial">In den
+Trainingsdaten aus der Fahrweise eines realen Prozesses befinden sich durch
+Meßtoleranzen und Störgrößen meist viele Datenpunkte, die
+zwar den gleichen Zustand abbilden, aber leicht andere Werte
+aufweisen. Hierfür wurde das Fuzzy-Clusteringverfahren
+entwickelt, bei dem die Ähnlichkeit zweier Datenpunke durch ein
+Fuzzy-Entscheidungssystem bewertet wird. Hierbei wird für jede
+Ein- und Ausgangsgröße eine Zugehörigkeitsfunktion (siehe
+Bild oben) definiert, welche anhand zweier Parameter (Delta,
+Epsilon) die Ähnlichkeit zweier Werte beschreibt. Epsilon kann
+als Sensorauflösung interpretiert werden; jeder Abstand
+unterhalb Epsilon wird als &quot;gleicher&quot; Wert betrachtet.
+Delta ist der größte Abstand zweier Werte die &quot;noch so
+eben als ähnlich&quot; betrachtet werden. Dieses Verfahren
+erlaubt die komplette Entfernung von überflüssigen Datensätzen
+und beschleunigt das Training wesentlich.</font></p>
+
+<p><font size="2"><img src="fc_bef.gif" width="538" height="442"><br>
+</font><font size="2" face="arial"><i>Datensatz mit Inkonsistenz
+vor FuzzyClustering</i></font><font size="2"> </font></p>
+
+<p><font size="2" face="arial">Das FuzzyCluster Modul integriert
+sich wie das NeuroFuzzy Modul komplett in <i>fuzzy</i>TECH und
+bietet sowohl konventionelle Clusterverfahren als auch das
+innovative Fuzzy-Clustering. Es eignet sich zur
+Erzeugung von &quot;Typicals&quot; aus beliebigen Datensätzen
+ebenso wie auch direkt zur Datenvorverarbeitung im Rahmen eines
+NeuroFuzzy-Trainings.</font></p>
+
+<p><font size="2"><img src="fc_aft.gif" width="538" height="443"><br>
+</font><font size="2" face="arial"><i>Datensatz mit Inkonsistenz
+nach FuzzyClustering</i></font><font size="2"> </font></p>
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+    <tr>
+        <td bgcolor="#000080"><font color="#00ffff" size="5"
+        face="arial"><b><i>fuzzy</i></b><b>TECH:
+        NeuroFuzzy&trade; und FuzzyCluster&trade; Modul</b></font></td>
+        <td align="center" bgcolor="#ffff00"><a
+        href="d_index.htm"><font size="2" face="arial"><img
+        src="home.gif" alt="zur fuzzytech home page (deutsch)"
+        width="21" height="21"></font></a><a href="e_nf.htm"><font
+        size="2" face="arial"><img src="wld16x16.gif"
+        alt="english" width="21" height="21"></font></a><a
+        href="d_nmm.htm"><font face="arial"><img
+        src="previous.gif" alt="zum plantmodel modul" width="21"
+        height="21"></font></a><a href="d_wfact.htm"><font
+        size="2" face="arial"><img src="next.gif"
+        alt="zum simulation modul" width="21" height="21"></font></a></td>
+    </tr>
+</table>
+</body>
+</html>

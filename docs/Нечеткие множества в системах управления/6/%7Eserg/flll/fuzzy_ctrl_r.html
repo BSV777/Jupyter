@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-r">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>FLLL - Fuzzy Control</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF">
+[&nbsp;<A HREF="operations_r.html"><IMG SRC="prev.gif" ALT="Prev" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_r.html"><IMG SRC="toc.gif" ALT="Contents" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_ctrl_r_10.html"><IMG SRC="next.gif" ALT="Next" HEIGHT=16 WIDTH=16></A>
+]&nbsp;
+<HR WIDTH="100%">
+<H1>
+Нечеткое управление</H1>
+
+<HR NOSHADE WIDTH="100%">
+
+<P>Контроллеры нечеткой логики - наиболее важное приложение теории нечетких
+множеств. Их функционирование немного отличается от работы обычных контроллеров;
+для описания системы используются знания экспертов вместо дифференциальных
+уравнений. Эти знания могут быть выражены естесственным образом с помощью
+<I><A HREF="definitions_r.html#linguistic">лингвистических переменных</A></I>,
+которые описываются нечеткими множествами.
+<BR>
+<HR>
+<H2>
+Пример: Перевернутый маятник</H2>
+Проблема состоит в балансировке вертикальной мачты, подвижно закрепленной
+нижним концом на тележке, которая может двигаться только в двух направлениях
+- влево или вправо.
+<BR>Во-первых, мы должны определить (субъективно) что такое <I>высокая</I>
+скорость, <I>низкая&nbsp;</I> скорость и т.п. для тележки. Это делается
+описанием функции принадлежности для нечетких множеств.
+<UL>
+<LI>
+отрицательная высокая, neg.high (голубой)</LI>
+
+<LI>
+отрицательная низкая, neg.low (зеленый)</LI>
+
+<LI>
+нулевая, zero (красный)</LI>
+
+<LI>
+положительная низкая, pos.low (синий)</LI>
+
+<LI>
+положительная высокая, pos.high (розовый)</LI>
+</UL>
+
+<CENTER><IMG SRC="fuzzy_fig4_1.gif" NOSAVE HEIGHT=164 WIDTH=364></CENTER>
+
+
+<P>Тоже самое делается для угла между тележкой и мачтой маятника и для
+угловой скорости изменения этого угла
+<CENTER><IMG SRC="fuzzy_fig4_2.gif" NOSAVE HEIGHT=164 WIDTH=364>&nbsp;<IMG SRC="fuzzy_fig4_3.gif" NOSAVE HEIGHT=164 WIDTH=364></CENTER>
+
+
+<P>Пожалуйста заметьте, что для упрощения предполагается, что начальное
+положение мачты <I>около центра справа</I>, так что угол более чем, скажем,
+45 градусов в любом направлении по определению никогда не возникнет.
+<BR>&nbsp;
+
+<P>На следующей странице определим некоторые <I>правила,&nbsp;</I> которые
+желательно применить в данной ситуации.
+
+<P>
+<HR WIDTH="100%">
+<BR>[&nbsp;<A HREF="operations_r.html"><IMG SRC="prev.gif" ALT="Prev" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_r.html"><IMG SRC="toc.gif" ALT="Contents" HEIGHT=16 WIDTH=16></A>
+]&nbsp; [&nbsp;<A HREF="fuzzy_ctrl_r_10.html"><IMG SRC="next.gif" ALT="Next" HEIGHT=16 WIDTH=16></A>
+]
+</BODY>
+</HTML>

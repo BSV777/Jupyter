@@ -1,0 +1,756 @@
+<!doctype html public "-//ietf//dtd html//en">
+<html>
+
+<head>
+<meta http-equiv="content-type"
+content="text/html; charset=iso-8859-1">
+<meta name="generator" content="microsoft frontpage 2.0">
+<title>fuzzyTECH Application Paper: Recent Successful Fuzzy Logic Applications in Industrial Automation </title>
+</head>
+
+<body bgcolor="#c0c0c0">
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+    <tr>
+        <td bgcolor="#000080"><font color="#00ffff" size="5"
+        face="arial"><b><i>fuzzy</i></b><b>TECH Application Paper</b></font>
+        </td>
+        <td align="center" bgcolor="#ffff00"><a href="index.htm"><img
+        src="home.gif" alt="go back to home page" width="21"
+        height="21"></a><a href="e_ap_lst.htm#21"><img
+        src="previous.gif" alt="go to application papers page"
+        width="21" height="21"></a> </td>
+    </tr>
+</table>
+
+<h1><font size="5" face="arial">Recent Successful Fuzzy Logic
+Applications in Industrial Automation </font></h1>
+
+<hr>
+
+<p><font size="2" face="arial"><i>by Dr. Jörg Gebhardt and
+Constantin von Altrock </i></font></p>
+
+<p><font size="2" face="arial">Citation Reference: This paper was
+been published at the Fifth IEEE International Conference on
+Fuzzy Systems, held in New Orleans September 1996. The Fuzzy
+Logic Application Note series is published by Inform Software
+Corporation on its Internet server to promote the use of fuzzy
+logic technologies in applications.</font></p>
+
+<hr>
+
+<p><font size="2" face="arial"><em>In this paper, we review eight
+(8) recent applications of fuzzy logic in industrial automation.
+All applications used the so-called &quot;fuzzyPLC&quot;, an
+innovative hardware platform that merges fuzzy logic and
+traditional automation techniques. Following a quick overview on
+the fuzzyPLC, we discuss the eight (8) applications and focus on
+how fuzzy logic enabled a superior solution compared to
+conventional techniques. Whenever possible, we quantify the
+benefit in cost saving or quality improvement. For detailed
+information on the reviewed applications, the respective papers
+are referenced. </em></font></p>
+
+<h2><font size="4" face="arial">1. Fuzzy Logic in Industrial
+Automation </font></h2>
+
+<p><font size="2" face="arial">In recent years, fuzzy logic has
+proven well its broad potential in industrial automation
+applications. In this application area, engineers primarily rely
+on proven concepts. For discrete event control, they mostly use
+ladder logic, a programming language resembling electrical wiring
+schemes and running on so called programmable logic controllers
+(PLC). For continuous control, either bang-bang type or PID type
+controllers are mostly employed.</font></p>
+
+<p><font size="2" face="arial">While PID type controllers do work
+fine when the process under control is in a stable condition,
+they do not cope well in other cases: </font></p>
+
+<ul>
+    <li><font size="2" face="arial">The presence of strong
+        disturbances (non-linearity) </font></li>
+    <li><font size="2" face="arial">Time-varying parameters of
+        the process (non-linearity) </font></li>
+    <li><font size="2" face="arial">Presence of dead times </font></li>
+</ul>
+
+<p><font size="2" face="arial">The reason for this is that a PID
+controller assumes the process to behave in a strictly linear
+fashion. While this simplification can be made in a stable
+condition, strong disturbances can push the process operation
+point far away from the set operating point. Here, the linear
+assumption usually does not work any more. The same happens if a
+process changes its parameters over time. In these cases, the
+extension or replacement of PID controllers with fuzzy
+controllers has been shown to be more feasible more often than
+using conventional but sophisticated state controllers or
+adaptive approaches [4]. However, this is not the only area where
+there is potential for fuzzy logic based solutions. </font></p>
+
+<h3><font size="3" face="arial">Multi-Variable Control </font></h3>
+
+<p><font size="2" face="arial">The real potential of fuzzy logic
+in industrial automation lies in the straightforward way fuzzy
+logic renders possible the design of multi-variable controllers.
+In many applications, keeping a single process variable constant
+can be done well using a PID or bang-bang type controller.
+However, set values for all these individual control loops are
+often still set manually by operators. The operators analyze the
+process condition, and tune the set values of the PID controllers
+to optimize the operation. This is called &quot;supervisory
+control&quot; and mostly involves multiple variables. </font></p>
+
+<p><font size="2" face="arial"><img src="mv-ctrl.gif" width="603"
+height="195"> <i><br>
+Figure </i></font><a name="f_1_multi_variable_control"><font
+size="2" face="arial"><i>1: Using a Fuzzy Logic Controller to
+Determine the Set Values for Underlying PID Control Loops </i></font></a></p>
+
+<p><font size="2" face="arial">Alas, both PID and bang-bang type
+controllers can only cope with one variable. This usually results
+in several independently operating control loops. These loops are
+not able to &quot;talk to each other&quot;. In cases where it is
+desirable or necessary to exploit interdependencies of physical
+variables, one is forced to set up a complete mathematical model
+of the process and to derive differential equations from it that
+are necessary for the implementation of a solution. In the world
+of industrial automation, this is rarely feasible: </font></p>
+
+<ul>
+    <li><font size="2" face="arial">Creating a mathematical model
+        for a real-word problem can involve years of work. </font></li>
+    <li><font size="2" face="arial">Most mathematical models
+        involve extensive simplifications and linearizations that
+        require &quot;fudge&quot; factors to optimize the
+        resulting controller later on. </font></li>
+    <li><font size="2" face="arial">Tuning the fudge factors of a
+        controller derived from a mathematical model is
+        &quot;fishing in the dark&quot;, because optimizing the
+        system at one operating point using global factors
+        usually degrades the performance at other operating
+        points. </font></li>
+</ul>
+
+<p><font size="2" face="arial">Also, many practitioners do not
+have the background required for rigorous mathematical modeling.
+Thus, the general observation in industry is that single process
+variables are controlled by simple control models such as PID or
+bang-bang, while supervisory control is done by human operators. </font></p>
+
+<p><font size="2" face="arial">This is where fuzzy logic provides
+an elegant and highly efficient solution to the problem. Fuzzy
+logic lets engineers design supervisory multi-variable
+controllers from operator experience and experimental results
+rather than from mathematical models. A possible structure of a
+fuzzy logic based control system in industrial automation
+applications is exemplified by Figure 1. Each single process
+variable is kept constant by a PID controller, while the set
+values for the PID controller stem from the fuzzy logic system.
+This arrangement is typical for cases like control of several
+temperature zones of an oven or control of oxygen concentrations
+in different zones of a wastewater basin. In other cases, it
+could be reasonable to develop the complete closed loop control
+solution in a fuzzy system.</font></p>
+
+<p><font size="2" face="arial">This illustrates why it is very
+desirable to integrate conventional control engineering
+techniques, such as ladder logic or instruction list language for
+digital logic and PID control blocks tightly together with fuzzy
+logic functionality. </font></p>
+
+<h2><a name="fuzzyplc"><font size="4" face="arial">2. Merging
+Fuzzy Logic and PLCs </font></a></h2>
+
+<p><font size="2" face="arial">In 1990, when more and more
+successful applications proved the potential of fuzzy logic in
+industrial automation, the German company Klockner-Moeller and
+the U.S./German company Inform Software created the <i>fuzzy</i>PLC
+based on the observation that fuzzy logic needs tight integration
+with conventional industrial automation techniques. </font></p>
+
+<h3><font size="3" face="arial">The <i>fuzzy</i>PLC Hardware and
+Firmware </font></h3>
+
+<p><font size="2" face="arial"><img src="km_fplc.gif" width="300"
+height="233"> <i><br>
+Figure </i></font><a name="f_2_fuzzyplc"><font size="2"
+face="arial"><i>2: The fuzzyPLC Contains Fuzzy and Conventional
+Logic Processing Capabilities, Field Bus Connections, and
+Interfaces </i></font></a></p>
+
+<p><font size="2" face="arial">To make it available at a low
+cost, the core of the <i>fuzzy</i>PLC uses a highly integrated
+two-chip solution. An analog ASIC handles the analog/digital
+interfaces at industry standard 12 bit resolution. Snap-On
+modules can extend the periphery for large applications of up to
+about 100 signals. An integrated field bus connection, based on
+RS485, provides further expansion by networking. The conventional
+and the fuzzy logic computation is handled by a 16/32 bit RISC
+microcontroller. The operating system and communication routines,
+developed by Klockner-Moeller, are based on a commercial real
+time multitasking kernel. The fuzzy inference engine, developed
+by Inform Software, is implemented and integrated into the
+operating system in a highly efficient manner, so that scan times
+of less than one millisecond are possible. The internal RAM of
+256 KB can be expanded by memory cards using flash technology.
+Thus, the <i>fuzzy</i>PLC is capable of solving quite complex and
+fast industrial automation problems in spite of its compact and
+low price design. </font></p>
+
+<h3><font size="3" face="arial">The <i>fuzzy</i>PLC Engineering
+Software </font></h3>
+
+<p><font size="2" face="arial">The <i>fuzzy</i>PLC is programmed
+by an enhanced version of the standard fuzzy logic system
+development software <i>fuzzy</i>TECH from Inform Software. <i>fuzzy</i>TECH
+is an all-graphical, design, simulation, and optimization
+environment with implementation modules for most microcontrollers
+and industrial computers. To support the complete functionality
+of the <i>fuzzy</i>PLC, <i>fuzzy</i>TECH has been enhanced with
+editors and functions to support the conventional programming of
+the PLC. Thus, a user only needs one tool to program both
+conventional and fuzzy logic parts of the solution. </font></p>
+
+<p><font size="2" face="arial"><img src="suco.gif" width="941"
+height="644"> <i>Figure </i></font><a name="f_3_ft_awl"><font
+size="2" face="arial"><i>3: Both the Traditional Logic and the
+Fuzzy Logic System Is Programmed By fuzzyTECH 40 </i></font></a></p>
+
+<p><font size="2" face="arial">The <i>fuzzy</i>TECH software
+combines all necessary editors for membership functions,
+linguistic variables, rule tables, and system structure with
+analyzer functions and optimization features. The software runs
+on a PC and is linked to the <i>fuzzy</i>PLC by a standard serial
+cable (RS232) or the field bus (RS485). Through this link, the
+developer downloads the designed system to the <i>fuzzy</i>PLC.
+Because fuzzy logic systems often require optimization
+&quot;on-the-fly&quot;, <i>fuzzy</i>TECH and the <i>fuzzy</i>PLC
+feature &quot;online-debugging&quot; where the system running on
+the <i>fuzzy</i>PLC is completely visualized by the graphical
+editors and analyzers of <i>fuzzy</i>TECH. Plus, in
+online-debugging modes, any modification of the fuzzy logic
+system is instantly translated to the <i>fuzzy</i>PLC without
+halting operation. </font></p>
+
+<h2><font size="4" face="arial">3. Application Case Studies </font></h2>
+
+<p><font size="2" face="arial">In this section, we review eight
+(8) recent highly successful applications of fuzzy logic in
+industrial automation using the <i>fuzzy</i>PLC: </font></p>
+
+<ul>
+    <li><font size="2" face="arial">Anti-Sway Control of Cranes </font></li>
+    <li><font size="2" face="arial">Fire Zone Control in Waste
+        Incineration Plants </font></li>
+    <li><font size="2" face="arial">Dosing Control in Waste Water
+        Treatment Plants </font></li>
+    <li><font size="2" face="arial">Control of Tunnel Inspection
+        Robots </font></li>
+    <li><font size="2" face="arial">Positioning in Presses </font></li>
+    <li><font size="2" face="arial">Temperature Control in
+        Plastic Molding Machines </font></li>
+    <li><font size="2" face="arial">Climate Control and Building
+        Automation </font></li>
+    <li><font size="2" face="arial">Wind Energy Converter Control
+        </font></li>
+</ul>
+
+<h3><font size="3" face="arial">Anti-Sway Control of Cranes </font></h3>
+
+<p><font size="2" face="arial">In crane control, the objective is
+to position a load over a target point. While the load connected
+to the crane head by flexible cables may well sway within certain
+limits during transportation, the sway must be reduced to almost
+zero for load release when the target position is reached. Hence,
+a controller must use at least two input variables, for example
+position and sway angle. Thus, a simple PID controller cannot be
+used as it is restricted to one input. Conventional solutions of
+the problem require highly elaborate approaches, like model based
+control or state variable controllers, that need intensive
+engineering and hardware resources. These technologies tend to
+push system costs into regions that make anti-sway systems
+economically unaffordable. For these reasons, most cranes are
+still operated manually. </font></p>
+
+<p><font size="2" face="arial"><img src="km_kran.gif" width="300"
+height="184"> <i><br>
+Figure 4: The 64 Ton crane of Hochtief Corp. Uses fuzzyPLC Based
+Anti-Sway Positioning Control</i> </font></p>
+
+<p><font size="2" face="arial">In spite of the difficulties
+involved with automated control, human operators can control
+cranes quite well in most cases. Because fuzzy logic is a
+technology that facilitates control system design based directly
+on such human experiences, it has been used for crane automation
+for almost a decade. The types of cranes include container cranes
+in harbors, steel pan cranes, and cranes in a manufacturing
+environment. Recently, a 64 ton crane that transports concrete
+modules for bridges and tunnels over a distance of 500 yards has
+been automated with a <i>fuzzy</i>PLC in Germany [8]. The benefit
+was a capacity gain of about 20% due to the faster transportation
+and an increase in safety. Accidents were frequent, because the
+crane operators walk parallel to the crane during operation with
+a remote controller. Before, when they had to watch the load to
+concentrate on the sway angle, they frequently stumbled over
+parts lying on the ground. The crane was commissioned in Spring
+1995 and the fuzzy logic anti-sway controller has been
+continuously enabled by the crane operator, showing the high
+degree of acceptance by the operators. This fact is of special
+importance since not only technological feasibility but also
+psychological aspects are important for the success of an
+industrial automation solution. </font></p>
+
+<p><font size="2" face="arial"><img src="km_crane.gif"
+width="640" height="400"> <i><br>
+Figure 5: A Software Simulation of the Crane Controller Is
+Contained In [4]</i> </font></p>
+
+<p><font size="2" face="arial">A software simulation and a simple
+example of an anti-sway crane controller for didactic purposes
+can be found in [4]. The real solution uses about 10 inputs, 2
+outputs, and 4 rule blocks with a total of 75 rules. </font></p>
+
+<h3><font size="3" face="arial">Fire Zone Control in Waste
+Incineration Plants </font></h3>
+
+<p><font size="2" face="arial">Maintaining a stable burning
+temperature in waste incineration plants is important to minimize
+the generation of toxic gases, such as dioxin and furan, as well
+as to avoid corrosion in the burning chambers. There are two
+primary difficulties of this temperature control process: </font></p>
+
+<ul>
+    <li><font size="2" face="arial">The caloric value of the
+        waste fluctuates strongly. </font></li>
+    <li><font size="2" face="arial">The fire position and shape
+        cannot be measured directly. </font></li>
+</ul>
+
+<p><font size="2" face="arial">Because the heat generated from
+the burning process is used to produce electrical energy, a
+stable incineration process is also of high commercial interest. </font></p>
+
+<p><font size="2" face="arial"><img src="km_waste.gif"
+width="300" height="341"> <i><br>
+Figure 6: In a Waste Incineration Plan, a Crane Continuously
+Delivers Waste from the Bunker to the Belt Running through the
+Burning Zone. The Exhaust Gases Are Cooled And Cleaned</i>.</font></p>
+
+<p><font size="2" face="arial">In recent applications at waste
+incineration plants in the cities of Hamburg and Mannheim in
+Germany, fuzzy logic has been successfully applied. In Mannheim,
+where two <i>fuzzy</i>PLCs were used to control the burning
+process, the steam generation capacity of one furnace is 28 Mg/h.
+Using the industry standard conventional controller, steam
+generation fluctuated by as much as 10 Mg/h in just one hour. The
+fuzzy logic controller was capable of reducing this fluctuation
+to less than ±1 Mg/h. This dramatically improved robustness and
+also caused the NOx and SO2 emission to drop slightly, and the CO
+emission to drop to half [11, 12]. </font></p>
+
+<h3><font size="3" face="arial">Dosing Control in Waste Water
+Treatment Plants </font></h3>
+
+<p><font size="2" face="arial">Waste water treatment processes
+are a combination of biological, chemical, and mechanical
+processes. This makes the creation of a complete mathematical
+model for their control intractable. However, there is a large
+amount of human experience that can be exploited for automated
+controller design. As such operator experience can be efficiently
+put to work by fuzzy logic, many plants already use this
+technique [4]. </font></p>
+
+<p><font size="2" face="arial">In a recent application in Bonn,
+dosing of liquid FeCl3 for phosphate precipitation has been
+successfully automated using the <i>fuzzy</i>PLC. Recently
+changes in legislation require water treatment plants in Germany
+to limit the total amount of phosphate in the released water to 1
+milligram per liter. To extract the phosphate from the water,
+FeCl3 is added, which converts the phosphate into FePO4 that is
+sedimented with the sludge. Because a violation of the legal
+phosphate limit results in severe penalties, the operators tend
+to overdose the FeCl3. </font></p>
+
+<p><font size="2" face="arial"><img src="km_klaer.gif"
+width="300" height="236"> <i><br>
+Figure 7: By Injecting FeCl3 Into the Sludge, Dissolved Phosphate
+Precipitates from the Waste Water</i> </font></p>
+
+<p><font size="2" face="arial">To optimize the FeCl3 dosing, a
+fuzzy logic controller that uses the input variables phosphate
+concentration, its derivative, water flow, its derivative, and
+dry substance contents was designed. The output of the fuzzy
+logic controller is the change of the set variable for the
+injected FeCl3. An underlying conventional PI type controller
+stabilizes the FeCl3 flow to this set point. The PI type
+controller is implemented as a function block in the <i>fuzzy</i>PLC
+as well. This is an example of the combination of fuzzy logic and
+conventional control engineering techniques.</font></p>
+
+<p><font size="2" face="arial"><img src="km_water.gif"
+width="640" height="430"> <i><br>
+Figure 8: A Software Simulation of a Simplified Precipitation
+Controller Is Contained in [4]</i> </font></p>
+
+<p><font size="2" face="arial">The total fuzzy logic controller
+uses 207 rules to express the control strategy based on the five
+(5) input variables of the fuzzy logic control block. The total
+implementation time was three (3) staff months and resulted in
+savings of about 50% of the FeCl3 compared to the manual control
+before. Taking implementation time and hardware/software costs
+into consideration with the savings on FeCl3 results a return in
+investment time of half a year. </font></p>
+
+<h3><font size="3" face="arial">Control of Tunnel Inspection
+Robots </font></h3>
+
+<p><font size="2" face="arial">The German Aerospace corporation
+DASA has developed a sewage pipe inspection system using two
+robot units and a support truck [7]. The objective of the robots
+is to detect leakage in segments of the pipe by applying air
+pressure to the sealed space between the two robots. Because the
+vertical access shafts can be quite far away from each other, the
+robots have to operate up to 400 yards away from the truck. The
+robots are connected to each other and the truck by cables that
+provide air pressure, electrical energy, and control signals to
+the robots. </font></p>
+
+<p><font size="2" face="arial"><img src="km_polis.gif"
+width="300" height="163"> <i><br>
+Figure 9: The Two Robot Units in the Sewage Pipe (right) Are
+Supplied From a Specialized Truck By Cables</i> </font></p>
+
+<p><font size="2" face="arial">When DASA developed the system, a
+severe control problem came up. To avoid entanglement of the
+cables that can result in the robots getting stuck in the pipe,
+cable tension must be controlled very carefully. A conventional
+approach using complex state variable controllers turned out to
+be too costly in terms of both money and design time. A control
+system implemented on two <i>fuzzy</i>PLCs using about 200 rules
+each showed very good results in a very short engineering time at
+less than 10% of the costs of a conventional solution. </font></p>
+
+<h3><font size="3" face="arial">Positioning of Presses </font></h3>
+
+<p><font size="2" face="arial">One area with big potential for
+fuzzy solutions is the control of drives. In this example, we
+discuss hydraulic axis control. One of the most complex fuzzy
+projects was done for a hydraulic press used to press laminates,
+printed circuit boards, and floor coverings. The task was the
+synchronized control of a 14-axis system. The position control of
+the axis, a superimposed pressure controller, the parallel
+running of the steel belt and the synchronization of all axes had
+to be solved. </font></p>
+
+<p><font size="2" face="arial"><img src="bison011.gif"
+width="300" height="299"> <i><br>
+Figure 10: Control of Hydraulic Systems Is Difficult As Many
+Non-Linearities, Such As the &quot;stick-slip&quot; Effect, Are
+Involved</i> </font></p>
+
+<p><font size="2" face="arial">The automation system employed has
+a highly decentralized structure and consists of two large master
+PLCs, a number of smaller compact PLCs, a PC based supervisory
+system, and seven <i>fuzzy</i>PLCs. All units are networked using
+the integrated field bus interfaces. Very important for the
+synchronization of the entire machine is the ability of the field
+bus network to satisfy the real time requirements. One typical
+problem involved in the control of hydraulic systems is the
+so-called &quot;stick slip effect&quot;. The transition of an
+axis from standstill to motion is highly non-linear because of
+the transition from stick friction to slip friction. This makes
+designing a good controller for hydraulic systems difficult. In
+the cited application, fuzzy logic rendered a good solution
+technique, freeing system design from the burden of the theory of
+non linear systems synthesis. The overall design time using fuzzy
+logic was only a third of what a conventional approach had
+required in past applications of conventional control for similar
+presses [9].</font></p>
+
+<h3><font size="3" face="arial">Temperature Control in Plastic
+Molding Machines </font></h3>
+
+<p><font size="2" face="arial">In plastic molding machines,
+temperature control is crucial to achieve high and consistent
+product quality. This requires laborious tuning of the involved
+control algorithms, because the dead times involved in an
+extrusion machine are significant and there is significant
+coupling between the different temperature zones [9].</font></p>
+
+<p><font size="2" face="arial"><img src="km_extru.gif"
+width="300" height="314"> <i><br>
+Figure 11: To Achieve High Product Quality, Keeping the
+Temperature Constant Is Critical in Molding Plastic</i> </font></p>
+
+<p><font size="2" face="arial">To cut down the commission time
+for these machines, KM corporation has developed a self-tuning
+controller using the <i>fuzzy</i>PLC. At start up time, some
+parameters are estimated that are used to scale the non linear
+fuzzy controller. In contrast to conventional tuning algorithms,
+this controller does not require a cooling down of the machine to
+room temperature before self tuning can work. Even very difficult
+temperature zones with big dead times can be handled by this
+algorithm and the result is a very robust controller. This is
+important because the temperature properties of an empty machine
+and one filled with plastic material are extremely different.
+Compared to conventional systems, the fuzzy logic enhanced
+temperature controller performs with a faster response time and a
+significantly smaller overshoot combined with extreme robustness.</font></p>
+
+<p><font size="2" face="arial"><img src="km-extc.gif" width="400"
+height="225"> <i><br>
+Figure 12: The Fuzzy Logic Controller in the Molding Machine
+Reaches the Set Point Faster and Avoids Overshoot</i> </font></p>
+
+<h3><font size="3" face="arial">Climate Control Using Fuzzy Logic
+</font></h3>
+
+<p><font size="2" face="arial">Climate control systems reveal a
+high potential for energy savings. In a recent application at a
+major hospital in Europe, the integration of fuzzy logic saves
+about 25% on electrical energy, equivalent to the amount of
+$50,000 per year. </font></p>
+
+<p><font size="2" face="arial"><img src="km_klima.gif"
+width="300" height="199"> <i><br>
+Figure </i></font><a name="bild_viess_energycon"><font size="2"
+face="arial"><i>13: An Application of Fuzzy Logic in the A/C
+System of a Large Hospital in Germany Saved More than 25% on
+Energy Costs</i></font></a></p>
+
+<p><font size="2" face="arial">The fuzzy logic controller outputs
+the set values for the coolant valve, the water heater valve, and
+the humidifier water valve. The fuzzy logic control strategy uses
+different temperature and humidity sensors to determine how to
+operate the air conditioning process in a way that conserves
+energy. Again, the capability of processing interdependent
+variables results in significant advantages over conventional
+solutions. For example, one knows that when temperature rises,
+relative humidity of the air decreases.</font></p>
+
+<p><font size="2" face="arial">This knowledge can be exploited by
+implementing a fuzzy logic control strategy that allows the
+temperature controller &quot;to tell&quot; the humidity
+controller that it is going to activate the heater valve. The
+humidity controller now can respond to this before it can detect
+it by its sensor. The result is an increase in control quality
+[4, 8]. </font></p>
+
+<p><font size="2" face="arial"><img
+src="klima_ac.gif" width="746"
+height="629"><br>
+<em>Figure 14: Fuzzy Logic Allows to Increase the Energy
+Efficiency of an A/C system by evaluating several process values.</em><br>
+</font></p>
+
+<h3><font size="3" face="arial">Wind Energy Converter Control </font></h3>
+
+<p><font size="2" face="arial">In recent years, technological
+advancements made the commercial use of wind energy feasible. A
+trend to larger plants further improved the cost/performance
+ratio. However, such large wind energy converters require
+advanced control systems both to ensure high efficiency and long
+life. The controller sets the angle of the rotor blades based on
+the wind situation (pitch control). However, wind is not a
+one-dimensional figure. Strength, gustiness, and fluctuation of
+the wind angle must be evaluated to determine the optimal rotor
+blade angle. </font></p>
+
+<p><font size="2" face="arial"><img src="km_wind.gif" width="200"
+height="264"> <i><br>
+Figure </i></font><a name="bild_viess_haus"><font size="2"
+face="arial"><i>15: To Maximize the Efficiency of a Wind Energy
+Converter, the Pitch Controller Must Consider Many Inputs </i></font></a></p>
+
+<p><font size="2" face="arial">There is a trade-off between
+efficiency, safety and wear of the wind energy converter. If the
+blade angle is set to draw the maximum amount of energy from the
+wind, the risk of sudden wind gusts causing excessive mechanical
+stress on the converter increases. For these reasons, an Aerodyn
+wind energy converter was enhanced with a fuzzy system based on
+human experience to find the best compromise to this trade-off
+[6]. The first implemented system is running in a field test and
+shows quite promising results. The quality of the controller is
+not only measured in constancy of the delivered power, but also
+in measures of mechanical stress on the tower, the nacelle and
+the rotor blades. The next step will be the application of the
+achieved results to the first 1.2 MW systems that are to be
+launched in the marketplace in 1996.</font></p>
+
+<h1><a name="_toc295025279"><font size="5" face="arial">4.
+Conclusions</font></a><font size="5" face="arial"> </font></h1>
+
+<p><font size="2" face="arial">As a consequence of the high
+degree of awareness raised by a large number of publications over
+the past five years in Europe, a substantial number of successful
+applications have been generated. Of these, we have presented a
+selection of eight (8) recent applications in this paper. In all
+applications, the key to success lies in the clever combination
+of both conventional automation techniques and fuzzy logic. Fuzzy
+logic by no means replaces conventional control engineering.
+Rather, it compliments conventional techniques with a highly
+efficient methodology to implement multi-variable control
+strategies. Thus, the major potential for fuzzy logic lies in the
+implementation of supervisory control loops. </font></p>
+
+<h1><font size="5" face="arial">5. Literature </font></h1>
+
+<table border="0">
+    <tr>
+        <td align="right" valign="top"><a name="altrock92iizuka"><font
+        size="2" face="arial">[1</font></a><font size="2"
+        face="arial">]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">von Altrock,
+        C. and Krause, B., &quot;On-Line-Development Tools for
+        Fuzzy Knowledge-Base Systems of Higher Order&quot;, 2nd
+        Int'l Conference on Fuzzy Logic and Neural Networks
+        Proceedings, IIZUKA, Japan (1992), ISBN 4-938717-01-8.</font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[2]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">von Altrock,
+        C., Krause, B. and Zimmermann, H.-J., &quot;Advanced
+        Fuzzy Logic Control Technologies in Automotive
+        Applications&quot;, IEEE Conference on Fuzzy Systems
+        (1992), ISBN 0-7803-0237-0, p. 831-842. </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[</font><a name="altrock94dekanter"><font
+        size="2" face="arial">3</font></a><font size="2"
+        face="arial">]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">von Altrock,
+        C., Franke, S., and Froese, Th., &quot;Optimization of a
+        Water-Treatment System with Fuzzy Logic Control&quot;,
+        Computer Design Fuzzy Logic '94 Conference in San Diego
+        (1994). </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[</font><a name="altrock95_prentice_hall"><font
+        size="2" face="arial">4</font></a><font size="2"
+        face="arial">]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">von Altrock,
+        C., &quot;Fuzzy Logic and NeuroFuzzy Applications
+        Explained&quot;, Prentice Hall, ISBN 0-13-368465-2
+        (1995). </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[</font><a name="altrock94"><font size="2"
+        face="arial">5</font></a><font size="2" face="arial">]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">von Altrock,
+        C., Arend, H.-O., Krause, B., Steffens, C., and
+        Behrens-Rommler, E., &quot;Customer-Adaptive Fuzzy
+        Control of Home Heating System&quot;, IEEE Conference on
+        Fuzzy Systems in Orlando (1994). </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[6]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">von Altrock,
+        C., Arend, H.-O., Krause, B., Steffens, C., and
+        Behrens-Rommler, E., &quot;Customer-Adaptive Fuzzy
+        Control of Home Heating System&quot;, IEEE Conference on
+        Fuzzy Systems in Orlando (1994). </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[7]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">Gebhardt, J.
+        and Müller, R., &quot;Application of Fuzzy Logic to the
+        Control of a Wind Energy Converter, First European
+        Congress on Fuzzy and Intelligent Technologies (EUFIT
+        93), Aachen, 09/93 </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[8]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">Gebhardt,
+        J., Fuzzy Logic and the Programmable Logic Controller,
+        Control Systems 09/94 </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[9]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">Gebhardt,
+        J., New Industrial Applications of the Fuzzy-PLC
+        Proceedings of the 3. European Congress on Fuzzy and
+        Intelligent Technologies (EUFIT 95), Aachen, 08/95 </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[10]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">Gebhardt,
+        J., Standard-Solutions and Industrial Practice - Dream or
+        Reality?, 3. European Congress on Fuzzy and Intelligent
+        Technologies (EUFIT 95), Aachen </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[11]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">Gierend,
+        Ch., &quot;Fuzzy Logic Control of a Waste Incineration
+        Plant&quot;, 5. Aachen Fuzzy-Symposium (1995). </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[12]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">Krause, B.,
+        von Altrock, C., Limper, K., and Schäfers, W., &quot;A
+        Neuro-Fuzzy Adaptive Control Strategy for Refuse
+        Incineration Plants&quot;, Fuzzy Sets and Systems, V. 63,
+        3 (1994). </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[13]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">N.N.,
+        Fuzzy-Logic: Hardware and Engineering, 2/95 AWB
+        27-1240-GB, Klockner-Moeller corporation </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top"><font size="2"
+        face="arial">[14]</font></td>
+        <td>&nbsp;</td>
+        <td valign="top"><font size="2" face="arial">N.N.,
+        Fuzzy-Logic: Programming and Operation of the User
+        Interface, 11/94 AWB 27-1149-GB </font></td>
+    </tr>
+    <tr>
+        <td align="right" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+    </tr>
+</table>
+
+<table border="1" cellspacing="1" width="100%" bgcolor="#ffff00">
+    <tr>
+        <td bgcolor="#000080"><font color="#00ffff" size="5"
+        face="arial"><b><i>fuzzy</i></b><b>TECH Application Paper</b></font>
+        </td>
+        <td align="center" bgcolor="#ffff00"><a href="index.htm"><img
+        src="home.gif" alt="go back to home page" width="21"
+        height="21"></a><a href="e_ap_lst.htm#21"><img
+        src="previous.gif" alt="go to application papers page"
+        width="21" height="21"></a> </td>
+    </tr>
+</table>
+</body>
+</html>
